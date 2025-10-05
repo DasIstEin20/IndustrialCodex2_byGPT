@@ -1,0 +1,1980 @@
+{
+  "target": {
+    "mc": "1.20.1",
+    "forge": "47.x",
+    "java": 17,
+    "gradle": "8.x",
+    "mappings": "Mojang+Parchment"
+  },
+  "constraints": {
+    "max_code_files_per_run": 2,
+    "prefer_modularity": true,
+    "avoid_npe": true
+  },
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Audit & Inventory"
+    },
+    {
+      "id": "S2",
+      "name": "Build System Baseline"
+    },
+    {
+      "id": "S3",
+      "name": "Core Mod Init & Registries"
+    },
+    {
+      "id": "S4",
+      "name": "Events & Lifecycle"
+    },
+    {
+      "id": "S5",
+      "name": "Networking"
+    },
+    {
+      "id": "S6",
+      "name": "Capabilities & Data"
+    },
+    {
+      "id": "S7",
+      "name": "Configs"
+    },
+    {
+      "id": "S8",
+      "name": "Datagen & Assets"
+    },
+    {
+      "id": "S9",
+      "name": "Gameplay Parity & Fixes"
+    },
+    {
+      "id": "S10",
+      "name": "Docs & Housekeeping"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T001",
+      "stage": "S1",
+      "title": "Document build tooling baseline",
+      "type": "docs",
+      "description": "Summarize current ForgeGradle/Forge/mapping versions and Java toolchain state in PLAN.md for migration context.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md captures Gradle, Forge, mapping, and Java versions in use today.",
+        "Identified upgrade gaps feeding into Stage S2 tasks."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T002",
+      "stage": "S1",
+      "title": "Document source layout and entrypoint gaps",
+      "type": "docs",
+      "description": "Map current source tree, note absence of gameplay packages and @Mod entrypoint, and record implications for migration.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md lists existing packages under src/main/java and highlights missing runtime module.",
+        "Follow-up tasks reference canonical package names for new runtime scaffolding."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T003",
+      "stage": "S1",
+      "title": "Catalog registries & missing content",
+      "type": "docs",
+      "description": "List expected block/item/block entity/menu/recipe/sound registries based on API and lang files, noting missing implementations.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md enumerates registry domains requiring DeferredRegister rebuilds.",
+        "Gaps mapped to specific Stage S3/S9 tasks."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T004",
+      "stage": "S1",
+      "title": "Review networking API expectations",
+      "type": "docs",
+      "description": "Summarize INetworkManager responsibilities and data buffer usage to guide SimpleChannel migration.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md captures packet categories (tile sync, gui, item) and required features.",
+        "Stage S5 tasks reference this audit for packet coverage."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T005",
+      "stage": "S1",
+      "title": "Review config expectations",
+      "type": "docs",
+      "description": "Document legacy config lifecycle described by API, identify mapping to ForgeConfigSpec tiers.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md captures config phases (loadConfigs/preInit/postInit) and migration needs.",
+        "Stage S7 tasks mapped to address config lifecycle."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T006",
+      "stage": "S1",
+      "title": "Assess capability usage points",
+      "type": "docs",
+      "description": "List capabilities exposed via IC2Classic (tubes, notifiable machines, armor) and note missing attachment hooks.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md enumerates required capability tokens/providers.",
+        "Stage S6 tasks planned for each capability."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T007",
+      "stage": "S1",
+      "title": "Audit data assets and datagen needs",
+      "type": "docs",
+      "description": "Record present assets (lang only) and missing blockstates/models/loot/tags to scope datagen rebuild.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md documents asset gaps per domain.",
+        "Stage S8 datagen tasks referenced to fill each gap."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T008",
+      "stage": "S1",
+      "title": "Identify client-only hooks",
+      "type": "docs",
+      "description": "List API references needing Dist.CLIENT gating (renderers, particles, keybinds) for future migration.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md lists client-only systems for Stage S4 follow-up.",
+        "Notes capture any missing classes requiring recreation."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T009",
+      "stage": "S1",
+      "title": "Spot legacy/oversized API classes",
+      "type": "docs",
+      "description": "Flag API classes likely needing refactor or wrappers to avoid monolithic implementations in new runtime.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md highlights candidate classes/packages to split or wrap.",
+        "Stage S9 tasks reference mitigation strategies."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T020",
+      "stage": "S2",
+      "title": "Upgrade Gradle wrapper to 8.x",
+      "type": "build",
+      "description": "Point Gradle wrapper to 8.x distribution supporting ForgeGradle 6 and Java 17.",
+      "targets": [
+        "gradle/wrapper/gradle-wrapper.properties"
+      ],
+      "acceptance": [
+        "Gradle wrapper references 8.x distribution URL.",
+        "Wrapper scripts regenerate without manual edits."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T021",
+      "stage": "S2",
+      "title": "Update build.gradle for Forge 47.x & ForgeGradle 6",
+      "type": "build",
+      "description": "Adopt ForgeGradle 6 plugin DSL, bump Forge dependency to 1.20.1-47.x, and switch to Mojang+Parchment mappings.",
+      "targets": [
+        "build.gradle"
+      ],
+      "acceptance": [
+        "build.gradle uses net.minecraftforge.gradle 6.x and Forge 47.x coordinates.",
+        "Mappings configured for Mojang+Parchment 1.20.1."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T022",
+      "stage": "S2",
+      "title": "Refresh gradle.properties for Gradle 8 defaults",
+      "type": "build",
+      "description": "Normalize gradle.properties with org.gradle warnings, memory flags, and Java 17 toolchain hints.",
+      "targets": [
+        "gradle.properties"
+      ],
+      "acceptance": [
+        "gradle.properties cleaned of legacy FG flags and includes useful defaults.",
+        "Settings align with Gradle 8 recommendations (warnings-as-errors optional toggle)."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T023",
+      "stage": "S2",
+      "title": "Add mods.toml and pack metadata",
+      "type": "build",
+      "description": "Create Forge 1.20.1 compliant META-INF/mods.toml and pack.mcmeta referencing IndustrialCodex identifiers.",
+      "targets": [],
+      "acceptance": [
+        "mods.toml present with correct loader version range and mod metadata.",
+        "pack.mcmeta updated for pack_format 15+."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T024",
+      "stage": "S2",
+      "title": "Update run configurations for ic2 namespace",
+      "type": "build",
+      "description": "Replace examplemod run config namespaces with ic2, refresh datagen args, and ensure logging markers remain useful.",
+      "targets": [
+        "build.gradle"
+      ],
+      "acceptance": [
+        "Run configs reference ic2 mod id for client/server/gameTest/data.",
+        "Data run points to src/generated/resources and uses new mod id."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T025",
+      "stage": "S2",
+      "title": "Expand settings.gradle repositories",
+      "type": "build",
+      "description": "Add Parchment and other required plugin repositories to pluginManagement for ForgeGradle 6.",
+      "targets": [
+        "settings.gradle"
+      ],
+      "acceptance": [
+        "settings.gradle lists parchment maven and additional plugin repos as needed.",
+        "Ensures Gradle sync succeeds post-upgrade."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T030",
+      "stage": "S3",
+      "title": "Create IndustrialCodex mod entrypoint",
+      "type": "code",
+      "description": "Add @Mod class wiring mod event bus, forge event bus, and initial logging.",
+      "targets": [
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "@Mod annotated entrypoint exists under ic2 namespace.",
+        "Constructor registers listeners on mod event bus without deprecated APIs."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T031",
+      "stage": "S3",
+      "title": "Introduce IC2Constants",
+      "type": "code",
+      "description": "Centralize mod id, logger, and resource helpers for reuse across runtime packages.",
+      "targets": [
+        "src/main/java/ic2/core/IC2Constants.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "IC2Constants exposes MOD_ID, LOGGER, and helper methods.",
+        "IndustrialCodex leverages IC2Constants instead of hardcoded strings."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T032",
+      "stage": "S3",
+      "title": "Bootstrap DeferredRegister infrastructure",
+      "type": "code",
+      "description": "Create RegistryBootstrap with DeferredRegisters for blocks, items, block entities, menus, fluids, entity types, recipe types/serializers, sounds, and data components; hook into mod bus.",
+      "targets": [
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "RegistryBootstrap registers all DeferredRegisters to mod event bus.",
+        "All registry accessors exposed via static methods for content packages."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T033",
+      "stage": "S3",
+      "title": "Add creative mode tab registry",
+      "type": "code",
+      "description": "Define IC2 creative mode tabs leveraging DeferredRegister and supply icon supplier placeholders.",
+      "targets": [
+        "src/main/java/ic2/core/registries/IC2CreativeTabs.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "Creative mode tab registered via DeferredRegister of CreativeModeTab.",
+        "Icon supplier references future item safely via Supplier."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T034",
+      "stage": "S3",
+      "title": "Stub block registry with casing blocks",
+      "type": "code",
+      "description": "Create IC2Blocks to register machine casing/base blocks needed for future content.",
+      "targets": [
+        "src/main/java/ic2/content/block/IC2Blocks.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "IC2Blocks registers foundational casing blocks via RegistryBootstrap.BLOCKS.",
+        "RegistryBootstrap exposes blocks registrar to other packages."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T035",
+      "stage": "S3",
+      "title": "Stub block item registration",
+      "type": "code",
+      "description": "Ensure casing blocks gain BlockItem entries and prepare helper for later machine registrations.",
+      "targets": [
+        "src/main/java/ic2/content/item/IC2BlockItems.java",
+        "src/main/java/ic2/content/block/IC2Blocks.java"
+      ],
+      "acceptance": [
+        "IC2BlockItems registers BlockItems for casing blocks.",
+        "Block registration defers BlockItem creation to avoid classloading issues."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T036",
+      "stage": "S3",
+      "title": "Stub standalone item registry",
+      "type": "code",
+      "description": "Introduce IC2Items with representative components (circuits, plates) as placeholders for future expansion.",
+      "targets": [
+        "src/main/java/ic2/content/item/IC2Items.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "IC2Items registers baseline component items via DeferredRegister.",
+        "RegistryBootstrap exposes ITEMS registrar and ensures creative tab population hook exists."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T037",
+      "stage": "S3",
+      "title": "Introduce block entity type registry skeleton",
+      "type": "code",
+      "description": "Add IC2BlockEntities with placeholder entries and helper factory methods for machine registration.",
+      "targets": [
+        "src/main/java/ic2/content/blockentity/IC2BlockEntities.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "IC2BlockEntities defines DeferredRegister-backed RegistryObject holders.",
+        "Utility builder supports registering block entities with block suppliers."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T038",
+      "stage": "S3",
+      "title": "Introduce menu type registry skeleton",
+      "type": "code",
+      "description": "Create IC2MenuTypes for machine UI menus using DeferredRegister and placeholder factories.",
+      "targets": [
+        "src/main/java/ic2/content/menu/IC2MenuTypes.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "Menu types registered using MenuType constructors appropriate for 1.20.1.",
+        "Factory helpers prepared for future GUI wiring."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T039",
+      "stage": "S3",
+      "title": "Introduce fluid registry skeleton",
+      "type": "code",
+      "description": "Add IC2Fluids for fluid types (steam, coolant) with fluid properties placeholders.",
+      "targets": [
+        "src/main/java/ic2/content/fluid/IC2Fluids.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "FluidType and FlowingFluid DeferredRegisters established.",
+        "Placeholder registry objects declared for key IC2 fluids."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T040",
+      "stage": "S3",
+      "title": "Introduce entity type registry skeleton",
+      "type": "code",
+      "description": "Create IC2EntityTypes with placeholders for utility entities (dynamite, itnt, boats).",
+      "targets": [
+        "src/main/java/ic2/content/entity/IC2EntityTypes.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "Entity types registered with correct SpawnPlacements and factory suppliers.",
+        "Future attribute hooks documented via TODOs without deprecated API."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T041",
+      "stage": "S3",
+      "title": "Introduce recipe type registry",
+      "type": "code",
+      "description": "Define IC2RecipeTypes encapsulating machine recipe types and helper methods for registration.",
+      "targets": [
+        "src/main/java/ic2/content/recipe/IC2RecipeTypes.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "RecipeType holders registered via DeferredRegister.",
+        "Helper method available for data-driven recipe registration."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T042",
+      "stage": "S3",
+      "title": "Introduce recipe serializer registry",
+      "type": "code",
+      "description": "Add IC2RecipeSerializers with placeholder serializers and builder utilities.",
+      "targets": [
+        "src/main/java/ic2/content/recipe/IC2RecipeSerializers.java",
+        "src/main/java/ic2/content/recipe/IC2RecipeTypes.java"
+      ],
+      "acceptance": [
+        "Serializer DeferredRegister populated with base serializer stubs.",
+        "Serializers reference appropriate recipe type constants."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T043",
+      "stage": "S3",
+      "title": "Introduce sound event registry",
+      "type": "code",
+      "description": "Create IC2SoundEvents for machine and tool sounds using DeferredRegister.",
+      "targets": [
+        "src/main/java/ic2/content/sound/IC2SoundEvents.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "Sound events registered with namespaced ResourceLocations.",
+        "Placeholder RegistryObjects declared for major sound categories."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T044",
+      "stage": "S3",
+      "title": "Introduce data component registry",
+      "type": "code",
+      "description": "Register custom DataComponentType entries for IC2 item/block attachments (energy, coolant).",
+      "targets": [
+        "src/main/java/ic2/content/data/IC2DataComponents.java",
+        "src/main/java/ic2/core/registries/RegistryBootstrap.java"
+      ],
+      "acceptance": [
+        "DataComponent DeferredRegister initialized and registered.",
+        "Components declared with codecs/sync codecs ready for use."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T050",
+      "stage": "S4",
+      "title": "Establish common lifecycle handler",
+      "type": "code",
+      "description": "Create CommonLifecycleHandler subscribing to FMLCommonSetupEvent and enqueueing work for registries and network bootstrap.",
+      "targets": [
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "CommonLifecycleHandler listens to mod bus events with proper lambda usage.",
+        "IndustrialCodex registers handler without deprecated setup hooks."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T051",
+      "stage": "S4",
+      "title": "Implement module loader bridging",
+      "type": "code",
+      "description": "Add ModuleLoader to discover @IC2Plugin modules, call IModule lifecycle methods, and wire into event bus.",
+      "targets": [
+        "src/main/java/ic2/core/events/ModuleLoader.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "ModuleLoader scans ModList for IC2Plugin annotations and respects Dist gating.",
+        "Lifecycle handler invokes module load phases at appropriate times."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T052",
+      "stage": "S4",
+      "title": "Update IC2Classic helper lifecycle",
+      "type": "code",
+      "description": "Connect IC2Classic.setHelper to ModuleLoader results and ensure duplicate set prevention remains.",
+      "targets": [
+        "src/main/java/ic2/api/core/IC2Classic.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "IC2Classic helper is assigned during common setup without violating safeguards.",
+        "Helper reset is prevented and error messaging preserved."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T053",
+      "stage": "S4",
+      "title": "Port gameplay event subscriptions",
+      "type": "code",
+      "description": "Create GameplayEvents class attaching to MinecraftForge event bus for tick/world interactions using modern events.",
+      "targets": [
+        "src/main/java/ic2/core/events/GameplayEvents.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "GameplayEvents registers to Forge EVENT_BUS with non-deprecated annotations.",
+        "Event handlers stubbed for world tick, chunk load, and block break logic."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T054",
+      "stage": "S4",
+      "title": "Add server lifecycle hooks",
+      "type": "code",
+      "description": "Handle server starting/stopping events for save data and energy net management.",
+      "targets": [
+        "src/main/java/ic2/core/events/ServerLifecycleHandler.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "ServerLifecycleHandler subscribes via EVENT_BUS or Dist-safe registration.",
+        "Energy/tick managers receive start/stop callbacks."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T055",
+      "stage": "S4",
+      "title": "Create client lifecycle entrypoint",
+      "type": "code",
+      "description": "Add ClientLifecycle with Dist.CLIENT subscriber to prepare client setup tasks.",
+      "targets": [
+        "src/main/java/ic2/client/ClientLifecycle.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "ClientLifecycle annotated with @Mod.EventBusSubscriber(value = Dist.CLIENT).",
+        "Registers client setup listener hooking into event bus safely."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T056",
+      "stage": "S4",
+      "title": "Port color handler registration",
+      "type": "code",
+      "description": "Implement ColorHandlerRegistrar to register block/item colors during ColorHandlerEvent.",
+      "targets": [
+        "src/main/java/ic2/client/render/ColorHandlerRegistrar.java",
+        "src/main/java/ic2/client/ClientLifecycle.java"
+      ],
+      "acceptance": [
+        "Color handlers registered using modern API without deprecated methods.",
+        "ClientLifecycle forwards ColorHandlerEvent to registrar."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T057",
+      "stage": "S4",
+      "title": "Port particle factory registration",
+      "type": "code",
+      "description": "Register particle factories via RegisterParticleProvidersEvent with Dist gating.",
+      "targets": [
+        "src/main/java/ic2/client/particle/ParticleFactoryRegistrar.java",
+        "src/main/java/ic2/client/ClientLifecycle.java"
+      ],
+      "acceptance": [
+        "Particle factories registered during RegisterParticleProvidersEvent.",
+        "ClientLifecycle adds listener only on client dist."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T058",
+      "stage": "S4",
+      "title": "Port entity renderer registration",
+      "type": "code",
+      "description": "Register entity renderers during EntityRenderersEvent.RegisterRenderers.",
+      "targets": [
+        "src/main/java/ic2/client/render/EntityRendererRegistrar.java",
+        "src/main/java/ic2/client/ClientLifecycle.java"
+      ],
+      "acceptance": [
+        "EntityRendererRegistrar registers renderers for IC2 entities.",
+        "ClientLifecycle wires event subscriber without mixing server-only code."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T059",
+      "stage": "S4",
+      "title": "Port client input hooks",
+      "type": "code",
+      "description": "Register key bindings and input event handlers using RegisterKeyMappingsEvent and ClientTickEvent.",
+      "targets": [
+        "src/main/java/ic2/client/input/KeyBindingHandler.java",
+        "src/main/java/ic2/client/ClientLifecycle.java"
+      ],
+      "acceptance": [
+        "Key bindings registered with proper categories and translations.",
+        "Input events handle toggles without referencing deprecated classes."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T060",
+      "stage": "S5",
+      "title": "Introduce IC2Network channel",
+      "type": "code",
+      "description": "Create IC2Network with SimpleChannel, PROTOCOL_VERSION, and registration entry point.",
+      "targets": [
+        "src/main/java/ic2/network/IC2Network.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "SimpleChannel initialized with explicit protocol version and version check.",
+        "CommonLifecycleHandler triggers packet registration during common setup."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T061",
+      "stage": "S5",
+      "title": "Implement NetworkManager bridge",
+      "type": "code",
+      "description": "Add NetworkManagerImpl implementing INetworkManager and routing to IC2Network packets.",
+      "targets": [
+        "src/main/java/ic2/network/NetworkManagerImpl.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "NetworkManagerImpl covers INetworkManager methods with stubbed packet dispatch.",
+        "CommonLifecycleHandler exposes NetworkManagerImpl via API helper."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T062",
+      "stage": "S5",
+      "title": "Port tile field sync packet",
+      "type": "code",
+      "description": "Implement TileFieldSyncPacket with codec, handler, and registration in IC2Network.",
+      "targets": [
+        "src/main/java/ic2/network/packet/TileFieldSyncPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet encodes/decodes target BlockPos and field identifiers using FriendlyByteBuf.",
+        "Handler schedules client thread updates safely."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T063",
+      "stage": "S5",
+      "title": "Port tile event packet",
+      "type": "code",
+      "description": "Implement TileEventPacket for key/value events with server->client/client->server routing.",
+      "targets": [
+        "src/main/java/ic2/network/packet/TileEventPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet carries BlockPos, key, value, and PacketRange metadata.",
+        "IC2Network registers packet with correct direction(s)."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T064",
+      "stage": "S5",
+      "title": "Port tile data buffer packet",
+      "type": "code",
+      "description": "Implement TileDataBufferPacket to sync INetworkDataBuffer payloads.",
+      "targets": [
+        "src/main/java/ic2/network/packet/TileDataBufferPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet serializes ResourceLocation + buffer payload via INetworkDataBuffer hooks.",
+        "Handler ensures buffer creation via registered suppliers."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T065",
+      "stage": "S5",
+      "title": "Port item event packet",
+      "type": "code",
+      "description": "Implement ItemEventPacket for player-held items.",
+      "targets": [
+        "src/main/java/ic2/network/packet/ItemEventPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet syncs player ID/item slot with key/value pairs.",
+        "IC2Network registers server and client handlers appropriately."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T066",
+      "stage": "S5",
+      "title": "Port item data buffer packet",
+      "type": "code",
+      "description": "Implement ItemDataBufferPacket for INetworkDataBuffer on items.",
+      "targets": [
+        "src/main/java/ic2/network/packet/ItemDataBufferPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet encodes stack slot/index plus data buffer ID.",
+        "Handler guards against empty stacks and schedules updates."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T067",
+      "stage": "S5",
+      "title": "Implement GUI initial sync packet",
+      "type": "code",
+      "description": "Add GuiInitialDataPacket to push CompoundTag snapshots to client screens.",
+      "targets": [
+        "src/main/java/ic2/network/packet/GuiInitialDataPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet transfers CompoundTag and BlockPos/ItemStack context.",
+        "Client handler applies data to screen/controller safely."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T068",
+      "stage": "S5",
+      "title": "Implement tracking control packets",
+      "type": "code",
+      "description": "Add StartGuiTrackingPacket/StopGuiTrackingPacket to control auto sync lifetimes.",
+      "targets": [
+        "src/main/java/ic2/network/packet/TrackingControlPacket.java",
+        "src/main/java/ic2/network/IC2Network.java"
+      ],
+      "acceptance": [
+        "Packet toggles tracking state for players using dimension-safe identifiers.",
+        "Network registers both directions with appropriate consumers."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T069",
+      "stage": "S5",
+      "title": "Finalize INetworkManager wiring",
+      "type": "code",
+      "description": "Update IC2BlockEntities/menus to request sync via NetworkManagerImpl and ensure API helper exposes side-specific managers.",
+      "targets": [
+        "src/main/java/ic2/api/network/INetworkManager.java",
+        "src/main/java/ic2/network/NetworkManagerImpl.java"
+      ],
+      "acceptance": [
+        "INetworkManager gains default helper/static accessor to reach runtime implementation without breaking addons.",
+        "NetworkManagerImpl provides client/server delegates respecting Dist."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T070",
+      "stage": "S6",
+      "title": "Bootstrap capability attachment events",
+      "type": "code",
+      "description": "Create CapabilityBootstrap to register capability providers on blocks, items, and entities via AttachCapabilitiesEvent.",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/CapabilityBootstrap.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "CapabilityBootstrap subscribes to relevant AttachCapabilitiesEvent variants.",
+        "CommonLifecycleHandler registers bootstrap during setup."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T071",
+      "stage": "S6",
+      "title": "Implement tube capability provider",
+      "type": "code",
+      "description": "Provide TubeCapabilityProvider exposing ITube capability for tube block entities.",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/TubeCapabilityProvider.java",
+        "src/main/java/ic2/core/capabilities/CapabilityBootstrap.java"
+      ],
+      "acceptance": [
+        "Provider attaches capability with stable ResourceLocation.",
+        "Invalidation handled via LazyOptional."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T072",
+      "stage": "S6",
+      "title": "Implement notifiable machine capability provider",
+      "type": "code",
+      "description": "Expose INotifiableMachine capability for machines needing network updates.",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/NotifiableMachineCapabilityProvider.java",
+        "src/main/java/ic2/core/capabilities/CapabilityBootstrap.java"
+      ],
+      "acceptance": [
+        "Provider wraps block entities implementing marker interface.",
+        "Capability correctly invalidated on block entity removal."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T073",
+      "stage": "S6",
+      "title": "Implement armor module capability provider",
+      "type": "code",
+      "description": "Attach armor capability to powered armor pieces with appropriate serialization.",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/ArmorModuleCapabilityProvider.java",
+        "src/main/java/ic2/core/capabilities/CapabilityBootstrap.java"
+      ],
+      "acceptance": [
+        "ItemStack capabilities attached via AttachCapabilitiesEvent<ItemStack>.",
+        "Provider serializes state via INBTSerializable."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T074",
+      "stage": "S6",
+      "title": "Create capability sync helper",
+      "type": "code",
+      "description": "Add CapabilitySyncUtil for sending capability state updates via NetworkManagerImpl.",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/CapabilitySyncUtil.java",
+        "src/main/java/ic2/network/NetworkManagerImpl.java"
+      ],
+      "acceptance": [
+        "Utility exposes methods to queue sync packets for players around block entities.",
+        "NetworkManagerImpl delegates to helper for NBT conversions."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T075",
+      "stage": "S6",
+      "title": "Integrate capability bootstrap with block entities",
+      "type": "code",
+      "description": "Update base machine/generator block entities to expose capabilities using new providers.",
+      "targets": [
+        "src/main/java/ic2/content/blockentity/machine/BaseMachineBlockEntity.java",
+        "src/main/java/ic2/core/capabilities/CapabilityBootstrap.java"
+      ],
+      "acceptance": [
+        "Base machine block entity registers capability providers during initialization.",
+        "CapabilityBootstrap identifies machine types requiring attachments."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T076",
+      "stage": "S6",
+      "title": "Attach armor capabilities on equip",
+      "type": "code",
+      "description": "Ensure armor capability provider responds to LivingEquipmentChangeEvent for initialization refresh.",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/ArmorModuleCapabilityProvider.java",
+        "src/main/java/ic2/core/events/GameplayEvents.java"
+      ],
+      "acceptance": [
+        "Armor capability refreshed when armor equipped/unequipped.",
+        "Event handler avoids server<->client desync."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T077",
+      "stage": "S6",
+      "title": "Persist capability data to saved data",
+      "type": "code",
+      "description": "Introduce SavedData implementation storing global capability state (e.g., energy net, crop data).",
+      "targets": [
+        "src/main/java/ic2/core/capabilities/CapabilitySavedData.java",
+        "src/main/java/ic2/core/events/ServerLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "SavedData registered via ServerLifecycleHandler on server start.",
+        "Capability state saved and loaded without NPE risk."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T080",
+      "stage": "S7",
+      "title": "Introduce common config spec",
+      "type": "code",
+      "description": "Create IC2CommonConfig with ForgeConfigSpec and register via ModLoadingContext.",
+      "targets": [
+        "src/main/java/ic2/config/IC2CommonConfig.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "COMMON config spec defines core gameplay toggles and machine balance values.",
+        "Registered during mod construction with correct file name."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T081",
+      "stage": "S7",
+      "title": "Introduce client config spec",
+      "type": "code",
+      "description": "Add IC2ClientConfig for rendering/UI toggles and register safely on client dist.",
+      "targets": [
+        "src/main/java/ic2/config/IC2ClientConfig.java",
+        "src/main/java/ic2/client/ClientLifecycle.java"
+      ],
+      "acceptance": [
+        "Client config registered only on Dist.CLIENT.",
+        "Config values exposed via safe accessors for rendering code."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T082",
+      "stage": "S7",
+      "title": "Introduce server config spec",
+      "type": "code",
+      "description": "Add IC2ServerConfig for server-only balancing and register during common setup.",
+      "targets": [
+        "src/main/java/ic2/config/IC2ServerConfig.java",
+        "src/main/java/ic2/IndustrialCodex.java"
+      ],
+      "acceptance": [
+        "Server config registered and loaded with COMMON as needed.",
+        "Hot-reload safe listeners ensure values propagate to runtime managers."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T083",
+      "stage": "S7",
+      "title": "Wire configs into API helper",
+      "type": "code",
+      "description": "Expose config access through APIHelperImpl to maintain addon compatibility.",
+      "targets": [
+        "src/main/java/ic2/core/APIHelperImpl.java",
+        "src/main/java/ic2/config/IC2CommonConfig.java"
+      ],
+      "acceptance": [
+        "API helper provides getters for config specs/values.",
+        "Common config exposes static instance used by helper without NPE."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T084",
+      "stage": "S7",
+      "title": "Handle config reload events",
+      "type": "code",
+      "description": "Listen for ModConfigEvent and propagate changes to relevant managers.",
+      "targets": [
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java",
+        "src/main/java/ic2/config/IC2CommonConfig.java"
+      ],
+      "acceptance": [
+        "ModConfigEvent loading/reloading handled without memory leaks.",
+        "Managers respond to updated values promptly."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T090",
+      "stage": "S8",
+      "title": "Create datagen entrypoint",
+      "type": "code",
+      "description": "Add IC2DataGenerators registering provider scaffolding for runData.",
+      "targets": [
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Main datagen class registers to GatherDataEvent via Dist safe listener.",
+        "Supports server and client data providers."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T091",
+      "stage": "S8",
+      "title": "Add blockstate/model provider",
+      "type": "code",
+      "description": "Implement blockstate+model provider generating casing and machine states.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2BlockStateProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Blockstate provider outputs JSON for casing blocks.",
+        "Data generator registers provider only on server data run."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T092",
+      "stage": "S8",
+      "title": "Add item model provider",
+      "type": "code",
+      "description": "Generate models for base items and block items.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2ItemModelProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Item models generated for components and tools.",
+        "Provider respects existing manual overrides when present."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T093",
+      "stage": "S8",
+      "title": "Add loot table provider",
+      "type": "code",
+      "description": "Generate block loot tables for casings/machines with correct drops.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2BlockLootProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Loot tables handle silk touch/fortune rules where required.",
+        "Provider extends BlockLootSubProvider with correct parameter sets."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T094",
+      "stage": "S8",
+      "title": "Add recipe provider",
+      "type": "code",
+      "description": "Generate machine, crafting, and processing recipes from registries.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2RecipeProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Recipe provider covers crafting + machine recipes using builder helpers.",
+        "runData produces valid recipes without errors."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T095",
+      "stage": "S8",
+      "title": "Add block tags provider",
+      "type": "code",
+      "description": "Generate block tags for ores, machine harvest requirements, etc.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2BlockTagsProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Block tags provider populates forge tag conventions.",
+        "Existing resources merged without duplication."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T096",
+      "stage": "S8",
+      "title": "Add item tags provider",
+      "type": "code",
+      "description": "Generate item tags for circuits, plates, cables, and upgrades.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2ItemTagsProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Item tags provider syncs with block tags provider where needed.",
+        "Tags include forge:ingots/* and ic2 categories."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T097",
+      "stage": "S8",
+      "title": "Add fluid tags provider",
+      "type": "code",
+      "description": "Generate fluid tags for steam, coolant, and gases.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2FluidTagsProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Fluid tags provider registers forge fluid tags without duplicates.",
+        "Provider only runs on server data set."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T098",
+      "stage": "S8",
+      "title": "Add language provider",
+      "type": "code",
+      "description": "Generate base en_us lang file for new registry keys while preserving manual translations.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2LanguageProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Lang provider seeds en_us keys for all registered content.",
+        "Manual lang files preserved for additional locales."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T099",
+      "stage": "S8",
+      "title": "Add worldgen data providers",
+      "type": "code",
+      "description": "Generate configured/placed features for ores and rubber trees.",
+      "targets": [
+        "src/main/java/ic2/data/provider/IC2WorldGenProvider.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Worldgen provider registers configured + placed features for IC2 resources.",
+        "runData outputs JSON under data/ic2/worldgen without errors."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T100",
+      "stage": "S9",
+      "title": "Implement APIHelper runtime bridge",
+      "type": "code",
+      "description": "Create APIHelperImpl wiring fluid container lookup, tick helper, and network manager exposure.",
+      "targets": [
+        "src/main/java/ic2/core/APIHelperImpl.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "APIHelperImpl fulfills APIHelper contract without NPEs.",
+        "CommonLifecycleHandler assigns helper to IC2Classic during setup."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T101",
+      "stage": "S9",
+      "title": "Provide tick scheduler implementation",
+      "type": "code",
+      "description": "Implement TickSchedulerImpl backing APIHelper.getTickHelper with server-safe scheduling.",
+      "targets": [
+        "src/main/java/ic2/tick/TickSchedulerImpl.java",
+        "src/main/java/ic2/core/APIHelperImpl.java"
+      ],
+      "acceptance": [
+        "Tick scheduler queues tasks on server thread respecting level separation.",
+        "API helper returns singleton instance and clears on server shutdown."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T102",
+      "stage": "S9",
+      "title": "Introduce base machine block/entity classes",
+      "type": "code",
+      "description": "Add reusable BaseMachineBlock and BaseMachineBlockEntity handling energy, inventory, and menu hooks.",
+      "targets": [
+        "src/main/java/ic2/content/block/machine/BaseMachineBlock.java",
+        "src/main/java/ic2/content/blockentity/machine/BaseMachineBlockEntity.java"
+      ],
+      "acceptance": [
+        "Base machine classes implement use-with-menu, ticker, and capability exposure without deprecated ITickable.",
+        "Inventory and energy storage use modern Forge capabilities."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T103",
+      "stage": "S9",
+      "title": "Register furnace-tier machines",
+      "type": "code",
+      "description": "Add Macerator, Compressor, Extractor blocks/items/block entities referencing base machine classes.",
+      "targets": [
+        "src/main/java/ic2/content/block/IC2Blocks.java",
+        "src/main/java/ic2/content/blockentity/IC2BlockEntities.java"
+      ],
+      "acceptance": [
+        "Registry objects for core machines exist and tie to block entity constructors.",
+        "Placeholder logic ensures machines appear in creative tab and datagen lists."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T104",
+      "stage": "S9",
+      "title": "Introduce generator base classes",
+      "type": "code",
+      "description": "Create BaseGeneratorBlock and BaseGeneratorBlockEntity handling fuel/energy output.",
+      "targets": [
+        "src/main/java/ic2/content/block/generator/BaseGeneratorBlock.java",
+        "src/main/java/ic2/content/blockentity/generator/BaseGeneratorBlockEntity.java"
+      ],
+      "acceptance": [
+        "Generator base handles energy production tick using capabilities.",
+        "Includes hooks for fuel burn time and fluid inputs."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T105",
+      "stage": "S9",
+      "title": "Register generator family blocks",
+      "type": "code",
+      "description": "Register generator blocks (Coal, Geothermal, Solar, Water, Wind) and associated block entities.",
+      "targets": [
+        "src/main/java/ic2/content/block/IC2Blocks.java",
+        "src/main/java/ic2/content/blockentity/IC2BlockEntities.java"
+      ],
+      "acceptance": [
+        "Generator registry objects defined with appropriate properties and block entity types.",
+        "Creative tab + datagen placeholders updated accordingly."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T106",
+      "stage": "S9",
+      "title": "Implement electric tool base",
+      "type": "code",
+      "description": "Add ElectricToolItem base class and migrate drill/chainsaw registration to new system.",
+      "targets": [
+        "src/main/java/ic2/content/item/tool/ElectricToolItem.java",
+        "src/main/java/ic2/content/item/IC2Items.java"
+      ],
+      "acceptance": [
+        "Electric tools use Forge item capabilities for energy and interact with IC2DataComponents.",
+        "IC2Items registers drills/chainsaw referencing new class."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T107",
+      "stage": "S9",
+      "title": "Implement armor module items",
+      "type": "code",
+      "description": "Create ArmorModuleItem handling module capability and energy, register core modules.",
+      "targets": [
+        "src/main/java/ic2/content/item/armor/ArmorModuleItem.java",
+        "src/main/java/ic2/content/item/IC2Items.java"
+      ],
+      "acceptance": [
+        "Armor modules expose armor capability provider and respect config toggles.",
+        "Items added to creative tab with proper translation keys."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T108",
+      "stage": "S9",
+      "title": "Implement crop registry runtime",
+      "type": "code",
+      "description": "Provide CropRegistryImpl fulfilling ICropRegistry API and register default crops/seeds.",
+      "targets": [
+        "src/main/java/ic2/crops/CropRegistryImpl.java",
+        "src/main/java/ic2/api/crops/ICropRegistry.java"
+      ],
+      "acceptance": [
+        "CropRegistryImpl registers default crops and updates static INSTANCE/weed references.",
+        "API static access safe-guarded against null before init."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T109",
+      "stage": "S9",
+      "title": "Implement reactor base classes",
+      "type": "code",
+      "description": "Add NuclearReactorBlock and NuclearReactorBlockEntity scaffolding plus heat management helpers.",
+      "targets": [
+        "src/main/java/ic2/content/block/reactor/NuclearReactorBlock.java",
+        "src/main/java/ic2/content/blockentity/reactor/NuclearReactorBlockEntity.java"
+      ],
+      "acceptance": [
+        "Reactor block entity manages inventory, heat, and emits appropriate block events.",
+        "Block handles interactions and renders correct state properties."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T110",
+      "stage": "S9",
+      "title": "Implement fluid cell items",
+      "type": "code",
+      "description": "Create FluidCellItem supporting fluid capabilities and register standard cells.",
+      "targets": [
+        "src/main/java/ic2/content/item/cell/FluidCellItem.java",
+        "src/main/java/ic2/content/item/IC2Items.java"
+      ],
+      "acceptance": [
+        "Fluid cells integrate with Forge fluid capability and handle stack interactions.",
+        "IC2Items registers empty + filled cell variants as needed."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T111",
+      "stage": "S9",
+      "title": "Add machine recipe builders",
+      "type": "code",
+      "description": "Introduce MachineRecipeBuilder utilities and hook serializers to support machine recipes.",
+      "targets": [
+        "src/main/java/ic2/content/recipe/builder/MachineRecipeBuilder.java",
+        "src/main/java/ic2/content/recipe/IC2RecipeSerializers.java"
+      ],
+      "acceptance": [
+        "Builder simplifies creation of processing recipes with conditions.",
+        "Serializers updated to use builder output ensuring codec compliance."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T112",
+      "stage": "S9",
+      "title": "Restore scrapbox loot system",
+      "type": "code",
+      "description": "Implement IC2LootModifiers to handle scrapbox drops and integrate with datagen.",
+      "targets": [
+        "src/main/java/ic2/content/loot/IC2LootModifiers.java",
+        "src/main/java/ic2/data/IC2DataGenerators.java"
+      ],
+      "acceptance": [
+        "Global loot modifier registered for scrapbox functionality.",
+        "Datagen registers modifier provider producing JSON entries."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T113",
+      "stage": "S9",
+      "title": "Implement foam & miner mechanics",
+      "type": "code",
+      "description": "Add FoamSprayerBlock/BlockEntity and MinerBlockEntity scaffolding for world interaction tools.",
+      "targets": [
+        "src/main/java/ic2/content/block/foam/FoamSprayerBlock.java",
+        "src/main/java/ic2/content/blockentity/foam/FoamSprayerBlockEntity.java"
+      ],
+      "acceptance": [
+        "Foam sprayer handles block placement and drying timers via new tick scheduler.",
+        "Miner entity scaffolding interacts with drill/pipes using new capability system."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T114",
+      "stage": "S9",
+      "title": "Implement compatibility loader",
+      "type": "code",
+      "description": "Add CompatLoader to conditionally initialize integrations and invoke from module loader/common setup.",
+      "targets": [
+        "src/main/java/ic2/core/compat/CompatLoader.java",
+        "src/main/java/ic2/core/events/CommonLifecycleHandler.java"
+      ],
+      "acceptance": [
+        "CompatLoader checks ModList for partners and registers hooks safely.",
+        "CommonLifecycleHandler invokes loader during setup without side effects."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T120",
+      "stage": "S10",
+      "title": "Update README for 1.20.1",
+      "type": "docs",
+      "description": "Refresh README with new version badges, setup instructions, and migration overview.",
+      "targets": [],
+      "acceptance": [
+        "README reflects Forge 47.x / Minecraft 1.20.1 requirements.",
+        "Includes quickstart for runClient/runData tasks."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T121",
+      "stage": "S10",
+      "title": "Add BUILDING guide",
+      "type": "docs",
+      "description": "Document build prerequisites, Gradle tasks, and IDE import steps in BUILDING.md.",
+      "targets": [],
+      "acceptance": [
+        "BUILDING.md created with reproducible build instructions.",
+        "References configs, datagen, and testing expectations."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T122",
+      "stage": "S10",
+      "title": "Add CONTRIBUTING guide",
+      "type": "docs",
+      "description": "Define contribution guidelines, coding standards, and review cadence.",
+      "targets": [],
+      "acceptance": [
+        "CONTRIBUTING.md created with code style (one public class per file) and testing requirements.",
+        "Links to PLAN/progress workflow for contributors."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T123",
+      "stage": "S10",
+      "title": "Add migration notes",
+      "type": "docs",
+      "description": "Author MIGRATION_NOTES_1_20_1.md summarizing major API changes and addon guidance.",
+      "targets": [],
+      "acceptance": [
+        "Migration notes cover registries, networking, configs, and capabilities changes.",
+        "Document references updated API entry points for addon authors."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T124",
+      "stage": "S10",
+      "title": "Add GitHub templates",
+      "type": "docs",
+      "description": "Provide ISSUE_TEMPLATE/PR_TEMPLATE with instructions referencing migration process.",
+      "targets": [],
+      "acceptance": [
+        ".github directory populated with issue/PR templates reflecting Forge 1.20.1 state.",
+        "Templates mention testing + datagen expectations."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    },
+    {
+      "id": "T125",
+      "stage": "S10",
+      "title": "Final audit & cleanup",
+      "type": "docs",
+      "description": "Run final audit ensuring PLAN/progress reflect completion, prune obsolete docs/assets, and prepare release notes.",
+      "targets": [],
+      "acceptance": [
+        "PLAN.md and progress.json marked complete for all tasks.",
+        "Changelog or release notes updated summarizing migration."
+      ],
+      "done": false,
+      "commit": null,
+      "blockers": [],
+      "touched": [],
+      "added_files": [],
+      "notes": ""
+    }
+  ],
+  "cursor": 0,
+  "last_run": "2025-10-05T14:13:55+00:00",
+  "notes": "Seeded plan awaiting execution."
+}
