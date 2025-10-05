@@ -2,12 +2,17 @@
 
 ## Stage S1 – Audit & Inventory
 
-- [ ] **T001** – Document build tooling baseline (_docs_) 
+- [x] **T001** – Document build tooling baseline (_docs_)
   - Targets: (docs only)
   - Description: Summarize current ForgeGradle/Forge/mapping versions and Java toolchain state in PLAN.md for migration context.
   - Acceptance criteria:
     - PLAN.md captures Gradle, Forge, mapping, and Java versions in use today.
     - Identified upgrade gaps feeding into Stage S2 tasks.
+  - Findings:
+    - Gradle wrapper pinned to **7.5** via `gradle/wrapper/gradle-wrapper.properties`.
+    - `build.gradle` uses **ForgeGradle 5.1.+** with **Forge 1.19.2-43.1.47** and **official 1.19.2 mappings**.
+    - Java toolchain already targets **Java 17**, matching the Minecraft 1.18+ baseline.
+    - Stage S2 tasks must lift wrapper to Gradle 8.x, adopt ForgeGradle 6, and switch to Mojang+Parchment mappings for 1.20.1.
 
 - [ ] **T002** – Document source layout and entrypoint gaps (_docs_) 
   - Targets: (docs only)

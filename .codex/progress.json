@@ -65,12 +65,15 @@
         "PLAN.md captures Gradle, Forge, mapping, and Java versions in use today.",
         "Identified upgrade gaps feeding into Stage S2 tasks."
       ],
-      "done": false,
+      "done": true,
       "commit": null,
       "blockers": [],
-      "touched": [],
+      "touched": [
+        "PLAN.md",
+        ".codex/progress.json"
+      ],
       "added_files": [],
-      "notes": ""
+      "notes": "Logged Gradle 7.5 wrapper, ForgeGradle 5.1, Forge 1.19.2-43.1.47, and Java 17 baseline."
     },
     {
       "id": "T002",
@@ -1974,7 +1977,7 @@
       "notes": ""
     }
   ],
-  "cursor": 0,
-  "last_run": "2025-10-05T14:13:55+00:00",
-  "notes": "Seeded plan awaiting execution."
+  "cursor": 1,
+  "last_run": "2025-10-05T14:19:17+00:00",
+  "notes": "Completed T001 build tooling baseline audit."
 }
