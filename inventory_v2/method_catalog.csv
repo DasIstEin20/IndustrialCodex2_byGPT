@@ -1,0 +1,1283 @@
+domain,fqcn,member,kind,signature_or_value,notes
+other,ic2.api.addons.IModule,canLoad,method,boolean canLoad(Dist side),DECLARED
+other,ic2.api.addons.IModule,loadConfigs,method,void loadConfigs(),DECLARED
+other,ic2.api.addons.IModule,preInit,method,void preInit(IEventBus modBus),DECLARED
+other,ic2.api.addons.IModule,postInit,method,void postInit(),DECLARED
+other,ic2.api.blocks.BlockRegistries,registerListener,method,void registerListener(Runnable run),DECLARED
+other,ic2.api.blocks.BlockRegistries,reload,method,void reload(),DECLARED
+other,ic2.api.blocks.BlockRegistries,registerOre,method,"void registerOre(int value, TagKey<Block> tag)",DECLARED
+other,ic2.api.blocks.BlockRegistries,registerOre,method,"void registerOre(int value, Block... blocks)",DECLARED
+other,ic2.api.blocks.BlockRegistries,getBlocksForOreValue,method,Set<Block> getBlocksForOreValue(int value),DECLARED
+other,ic2.api.blocks.BlockRegistries,getOreValue,method,int getOreValue(BlockState state),DECLARED
+other,ic2.api.blocks.BlockRegistries,getOreValue,method,int getOreValue(Block block),DECLARED
+other,ic2.api.blocks.BlockRegistries,getAllValueBlocks,method,List<Block> getAllValueBlocks(),DECLARED
+other,ic2.api.blocks.DyeableMap,addBlock,method,"void addBlock(Block block, DyeColor color)",DECLARED
+other,ic2.api.blocks.DyeableMap,addBlocks,method,"void addBlocks(Map<Block, DyeColor> maps)",DECLARED
+other,ic2.api.blocks.DyeableMap,addReverseBlocks,method,"void addReverseBlocks(Map<DyeColor, Block> maps)",DECLARED
+other,ic2.api.blocks.DyeableMap,getBlock,method,Block getBlock(DyeColor color),DECLARED
+other,ic2.api.blocks.DyeableMap,getBlock,method,"Block getBlock(DyeColor color, Block defaultValue)",DECLARED
+other,ic2.api.blocks.DyeableMap,getColor,method,DyeColor getColor(Block block),DECLARED
+other,ic2.api.blocks.DyeableMap,getBlocks,method,ObjectSet<Block> getBlocks(),DECLARED
+other,ic2.api.blocks.DyeableMap,getBlockArray,method,Block[] getBlockArray(),DECLARED
+other,ic2.api.blocks.DyeableMap,contains,method,boolean contains(Block block),DECLARED
+other,ic2.api.blocks.ExplosionWhitelist,addWhitelist,method,void addWhitelist(Block... blocks),DECLARED
+other,ic2.api.blocks.ExplosionWhitelist,removeWhitelist,method,void removeWhitelist(Block... blocks),DECLARED
+other,ic2.api.blocks.ExplosionWhitelist,isWhitelisted,method,boolean isWhitelisted(Block block),DECLARED
+other,ic2.api.blocks.IAdvancedComparable,getComparatorInputOverride,method,"int getComparatorInputOverride(BlockState state, Level world, BlockPos pos, Direction side)",DECLARED
+other,ic2.api.blocks.IWrenchable,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,doSpecialAction,method,"boolean doSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,hasSpecialAction,method,"AABB hasSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,canRemoveBlock,method,"boolean canRemoveBlock(BlockState state, Level world, BlockPos pos, Player player);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,getDropRate,method,"double getDropRate(BlockState state, Level world, BlockPos pos, Player player);",DECLARED (fallback)
+other,ic2.api.blocks.IWrenchable,getDrops,method,"List<ItemStack> getDrops(BlockState state, Level world, BlockPos pos, Player player);",DECLARED (fallback)
+other,ic2.api.blocks.IPaintable,recolor,method,"boolean recolor(BlockState state, Level world, BlockPos pos, Vec3 exactClick, Direction dir, DyeColor color);",DECLARED (fallback)
+other,ic2.api.blocks.IPaintable,getColor,method,DyeColor getColor(BlockState state);,DECLARED (fallback)
+other,ic2.api.blocks.wrench.BaseWrenchHandler,doSpecialAction,method,"boolean doSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit)",DECLARED
+other,ic2.api.blocks.wrench.BaseWrenchHandler,hasSpecialAction,method,"AABB hasSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit)",DECLARED
+other,ic2.api.blocks.wrench.BaseWrenchHandler,canRemoveBlock,method,"boolean canRemoveBlock(BlockState state, Level world, BlockPos pos, Player player)",DECLARED
+other,ic2.api.blocks.wrench.BaseWrenchHandler,getDropRate,method,"double getDropRate(BlockState state, Level world, BlockPos pos, Player player)",DECLARED
+other,ic2.api.blocks.wrench.BaseWrenchHandler,getDrops,method,"List<ItemStack> getDrops(BlockState state, Level world, BlockPos pos, Player player)",DECLARED
+other,ic2.api.blocks.wrench.ChestWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.ChestWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.HopperWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.HopperWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.HopperWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.HopperWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.PillarWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.PillarWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.PillarWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.PillarWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.PistonWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.PistonWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.PistonWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.PistonWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.PistonWrenchHandler,canRemoveBlock,method,"boolean canRemoveBlock(BlockState state, Level world, BlockPos pos, Player player)",DECLARED
+other,ic2.api.blocks.wrench.PistonWrenchHandler,getDropRate,method,"double getDropRate(BlockState state, Level world, BlockPos pos, Player player)",DECLARED
+other,ic2.api.blocks.wrench.StairWrenchHandler,INSTANCE,field,IWrenchable INSTANCE,unknown
+other,ic2.api.blocks.wrench.StairWrenchHandler,getFacing,method,"Direction getFacing(BlockState state, Level world, BlockPos pos)",DECLARED
+other,ic2.api.blocks.wrench.StairWrenchHandler,canSetFacing,method,"boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.blocks.wrench.StairWrenchHandler,setFacing,method,"boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side)",DECLARED
+other,ic2.api.core.APIHelper,getFluidContainers,method,List<ItemStack> getFluidContainers(Fluid fluid),DECLARED
+other,ic2.api.core.APIHelper,createSteam,method,FluidStack createSteam(int amount),DECLARED
+other,ic2.api.core.APIHelper,getTickHelper,method,ITickScheduler getTickHelper(),DECLARED
+other,ic2.api.core.APIHelper,getNetworkManager,method,INetworkManager getNetworkManager(),DECLARED
+other,ic2.api.core.APIHelper,getNetworkManager,method,INetworkManager getNetworkManager(Dist side),DECLARED
+other,ic2.api.core.IC2Classic,TUBE_CAPABILITY,field,Capability<ITube> TUBE_CAPABILITY,get()
+other,ic2.api.core.IC2Classic,NOTIFY_CAPABILITY,field,Capability<INotifiableMachine> NOTIFY_CAPABILITY,get()
+other,ic2.api.core.IC2Classic,ARMOR_CAPABILITY,field,Capability<IArmorCapability> ARMOR_CAPABILITY,get()
+other,ic2.api.core.IC2Classic,getHelper,method,APIHelper getHelper(),DECLARED
+other,ic2.api.core.IC2Classic,setHelper,method,void setHelper(APIHelper helper),DECLARED
+other,ic2.api.crops.BaseSeed,crop,field,ICrop crop,unknown
+other,ic2.api.crops.BaseSeed,stage,field,int stage,unknown
+other,ic2.api.crops.BaseSeed,growth,field,int growth,unknown
+other,ic2.api.crops.BaseSeed,gain,field,int gain,unknown
+other,ic2.api.crops.BaseSeed,resistance,field,int resistance,unknown
+other,ic2.api.crops.BaseSeed,stack_size,field,int stack_size,unknown
+other,ic2.api.crops.CropDifficulty,getWeedChance,method,int getWeedChance(),DECLARED
+other,ic2.api.crops.CropDifficulty,getCropGrowth,method,int getCropGrowth(int value),DECLARED
+other,ic2.api.crops.CropDifficulty,getBreedingDifficulty,method,int getBreedingDifficulty(),DECLARED
+other,ic2.api.crops.CropDifficulty,getCropStats,method,"int[] getCropStats(List<ICropTile> crops, RandomSource rand)",DECLARED
+other,ic2.api.crops.CropProperties,getTier,method,int getTier(),DECLARED
+other,ic2.api.crops.CropProperties,getChemistry,method,int getChemistry(),DECLARED
+other,ic2.api.crops.CropProperties,getConsumable,method,int getConsumable(),DECLARED
+other,ic2.api.crops.CropProperties,getDefensive,method,int getDefensive(),DECLARED
+other,ic2.api.crops.CropProperties,getColorful,method,int getColorful(),DECLARED
+other,ic2.api.crops.CropProperties,getWeed,method,int getWeed(),DECLARED
+other,ic2.api.crops.CropProperties,getAllProperties,method,int[] getAllProperties(),DECLARED
+other,ic2.api.crops.ICrop,UNKNOWN,field,Component UNKNOWN,translatable()
+other,ic2.api.crops.ICrop,EMPTY_DROPS,field,ItemStack[] EMPTY_DROPS,unknown
+other,ic2.api.crops.ICrop,id,method,ResourceLocation id(),DECLARED
+other,ic2.api.crops.ICrop,discoveredBy,method,Component discoveredBy(),DECLARED
+other,ic2.api.crops.ICrop,getName,method,Component getName(),DECLARED
+other,ic2.api.crops.ICrop,getDisplayItem,method,ItemStack getDisplayItem(),DECLARED
+other,ic2.api.crops.ICrop,getProperties,method,CropProperties getProperties(),DECLARED
+other,ic2.api.crops.ICrop,getCropType,method,CropType getCropType(),DECLARED
+other,ic2.api.crops.ICrop,isWaterCleaningCrop,method,boolean isWaterCleaningCrop(ICropTile tile),DECLARED
+other,ic2.api.crops.ICrop,getAttributes,method,String[] getAttributes(),DECLARED
+other,ic2.api.crops.ICrop,getTextures,method,List<ResourceLocation> getTextures(),DECLARED
+other,ic2.api.crops.ICrop,getGrowthSteps,method,int getGrowthSteps(),DECLARED
+other,ic2.api.crops.ICrop,getOptimalHarvestStep,method,int getOptimalHarvestStep(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getGrowthDuration,method,int getGrowthDuration(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getStatInfluence,method,"int getStatInfluence(ICropTile cropTile, int humidity, int nutrients, int air)",DECLARED
+other,ic2.api.crops.ICrop,canGrow,method,boolean canGrow(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,canBeHarvested,method,boolean canBeHarvested(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getAfterHarvestStage,method,int getAfterHarvestStage(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getDropChance,method,double getDropChance(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getDrops,method,ItemStack[] getDrops(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getSeedDropChance,method,float getSeedDropChance(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getSeeds,method,ItemStack getSeeds(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,canBreed,method,boolean canBreed(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,isWeed,method,boolean isWeed(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,onRightClick,method,"boolean onRightClick(ICropTile cropTile, Player player, InteractionHand hand)",DECLARED
+other,ic2.api.crops.ICrop,onLeftClick,method,"boolean onLeftClick(ICropTile cropTile, Player player)",DECLARED
+other,ic2.api.crops.ICrop,onTick,method,void onTick(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,onBlockUpdate,method,void onBlockUpdate(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,onEntityCollision,method,"void onEntityCollision(ICropTile cropTile, Entity entity)",DECLARED
+other,ic2.api.crops.ICrop,onCropPlaceFailed,method,"void onCropPlaceFailed(BaseSeed seed, ICropTile cropTile, Player player)",DECLARED
+other,ic2.api.crops.ICrop,hasCustomCropPlaceFailedMessage,method,boolean hasCustomCropPlaceFailedMessage(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getCustomCropPlaceFailedMessage,method,Component getCustomCropPlaceFailedMessage(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,canEmitRedstone,method,boolean canEmitRedstone(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getRedstoneLevel,method,int getRedstoneLevel(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,getEmittedLight,method,int getEmittedLight(ICropTile cropTile),DECLARED
+other,ic2.api.crops.ICrop,desc,method,String desc(int i),DECLARED
+other,ic2.api.crops.ICrop,getGrowth,method,int getGrowth(int combo),DECLARED
+other,ic2.api.crops.ICrop,getGain,method,int getGain(int combo),DECLARED
+other,ic2.api.crops.ICrop,getResistance,method,int getResistance(int combo),DECLARED
+other,ic2.api.crops.ICrop,combineStats,method,"short combineStats(int growth, int gain, int resistance)",DECLARED
+other,ic2.api.crops.ICropModifier,canChangeSeedMode,method,boolean canChangeSeedMode(ItemStack input),DECLARED
+other,ic2.api.crops.ICropModifier,canToggleSeedMode,method,boolean canToggleSeedMode(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropRegistry,WEED,field,ICrop WEED,null
+other,ic2.api.crops.ICropRegistry,SEA_WEED,field,ICrop SEA_WEED,null
+other,ic2.api.crops.ICropRegistry,INSTANCE,field,ICropRegistry INSTANCE,unknown
+other,ic2.api.crops.ICropRegistry,registerCustomCropRenderer,method,"void registerCustomCropRenderer(ResourceLocation location, ICropRenderer render)",DECLARED
+other,ic2.api.crops.ICropRegistry,registerCustomStickRenderer,method,void registerCustomStickRenderer(ICropRenderer render),DECLARED
+other,ic2.api.crops.ICropRegistry,registerCrop,method,T registerCrop(T crop),DECLARED
+other,ic2.api.crops.ICropRegistry,getCrop,method,"ICrop getCrop(String id, String name)",DECLARED
+other,ic2.api.crops.ICropRegistry,getCrop,method,ICrop getCrop(ResourceLocation location),DECLARED
+other,ic2.api.crops.ICropRegistry,getRandomCrop,method,ICrop getRandomCrop(OptionalLong seed),DECLARED
+other,ic2.api.crops.ICropRegistry,getCrop,method,ICrop getCrop(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropRegistry,getCrops,method,List<ICrop> getCrops(),DECLARED
+other,ic2.api.crops.ICropRegistry,registerDisplayItem,method,"void registerDisplayItem(ResourceLocation cropID, ItemStack stack)",DECLARED
+other,ic2.api.crops.ICropRegistry,getDisplayItem,method,ItemStack getDisplayItem(ResourceLocation cropID),DECLARED
+other,ic2.api.crops.ICropRegistry,registerBaseSeed,method,"void registerBaseSeed(Item item, BaseSeed seed)",DECLARED
+other,ic2.api.crops.ICropRegistry,getSeedForStack,method,BaseSeed getSeedForStack(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropRegistry,getSeedForCrop,method,ItemStack getSeedForCrop(ICrop crop),DECLARED
+other,ic2.api.crops.ICropRegistry,addBiomeHumidityBonus,method,"void addBiomeHumidityBonus(TagKey<Biome> type, int bonus)",DECLARED
+other,ic2.api.crops.ICropRegistry,getHumidityBonus,method,int getHumidityBonus(Holder<Biome> biome),DECLARED
+other,ic2.api.crops.ICropRegistry,addBiomeNutrientBonus,method,"void addBiomeNutrientBonus(TagKey<Biome> type, int bonus)",DECLARED
+other,ic2.api.crops.ICropRegistry,getNutrientBonus,method,int getNutrientBonus(Holder<Biome> biome),DECLARED
+other,ic2.api.crops.ICropRegistry,addBiomeWaterQualityBonus,method,"void addBiomeWaterQualityBonus(TagKey<Biome> type, int bonus)",DECLARED
+other,ic2.api.crops.ICropRegistry,getWaterQualityBonus,method,int getWaterQualityBonus(Holder<Biome> biome),DECLARED
+other,ic2.api.crops.ICropRegistry,registerFarmland,method,"void registerFarmland(IFarmland land, Block... blocks)",DECLARED
+other,ic2.api.crops.ICropRegistry,getFarmland,method,IFarmland getFarmland(Block block),DECLARED
+other,ic2.api.crops.ICropRegistry,registerSubSoil,method,"void registerSubSoil(ISubSoil soil, Block... blocks)",DECLARED
+other,ic2.api.crops.ICropRegistry,getSubSoil,method,ISubSoil getSubSoil(Block block),DECLARED
+other,ic2.api.crops.ICropRenderer,createQuadsForStage,method,"List<BakedQuad> createQuadsForStage(int stage, boolean fancy, FaceBakery baker)",DECLARED
+other,ic2.api.crops.ICropSeed,SCAN_COST,field,int[] SCAN_COST,unknown
+other,ic2.api.crops.ICropSeed,TIERS,field,String[] TIERS,unknown
+other,ic2.api.crops.ICropSeed,getCrop,method,ICrop getCrop(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropSeed,getScanLevel,method,int getScanLevel(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropSeed,setScanLevel,method,"void setScanLevel(ItemStack stack, int level)",DECLARED
+other,ic2.api.crops.ICropSeed,increaseScanLevel,method,void increaseScanLevel(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropSeed,getGrowth,method,int getGrowth(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropSeed,setGrowth,method,"void setGrowth(ItemStack stack, int growth)",DECLARED
+other,ic2.api.crops.ICropSeed,getGain,method,int getGain(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropSeed,setGain,method,"void setGain(ItemStack stack, int gain)",DECLARED
+other,ic2.api.crops.ICropSeed,getResistance,method,int getResistance(ItemStack stack),DECLARED
+other,ic2.api.crops.ICropSeed,setResistance,method,"void setResistance(ItemStack stack, int resistance)",DECLARED
+other,ic2.api.crops.ICropTile,getFarmland,method,IFarmland getFarmland(),DECLARED
+other,ic2.api.crops.ICropTile,isWaterLogged,method,boolean isWaterLogged(),DECLARED
+other,ic2.api.crops.ICropTile,setWaterlogged,method,void setWaterlogged(boolean water),DECLARED
+other,ic2.api.crops.ICropTile,getCrop,method,ICrop getCrop(),DECLARED
+other,ic2.api.crops.ICropTile,setCrop,method,void setCrop(ICrop crop),DECLARED
+other,ic2.api.crops.ICropTile,getGrowthStage,method,int getGrowthStage(),DECLARED
+other,ic2.api.crops.ICropTile,setGrowthStage,method,void setGrowthStage(int stage),DECLARED
+other,ic2.api.crops.ICropTile,getGrowthPoints,method,int getGrowthPoints(),DECLARED
+other,ic2.api.crops.ICropTile,setGrowthPoints,method,void setGrowthPoints(int points),DECLARED
+other,ic2.api.crops.ICropTile,getScanLevel,method,int getScanLevel(),DECLARED
+other,ic2.api.crops.ICropTile,setScanLevel,method,void setScanLevel(int level),DECLARED
+other,ic2.api.crops.ICropTile,isCrossBreeding,method,boolean isCrossBreeding(),DECLARED
+other,ic2.api.crops.ICropTile,setCrossBreeding,method,void setCrossBreeding(boolean breed),DECLARED
+other,ic2.api.crops.ICropTile,getGainStat,method,int getGainStat(),DECLARED
+other,ic2.api.crops.ICropTile,setGainStat,method,void setGainStat(int level),DECLARED
+other,ic2.api.crops.ICropTile,getGrowthStat,method,int getGrowthStat(),DECLARED
+other,ic2.api.crops.ICropTile,setGrowthStat,method,void setGrowthStat(int level),DECLARED
+other,ic2.api.crops.ICropTile,getResistanceStat,method,int getResistanceStat(),DECLARED
+other,ic2.api.crops.ICropTile,setResistanceStat,method,void setResistanceStat(int level),DECLARED
+other,ic2.api.crops.ICropTile,canBreed,method,boolean canBreed(),DECLARED
+other,ic2.api.crops.ICropTile,requestStateUpdate,method,void requestStateUpdate(),DECLARED
+other,ic2.api.crops.ICropTile,onCustomDataChanged,method,void onCustomDataChanged(),DECLARED
+other,ic2.api.crops.ICropTile,calculateGrowthSpeed,method,int calculateGrowthSpeed(),DECLARED
+other,ic2.api.crops.ICropTile,performManualHarvest,method,boolean performManualHarvest(),DECLARED
+other,ic2.api.crops.ICropTile,performHarvest,method,List<ItemStack> performHarvest(boolean manual),DECLARED
+other,ic2.api.crops.ICropTile,pickCrop,method,boolean pickCrop(),DECLARED
+other,ic2.api.crops.ICropTile,removeCrop,method,void removeCrop(),DECLARED
+other,ic2.api.crops.ICropTile,isBlockBelow,method,boolean isBlockBelow(BlockState state),DECLARED
+other,ic2.api.crops.ICropTile,isBlockBelow,method,boolean isBlockBelow(Block block),DECLARED
+other,ic2.api.crops.ICropTile,isBlockBelow,method,boolean isBlockBelow(TagKey<Block> tag),DECLARED
+other,ic2.api.crops.ICropTile,getBlocksBelow,method,Set<Block> getBlocksBelow(),DECLARED
+other,ic2.api.crops.ICropTile,getCustomData,method,CompoundTag getCustomData(),DECLARED
+other,ic2.api.crops.ICropTile,getLightLevel,method,int getLightLevel(),DECLARED
+other,ic2.api.crops.ICropTile,getEnvironmentQuality,method,int getEnvironmentQuality(),DECLARED
+other,ic2.api.crops.ICropTile,getNutrients,method,int getNutrients(),DECLARED
+other,ic2.api.crops.ICropTile,getHumidity,method,int getHumidity(),DECLARED
+other,ic2.api.crops.ICropTile,getWaterStorage,method,int getWaterStorage(),DECLARED
+other,ic2.api.crops.ICropTile,setWaterStorage,method,void setWaterStorage(int water),DECLARED
+other,ic2.api.crops.ICropTile,getFertilizerStorage,method,int getFertilizerStorage(),DECLARED
+other,ic2.api.crops.ICropTile,setFertilizerStorage,method,void setFertilizerStorage(int fertilizer),DECLARED
+other,ic2.api.crops.ICropTile,getWeedExStorage,method,int getWeedExStorage(),DECLARED
+other,ic2.api.crops.ICropTile,setWeedExStorage,method,void setWeedExStorage(int weedEx),DECLARED
+other,ic2.api.crops.ICropTile,createSeeds,method,"ItemStack createSeeds(ICrop crop, int growthStat, int gainStat, int resistanceStat, int scanLevel)",DECLARED
+other,ic2.api.crops.IFarmland,getHumidity,method,"int getHumidity(Level world, BlockPos pos)",DECLARED
+other,ic2.api.crops.IFarmland,getHumidity,method,int getHumidity(BlockState state),DECLARED
+other,ic2.api.crops.IFarmland,getNutrients,method,"int getNutrients(Level world, BlockPos pos)",DECLARED
+other,ic2.api.crops.IFarmland,getNutrients,method,int getNutrients(BlockState state),DECLARED
+other,ic2.api.crops.IFarmland,isSpecial,method,boolean isSpecial(),DECLARED
+other,ic2.api.crops.IFarmland,getSpecialState,method,BlockState getSpecialState(Block block),DECLARED
+other,ic2.api.crops.ISeedCrop,isDroppingSeeds,method,boolean isDroppingSeeds(ICropTile tile),DECLARED
+other,ic2.api.crops.ISeedCrop,getSeedDrops,method,ItemStack[] getSeedDrops(ICropTile tile),DECLARED
+other,ic2.api.crops.ISubSoil,getHumidity,method,"int getHumidity(Level world, BlockPos pos)",DECLARED
+other,ic2.api.crops.ISubSoil,getHumidity,method,int getHumidity(BlockState state),DECLARED
+other,ic2.api.crops.ISubSoil,getNutrients,method,"int getNutrients(Level world, BlockPos pos)",DECLARED
+other,ic2.api.crops.ISubSoil,getNutrients,method,int getNutrients(BlockState state),DECLARED
+other,ic2.api.crops.ISubSoil,isSpecial,method,boolean isSpecial(),DECLARED
+other,ic2.api.crops.ISubSoil,getSpecialState,method,BlockState getSpecialState(Block block),DECLARED
+energy,ic2.api.energy.EnergyNet,INSTANCE,field,IEnergyNet INSTANCE,unknown
+energy,ic2.api.energy.IEnergyNet,getTile,method,"IEnergyTile getTile(Level world, BlockPos pos)",DECLARED
+energy,ic2.api.energy.IEnergyNet,getSubTile,method,"IEnergyTile getSubTile(Level world, BlockPos pos)",DECLARED
+energy,ic2.api.energy.IEnergyNet,getTiles,method,"GridTile getTiles(Level world, BlockPos pos)",DECLARED
+energy,ic2.api.energy.IEnergyNet,addTile,method,void addTile(IEnergyTile tile),DECLARED
+energy,ic2.api.energy.IEnergyNet,removeTile,method,void removeTile(IEnergyTile tile),DECLARED
+energy,ic2.api.energy.IEnergyNet,updateTile,method,void updateTile(IEnergyTile tile),DECLARED
+energy,ic2.api.energy.IEnergyNet,getPowerFromTier,method,int getPowerFromTier(int tier),DECLARED
+energy,ic2.api.energy.IEnergyNet,getTierFromPower,method,int getTierFromPower(int power),DECLARED
+energy,ic2.api.energy.IEnergyNet,getDisplayTier,method,String getDisplayTier(int tier),DECLARED
+energy,ic2.api.energy.IEnergyNet,getStats,method,TransferStats getStats(IEnergyTile tile),DECLARED
+energy,ic2.api.energy.IEnergyNet,getPacketStats,method,List<PacketStats> getPacketStats(IEnergyTile tile),DECLARED
+energy,ic2.api.energy.PacketStats,getTile,method,IEnergyTile getTile(),DECLARED
+energy,ic2.api.energy.PacketStats,getPackets,method,long getPackets(),DECLARED
+energy,ic2.api.energy.PacketStats,getPower,method,long getPower(),DECLARED
+energy,ic2.api.energy.PacketStats,isAccepting,method,boolean isAccepting(),DECLARED
+energy,ic2.api.energy.TransferStats,getEnergyIn,method,long getEnergyIn(),DECLARED
+energy,ic2.api.energy.TransferStats,getEnergyOut,method,long getEnergyOut(),DECLARED
+energy,ic2.api.energy.TransferStats,getEnergyLossIn,method,long getEnergyLossIn(),DECLARED
+energy,ic2.api.energy.TransferStats,getEnergyLossOut,method,long getEnergyLossOut(),DECLARED
+energy,ic2.api.energy.TransferStats,toString,method,String toString(),DECLARED
+energy,ic2.api.energy.impl.LinkedSink,getWorldObj,method,Level getWorldObj(),DECLARED
+energy,ic2.api.energy.impl.LinkedSink,getPosition,method,BlockPos getPosition(),DECLARED
+energy,ic2.api.energy.impl.LinkedSink,canAcceptEnergy,method,"boolean canAcceptEnergy(IEnergyEmitter emitter, Direction side)",DECLARED
+energy,ic2.api.energy.impl.LinkedSource,getWorldObj,method,Level getWorldObj(),DECLARED
+energy,ic2.api.energy.impl.LinkedSource,getPosition,method,BlockPos getPosition(),DECLARED
+energy,ic2.api.energy.impl.LinkedSource,canEmitEnergy,method,"boolean canEmitEnergy(IEnergyAcceptor acceptor, Direction side)",DECLARED
+energy,ic2.api.energy.tile.IEnergyAcceptor,canAcceptEnergy,method,"boolean canAcceptEnergy(IEnergyEmitter emitter, Direction side)",DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,isWaterlogged,method,boolean isWaterlogged(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,isLavaLogged,method,boolean isLavaLogged(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,getConductionLoss,method,double getConductionLoss(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,getInsulationEnergyAbsorption,method,int getInsulationEnergyAbsorption(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,getInsulationBreakdownEnergy,method,int getInsulationBreakdownEnergy(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,getConductorBreakdownEnergy,method,int getConductorBreakdownEnergy(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,removeInsulation,method,void removeInsulation(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductor,removeConductor,method,void removeConductor(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductorColored,getColor,method,DyeColor getColor(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductorModifiable,tryAddInsulation,method,boolean tryAddInsulation(),DECLARED
+energy,ic2.api.energy.tile.IEnergyConductorModifiable,tryRemoveInsulation,method,boolean tryRemoveInsulation(),DECLARED
+energy,ic2.api.energy.tile.IEnergyEmitter,canEmitEnergy,method,"boolean canEmitEnergy(IEnergyAcceptor acceptor, Direction side)",DECLARED
+energy,ic2.api.energy.tile.IEnergySink,getSinkTier,method,int getSinkTier(),DECLARED
+energy,ic2.api.energy.tile.IEnergySink,getRequestedEnergy,method,int getRequestedEnergy(),DECLARED
+energy,ic2.api.energy.tile.IEnergySink,acceptEnergy,method,"int acceptEnergy(Direction side, int amount, int voltage)",DECLARED
+energy,ic2.api.energy.tile.IEnergySource,getSourceTier,method,int getSourceTier(),DECLARED
+energy,ic2.api.energy.tile.IEnergySource,getMaxEnergyOutput,method,int getMaxEnergyOutput(),DECLARED
+energy,ic2.api.energy.tile.IEnergySource,getProvidedEnergy,method,int getProvidedEnergy(),DECLARED
+energy,ic2.api.energy.tile.IEnergySource,consumeEnergy,method,void consumeEnergy(int consumed),DECLARED
+energy,ic2.api.energy.tile.IEnergySource,onPacketFailed,method,void onPacketFailed(),DECLARED
+energy,ic2.api.energy.tile.IEnergySource,getSourceType,method,SourceType getSourceType(),DECLARED
+energy,ic2.api.energy.tile.IMultiEnergySource,hasMultiplePackets,method,boolean hasMultiplePackets(),DECLARED
+energy,ic2.api.energy.tile.IMultiEnergySource,getPacketCount,method,int getPacketCount(),DECLARED
+energy,ic2.api.energy.tile.IMultiEnergyTile,getTiles,method,List<IEnergyTile> getTiles(),DECLARED
+events,ic2.api.events.ArmorSlotEvent,getItem,method,Item getItem(),DECLARED
+events,ic2.api.events.ArmorSlotEvent,getId,method,String getId(),DECLARED
+events,ic2.api.events.ArmorSlotEvent,getEquipmentSlot,method,EquipmentSlot getEquipmentSlot(),DECLARED
+events,ic2.api.events.ArmorSlotEvent,getSlots,method,Object2IntMap<ModuleType> getSlots(),DECLARED
+events,ic2.api.events.ArmorSlotEvent,addSlots,method,"void addSlots(ModuleType type, int amount)",DECLARED
+events,ic2.api.events.FoamEvent,getPos,method,BlockPos getPos(),DECLARED
+events,ic2.api.events.FoamEvent,getState,method,BlockState getState(),DECLARED
+events,ic2.api.events.FoamEvent,getBlockEntity,method,BlockEntity getBlockEntity(),DECLARED
+events,ic2.api.events.LaserEvent,laser,field,Entity laser,unknown
+events,ic2.api.events.LaserEvent,source,field,LivingEntity source,unknown
+events,ic2.api.events.LaserEvent,range,field,float range,0F
+events,ic2.api.events.LaserEvent,power,field,float power,0F
+events,ic2.api.events.LaserEvent,blockBreaks,field,int blockBreaks,0
+events,ic2.api.events.LaserEvent,explosive,field,boolean explosive,false
+events,ic2.api.events.LaserEvent,smelt,field,boolean smelt,false
+events,ic2.api.events.RetextureEvent,getPos,method,BlockPos getPos(),DECLARED
+events,ic2.api.events.RetextureEvent,getSide,method,Direction getSide(),DECLARED
+events,ic2.api.events.RetextureEvent,getBlockState,method,BlockState getBlockState(),DECLARED
+events,ic2.api.events.RetextureEvent,getBlockEntity,method,BlockEntity getBlockEntity(),DECLARED
+events,ic2.api.events.RetextureEvent,getApplyingPlayer,method,Player getApplyingPlayer(),DECLARED
+events,ic2.api.events.RetextureEvent,getContainer,method,TextureContainer getContainer(),DECLARED
+events,ic2.api.events.RetextureEvent,isApplied,method,boolean isApplied(),DECLARED
+events,ic2.api.events.RetextureEvent,setApplied,method,void setApplied(boolean apply),DECLARED
+events,ic2.api.events.ScrapBoxEvent,getDrops,method,List<ItemStack> getDrops(),DECLARED
+events,ic2.api.events.ScrapBoxEvent,getScrapBox,method,ItemStack getScrapBox(),DECLARED
+items,ic2.api.items.IAutoEatable,canAutoEat,method,boolean canAutoEat(ItemStack stack),DECLARED
+items,ic2.api.items.IAutoEatable,getFoodValue,method,int getFoodValue(ItemStack stack),DECLARED
+items,ic2.api.items.IAutoEatable,onEaten,method,"ItemStack onEaten(ItemStack stack, Level level, Player player)",DECLARED
+items,ic2.api.items.IBoxableItem,canStoreIntoBox,method,boolean canStoreIntoBox(ItemStack stack),DECLARED
+items,ic2.api.items.ICoinItem,getMoneyValue,method,int getMoneyValue(ItemStack stack),DECLARED
+items,ic2.api.items.ICutterItem,cutInsulation,method,"void cutInsulation(Player player, ItemStack stack, Level world, BlockPos pos)",DECLARED
+items,ic2.api.items.IDisplayProvider,provideInfo,method,"void provideInfo(ItemStack stack, Consumer<IDisplayInfo> infos)",DECLARED
+items,ic2.api.items.IDrinkContainer,getCapacity,method,int getCapacity(),DECLARED
+items,ic2.api.items.IDrinkContainer,getContent,method,IDrinkableFluid getContent(ItemStack stack),DECLARED
+items,ic2.api.items.IDrinkContainer,hasContent,method,boolean hasContent(ItemStack stack),DECLARED
+items,ic2.api.items.IDrinkContainer,fillWith,method,"ItemStack fillWith(IDrinkableFluid fluid, int amount)",DECLARED
+items,ic2.api.items.IDrinkContainer,getEmptyContainer,method,ItemStack getEmptyContainer(),DECLARED
+items,ic2.api.items.IDrinkableFluid,REGISTRY,field,"Map<ResourceLocation, IDrinkableFluid> REGISTRY",unknown
+items,ic2.api.items.IDrinkableFluid,drink,method,"boolean drink(ItemStack stack, Level world, Player player)",DECLARED
+items,ic2.api.items.IDrinkableFluid,hasSpecialName,method,boolean hasSpecialName(),DECLARED
+items,ic2.api.items.IDrinkableFluid,getSpecialName,method,Component getSpecialName(ItemStack stack),DECLARED
+items,ic2.api.items.IDrinkableFluid,generateSubStates,method,"List<ItemStack> generateSubStates(ItemStack base, boolean textures)",DECLARED
+items,ic2.api.items.IDrinkableFluid,getTexture,method,"ResourceLocation getTexture(ItemStack stack, String baseFolder)",DECLARED
+items,ic2.api.items.IDrinkableFluid,getTextureIndex,method,int getTextureIndex(ItemStack stack),DECLARED
+items,ic2.api.items.IDrinkableFluid,getID,method,ResourceLocation getID(),DECLARED
+items,ic2.api.items.IDrinkableFluid,hashCode,method,int hashCode(),DECLARED
+items,ic2.api.items.IDrinkableFluid,equals,method,boolean equals(Object obj),DECLARED
+items,ic2.api.items.IFuelableItem,fill,method,"ItemStack fill(ItemStack stack, int amount)",DECLARED
+items,ic2.api.items.IFuelableItem,canFuel,method,boolean canFuel(ItemStack stack),DECLARED
+items,ic2.api.items.IFuelableItem,hasFuel,method,boolean hasFuel(ItemStack stack),DECLARED
+items,ic2.api.items.IFuelableItem,getFuel,method,"int getFuel(ItemStack stack, int requested, boolean doDrain)",DECLARED
+items,ic2.api.items.IRepairable,repairDamage,method,"boolean repairDamage(ItemStack stack, int amount)",DECLARED
+items,ic2.api.items.ITagBlock,matches,method,"boolean matches(ItemStack self, Block block)",DECLARED
+items,ic2.api.items.ITagBlock,getBlocks,method,List<Block> getBlocks(ItemStack self),DECLARED
+items,ic2.api.items.ITagItem,matches,method,"boolean matches(ItemStack self, ItemStack toCompare)",DECLARED
+items,ic2.api.items.ITerraformerBP,canInsert,method,"boolean canInsert(ItemStack stack, Player player, Level world, BlockPos pos)",DECLARED
+items,ic2.api.items.ITerraformerBP,onInsert,method,"void onInsert(ItemStack stack, Player player, Level world, BlockPos pos)",DECLARED
+items,ic2.api.items.ITerraformerBP,isRandomized,method,boolean isRandomized(ItemStack stack),DECLARED
+items,ic2.api.items.ITerraformerBP,getEnergyUsage,method,int getEnergyUsage(ItemStack stack),DECLARED
+items,ic2.api.items.ITerraformerBP,getRadius,method,int getRadius(ItemStack stack),DECLARED
+items,ic2.api.items.ITerraformerBP,terraform,method,"boolean terraform(ItemStack stack, Level world, BlockPos position, ITerraformer terraformer)",DECLARED
+items,ic2.api.items.IUpgradeItem,getType,method,UpgradeType getType(ItemStack stack),DECLARED
+items,ic2.api.items.IUpgradeItem,getFunctions,method,EnumSet<Functions> getFunctions(ItemStack stack),DECLARED
+items,ic2.api.items.IUpgradeItem,onInstall,method,"void onInstall(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getProcessingSpeedMultiplier,method,"double getProcessingSpeedMultiplier(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getExtraProcessingSpeed,method,"int getExtraProcessingSpeed(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getProcessingTimeMultiplier,method,"double getProcessingTimeMultiplier(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getExtraProcessingTime,method,"int getExtraProcessingTime(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getEnergyDemandMultiplier,method,"double getEnergyDemandMultiplier(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getExtraEnergyDemand,method,"int getExtraEnergyDemand(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getEnergyStorageMultiplier,method,"double getEnergyStorageMultiplier(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getExtraEnergyStorage,method,"int getExtraEnergyStorage(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getExtraTier,method,"int getExtraTier(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,getSoundMultiplier,method,"float getSoundMultiplier(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,useRedstoneInvertion,method,"boolean useRedstoneInvertion(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,onTick,method,"void onTick(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IUpgradeItem,onMachineFinishedRecipePre,method,"void onMachineFinishedRecipePre(ItemStack stack, IMachine machine, IRecipeOutput output, CompoundTag recipeFlags)",DECLARED
+items,ic2.api.items.IUpgradeItem,onMachineFinishedRecipePost,method,"void onMachineFinishedRecipePost(ItemStack stack, IMachine machine, RecipeEntry entry, List<IStackOutput> drops)",DECLARED
+items,ic2.api.items.IUpgradeItem,onMachineProcessed,method,"void onMachineProcessed(ItemStack stack, IMachine machine)",DECLARED
+items,ic2.api.items.IWindmillBlade,getRadius,method,int getRadius(ItemStack stack),DECLARED
+items,ic2.api.items.IWindmillBlade,getEffectiveness,method,float getEffectiveness(ItemStack stack),DECLARED
+items,ic2.api.items.IWindmillBlade,getTexture,method,ResourceLocation getTexture(ItemStack stack),DECLARED
+items,ic2.api.items.ItemRegistries,registerMetalArmor,method,"void registerMetalArmor(IMetalArmor armor, Item... items)",DECLARED
+items,ic2.api.items.ItemRegistries,isMetalArmor,method,"boolean isMetalArmor(Player player, EquipmentSlot slot)",DECLARED
+items,ic2.api.items.ItemRegistries,registerBoxableItems,method,"void registerBoxableItems(IBoxableItem box, Item... items)",DECLARED
+items,ic2.api.items.ItemRegistries,isBoxable,method,boolean isBoxable(ItemStack stack),DECLARED
+items,ic2.api.items.ItemRegistries,registerCoin,method,void registerCoin(Item item),DECLARED
+items,ic2.api.items.ItemRegistries,generateCoins,method,"NonNullList<ItemStack> generateCoins(int coinValue, NonNullList<ItemStack> result, boolean limit)",DECLARED
+items,ic2.api.items.ItemRegistries,registerBlockableDamageSource,method,"void registerBlockableDamageSource(ShieldItem shield, DamageSource source)",DECLARED
+items,ic2.api.items.ItemRegistries,registerBlockableDamageSource,method,void registerBlockableDamageSource(DamageSource source),DECLARED
+items,ic2.api.items.ItemRegistries,isDamageSourceBlockable,method,"boolean isDamageSourceBlockable(ShieldItem shield, DamageSource source)",DECLARED
+items,ic2.api.items.armor.IArmorHud,isHudEnabled,method,boolean isHudEnabled(ItemStack stack),DECLARED
+items,ic2.api.items.armor.IArmorModule,getType,method,ModuleType getType(ItemStack stack),DECLARED
+items,ic2.api.items.armor.IArmorModule,canInstallInArmor,method,"boolean canInstallInArmor(ItemStack stack, ItemStack armor, EquipmentSlot type)",DECLARED
+items,ic2.api.items.armor.IArmorModule,onInstall,method,"void onInstall(ItemStack stack, ItemStack armor, IArmorModuleHolder holder)",DECLARED
+items,ic2.api.items.armor.IArmorModule,onUninstall,method,"void onUninstall(ItemStack stack, ItemStack armor, IArmorModuleHolder holder)",DECLARED
+items,ic2.api.items.armor.IArmorModule,transferToArmor,method,"void transferToArmor(ItemStack stack, ItemStack oldArmor, ItemStack newArmor)",DECLARED
+items,ic2.api.items.armor.IArmorModule,onTick,method,"void onTick(ItemStack stack, ItemStack armor, Level world, Player player)",DECLARED
+items,ic2.api.items.armor.IArmorModule,onEquipped,method,"void onEquipped(ItemStack stack, ItemStack armor, Player entity)",DECLARED
+items,ic2.api.items.armor.IArmorModule,onUnequipped,method,"void onUnequipped(ItemStack stack, ItemStack armor, Player entity)",DECLARED
+items,ic2.api.items.armor.IArmorModule,provideCapabilities,method,"void provideCapabilities(ItemStack stack, ItemStack armor)",DECLARED
+items,ic2.api.items.armor.IArmorModule,handlePacket,method,"boolean handlePacket(Player player, ItemStack module, ItemStack armor, String id, INetworkDataBuffer buffer, Dist targetSide)",DECLARED
+items,ic2.api.items.armor.IArmorModule,handleToolTip,method,"void handleToolTip(ItemStack stack, Consumer<MutableComponent> results)",DECLARED
+items,ic2.api.items.armor.ICustomArmor,getProperties,method,"AbsorptionProperties getProperties(LivingEntity entity, ItemStack armor, DamageSource source, double damage, EquipmentSlot slot)",DECLARED
+items,ic2.api.items.armor.ICustomArmor,damageArmor,method,"void damageArmor(LivingEntity player, ItemStack stack, DamageSource source, int damage, EquipmentSlot slot, DamageType type)",DECLARED
+items,ic2.api.items.armor.ICustomArmor,canBlockDamageSource,method,"boolean canBlockDamageSource(LivingEntity player, ItemStack stack, DamageSource source, EquipmentSlot slot)",DECLARED
+items,ic2.api.items.armor.IEnergyShieldArmor,addsShieldEffect,method,"boolean addsShieldEffect(EquipmentSlot type, LivingEntity entity, ItemStack stack)",DECLARED
+items,ic2.api.items.armor.IEnergyShieldArmor,isEffectAlwaysOn,method,"boolean isEffectAlwaysOn(EquipmentSlot type, LivingEntity entity, ItemStack stack)",DECLARED
+items,ic2.api.items.armor.IEnergyShieldArmor,addsEnergyShieldEffect,method,boolean addsEnergyShieldEffect(LivingEntity living),DECLARED
+items,ic2.api.items.armor.IEnergyShieldArmor,shouldAlwaysShowEffect,method,boolean shouldAlwaysShowEffect(LivingEntity living),DECLARED
+items,ic2.api.items.armor.IFoamSupplier,canProvideFoam,method,"boolean canProvideFoam(Player player, ItemStack stack, InventoryType inv, int amount)",DECLARED
+items,ic2.api.items.armor.IFoamSupplier,useFoam,method,"void useFoam(Player player, ItemStack stack, int amount)",DECLARED
+items,ic2.api.items.armor.IFoamSupplier,getFreeFoamSpace,method,int getFreeFoamSpace(ItemStack stack),DECLARED
+items,ic2.api.items.armor.IFoamSupplier,fillFoam,method,"void fillFoam(ItemStack stack, int amount)",DECLARED
+items,ic2.api.items.armor.IMetalArmor,isMetalArmor,method,"boolean isMetalArmor(ItemStack stack, Player player, EquipmentSlot targetSlot)",DECLARED
+items,ic2.api.items.electric.ElectricItem,MANAGER,field,IElectricItemManager MANAGER,unknown
+items,ic2.api.items.electric.ElectricItem,DIRECT_MANAGER,field,IElectricItemManager DIRECT_MANAGER,unknown
+items,ic2.api.items.electric.ElectricItem,registerBackupManager,method,"void registerBackupManager(IElectricItemManager manager, ItemLike... items)",DECLARED
+items,ic2.api.items.electric.ElectricItem,setCurioSupport,method,"void setCurioSupport(Function<Player, IItemHandler> curio)",DECLARED
+items,ic2.api.items.electric.ElectricItem,getBackupManager,method,IElectricItemManager getBackupManager(Item item),DECLARED
+items,ic2.api.items.electric.ElectricItem,chargeArmor,method,"int chargeArmor(Player player, int provided)",DECLARED
+items,ic2.api.items.electric.ElectricItem,chargeArmor,method,"int chargeArmor(Player player, int provided, boolean whitelist, EquipmentSlot... slots)",DECLARED
+items,ic2.api.items.electric.ElectricItem,chargeArmor,method,"int chargeArmor(Player player, int provided, boolean whitelist, boolean allowCurio, EquipmentSlot... slots)",DECLARED
+items,ic2.api.items.electric.ElectricItem,chargeCurio,method,"int chargeCurio(IItemHandler handler, int energyProvided)",DECLARED
+items,ic2.api.items.electric.ElectricItem,applyEnchantmentEffect,method,"int applyEnchantmentEffect(ItemStack item, int amount)",DECLARED
+items,ic2.api.items.electric.ICustomElectricItem,getManager,method,IElectricItemManager getManager(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricEnchantable,getEnchantmentCompatibility,method,"InteractionResult getEnchantmentCompatibility(ItemStack stack, Enchantment ench)",DECLARED
+items,ic2.api.items.electric.IElectricEnchantable,getEnchantmentType,method,EnchantmentCategory getEnchantmentType(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricEnchantable,isBookEnchantable,method,"boolean isBookEnchantable(ItemStack stack, ItemStack book)",DECLARED
+items,ic2.api.items.electric.IElectricItem,canProvideEnergy,method,boolean canProvideEnergy(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItem,getCapacity,method,int getCapacity(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItem,getTier,method,int getTier(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItem,getTransferLimit,method,int getTransferLimit(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItemManager,charge,method,"int charge(ItemStack stack, int amount, int tier, boolean ignoreTransferLimit, boolean simulate)",DECLARED
+items,ic2.api.items.electric.IElectricItemManager,discharge,method,"int discharge(ItemStack stack, int amount, int tier, boolean ignoreTransferLimit, boolean externally, boolean simulate)",DECLARED
+items,ic2.api.items.electric.IElectricItemManager,getCharge,method,int getCharge(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItemManager,getCapacity,method,int getCapacity(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItemManager,canUse,method,"boolean canUse(ItemStack stack, int amount)",DECLARED
+items,ic2.api.items.electric.IElectricItemManager,use,method,"boolean use(ItemStack stack, int amount, LivingEntity entity)",DECLARED
+items,ic2.api.items.electric.IElectricItemManager,chargeFromArmor,method,"void chargeFromArmor(ItemStack stack, LivingEntity entity)",DECLARED
+items,ic2.api.items.electric.IElectricItemManager,getTier,method,int getTier(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItemManager,getTransferLimit,method,int getTransferLimit(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IElectricItemManager,getToolTip,method,Component getToolTip(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IFluidScanner,getScanRadius,method,"int getScanRadius(ItemStack stack, boolean useEnergy)",DECLARED
+items,ic2.api.items.electric.IFluidScanner,isValuableFluid,method,"boolean isValuableFluid(ItemStack stack, FluidState state, LevelReader world, BlockPos pos)",DECLARED
+items,ic2.api.items.electric.IFluidScanner,isValuableFluid,method,"boolean isValuableFluid(ItemStack stack, FluidState state)",DECLARED
+items,ic2.api.items.electric.IMiningDrill,canMineBlock,method,"boolean canMineBlock(ItemStack drill, BlockState state, LevelReader access, BlockPos pos)",DECLARED
+items,ic2.api.items.electric.IMiningDrill,getMiningBoost,method,"int getMiningBoost(ItemStack stack, BlockState state)",DECLARED
+items,ic2.api.items.electric.IMiningDrill,getExtraEnergyCost,method,int getExtraEnergyCost(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IMiningDrill,canDrillBeUsed,method,boolean canDrillBeUsed(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IMiningDrill,onDrillUsed,method,void onDrillUsed(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IScanner,getScanRadius,method,"int getScanRadius(ItemStack stack, boolean useEnergy)",DECLARED
+items,ic2.api.items.electric.IScanner,hasScanEffect,method,boolean hasScanEffect(ItemStack stack),DECLARED
+items,ic2.api.items.electric.IScanner,isOreValuable,method,"boolean isOreValuable(ItemStack stack, BlockState state, LevelReader world, BlockPos pos)",DECLARED
+items,ic2.api.items.electric.IScanner,isOreValuable,method,"boolean isOreValuable(ItemStack stack, BlockState state)",DECLARED
+items,ic2.api.items.electric.IScanner,getOreValue,method,"int getOreValue(ItemStack stack, BlockState state, LevelReader world, BlockPos pos)",DECLARED
+items,ic2.api.items.electric.IScanner,getOreValue,method,"int getOreValue(ItemStack stack, BlockState state)",DECLARED
+items,ic2.api.items.readers.ICropReader,isCropReader,method,boolean isCropReader(ItemStack stack),DECLARED
+items,ic2.api.items.readers.ICropReader,isCropReaderImpl,method,boolean isCropReaderImpl(ItemStack stack),DECLARED
+items,ic2.api.items.readers.IEUReader,isEUReader,method,boolean isEUReader(ItemStack stack),DECLARED
+items,ic2.api.items.readers.IEUReader,isEUReaderImpl,method,boolean isEUReaderImpl(ItemStack stack),DECLARED
+items,ic2.api.items.readers.IThermometer,isThermometer,method,boolean isThermometer(ItemStack stack),DECLARED
+items,ic2.api.items.readers.IThermometer,isThermometerImpl,method,boolean isThermometerImpl(ItemStack stack),DECLARED
+items,ic2.api.items.readers.IWrenchTool,getActualLoss,method,"double getActualLoss(ItemStack stack, double originalLoss)",DECLARED
+items,ic2.api.items.readers.IWrenchTool,shouldRenderOverlay,method,boolean shouldRenderOverlay(ItemStack stack),DECLARED
+network,ic2.api.network.INetworkManager,registerDataBuffer,method,"void registerDataBuffer(ResourceLocation location, Class<INetworkDataBuffer> clz, Supplier<INetworkDataBuffer> creator)",DECLARED
+network,ic2.api.network.INetworkManager,startGuiTracking,method,"void startGuiTracking(BlockEntity tile, Player player)",DECLARED
+network,ic2.api.network.INetworkManager,sendInitialGuiData,method,"void sendInitialGuiData(INetworkFieldProvider tile, Player player)",DECLARED
+network,ic2.api.network.INetworkManager,updateGuiData,method,"void updateGuiData(BlockEntity tile, Player player)",DECLARED
+network,ic2.api.network.INetworkManager,updateTileField,method,"void updateTileField(BlockEntity tile, String field)",DECLARED
+network,ic2.api.network.INetworkManager,updateTileFields,method,"void updateTileFields(BlockEntity tile, String... fields)",DECLARED
+network,ic2.api.network.INetworkManager,updateGuiField,method,"void updateGuiField(BlockEntity tile, String field)",DECLARED
+network,ic2.api.network.INetworkManager,updateGuiFields,method,"void updateGuiFields(BlockEntity tile, String... fields)",DECLARED
+network,ic2.api.network.INetworkManager,sendInitialData,method,"void sendInitialData(INetworkFieldProvider prov, CompoundTag nbt)",DECLARED
+network,ic2.api.network.INetworkManager,handleInitialChange,method,"void handleInitialChange(BlockEntity prov, CompoundTag nbt)",DECLARED
+network,ic2.api.network.INetworkManager,requestInitialData,method,void requestInitialData(INetworkFieldProvider prov),DECLARED
+network,ic2.api.network.INetworkManager,sendTileEvent,method,"void sendTileEvent(BlockEntity tile, int key, int value, PacketRange target)",DECLARED
+network,ic2.api.network.INetworkManager,sendTileDataBufferEvent,method,"void sendTileDataBufferEvent(BlockEntity tile, String id, INetworkDataBuffer buffer, PacketRange target)",DECLARED
+network,ic2.api.network.INetworkManager,sendClientTileEvent,method,"void sendClientTileEvent(BlockEntity tile, int key, int value)",DECLARED
+network,ic2.api.network.INetworkManager,sendClientTileDataBufferEvent,method,"void sendClientTileDataBufferEvent(BlockEntity tile, String id, INetworkDataBuffer buffer)",DECLARED
+network,ic2.api.network.INetworkManager,sendItemEvent,method,"void sendItemEvent(Player player, ItemStack stack, int key, int value)",DECLARED
+network,ic2.api.network.INetworkManager,sendItemBuffer,method,"void sendItemBuffer(Player player, ItemStack stack, String id, INetworkDataBuffer buffer)",DECLARED
+network,ic2.api.network.INetworkManager,sendClientItemEvent,method,"void sendClientItemEvent(ItemStack stack, int key, int value)",DECLARED
+network,ic2.api.network.INetworkManager,sendClientItemBuffer,method,"void sendClientItemBuffer(ItemStack stack, String id, INetworkDataBuffer buffer)",DECLARED
+network,ic2.api.network.IPlayerPacket,getContainer,method,"T getContainer(Player player, Class<T> clz)",DECLARED
+network,ic2.api.network.IPlayerPacket,getContainer,method,"void getContainer(Player player, Class<T> clz, Consumer<T> listener)",DECLARED
+network,ic2.api.network.IPlayerPacket,getOptionalContainer,method,"Optional<T> getOptionalContainer(Player player, Class<T> clz)",DECLARED
+network,ic2.api.network.IPlayerPacket,findPlayerStack,method,"ItemStack findPlayerStack(Player player, ItemStack send)",DECLARED
+network,ic2.api.network.buffer.EmptyDataBuffer,INSTANCE,field,EmptyDataBuffer INSTANCE,unknown
+network,ic2.api.network.buffer.EmptyDataBuffer,write,method,void write(IOutputBuffer buffer),DECLARED
+network,ic2.api.network.buffer.EmptyDataBuffer,read,method,void read(IInputBuffer buffer),DECLARED
+network,ic2.api.network.buffer.IBitLevelOverride,getOverride,method,"BitLevel getOverride(int fieldID, String fieldName)",DECLARED
+network,ic2.api.network.buffer.IBitLevelOverride,hasOverride,method,"boolean hasOverride(int fieldID, String fieldName)",DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readBoolean,method,boolean readBoolean(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readByte,method,byte readByte(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readShort,method,short readShort(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readMedium,method,int readMedium(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readInt,method,int readInt(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readVarInt,method,int readVarInt(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readFloat,method,float readFloat(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readDouble,method,double readDouble(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readLong,method,long readLong(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readData,method,long readData(BitLevel length),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readChar,method,char readChar(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readEnum,method,T readEnum(Class<T> clz),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readBytes,method,byte[] readBytes(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readString,method,String readString(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readNBTData,method,CompoundTag readNBTData(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readForgeRegistryEntry,method,T readForgeRegistryEntry(IForgeRegistry<T> registry),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readItemStack,method,ItemStack readItemStack(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readFluidStack,method,FluidStack readFluidStack(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readUUID,method,UUID readUUID(),DECLARED
+network,ic2.api.network.buffer.IInputBuffer,readRegistryKey,method,ResourceKey<T> readRegistryKey(ResourceKey<Registry<T>> key),DECLARED
+network,ic2.api.network.buffer.INetworkDataBuffer,write,method,void write(IOutputBuffer buffer),DECLARED
+network,ic2.api.network.buffer.INetworkDataBuffer,read,method,void read(IInputBuffer buffer),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeBoolean,method,void writeBoolean(boolean value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeByte,method,void writeByte(byte value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeShort,method,void writeShort(short value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeMedium,method,void writeMedium(int value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeInt,method,void writeInt(int value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeVarInt,method,void writeVarInt(int value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeFloat,method,void writeFloat(float value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeDouble,method,void writeDouble(double value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeLong,method,void writeLong(long value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeData,method,"void writeData(long value, BitLevel type)",DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeChar,method,void writeChar(char value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeEnum,method,void writeEnum(Enum<?> value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeString,method,void writeString(String value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeBytes,method,void writeBytes(byte[] value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeNBTData,method,void writeNBTData(CompoundTag value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeForgeEntry,method,"void writeForgeEntry(T value, IForgeRegistry<T> registry)",DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeItemStack,method,void writeItemStack(ItemStack stack),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeFluidStack,method,void writeFluidStack(FluidStack stack),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeUUID,method,void writeUUID(UUID value),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeRegistryKey,method,void writeRegistryKey(ResourceKey<?> key),DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeItemStack,method,"void writeItemStack(ItemStack stack, IOutputBuffer buffer)",DECLARED
+network,ic2.api.network.buffer.IOutputBuffer,writeEnum,method,"void writeEnum(Enum<?> value, IOutputBuffer buffer)",DECLARED
+network,ic2.api.network.container.IContainerDataEvent,onDataReceived,method,"void onDataReceived(int key, int value)",DECLARED
+network,ic2.api.network.item.INetworkItemBufferEvent,onDataBufferReceived,method,"void onDataBufferReceived(ItemStack stack, Player player, String id, T buffer, Dist targetSide)",DECLARED
+network,ic2.api.network.item.INetworkItemEvent,onEventReceived,method,"void onEventReceived(ItemStack stack, Player player, int key, int value, Dist target)",DECLARED
+network,ic2.api.network.tile.INetworkClientEventListener,onClientDataReceived,method,"void onClientDataReceived(Player entity, int key, int value)",DECLARED
+network,ic2.api.network.tile.INetworkDataEventListener,onDataBufferReceived,method,"void onDataBufferReceived(Player player, String id, INetworkDataBuffer data, Dist target)",DECLARED
+network,ic2.api.network.tile.INetworkEventListener,onServerDataReceived,method,"void onServerDataReceived(int key, int value)",DECLARED
+network,ic2.api.network.tile.INetworkFieldNotifier,onNetworkFieldChanged,method,"void onNetworkFieldChanged(Set<String> fields, Player player)",DECLARED
+network,ic2.api.network.tile.INetworkFieldNotifier,onGuiFieldChanged,method,"void onGuiFieldChanged(Set<String> fields, Player player)",DECLARED
+network,ic2.api.network.tile.INetworkFieldProvider,getNetworkFields,method,List<String> getNetworkFields(),DECLARED
+network,ic2.api.network.tile.INetworkFieldProvider,getGuiFields,method,List<String> getGuiFields(),DECLARED
+network,ic2.api.network.tile.INetworkFieldProvider,isDefaultData,method,boolean isDefaultData(String fieldName),DECLARED
+network,ic2.api.network.tile.PacketRange,PacketRange,enum,"SHORT_RANGE,LONG_RANGE,CHUNK_TRACKED,ALL_DIM,ALL_SERVER",
+reactor,ic2.api.reactor.IChamberReactor,refreshChambers,method,void refreshChambers(),DECLARED
+reactor,ic2.api.reactor.IChamberReactor,getWidth,method,int getWidth(),DECLARED
+reactor,ic2.api.reactor.IChamberReactor,getHeight,method,int getHeight(),DECLARED
+reactor,ic2.api.reactor.IReactor,getHeat,method,int getHeat(),DECLARED
+reactor,ic2.api.reactor.IReactor,setHeat,method,void setHeat(int newHeat),DECLARED
+reactor,ic2.api.reactor.IReactor,addHeat,method,void addHeat(int heat),DECLARED
+reactor,ic2.api.reactor.IReactor,getMaxHeat,method,int getMaxHeat(),DECLARED
+reactor,ic2.api.reactor.IReactor,setMaxHeat,method,void setMaxHeat(int heat),DECLARED
+reactor,ic2.api.reactor.IReactor,getHeatEffectModifier,method,float getHeatEffectModifier(),DECLARED
+reactor,ic2.api.reactor.IReactor,setHeatEffectModifier,method,void setHeatEffectModifier(float hem),DECLARED
+reactor,ic2.api.reactor.IReactor,getEnergyOutput,method,double getEnergyOutput(),DECLARED
+reactor,ic2.api.reactor.IReactor,addOutput,method,void addOutput(float output),DECLARED
+reactor,ic2.api.reactor.IReactor,getStackInReactor,method,"ItemStack getStackInReactor(int x, int y)",DECLARED
+reactor,ic2.api.reactor.IReactor,setStackInReactor,method,"void setStackInReactor(int x, int y, ItemStack stack)",DECLARED
+reactor,ic2.api.reactor.IReactor,explode,method,void explode(),DECLARED
+reactor,ic2.api.reactor.IReactor,getTickRate,method,int getTickRate(),DECLARED
+reactor,ic2.api.reactor.IReactor,isProducingEnergy,method,boolean isProducingEnergy(),DECLARED
+reactor,ic2.api.reactor.IReactorChamber,getReactor,method,IReactor getReactor(),DECLARED
+reactor,ic2.api.reactor.IReactorComponent,isValidForReactor,method,"boolean isValidForReactor(ItemStack stack, IReactor reactor)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,processChamber,method,"void processChamber(ItemStack stack, IReactor reactor, int x, int y, boolean heatCalculation, boolean damageTick)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,acceptUraniumPulse,method,"boolean acceptUraniumPulse(ItemStack stack, IReactor reactor, ItemStack source, int myX, int myY, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,canStoreHeat,method,"boolean canStoreHeat(ItemStack stack, IReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,getStoredHeat,method,"int getStoredHeat(ItemStack stack, IReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,getMaxStoredHeat,method,"int getMaxStoredHeat(ItemStack stack, IReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,storeHeat,method,"int storeHeat(ItemStack stack, IReactor reactor, int x, int y, int heatChange)",DECLARED
+reactor,ic2.api.reactor.IReactorComponent,getExplosionInfluence,method,"float getExplosionInfluence(ItemStack stack, IReactor reactor)",DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,FORMAT,field,DecimalFormat FORMAT,unknown
+reactor,ic2.api.reactor.IReactorPlannerComponent,NULL_VALUE,field,NumericTag NULL_VALUE,valueOf()
+reactor,ic2.api.reactor.IReactorPlannerComponent,applyStackSize,method,"ItemStack applyStackSize(ItemStack newStack, int size)",DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getStackSize,method,int getStackSize(ItemStack input),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,provideComponents,method,void provideComponents(NonNullList<ItemStack> list),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getComponentID,method,short getComponentID(ItemStack stack),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,createSimulationComponent,method,SimulatedStack createSimulationComponent(ItemStack self),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,addToolTip,method,"void addToolTip(ItemStack stack, Consumer<Component> tooltips)",DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,addAffectedSlots,method,"void addAffectedSlots(int x, int y, BiPredicate<Integer, Integer> slots)",DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getSupportedReactor,method,ReactorType getSupportedReactor(ItemStack stack),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getType,method,ComponentType getType(ItemStack stack),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getStats,method,List<ReactorStat> getStats(ItemStack stack),DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getReactorStat,method,"NumericTag getReactorStat(ReactorStat stat, ItemStack stack)",DECLARED
+reactor,ic2.api.reactor.IReactorPlannerComponent,getReactorStat,method,"NumericTag getReactorStat(ReactorStat stat, ItemStack stack, IReactor planner, int x, int y)",DECLARED
+reactor,ic2.api.reactor.IReactorProduct,isValidForReactor,method,"boolean isValidForReactor(ItemStack stack, IReactor reactor)",DECLARED
+reactor,ic2.api.reactor.ISteamReactor,getWaterTank,method,FluidTank getWaterTank(),DECLARED
+reactor,ic2.api.reactor.ISteamReactor,getSteamTank,method,FluidTank getSteamTank(),DECLARED
+reactor,ic2.api.reactor.IUsableUranium,createDepletedUraniumRod,method,ItemStack createDepletedUraniumRod(),DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,maxDamage,field,int maxDamage,unknown
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,damage,field,int damage,unknown
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,id,field,short id,unknown
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,save,method,CompoundTag save(),DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,load,method,void load(CompoundTag data),DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,commitState,method,void commitState(),DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,reset,method,void reset(),DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,acceptUraniumPulse,method,"boolean acceptUraniumPulse(ISimulatedReactor reactor, int x, int y, SimulatedStack source, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,canStoreHeat,method,"boolean canStoreHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getStoredHeat,method,"int getStoredHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getMaxStoredHeat,method,"int getMaxStoredHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,storeHeat,method,"int storeHeat(ISimulatedReactor reactor, int x, int y, int heatChange)",DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,canViewHeat,method,"boolean canViewHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getExplosionInfluence,method,float getExplosionInfluence(ISimulatedReactor reactor),DECLARED
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getId,method,short getId(),DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,maxHeat,field,int maxHeat,unknown
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,heat,field,int heat,unknown
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,id,field,short id,unknown
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,heatChanges,field,Tracker heatChanges,unknown
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,save,method,CompoundTag save(),DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,load,method,void load(CompoundTag data),DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,commitState,method,void commitState(),DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,reset,method,void reset(),DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,acceptUraniumPulse,method,"boolean acceptUraniumPulse(ISimulatedReactor reactor, int x, int y, SimulatedStack source, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,canStoreHeat,method,"boolean canStoreHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getStoredHeat,method,"int getStoredHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getMaxStoredHeat,method,"int getMaxStoredHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,storeHeat,method,"int storeHeat(ISimulatedReactor reactor, int x, int y, int heatChange)",DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,canViewHeat,method,"boolean canViewHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getExplosionInfluence,method,float getExplosionInfluence(ISimulatedReactor reactor),DECLARED
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getId,method,short getId(),DECLARED
+reactor,ic2.api.reactor.planner.FloatTracker,addChange,method,void addChange(float value),DECLARED
+reactor,ic2.api.reactor.planner.FloatTracker,commit,method,void commit(),DECLARED
+reactor,ic2.api.reactor.planner.FloatTracker,reset,method,void reset(),DECLARED
+reactor,ic2.api.reactor.planner.FloatTracker,getAverage,method,float getAverage(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getItem,method,"SimulatedStack getItem(int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,markBroken,method,"void markBroken(int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addBreedingPulse,method,void addBreedingPulse(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addFuelPulse,method,void addFuelPulse(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getHeat,method,int getHeat(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,setHeat,method,void setHeat(int newHeat),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addHeat,method,void addHeat(int heat),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getMaxHeat,method,int getMaxHeat(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,setMaxHeat,method,void setMaxHeat(int heat),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getHeatEffectModifier,method,float getHeatEffectModifier(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,setHeatEffectModifier,method,void setHeatEffectModifier(float hem),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addOutput,method,void addOutput(float output),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getEnergyOutput,method,float getEnergyOutput(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addSteam,method,void addSteam(int amount),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,consumeWater,method,int consumeWater(int amount),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,isProducingEnergy,method,boolean isProducingEnergy(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,isSteamReactor,method,boolean isSteamReactor(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,isSimulatingPulses,method,boolean isSimulatingPulses(),DECLARED
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getGameTime,method,long getGameTime(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,NULL_VALUE,field,NumericTag NULL_VALUE,valueOf()
+reactor,ic2.api.reactor.planner.SimulatedStack,syncStack,method,ItemStack syncStack(ItemStack original),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,save,method,CompoundTag save(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,load,method,void load(CompoundTag data),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,commitState,method,void commitState(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,reset,method,void reset(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,simulate,method,"void simulate(ISimulatedReactor reactor, int x, int y, boolean heatTick, boolean damageTick)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,acceptUraniumPulse,method,"boolean acceptUraniumPulse(ISimulatedReactor reactor, int x, int y, SimulatedStack source, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,canStoreHeat,method,"boolean canStoreHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getStoredHeat,method,"int getStoredHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getMaxStoredHeat,method,"int getMaxStoredHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,storeHeat,method,"int storeHeat(ISimulatedReactor reactor, int x, int y, int heatChange)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,canViewHeat,method,"boolean canViewHeat(ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getExplosionInfluence,method,float getExplosionInfluence(ISimulatedReactor reactor),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getId,method,short getId(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getStats,method,List<ReactorStat> getStats(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getValidType,method,ReactorType getValidType(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getComponentType,method,ComponentType getComponentType(),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getStat,method,NumericTag getStat(ReactorStat stat),DECLARED
+reactor,ic2.api.reactor.planner.SimulatedStack,getStat,method,"NumericTag getStat(ReactorStat stat, ISimulatedReactor reactor, int x, int y)",DECLARED
+reactor,ic2.api.reactor.planner.Tracker,save,method,CompoundTag save(CompoundTag tag),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,load,method,void load(CompoundTag tag),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,addChange,method,void addChange(int value),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,commit,method,void commit(),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,reset,method,void reset(),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,getAverage,method,float getAverage(),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,getCount,method,int getCount(),DECLARED
+reactor,ic2.api.reactor.planner.Tracker,getTotal,method,int getTotal(),DECLARED
+recipes,ic2.api.recipes.RecipeRegistry,INGREDIENTS,field,IIngredientRegistry INGREDIENTS,unknown
+recipes,ic2.api.recipes.RecipeRegistry,CRAFTING,field,IAdvancedCraftingManager CRAFTING,unknown
+recipes,ic2.api.recipes.RecipeRegistry,UU_SHAPES,field,SidedObject<IUUMatterRegistry> UU_SHAPES,unknown
+recipes,ic2.api.recipes.RecipeRegistry,FURNACE,field,SidedObject<IMachineRecipeList> FURNACE,unknown
+recipes,ic2.api.recipes.RecipeRegistry,BLAST_FURNACE,field,SidedObject<IMachineRecipeList> BLAST_FURNACE,unknown
+recipes,ic2.api.recipes.RecipeRegistry,SMOKER,field,SidedObject<IMachineRecipeList> SMOKER,unknown
+recipes,ic2.api.recipes.RecipeRegistry,MACERATOR,field,SidedObject<IMachineRecipeList> MACERATOR,unknown
+recipes,ic2.api.recipes.RecipeRegistry,EXTRACTOR,field,SidedObject<IMachineRecipeList> EXTRACTOR,unknown
+recipes,ic2.api.recipes.RecipeRegistry,COMPRESSOR,field,SidedObject<IMachineRecipeList> COMPRESSOR,unknown
+recipes,ic2.api.recipes.RecipeRegistry,RECYCLER,field,SidedObject<IRecyclerRecipeList> RECYCLER,unknown
+recipes,ic2.api.recipes.RecipeRegistry,SAWMILL,field,SidedObject<IMachineRecipeList> SAWMILL,unknown
+recipes,ic2.api.recipes.RecipeRegistry,RARE_EARTH,field,SidedObject<IRareEarthRegistry> RARE_EARTH,unknown
+recipes,ic2.api.recipes.RecipeRegistry,CANNER,field,SidedObject<ICannerRecipeRegistry> CANNER,unknown
+recipes,ic2.api.recipes.RecipeRegistry,ELECTROLYZER,field,SidedObject<IElectrolyzerRecipeList> ELECTROLYZER,unknown
+recipes,ic2.api.recipes.RecipeRegistry,MIXING_FURNACE,field,SidedObject<IMachineRecipeList> MIXING_FURNACE,unknown
+recipes,ic2.api.recipes.RecipeRegistry,SCRAP_BOX,field,SidedObject<IScrapBoxRegistry> SCRAP_BOX,unknown
+recipes,ic2.api.recipes.RecipeRegistry,MASS_FABRICATOR,field,SidedObject<IMachineRecipeList> MASS_FABRICATOR,unknown
+recipes,ic2.api.recipes.RecipeRegistry,CAN_EFFECTS,field,IFoodCanRegistry CAN_EFFECTS,unknown
+recipes,ic2.api.recipes.RecipeRegistry,POTION_BREWING,field,SidedObject<IPotionBrewRegistry> POTION_BREWING,unknown
+recipes,ic2.api.recipes.RecipeRegistry,FLUID_FUELS,field,SidedObject<IFluidFuelRegistry> FLUID_FUELS,unknown
+recipes,ic2.api.recipes.RecipeRegistry,FUSION_REACTOR,field,SidedObject<IFusionRecipeList> FUSION_REACTOR,unknown
+recipes,ic2.api.recipes.ingridients.generators.EmptyGenerator,EMPTY,field,IOutputGenerator EMPTY,unknown
+recipes,ic2.api.recipes.ingridients.generators.EmptyGenerator,addItems,method,void addItems(Consumer<ItemStack> output),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.EmptyGenerator,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.IOutputGenerator,addItems,method,void addItems(Consumer<ItemStack> output),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.IOutputGenerator,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.ItemGenerator,addItems,method,void addItems(Consumer<ItemStack> output),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.ItemGenerator,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.ItemWithNBTGenerator,addItems,method,void addItems(Consumer<ItemStack> output),DECLARED
+recipes,ic2.api.recipes.ingridients.generators.ItemWithNBTGenerator,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,INSTANCE,field,IInput INSTANCE,unknown
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,asIngredient,method,Ingredient asIngredient(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,asIngredient,method,Ingredient asIngredient(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,matchesAll,method,boolean matchesAll(ItemStack... stacks),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,matchesAny,method,boolean matchesAny(ItemStack... stacks),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,writeItemStack,method,"JsonObject writeItemStack(ItemStack stack, boolean includeSize)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,writeFluidStack,method,JsonObject writeFluidStack(FluidStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,readFluidStack,method,FluidStack readFluidStack(JsonObject obj),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,readNBT,method,CompoundTag readNBT(String s),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,copyWithSize,method,"ItemStack copyWithSize(ItemStack stack, int newSize)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,isStackEqual,method,"boolean isStackEqual(ItemStack key, ItemStack other)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IInput,isNBTExact,method,"boolean isNBTExact(ItemStack subject, ItemStack target)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.INullableInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,asIngredient,method,Ingredient asIngredient(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,asIngredient,method,Ingredient asIngredient(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,IInput createItemList(ItemLike... prov),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"IInput createItemList(int size, ItemLike... prov)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"IInput createItemList(int size, boolean or, ItemLike... prov)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,IInput createItemList(ItemStack... prov),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"IInput createItemList(int size, ItemStack... prov)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"IInput createItemList(int size, boolean or, ItemStack... stacks)",DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,asIngredient,method,Ingredient asIngredient(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,asIngredient,method,Ingredient asIngredient(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,getComponents,method,List<ItemStack> getComponents(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,getInputSize,method,int getInputSize(),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,matches,method,boolean matches(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.IInputter,addItemIntoSlot,method,"void addItemIntoSlot(int slot, ItemStack stack)",DECLARED
+recipes,ic2.api.recipes.ingridients.queue.IStackOutput,addToInventory,method,boolean addToInventory(IInputter inventory),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.IStackOutput,getStack,method,ItemStack getStack(),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.IStackOutput,save,method,void save(CompoundTag save),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.MultiStackOutput,addToInventory,method,boolean addToInventory(IInputter inventory),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.MultiStackOutput,getStack,method,ItemStack getStack(),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.MultiStackOutput,save,method,void save(CompoundTag save),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.SimpleStackOutput,addToInventory,method,boolean addToInventory(IInputter inventory),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.SimpleStackOutput,getStack,method,ItemStack getStack(),DECLARED
+recipes,ic2.api.recipes.ingridients.queue.SimpleStackOutput,save,method,void save(CompoundTag save),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.BaseRecipeOutput,generators,field,List<IOutputGenerator> generators,unknown
+recipes,ic2.api.recipes.ingridients.recipes.BaseRecipeOutput,handleGenerators,method,"void handleGenerators(List<IOutputGenerator> generators, List<ItemStack> outputs)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, IRecipeOverride overrides)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getChance,method,float getChance(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getAllOutputs,method,List<ItemStack> getAllOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getMetadata,method,CompoundTag getMetadata(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getExperience,method,float getExperience(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,onFluidRecipeProcessed,method,"List<FluidStack> onFluidRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, ItemStack input)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,onFluidRecipeProcessed,method,"List<FluidStack> onFluidRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, ItemStack input, IRecipeOverride overrides)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,getAllFluidOutputs,method,List<FluidStack> getAllFluidOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,copyFluids,method,List<FluidStack> copyFluids(List<FluidStack> copy),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,EMPTY_COMPOUND,field,CompoundTag EMPTY_COMPOUND,unknown
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, IRecipeOverride overrides)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,getAllOutputs,method,List<ItemStack> getAllOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,getMetadata,method,CompoundTag getMetadata(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,getExperience,method,float getExperience(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,copyItems,method,List<ItemStack> copyItems(List<ItemStack> copy),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutputChance,getChance,method,float getChance(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getAllOutputs,method,List<ItemStack> getAllOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,onFluidRecipeProcessed,method,"List<FluidStack> onFluidRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, ItemStack input)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getAllFluidOutputs,method,List<FluidStack> getAllFluidOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getMetadata,method,CompoundTag getMetadata(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getExperience,method,float getExperience(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,getAllOutputs,method,List<ItemStack> getAllOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,getMetadata,method,CompoundTag getMetadata(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,getExperience,method,float getExperience(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SawMillOutput,RECIPE_FLAG,field,String RECIPE_FLAG,"""saw_upgrade"""
+recipes,ic2.api.recipes.ingridients.recipes.SawMillOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,onFluidRecipeProcessed,method,"List<FluidStack> onFluidRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, ItemStack input)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,getAllFluidOutputs,method,List<FluidStack> getAllFluidOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,outputs,field,List<ItemStack> outputs,unknown
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,nbt,field,CompoundTag nbt,unknown
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,xp,field,float xp,unknown
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,onRecipeProcessed,method,"List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,getAllOutputs,method,List<ItemStack> getAllOutputs(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,getMetadata,method,CompoundTag getMetadata(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,getExperience,method,float getExperience(),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.misc.ICanEffect,onFoodEaten,method,"void onFoodEaten(ItemStack stack, Player player)",DECLARED
+recipes,ic2.api.recipes.misc.ICanEffect,getTooltip,method,Component getTooltip(),DECLARED
+recipes,ic2.api.recipes.misc.ICanEffect,getOverrideIcon,method,TextureAtlasSprite getOverrideIcon(),DECLARED
+recipes,ic2.api.recipes.misc.ICanEffect,getID,method,ResourceLocation getID(),DECLARED
+recipes,ic2.api.recipes.misc.RecipeFlags,RecipeFlags,enum,"CONSUME_CONTAINERS,KEEP_IN_INPUT,HIDE_RECIPE",
+recipes,ic2.api.recipes.misc.RecipeMods,RecipeMods,enum,"ENERGY_USAGE,RECIPE_TIME",
+recipes,ic2.api.recipes.misc.SimpleCanEffect,setRandom,method,SimpleCanEffect setRandom(float chance),DECLARED
+recipes,ic2.api.recipes.misc.SimpleCanEffect,setTexture,method,SimpleCanEffect setTexture(ResourceLocation texture),DECLARED
+recipes,ic2.api.recipes.misc.SimpleCanEffect,setTooltip,method,SimpleCanEffect setTooltip(Component component),DECLARED
+recipes,ic2.api.recipes.misc.SimpleCanEffect,onFoodEaten,method,"void onFoodEaten(ItemStack stack, Player player)",DECLARED
+recipes,ic2.api.recipes.misc.SimpleCanEffect,getTooltip,method,Component getTooltip(),DECLARED
+recipes,ic2.api.recipes.misc.SimpleCanEffect,getOverrideIcon,method,TextureAtlasSprite getOverrideIcon(),DECLARED
+recipes,ic2.api.recipes.misc.SimpleCanEffect,getID,method,ResourceLocation getID(),DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapedIC2Recipe,method,"void addShapedIC2Recipe(String location, ItemStack output, Object... args)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapelessIC2Recipe,method,"void addShapelessIC2Recipe(String location, ItemStack output, Object... args)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addRepairIC2Recipe,method,"void addRepairIC2Recipe(String location, IRepairable repair, IInput repairMaterial, int effect, Object... args)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapedRecipe,method,"void addShapedRecipe(ResourceLocation location, ItemStack output, Object... args)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapelessRecipe,method,"void addShapelessRecipe(ResourceLocation location, ItemStack output, Object... args)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addRepairRecipe,method,"void addRepairRecipe(ResourceLocation id, IRepairable repair, IInput repairMaterial, int effect, Object... args)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeCraftingRecipe,method,void removeCraftingRecipe(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addIC2SmeltingRecipe,method,"void addIC2SmeltingRecipe(String location, ItemStack output, Object input, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addIC2SmeltingRecipe,method,"void addIC2SmeltingRecipe(String location, ItemStack output, Object input, float xp, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addIC2SmeltingRecipe,method,"void addIC2SmeltingRecipe(String location, ItemStack output, Object input, float xp, float extraTime, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmeltingRecipe,method,"void addSmeltingRecipe(ResourceLocation location, ItemStack output, Object input, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmeltingRecipe,method,"void addSmeltingRecipe(ResourceLocation location, ItemStack output, Object input, float xp, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmeltingRecipe,method,"void addSmeltingRecipe(ResourceLocation location, ItemStack output, Object input, float xp, float extraTime, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeSmeltingRecipe,method,"void removeSmeltingRecipe(ResourceLocation id, SmeltingType... types)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addStoneCutterRecipe,method,"void addStoneCutterRecipe(ResourceLocation location, ItemStack output, Object input)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addStoneCutterIC2Recipe,method,"void addStoneCutterIC2Recipe(String location, ItemStack output, Object input)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeStoneCutterRecipe,method,void removeStoneCutterRecipe(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmithingRecipe,method,"void addSmithingRecipe(ResourceLocation location, Object main, Object secondary, ItemStack output)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmithingIC2Recipe,method,"void addSmithingIC2Recipe(String location, Object main, Object secondary, ItemStack output)",DECLARED
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeSmithingRecipe,method,void removeSmithingRecipe(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerRepairable,method,"void registerRepairable(IRepairable repair, IInput input, int repairAmount)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeRepairable,method,void removeRepairable(IRepairable repair),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getRepairableItem,method,"Tuple<IInput, Integer> getRepairableItem(ItemStack input, ItemStack repair, boolean compareStack)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getRepairItems,method,"Map<Item, List<Tuple<IInput, Integer>>> getRepairItems()",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerFuelValue,method,"void registerFuelValue(ItemStack stack, int amount)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerFuelMultiplier,method,"void registerFuelMultiplier(ItemStack stack, float multiplier)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeValue,method,void removeValue(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getValueForStack,method,FuelValue getValueForStack(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getFuels,method,List<FuelValue> getFuels(),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerFillable,method,"void registerFillable(ItemStack container, IInput fillable, ItemStack output)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,hasContainer,method,boolean hasContainer(ItemStack container),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeFillable,method,void removeFillable(ItemStack container),DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeFillable,method,"void removeFillable(ItemStack container, ItemStack fillable)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getFillOutput,method,"Tuple<IInput, ItemStack> getFillOutput(ItemStack container, ItemStack toFill, boolean compareStack)",DECLARED
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getFillables,method,"Map<ItemStack, List<Tuple<IInput, ItemStack>>> getFillables()",DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,CHARGE,field,int CHARGE,1
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,DISCHARGE,field,int DISCHARGE,2
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addChargeRecipe,method,"void addChargeRecipe(ResourceLocation id, ItemStack input, ItemStack output, int energy)",DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addDischargeRecipe,method,"void addDischargeRecipe(ResourceLocation id, ItemStack input, ItemStack output, int energy)",DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addDualRecipe,method,"void addDualRecipe(ResourceLocation id, ItemStack input, ItemStack output, int energy)",DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addRecipe,method,"void addRecipe(ResourceLocation id, ItemStack input, ItemStack output, int flags, int energy)",DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,removeRecipe,method,"void removeRecipe(ItemStack input, boolean charge)",DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,removeRecipe,method,void removeRecipe(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,getRecipes,method,List<ElectrolyzerRecipe> getRecipes(),DECLARED
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,getRecipe,method,"ElectrolyzerRecipe getRecipe(ItemStack input, boolean charge, boolean compareSize)",DECLARED
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,addFuel,method,"void addFuel(Fluid fluid, int ticksPerBucket, int euPerTick)",DECLARED
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,removeFuel,method,void removeFuel(Fluid fluid),DECLARED
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,getFuels,method,List<FuelEntry> getFuels(),DECLARED
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,getFuel,method,FuelEntry getFuel(Fluid fluid),DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,registerEffect,method,Item registerEffect(ICanEffect effect),DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getEffect,method,ICanEffect getEffect(ResourceLocation location),DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getAllEffects,method,List<ResourceLocation> getAllEffects(),DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getEffectItem,method,Item getEffectItem(ResourceLocation item),DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,registerItemForEffect,method,"void registerItemForEffect(ItemStack stack, ResourceLocation location)",DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getEffectForFood,method,ResourceLocation getEffectForFood(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getItemForFood,method,Item getItemForFood(ItemStack food),DECLARED
+recipes,ic2.api.recipes.registries.IFusionRecipeList,addFuel,method,"void addFuel(Item fuel, int fuelValue, float productionRate, boolean consumed)",DECLARED
+recipes,ic2.api.recipes.registries.IFusionRecipeList,getFuel,method,FusionFuel getFuel(Item item),DECLARED
+recipes,ic2.api.recipes.registries.IFusionRecipeList,removeFuel,method,void removeFuel(Item item),DECLARED
+recipes,ic2.api.recipes.registries.IFusionRecipeList,getFuels,method,List<FusionFuel> getFuels(),DECLARED
+recipes,ic2.api.recipes.registries.IFusionRecipeList,FusionFuel,method,"record FusionFuel(Item fuel, int fuelValue, float productionRate, boolean consumed)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerInput,method,"void registerInput(ResourceLocation location, Class<IInput> clz, Function<FriendlyByteBuf, IInput> creator, Function<JsonObject, IInput> serializer, Function<Object, IInput> maker)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerRecipeOutput,method,"void registerRecipeOutput(ResourceLocation location, Class<IRecipeOutput> clz, Function<FriendlyByteBuf, IRecipeOutput> creator, Function<JsonObject, IRecipeOutput> serializer)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerFluidOutput,method,"void registerFluidOutput(ResourceLocation location, Class<IFluidRecipeOutput> clz, Function<FriendlyByteBuf, IFluidRecipeOutput> creator, Function<JsonObject, IFluidRecipeOutput> serializer)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerQueue,method,"void registerQueue(ResourceLocation location, Class<IStackOutput> clz, Function<CompoundTag, IStackOutput> creator)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerOutputGenerators,method,"void registerOutputGenerators(ResourceLocation location, Class<IOutputGenerator> clz, Function<JsonObject, IOutputGenerator> creator)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeInput,method,"void writeInput(IInput input, FriendlyByteBuf buffer)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeRecipeOutput,method,"void writeRecipeOutput(IRecipeOutput output, FriendlyByteBuf buffer)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeFluidOutput,method,"void writeFluidOutput(IFluidRecipeOutput output, FriendlyByteBuf buffer)",DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeQueue,method,CompoundTag writeQueue(IStackOutput queue),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readInput,method,IInput readInput(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,createOutput,method,IRecipeOutput createOutput(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,createFluidOutput,method,IFluidRecipeOutput createFluidOutput(FriendlyByteBuf buffer),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readQueue,method,IStackOutput readQueue(CompoundTag nbt),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readInput,method,IInput readInput(JsonObject obj),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readOutput,method,IRecipeOutput readOutput(JsonObject obj),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readFluidOutput,method,IFluidRecipeOutput readFluidOutput(JsonObject obj),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readOutputGenerator,method,IOutputGenerator readOutputGenerator(JsonObject obj),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,createInputFrom,method,IInput createInputFrom(Object obj),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeInput,method,JsonObject serializeInput(IInput input),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeOutput,method,JsonObject serializeOutput(IRecipeOutput output),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeFluidOutput,method,JsonObject serializeFluidOutput(IFluidRecipeOutput output),DECLARED
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeOutputGenerator,method,JsonObject serializeOutputGenerator(IOutputGenerator generator),DECLARED
+recipes,ic2.api.recipes.registries.IListenableRegistry,registerListener,method,void registerListener(Consumer<T> listener),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRecipe,method,void addRecipe(RecipeEntry recipe),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRecipe,method,"void addRecipe(ResourceLocation id, IRecipeOutput output, IInput... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addSimpleRecipe,method,"void addSimpleRecipe(ResourceLocation id, ItemStack output, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addSimpleRecipe,method,"void addSimpleRecipe(ResourceLocation id, ItemStack output, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addXPRecipe,method,"void addXPRecipe(ResourceLocation id, ItemStack output, float xp, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addXPRecipe,method,"void addXPRecipe(ResourceLocation id, ItemStack output, float xp, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addChanceRecipe,method,"void addChanceRecipe(ResourceLocation id, ItemStack output, float xp, float chance, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addChanceRecipe,method,"void addChanceRecipe(ResourceLocation id, ItemStack output, float xp, float chance, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRangeRecipe,method,"void addRangeRecipe(ResourceLocation id, ItemStack output, int minValue, int maxValue, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRangeRecipe,method,"void addRangeRecipe(ResourceLocation id, ItemStack output, int minValue, int maxValue, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRecipe,method,"void addRecipe(ResourceLocation id, IRecipeOutput output, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2SimpleRecipe,method,"void addIC2SimpleRecipe(String id, ItemStack output, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2SimpleRecipe,method,"void addIC2SimpleRecipe(String id, ItemStack output, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2XPRecipe,method,"void addIC2XPRecipe(String id, ItemStack output, float xp, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2XPRecipe,method,"void addIC2XPRecipe(String id, ItemStack output, float xp, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2ChanceRecipe,method,"void addIC2ChanceRecipe(String id, ItemStack output, float xp, float chance, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2ChanceRecipe,method,"void addIC2ChanceRecipe(String id, ItemStack output, float xp, float chance, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2RangeRecipe,method,"void addIC2RangeRecipe(String id, ItemStack output, int minValue, int maxValue, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2RangeRecipe,method,"void addIC2RangeRecipe(String id, ItemStack output, int minValue, int maxValue, CompoundTag data, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2Recipe,method,"void addIC2Recipe(String id, IRecipeOutput output, Object... inputs)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,hasRecipeForItem,method,boolean hasRecipeForItem(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getRecipe,method,RecipeEntry getRecipe(ResourceLocation location),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getRecipe,method,"RecipeEntry getRecipe(ItemStack stack, boolean hasStackSize)",DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getRecipe,method,RecipeEntry getRecipe(Predicate<RecipeEntry> checker),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,removeRecipe,method,RecipeEntry removeRecipe(ResourceLocation location),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getAllRecipes,method,List<ResourceLocation> getAllRecipes(),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getAllEntries,method,List<RecipeEntry> getAllEntries(),DECLARED
+recipes,ic2.api.recipes.registries.IMachineRecipeList,convertInputs,method,IInput[] convertInputs(Object... inputs),DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerBrew,method,"void registerBrew(Item item, MobEffect potion)",DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerBrew,method,"void registerBrew(Item item, MobEffect fromEffect, MobEffect toEffect)",DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,removeBrew,method,void removeBrew(Item item),DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getEffect,method,"MobEffect getEffect(Item item, MobEffect original)",DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getEffects,method,"Map<Item, Map<MobEffect, MobEffect>> getEffects()",DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getRequiredItems,method,List<Item> getRequiredItems(MobEffect desiredEffect),DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerName,method,"void registerName(MobEffect effect, String name)",DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getName,method,String getName(MobEffect effect),DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerPotionContainer,method,"void registerPotionContainer(Item input, PotionContainer output)",DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getPotionContainer,method,PotionContainer getPotionContainer(Item input),DECLARED
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getContainers,method,"Map<Item, PotionContainer> getContainers()",DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,registerOutput,method,"void registerOutput(ResourceLocation id, ItemStack output)",DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,registerInput,method,"void registerInput(ResourceLocation id, float value, ItemStack... input)",DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,getOutputFor,method,RareEntry getOutputFor(ItemStack input),DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,getOutputFor,method,ItemStack getOutputFor(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,removeInput,method,RareEntry removeInput(ItemStack input),DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,removeOutput,method,void removeOutput(ItemStack output),DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,remove,method,void remove(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,getAllRecipes,method,List<RareEntry> getAllRecipes(),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,SIMPLE,field,int SIMPLE,1
+recipes,ic2.api.recipes.registries.IRecipeFilter,FILTER,field,int FILTER,2
+recipes,ic2.api.recipes.registries.IRecipeFilter,BOTH,field,int BOTH,unknown
+recipes,ic2.api.recipes.registries.IRecipeFilter,add,method,void add(ItemLike... items),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,add,method,void add(IInput... inputs),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,remove,method,"void remove(ItemStack stack, int flags)",DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,contains,method,boolean contains(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,getFilteredItems,method,List<ItemStack> getFilteredItems(),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,clear,method,void clear(),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,serialize,method,JsonObject serialize(),DECLARED
+recipes,ic2.api.recipes.registries.IRecipeFilter,read,method,void read(JsonObject obj),DECLARED
+recipes,ic2.api.recipes.registries.IRecyclerRecipeList,getBlackList,method,IRecipeFilter getBlackList(),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,addIC2Recipe,method,Builder addIC2Recipe(String id),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,addRecipe,method,Builder addRecipe(ResourceLocation id),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,addRecipe,method,"void addRecipe(ResourceLocation location, FluidStack input, FluidStack secondInput, IInput catalyst, IFluidRecipeOutput output)",DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getRecipe,method,FluidRecipe getRecipe(ResourceLocation location),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getRecipe,method,"FluidRecipe getRecipe(ItemStack item, FluidStack firstTank, FluidStack secondTank, boolean testAmounts)",DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getRecipe,method,FluidRecipe getRecipe(Predicate<FluidRecipe> checker),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,removeRecipe,method,"FluidRecipe removeRecipe(ResourceLocation location, boolean includeInverted)",DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getAllRecipes,method,List<FluidRecipe> getAllRecipes(),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,isValidCatalyst,method,boolean isValidCatalyst(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,isValidFirstFluid,method,boolean isValidFirstFluid(FluidStack fluid),DECLARED
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,isValidSecondFluid,method,boolean isValidSecondFluid(FluidStack fluid),DECLARED
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,addDrop,method,"void addDrop(ItemLike prov, float chance)",DECLARED
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,addDrop,method,"void addDrop(ItemStack stack, float chance)",DECLARED
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,getRandomDrop,method,"IDrop getRandomDrop(ItemStack source, boolean consumeItem)",DECLARED
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,removeDrops,method,void removeDrops(ItemStack stack),DECLARED
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,removeDrop,method,void removeDrop(IDrop drop),DECLARED
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,getAllDrops,method,List<IDrop> getAllDrops(),DECLARED
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,registerUUShape,method,void registerUUShape(UUMatterBuilder builder),DECLARED
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,registerUUEntry,method,"void registerUUEntry(ItemStack output, int milliUU)",DECLARED
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,getEntries,method,List<UUMatterEntry> getEntries(),DECLARED
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,removeUUEntry,method,void removeUUEntry(UUMatterEntry entry),DECLARED
+other,ic2.api.ticks.ITickScheduler,addWorldCallback,method,"void addWorldCallback(Level world, ToIntFunction<Level> ticket)",DECLARED
+other,ic2.api.ticks.ITickScheduler,addWorldCallback,method,"void addWorldCallback(Level world, ToIntFunction<Level> ticket, int delay)",DECLARED
+other,ic2.api.ticks.ITickScheduler,addServerCallback,method,void addServerCallback(ToIntFunction<MinecraftServer> ticket),DECLARED
+other,ic2.api.ticks.ITickScheduler,addServerCallback,method,"void addServerCallback(ToIntFunction<MinecraftServer> ticket, int delay)",DECLARED
+other,ic2.api.ticks.ITickScheduler,addClientCallback,method,void addClientCallback(IntSupplier ticket),DECLARED
+other,ic2.api.ticks.ITickScheduler,addClientCallback,method,"void addClientCallback(IntSupplier ticket, int delay)",DECLARED
+tiles,ic2.api.tiles.ArrayTube,getTubeType,method,TubeType getTubeType(),DECLARED
+tiles,ic2.api.tiles.ArrayTube,addItem,method,"void addItem(ItemStack item, Direction side, DyeColor color)",DECLARED
+tiles,ic2.api.tiles.ArrayTube,addItem,method,"void addItem(TransportedItem item, Direction side)",DECLARED
+tiles,ic2.api.tiles.ArrayTube,canAddItem,method,"boolean canAddItem(TransportedItem item, Direction side)",DECLARED
+tiles,ic2.api.tiles.ArrayTube,canConnect,method,"boolean canConnect(ITube other, Direction dir)",DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getValidRoom,method,int getValidRoom(ItemStack stack),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getSupportedUpgradeTypes,method,EnumSet<UpgradeType> getSupportedUpgradeTypes(),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getAvailableEnergy,method,int getAvailableEnergy(),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,useEnergy,method,"boolean useEnergy(int toUse, boolean doUse)",DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,isMachineWorking,method,boolean isMachineWorking(),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,isRedstoneSensitive,method,boolean isRedstoneSensitive(),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,setRedstoneSensitive,method,void setRedstoneSensitive(boolean flag),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,onUpgradesChanged,method,void onUpgradesChanged(),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getConnectedInventory,method,IItemHandler getConnectedInventory(Direction dir),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getConnectedTube,method,ITube getConnectedTube(Direction dir),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getWorldObj,method,Level getWorldObj(),DECLARED
+tiles,ic2.api.tiles.FakePlayerMachine,getPosition,method,BlockPos getPosition(),DECLARED
+tiles,ic2.api.tiles.IAnchorTile,hasAnchor,method,boolean hasAnchor(Direction side),DECLARED
+tiles,ic2.api.tiles.IAnchorTile,addAnchor,method,boolean addAnchor(Direction side),DECLARED
+tiles,ic2.api.tiles.IAnchorTile,removeAnchor,method,boolean removeAnchor(Direction side),DECLARED
+tiles,ic2.api.tiles.ICopyableSettings,saveSettings,method,void saveSettings(CompoundTag compound),DECLARED
+tiles,ic2.api.tiles.ICopyableSettings,loadSettings,method,void loadSettings(CompoundTag compound),DECLARED
+tiles,ic2.api.tiles.IElectrolyzerProvider,getProcessRate,method,int getProcessRate(),DECLARED
+tiles,ic2.api.tiles.IEnergyStorage,addEnergy,method,int addEnergy(int power),DECLARED
+tiles,ic2.api.tiles.IEnergyStorage,drawEnergy,method,int drawEnergy(int power),DECLARED
+tiles,ic2.api.tiles.IFluidMachine,getConnectedTank,method,IFluidHandler getConnectedTank(Direction dir),DECLARED
+tiles,ic2.api.tiles.IInputMachine,getValidRoom,method,int getValidRoom(ItemStack stack),DECLARED
+tiles,ic2.api.tiles.IMachine,getSupportedUpgradeTypes,method,EnumSet<UpgradeType> getSupportedUpgradeTypes(),DECLARED
+tiles,ic2.api.tiles.IMachine,onUpgradesChanged,method,void onUpgradesChanged(),DECLARED
+tiles,ic2.api.tiles.IMachine,getAvailableEnergy,method,int getAvailableEnergy(),DECLARED
+tiles,ic2.api.tiles.IMachine,useEnergy,method,"boolean useEnergy(int toUse, boolean doUse)",DECLARED
+tiles,ic2.api.tiles.IMachine,isMachineWorking,method,boolean isMachineWorking(),DECLARED
+tiles,ic2.api.tiles.IMachine,setRedstoneSensitive,method,void setRedstoneSensitive(boolean flag),DECLARED
+tiles,ic2.api.tiles.IMachine,isRedstoneSensitive,method,boolean isRedstoneSensitive(),DECLARED
+tiles,ic2.api.tiles.IMachine,getConnectedInventory,method,IItemHandler getConnectedInventory(Direction dir),DECLARED
+tiles,ic2.api.tiles.IMachine,getConnectedTube,method,ITube getConnectedTube(Direction dir),DECLARED
+tiles,ic2.api.tiles.INotifiableMachine,onNotify,method,void onNotify(),DECLARED
+tiles,ic2.api.tiles.IRecipeMachine,getRecipeList,method,IMachineRecipeList getRecipeList(),DECLARED
+tiles,ic2.api.tiles.ITerraformer,getBiome,method,"Holder<Biome> getBiome(Level world, BlockPos pos)",DECLARED
+tiles,ic2.api.tiles.ITerraformer,setBiome,method,"boolean setBiome(Level world, BlockPos pos, ResourceLocation biomeKey)",DECLARED
+tiles,ic2.api.tiles.ITerraformer,getFirstSolidBlockFrom,method,"BlockPos getFirstSolidBlockFrom(Level world, BlockPos pos)",DECLARED
+tiles,ic2.api.tiles.ITerraformer,getFirstBlockFrom,method,"BlockPos getFirstBlockFrom(Level world, BlockPos pos)",DECLARED
+tiles,ic2.api.tiles.ITerraformer,switchGround,method,"boolean switchGround(Level world, BlockPos pos, BlockState from, BlockState to, boolean upwards, boolean stateCompare)",DECLARED
+tiles,ic2.api.tiles.display.IDisplayInfo,REGISTRY,field,IDisplayRegistry REGISTRY,unknown
+tiles,ic2.api.tiles.display.IDisplayInfo,render,method,"void render(PoseStack stack, int x, int y, int width, int height, Alignment align, IMonitorRenderer helper)",DECLARED
+tiles,ic2.api.tiles.display.IDisplayInfo,getHeight,method,"int getHeight(int width, Alignment align)",DECLARED
+tiles,ic2.api.tiles.display.IDisplayInfo,isValid,method,boolean isValid(),DECLARED
+tiles,ic2.api.tiles.display.IDisplayInfo,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+tiles,ic2.api.tiles.display.IDisplayInfo,getServerData,method,Tag getServerData(),DECLARED
+tiles,ic2.api.tiles.display.IDisplayRegistry,register,method,"void register(ResourceLocation id, Class<IDisplayInfo> info, Function<FriendlyByteBuf, IDisplayInfo> creator)",DECLARED
+tiles,ic2.api.tiles.display.IDisplayRegistry,serialize,method,"void serialize(IDisplayInfo info, FriendlyByteBuf buffer)",DECLARED
+tiles,ic2.api.tiles.display.IDisplayRegistry,deserialize,method,IDisplayInfo deserialize(FriendlyByteBuf buffer),DECLARED
+tiles,ic2.api.tiles.display.IMonitorRenderer,getBatcher,method,MultiBufferSource getBatcher(),DECLARED
+tiles,ic2.api.tiles.display.IMonitorRenderer,getFont,method,Font getFont(),DECLARED
+tiles,ic2.api.tiles.display.IMonitorRenderer,getItemRenderer,method,ItemRenderer getItemRenderer(),DECLARED
+tiles,ic2.api.tiles.display.IMonitorRenderer,renderGuiItems,method,"void renderGuiItems(PoseStack matrix, ItemStack stack, float x, float y)",DECLARED
+tiles,ic2.api.tiles.display.IMonitorRenderer,renderGuiItemText,method,"void renderGuiItemText(PoseStack matrixstack, ItemStack stack, float x, float y, String text)",DECLARED
+tiles,ic2.api.tiles.display.IMonitorRenderer,renderGuiItemText,method,"void renderGuiItemText(PoseStack matrixstack, Font font, ItemStack stack, float x, float y, String text)",DECLARED
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,render,method,"void render(PoseStack stack, int x, int y, int width, int height, Alignment align, IMonitorRenderer helper)",DECLARED
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,getHeight,method,"int getHeight(int width, Alignment align)",DECLARED
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,isValid,method,boolean isValid(),DECLARED
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,getServerData,method,Tag getServerData(),DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,render,method,"void render(PoseStack stack, int x, int y, int width, int height, Alignment align, IMonitorRenderer helper)",DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,drawColorFrame,method,"void drawColorFrame(PoseStack stack, VertexConsumer builder, float x, float y, float width, float height, int color)",DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,darker,method,"int darker(int color, float factor)",DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,getHeight,method,"int getHeight(int width, Alignment align)",DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,isValid,method,boolean isValid(),DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,getServerData,method,Tag getServerData(),DECLARED
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,render,method,"void render(PoseStack stack, int x, int y, int width, int height, Alignment align, IMonitorRenderer helper)",DECLARED
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,getHeight,method,"int getHeight(int width, Alignment align)",DECLARED
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,isValid,method,boolean isValid(),DECLARED
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,getServerData,method,Tag getServerData(),DECLARED
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,serialize,method,void serialize(FriendlyByteBuf buffer),DECLARED
+tiles,ic2.api.tiles.readers.IActivityProvider,isActivated,method,boolean isActivated(),DECLARED
+tiles,ic2.api.tiles.readers.IAirSpeed,getCurrentSpeed,method,float getCurrentSpeed(),DECLARED
+tiles,ic2.api.tiles.readers.IAirSpeed,getMaxSpeed,method,float getMaxSpeed(),DECLARED
+tiles,ic2.api.tiles.readers.IEUProducer,getEUProduction,method,float getEUProduction(),DECLARED
+tiles,ic2.api.tiles.readers.IEUStorage,getStoredEU,method,int getStoredEU(),DECLARED
+tiles,ic2.api.tiles.readers.IEUStorage,getMaxEU,method,int getMaxEU(),DECLARED
+tiles,ic2.api.tiles.readers.IEUStorage,getTier,method,int getTier(),DECLARED
+tiles,ic2.api.tiles.readers.IEUStorage,getChargeLevel,method,double getChargeLevel(),DECLARED
+tiles,ic2.api.tiles.readers.IFuelStorage,getFuel,method,int getFuel(),DECLARED
+tiles,ic2.api.tiles.readers.IFuelStorage,getMaxFuel,method,int getMaxFuel(),DECLARED
+tiles,ic2.api.tiles.readers.IProgressMachine,getProgress,method,float getProgress(),DECLARED
+tiles,ic2.api.tiles.readers.IProgressMachine,getMaxProgress,method,float getMaxProgress(),DECLARED
+tiles,ic2.api.tiles.readers.IPumpTile,getPumpProgress,method,int getPumpProgress(),DECLARED
+tiles,ic2.api.tiles.readers.IPumpTile,getPumpMaxProgress,method,int getPumpMaxProgress(),DECLARED
+tiles,ic2.api.tiles.readers.ISpeedMachine,getSpeed,method,int getSpeed(),DECLARED
+tiles,ic2.api.tiles.readers.ISpeedMachine,getMaxSpeed,method,int getMaxSpeed(),DECLARED
+tiles,ic2.api.tiles.readers.ISubProgressMachine,getSubProgress,method,float getSubProgress(),DECLARED
+tiles,ic2.api.tiles.readers.ISubProgressMachine,getMaxSubProgress,method,float getMaxSubProgress(),DECLARED
+tiles,ic2.api.tiles.readers.IWorkProvider,isWorking,method,boolean isWorking(),DECLARED
+tiles,ic2.api.tiles.readers.ReaderProvider,registerActiveProvider,method,"void registerActiveProvider(Class<?> clz, Function<BlockEntity, IActivityProvider> provider)",DECLARED
+tiles,ic2.api.tiles.readers.ReaderProvider,registerFuelProvider,method,"void registerFuelProvider(Class<?> clz, Function<BlockEntity, IFuelStorage> provider)",DECLARED
+tiles,ic2.api.tiles.readers.ReaderProvider,registerProgressProvider,method,"void registerProgressProvider(Class<?> clz, Function<BlockEntity, IProgressMachine> provider)",DECLARED
+tiles,ic2.api.tiles.readers.ReaderProvider,getFuelProvider,method,IFuelStorage getFuelProvider(BlockEntity tile),DECLARED
+tiles,ic2.api.tiles.readers.ReaderProvider,getProgressProvider,method,IProgressMachine getProgressProvider(BlockEntity tile),DECLARED
+tiles,ic2.api.tiles.readers.ReaderProvider,getActivityProvider,method,IActivityProvider getActivityProvider(BlockEntity tile),DECLARED
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,getFacing,method,Direction getFacing(),DECLARED
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,getSendType,method,TeleportType getSendType(),DECLARED
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,canReceive,method,boolean canReceive(TeleportType type),DECLARED
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,setTarget,method,boolean setTarget(TeleporterTarget target),DECLARED
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,hasTarget,method,boolean hasTarget(TeleporterTarget target),DECLARED
+tiles,ic2.api.tiles.teleporter.TargetRegistry,INSTANCE,field,TargetRegistry INSTANCE,unknown
+tiles,ic2.api.tiles.teleporter.TargetRegistry,addTarget,method,"void addTarget(TeleporterTarget target, String name)",DECLARED
+tiles,ic2.api.tiles.teleporter.TargetRegistry,removeTarget,method,void removeTarget(TeleporterTarget target),DECLARED
+tiles,ic2.api.tiles.teleporter.TargetRegistry,getTargetName,method,String getTargetName(TeleporterTarget target),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,write,method,void write(IOutputBuffer buffer),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,read,method,void read(IInputBuffer buffer),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getDimension,method,ResourceKey<Level> getDimension(),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getTargetPosition,method,BlockPos getTargetPosition(),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getWorld,method,ServerLevel getWorld(),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getTile,method,BlockEntity getTile(),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,isSame,method,boolean isSame(BlockEntity tile),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,isSame,method,"boolean isSame(ResourceKey<Level> type, BlockPos pos)",DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,hashCode,method,int hashCode(),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,equals,method,boolean equals(Object obj),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,readFromBuffer,method,TeleporterTarget readFromBuffer(IInputBuffer buffer),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,read,method,TeleporterTarget read(CompoundTag nbt),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,write,method,CompoundTag write(),DECLARED
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,write,method,CompoundTag write(CompoundTag nbt),DECLARED
+tiles,ic2.api.tiles.tubes.IItemCache,CACHE,field,SidedObject<IItemCache> CACHE,unknown
+tiles,ic2.api.tiles.tubes.IItemCache,getCache,method,IItemCache getCache(),DECLARED
+tiles,ic2.api.tiles.tubes.IItemCache,getItem,method,Supplier<ItemStack> getItem(int id),DECLARED
+tiles,ic2.api.tiles.tubes.IItemCache,registerItem,method,int registerItem(ItemStack stack),DECLARED
+tiles,ic2.api.tiles.tubes.IItemCache,updateCache,method,void updateCache(),DECLARED
+tiles,ic2.api.tiles.tubes.IItemCache,clearCache,method,void clearCache(),DECLARED
+tiles,ic2.api.tiles.tubes.ILimiterTube,getValidColors,method,EnumSet<DyeColor> getValidColors(),DECLARED
+tiles,ic2.api.tiles.tubes.IProviderTube,provideItems,method,"int provideItems(ItemStack stack, int amount, DyeColor color, UUID requestId)",DECLARED
+tiles,ic2.api.tiles.tubes.IProviderTube,getItemsProvided,method,void getItemsProvided(ObjIntConsumer<ItemStack> listener),DECLARED
+tiles,ic2.api.tiles.tubes.IProviderTube,getProviderSource,method,long getProviderSource(),DECLARED
+tiles,ic2.api.tiles.tubes.IRequestTube,provideRequests,method,void provideRequests(ITubeRequester requested),DECLARED
+tiles,ic2.api.tiles.tubes.IRequestTube,onRequestsReset,method,void onRequestsReset(),DECLARED
+tiles,ic2.api.tiles.tubes.IRequestTube,onRequestFulfilled,method,"void onRequestFulfilled(ItemStack stack, int amount)",DECLARED
+tiles,ic2.api.tiles.tubes.IRequestTube,getRequestId,method,UUID getRequestId(),DECLARED
+tiles,ic2.api.tiles.tubes.IRequestTube,onRequestLost,method,"void onRequestLost(ItemStack stack, int amount)",DECLARED
+tiles,ic2.api.tiles.tubes.IRequestTube,getRequestSource,method,long getRequestSource(),DECLARED
+tiles,ic2.api.tiles.tubes.ITube,addItem,method,"void addItem(ItemStack item, Direction side)",DECLARED
+tiles,ic2.api.tiles.tubes.ITube,addItem,method,"void addItem(ItemStack item, Direction side, DyeColor color)",DECLARED
+tiles,ic2.api.tiles.tubes.ITube,addItem,method,"void addItem(TransportedItem item, Direction side)",DECLARED
+tiles,ic2.api.tiles.tubes.ITube,canAddItem,method,"boolean canAddItem(TransportedItem item, Direction side)",DECLARED
+tiles,ic2.api.tiles.tubes.ITube,canConnect,method,"boolean canConnect(ITube other, Direction dir)",DECLARED
+tiles,ic2.api.tiles.tubes.ITube,getTubeType,method,TubeType getTubeType(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,MIN_SPEED,field,int MIN_SPEED,1
+tiles,ic2.api.tiles.tubes.TransportedItem,MAX_SPEED,field,int MAX_SPEED,100
+tiles,ic2.api.tiles.tubes.TransportedItem,timeOut,field,byte timeOut,0
+tiles,ic2.api.tiles.tubes.TransportedItem,invalid,field,boolean invalid,false
+tiles,ic2.api.tiles.tubes.TransportedItem,readFromNetwork,method,TransportedItem readFromNetwork(IInputBuffer buffer),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,read,method,TransportedItem read(CompoundTag nbt),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,readFromNBT,method,void readFromNBT(CompoundTag nbt),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,writeToNBT,method,CompoundTag writeToNBT(CompoundTag nbt),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,read,method,void read(IInputBuffer buffer),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,write,method,void write(IOutputBuffer buffer),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,serializeEssentials,method,short serializeEssentials(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,deserializeEssentials,method,void deserializeEssentials(short data),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getId,method,int getId(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getRequestId,method,UUID getRequestId(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,isCentering,method,boolean isCentering(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getServerStack,method,ItemStack getServerStack(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getStack,method,ItemStack getStack(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getProgress,method,byte getProgress(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,isInvalid,method,boolean isInvalid(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getColor,method,DyeColor getColor(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setColor,method,TransportedItem setColor(DyeColor color),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setAttemptedDirections,method,void setAttemptedDirections(DirectionList list),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setRequestId,method,TransportedItem setRequestId(UUID id),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,invalidate,method,void invalidate(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,hasReachedCenter,method,boolean hasReachedCenter(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,hasReachedEnd,method,boolean hasReachedEnd(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getTransferDirection,method,Direction getTransferDirection(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getTravelingDirection,method,Direction getTravelingDirection(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,getAttemptedDirections,method,DirectionList getAttemptedDirections(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,clearDirections,method,void clearDirections(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setCentering,method,void setCentering(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setInsertionDirection,method,void setInsertionDirection(Direction dir),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setExportDirection,method,void setExportDirection(Direction dir),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,update,method,void update(),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,setStartSpeed,method,TransportedItem setStartSpeed(int speed),DECLARED
+tiles,ic2.api.tiles.tubes.TransportedItem,updateSpeed,method,"boolean updateSpeed(int newSpeed, int change)",DECLARED
+other,ic2.api.util.DirectionList,DOWN,field,DirectionList DOWN,ofFacing()
+other,ic2.api.util.DirectionList,UP,field,DirectionList UP,ofFacing()
+other,ic2.api.util.DirectionList,NORTH,field,DirectionList NORTH,ofFacing()
+other,ic2.api.util.DirectionList,SOUTH,field,DirectionList SOUTH,ofFacing()
+other,ic2.api.util.DirectionList,EAST,field,DirectionList EAST,ofFacing()
+other,ic2.api.util.DirectionList,WEST,field,DirectionList WEST,ofFacing()
+other,ic2.api.util.DirectionList,VERTICAL,field,DirectionList VERTICAL,add()
+other,ic2.api.util.DirectionList,HORIZONTAL,field,DirectionList HORIZONTAL,ofFacings()
+other,ic2.api.util.DirectionList,POSITIVE,field,DirectionList POSITIVE,ofFacings()
+other,ic2.api.util.DirectionList,NEGATIVE,field,DirectionList NEGATIVE,ofFacings()
+other,ic2.api.util.DirectionList,X_AXIS,field,DirectionList X_AXIS,add()
+other,ic2.api.util.DirectionList,Z_AXIS,field,DirectionList Z_AXIS,add()
+other,ic2.api.util.DirectionList,XY_AXIS,field,DirectionList XY_AXIS,add()
+other,ic2.api.util.DirectionList,YZ_AXIS,field,DirectionList YZ_AXIS,add()
+other,ic2.api.util.DirectionList,P_CORNER,field,DirectionList P_CORNER,add()
+other,ic2.api.util.DirectionList,N_CORNER,field,DirectionList N_CORNER,add()
+other,ic2.api.util.DirectionList,ALL,field,DirectionList ALL,ofNumber()
+other,ic2.api.util.DirectionList,EMPTY,field,DirectionList EMPTY,ofNumber()
+other,ic2.api.util.DirectionList,ofFacing,method,DirectionList ofFacing(Direction facing),DECLARED
+other,ic2.api.util.DirectionList,ofFacings,method,DirectionList ofFacings(Direction... facings),DECLARED
+other,ic2.api.util.DirectionList,ofFacings,method,DirectionList ofFacings(Collection<Direction> facings),DECLARED
+other,ic2.api.util.DirectionList,ofAxis,method,DirectionList ofAxis(Axis axis),DECLARED
+other,ic2.api.util.DirectionList,ofFlags,method,DirectionList ofFlags(boolean... flags),DECLARED
+other,ic2.api.util.DirectionList,ofNumber,method,DirectionList ofNumber(int index),DECLARED
+other,ic2.api.util.DirectionList,getName,method,MutableComponent getName(Direction dir),DECLARED
+other,ic2.api.util.DirectionList,rotate,method,DirectionList rotate(int amount),DECLARED
+other,ic2.api.util.DirectionList,invert,method,DirectionList invert(),DECLARED
+other,ic2.api.util.DirectionList,opposite,method,DirectionList opposite(),DECLARED
+other,ic2.api.util.DirectionList,add,method,DirectionList add(Direction facing),DECLARED
+other,ic2.api.util.DirectionList,add,method,DirectionList add(DirectionList facings),DECLARED
+other,ic2.api.util.DirectionList,remove,method,DirectionList remove(Direction facing),DECLARED
+other,ic2.api.util.DirectionList,remove,method,DirectionList remove(DirectionList facings),DECLARED
+other,ic2.api.util.DirectionList,set,method,"DirectionList set(Direction facing, boolean value)",DECLARED
+other,ic2.api.util.DirectionList,keep,method,DirectionList keep(DirectionList facings),DECLARED
+other,ic2.api.util.DirectionList,flip,method,DirectionList flip(Direction dir),DECLARED
+other,ic2.api.util.DirectionList,contains,method,boolean contains(Direction direction),DECLARED
+other,ic2.api.util.DirectionList,contains,method,boolean contains(DirectionList facings),DECLARED
+other,ic2.api.util.DirectionList,containsAny,method,boolean containsAny(DirectionList facings),DECLARED
+other,ic2.api.util.DirectionList,notContains,method,boolean notContains(Direction direction),DECLARED
+other,ic2.api.util.DirectionList,containsNot,method,boolean containsNot(DirectionList facings),DECLARED
+other,ic2.api.util.DirectionList,invertFacing,method,DirectionList invertFacing(Direction facing),DECLARED
+other,ic2.api.util.DirectionList,replace,method,"DirectionList replace(Direction oldFacing, Direction newFacing)",DECLARED
+other,ic2.api.util.DirectionList,getNextFacing,method,Direction getNextFacing(Direction facing),DECLARED
+other,ic2.api.util.DirectionList,getPrevFacing,method,Direction getPrevFacing(Direction facing),DECLARED
+other,ic2.api.util.DirectionList,getOffset,method,BlockPos getOffset(),DECLARED
+other,ic2.api.util.DirectionList,getCode,method,int getCode(),DECLARED
+other,ic2.api.util.DirectionList,size,method,int size(),DECLARED
+other,ic2.api.util.DirectionList,isEmpty,method,boolean isEmpty(),DECLARED
+other,ic2.api.util.DirectionList,isFull,method,boolean isFull(),DECLARED
+other,ic2.api.util.DirectionList,toString,method,String toString(),DECLARED
+other,ic2.api.util.DirectionList,toFacings,method,Set<Direction> toFacings(),DECLARED
+other,ic2.api.util.DirectionList,getRandomFacing,method,Direction getRandomFacing(),DECLARED
+other,ic2.api.util.DirectionList,getRandomFacing,method,Direction getRandomFacing(Direction defaultValue),DECLARED
+other,ic2.api.util.DirectionList,getDefaultFacing,method,Direction getDefaultFacing(),DECLARED
+other,ic2.api.util.DirectionList,toFlags,method,boolean[] toFlags(),DECLARED
+other,ic2.api.util.DirectionList,getNeighborState,method,"BlockState getNeighborState(BlockEntity tile, Direction dir)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborState,method,"BlockState getNeighborState(Level world, BlockPos pos, Direction dir)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborTile,method,"BlockEntity getNeighborTile(BlockEntity tile, Direction dir)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborTile,method,"BlockEntity getNeighborTile(Level world, BlockPos pos, Direction dir)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborCapability,method,"LazyOptional<T> getNeighborCapability(BlockEntity tile, Direction dir, Capability<T> capability)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborCapability,method,"LazyOptional<T> getNeighborCapability(Level world, BlockPos pos, Direction dir, Capability<T> capability)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborInterface,method,"T getNeighborInterface(BlockEntity tile, Direction dir, Class<T> clazz)",DECLARED
+other,ic2.api.util.DirectionList,getNeighborInterface,method,"T getNeighborInterface(Level world, BlockPos pos, Direction dir, Class<T> clazz)",DECLARED
+other,ic2.api.util.DirectionList,getRotation,method,"Rotation getRotation(Direction source, Direction other)",DECLARED
+other,ic2.api.util.DirectionList,rotateAround,method,"Direction rotateAround(Direction dir, Direction axis)",DECLARED
+other,ic2.api.util.DirectionList,rotateY,method,Direction rotateY(Direction dir),DECLARED
+other,ic2.api.util.DirectionList,toNumber,method,int toNumber(Direction... facings),DECLARED
+other,ic2.api.util.DirectionList,toNumber,method,int toNumber(Collection<Direction> facings),DECLARED
+other,ic2.api.util.DirectionList,toNumber,method,int toNumber(boolean... facings),DECLARED
+other,ic2.api.util.DirectionList,toFlags,method,boolean[] toFlags(Direction... facings),DECLARED
+other,ic2.api.util.DirectionList,test,method,boolean test(Direction t),DECLARED
+other,ic2.api.util.DirectionList,iterator,method,Iterator<Direction> iterator(),DECLARED
+other,ic2.api.util.DirectionList,getRandomIterator,method,Iterable<Direction> getRandomIterator(),DECLARED
+other,ic2.api.util.IC2DamageSource,ELECTRICITY,field,IC2DamageSource ELECTRICITY,unknown
+other,ic2.api.util.IC2DamageSource,NUKE,field,IC2DamageSource NUKE,unknown
+other,ic2.api.util.IC2DamageSource,RADIATION,field,IC2DamageSource RADIATION,unknown
+other,ic2.api.util.IC2DamageSource,newShockDamage,method,IC2DamageSource newShockDamage(Entity entity),DECLARED
+other,ic2.api.util.IC2DamageSource,getEntity,method,Entity getEntity(),DECLARED
+other,ic2.api.util.ILocation,getWorldObj,method,Level getWorldObj(),DECLARED
+other,ic2.api.util.ILocation,getPosition,method,BlockPos getPosition(),DECLARED
+other,ic2.api.util.SidedObject,set,method,"void set(T value, boolean serverSide)",DECLARED
+other,ic2.api.util.SidedObject,get,method,T get(),DECLARED
+other,ic2.api.util.SidedObject,get,method,T get(boolean serverSide),DECLARED
+other,ic2.api.util.SidedObject,isSimulating,method,boolean isSimulating(),DECLARED
