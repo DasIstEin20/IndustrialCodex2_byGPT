@@ -1,0 +1,1085 @@
+{
+  "modid": "",
+  "packages": [
+    "ic2.api.addons",
+    "ic2.api.blocks",
+    "ic2.api.blocks.wrench",
+    "ic2.api.core",
+    "ic2.api.crops",
+    "ic2.api.energy",
+    "ic2.api.energy.impl",
+    "ic2.api.energy.tile",
+    "ic2.api.events",
+    "ic2.api.items",
+    "ic2.api.items.armor",
+    "ic2.api.items.electric",
+    "ic2.api.items.readers",
+    "ic2.api.network",
+    "ic2.api.network.buffer",
+    "ic2.api.network.container",
+    "ic2.api.network.item",
+    "ic2.api.network.tile",
+    "ic2.api.reactor",
+    "ic2.api.reactor.planner",
+    "ic2.api.recipes",
+    "ic2.api.recipes.ingridients.generators",
+    "ic2.api.recipes.ingridients.inputs",
+    "ic2.api.recipes.ingridients.queue",
+    "ic2.api.recipes.ingridients.recipes",
+    "ic2.api.recipes.misc",
+    "ic2.api.recipes.registries",
+    "ic2.api.ticks",
+    "ic2.api.tiles",
+    "ic2.api.tiles.display",
+    "ic2.api.tiles.display.impl",
+    "ic2.api.tiles.readers",
+    "ic2.api.tiles.teleporter",
+    "ic2.api.tiles.tubes",
+    "ic2.api.util"
+  ],
+  "registries": {
+    "blocks": [],
+    "items": [],
+    "block_entities": [],
+    "entities": [],
+    "menus": [],
+    "fluids": [],
+    "recipes": [],
+    "sounds": []
+  },
+  "capabilities": [],
+  "multiblocks": [
+    {
+      "name": "BaseDurabilitySimulatedStack",
+      "classes": [
+        "ic2.api.reactor.planner.BaseDurabilitySimulatedStack"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/planner/BaseDurabilitySimulatedStack.java; INFERRED keyword 'reactor' in ic2/api/reactor/planner/BaseDurabilitySimulatedStack.java"
+    },
+    {
+      "name": "BaseHeatSimulatedStack",
+      "classes": [
+        "ic2.api.reactor.planner.BaseHeatSimulatedStack"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/planner/BaseHeatSimulatedStack.java; INFERRED keyword 'reactor' in ic2/api/reactor/planner/BaseHeatSimulatedStack.java"
+    },
+    {
+      "name": "FloatTracker",
+      "classes": [
+        "ic2.api.reactor.planner.FloatTracker"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/planner/FloatTracker.java; INFERRED keyword 'reactor' in ic2/api/reactor/planner/FloatTracker.java"
+    },
+    {
+      "name": "IChamberReactor",
+      "classes": [
+        "ic2.api.reactor.IChamberReactor"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/IChamberReactor.java"
+    },
+    {
+      "name": "IReactor",
+      "classes": [
+        "ic2.api.reactor.IReactor"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/IReactor.java"
+    },
+    {
+      "name": "IReactorChamber",
+      "classes": [
+        "ic2.api.reactor.IReactorChamber"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/IReactorChamber.java"
+    },
+    {
+      "name": "IReactorComponent",
+      "classes": [
+        "ic2.api.reactor.IReactorComponent"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/IReactorComponent.java"
+    },
+    {
+      "name": "IReactorPlannerComponent",
+      "classes": [
+        "ic2.api.reactor.IReactorPlannerComponent"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/IReactorPlannerComponent.java; INFERRED keyword 'reactor' in ic2/api/reactor/IReactorPlannerComponent.java"
+    },
+    {
+      "name": "IReactorProduct",
+      "classes": [
+        "ic2.api.reactor.IReactorProduct"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/IReactorProduct.java"
+    },
+    {
+      "name": "ISimulatedReactor",
+      "classes": [
+        "ic2.api.reactor.planner.ISimulatedReactor"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/planner/ISimulatedReactor.java; INFERRED keyword 'reactor' in ic2/api/reactor/planner/ISimulatedReactor.java"
+    },
+    {
+      "name": "ISteamReactor",
+      "classes": [
+        "ic2.api.reactor.ISteamReactor"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/ISteamReactor.java"
+    },
+    {
+      "name": "ISteamReactorChamber",
+      "classes": [
+        "ic2.api.reactor.ISteamReactorChamber"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/ISteamReactorChamber.java"
+    },
+    {
+      "name": "IUsableUranium",
+      "classes": [
+        "ic2.api.reactor.IUsableUranium"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'reactor' in ic2/api/reactor/IUsableUranium.java"
+    },
+    {
+      "name": "SimulatedStack",
+      "classes": [
+        "ic2.api.reactor.planner.SimulatedStack"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/planner/SimulatedStack.java; INFERRED keyword 'reactor' in ic2/api/reactor/planner/SimulatedStack.java"
+    },
+    {
+      "name": "Tracker",
+      "classes": [
+        "ic2.api.reactor.planner.Tracker"
+      ],
+      "assets": [],
+      "notes": "INFERRED keyword 'planner' in ic2/api/reactor/planner/Tracker.java; INFERRED keyword 'reactor' in ic2/api/reactor/planner/Tracker.java"
+    }
+  ],
+  "reactors": [
+    {
+      "name": "APIHelper",
+      "classes": [
+        "ic2.api.core.APIHelper"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/core/APIHelper.java"
+    },
+    {
+      "name": "ArrayInput",
+      "classes": [
+        "ic2.api.recipes.ingridients.inputs.ArrayInput"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/recipes/ingridients/inputs/ArrayInput.java"
+    },
+    {
+      "name": "ArrayTube",
+      "classes": [
+        "ic2.api.tiles.ArrayTube"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/ArrayTube.java"
+    },
+    {
+      "name": "BaseDurabilitySimulatedStack",
+      "classes": [
+        "ic2.api.reactor.planner.BaseDurabilitySimulatedStack"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/planner/BaseDurabilitySimulatedStack.java"
+    },
+    {
+      "name": "BaseHeatSimulatedStack",
+      "classes": [
+        "ic2.api.reactor.planner.BaseHeatSimulatedStack"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/planner/BaseHeatSimulatedStack.java"
+    },
+    {
+      "name": "BaseWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.BaseWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/BaseWrenchHandler.java"
+    },
+    {
+      "name": "ChestWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.ChestWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/ChestWrenchHandler.java"
+    },
+    {
+      "name": "DirectionList",
+      "classes": [
+        "ic2.api.util.DirectionList"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/util/DirectionList.java"
+    },
+    {
+      "name": "DispenserWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.DispenserWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/DispenserWrenchHandler.java"
+    },
+    {
+      "name": "EnergyNet",
+      "classes": [
+        "ic2.api.energy.EnergyNet"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/EnergyNet.java"
+    },
+    {
+      "name": "FakePlayerMachine",
+      "classes": [
+        "ic2.api.tiles.FakePlayerMachine"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/FakePlayerMachine.java"
+    },
+    {
+      "name": "FloatTracker",
+      "classes": [
+        "ic2.api.reactor.planner.FloatTracker"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/planner/FloatTracker.java"
+    },
+    {
+      "name": "FluidInput",
+      "classes": [
+        "ic2.api.recipes.ingridients.inputs.FluidInput"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/recipes/ingridients/inputs/FluidInput.java"
+    },
+    {
+      "name": "FoamEvent",
+      "classes": [
+        "ic2.api.events.FoamEvent"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/events/FoamEvent.java"
+    },
+    {
+      "name": "HopperWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.HopperWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/HopperWrenchHandler.java"
+    },
+    {
+      "name": "HorizontalWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.HorizontalWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/HorizontalWrenchHandler.java"
+    },
+    {
+      "name": "IAdvancedComparable",
+      "classes": [
+        "ic2.api.blocks.IAdvancedComparable"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/IAdvancedComparable.java"
+    },
+    {
+      "name": "IAnchorTile",
+      "classes": [
+        "ic2.api.tiles.IAnchorTile"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/IAnchorTile.java"
+    },
+    {
+      "name": "IC2Classic",
+      "classes": [
+        "ic2.api.core.IC2Classic"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/core/IC2Classic.java"
+    },
+    {
+      "name": "IChamberReactor",
+      "classes": [
+        "ic2.api.reactor.IChamberReactor"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IChamberReactor.java"
+    },
+    {
+      "name": "ICropRegistry",
+      "classes": [
+        "ic2.api.crops.ICropRegistry"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/crops/ICropRegistry.java"
+    },
+    {
+      "name": "ICutterItem",
+      "classes": [
+        "ic2.api.items.ICutterItem"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/items/ICutterItem.java"
+    },
+    {
+      "name": "IEnergyAcceptor",
+      "classes": [
+        "ic2.api.energy.tile.IEnergyAcceptor"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/tile/IEnergyAcceptor.java"
+    },
+    {
+      "name": "IEnergyEmitter",
+      "classes": [
+        "ic2.api.energy.tile.IEnergyEmitter"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/tile/IEnergyEmitter.java"
+    },
+    {
+      "name": "IEnergyNet",
+      "classes": [
+        "ic2.api.energy.IEnergyNet"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/IEnergyNet.java"
+    },
+    {
+      "name": "IEnergySink",
+      "classes": [
+        "ic2.api.energy.tile.IEnergySink"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/tile/IEnergySink.java"
+    },
+    {
+      "name": "IFarmland",
+      "classes": [
+        "ic2.api.crops.IFarmland"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/crops/IFarmland.java"
+    },
+    {
+      "name": "IFluidMachine",
+      "classes": [
+        "ic2.api.tiles.IFluidMachine"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/IFluidMachine.java"
+    },
+    {
+      "name": "IFluidScanner",
+      "classes": [
+        "ic2.api.items.electric.IFluidScanner"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/items/electric/IFluidScanner.java"
+    },
+    {
+      "name": "IFusionRecipeList",
+      "classes": [
+        "ic2.api.recipes.registries.IFusionRecipeList"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/recipes/registries/IFusionRecipeList.java"
+    },
+    {
+      "name": "IInputBuffer",
+      "classes": [
+        "ic2.api.network.buffer.IInputBuffer"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/network/buffer/IInputBuffer.java"
+    },
+    {
+      "name": "ILocation",
+      "classes": [
+        "ic2.api.util.ILocation"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/util/ILocation.java"
+    },
+    {
+      "name": "IMachine",
+      "classes": [
+        "ic2.api.tiles.IMachine"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/IMachine.java"
+    },
+    {
+      "name": "IMiningDrill",
+      "classes": [
+        "ic2.api.items.electric.IMiningDrill"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/items/electric/IMiningDrill.java"
+    },
+    {
+      "name": "IReactor",
+      "classes": [
+        "ic2.api.reactor.IReactor"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IReactor.java"
+    },
+    {
+      "name": "IReactorChamber",
+      "classes": [
+        "ic2.api.reactor.IReactorChamber"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IReactorChamber.java"
+    },
+    {
+      "name": "IReactorComponent",
+      "classes": [
+        "ic2.api.reactor.IReactorComponent"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IReactorComponent.java"
+    },
+    {
+      "name": "IReactorPlannerComponent",
+      "classes": [
+        "ic2.api.reactor.IReactorPlannerComponent"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IReactorPlannerComponent.java"
+    },
+    {
+      "name": "IReactorProduct",
+      "classes": [
+        "ic2.api.reactor.IReactorProduct"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IReactorProduct.java"
+    },
+    {
+      "name": "IScanner",
+      "classes": [
+        "ic2.api.items.electric.IScanner"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/items/electric/IScanner.java"
+    },
+    {
+      "name": "ISimulatedReactor",
+      "classes": [
+        "ic2.api.reactor.planner.ISimulatedReactor"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/planner/ISimulatedReactor.java"
+    },
+    {
+      "name": "ISteamReactor",
+      "classes": [
+        "ic2.api.reactor.ISteamReactor"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/ISteamReactor.java"
+    },
+    {
+      "name": "ISteamReactorChamber",
+      "classes": [
+        "ic2.api.reactor.ISteamReactorChamber"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/ISteamReactorChamber.java"
+    },
+    {
+      "name": "ISubSoil",
+      "classes": [
+        "ic2.api.crops.ISubSoil"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/crops/ISubSoil.java"
+    },
+    {
+      "name": "ITeleporterTarget",
+      "classes": [
+        "ic2.api.tiles.teleporter.ITeleporterTarget"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/teleporter/ITeleporterTarget.java"
+    },
+    {
+      "name": "ITerraformer",
+      "classes": [
+        "ic2.api.tiles.ITerraformer"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/ITerraformer.java"
+    },
+    {
+      "name": "ITerraformerBP",
+      "classes": [
+        "ic2.api.items.ITerraformerBP"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/items/ITerraformerBP.java"
+    },
+    {
+      "name": "ITube",
+      "classes": [
+        "ic2.api.tiles.tubes.ITube"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/tubes/ITube.java"
+    },
+    {
+      "name": "IUsableUranium",
+      "classes": [
+        "ic2.api.reactor.IUsableUranium"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/IUsableUranium.java"
+    },
+    {
+      "name": "IWrenchable",
+      "classes": [
+        "ic2.api.blocks.IWrenchable"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/IWrenchable.java"
+    },
+    {
+      "name": "InvertedHorizontalWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/InvertedHorizontalWrenchHandler.java"
+    },
+    {
+      "name": "ItemRegistries",
+      "classes": [
+        "ic2.api.items.ItemRegistries"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/items/ItemRegistries.java"
+    },
+    {
+      "name": "LaserEvent",
+      "classes": [
+        "ic2.api.events.LaserEvent"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/events/LaserEvent.java"
+    },
+    {
+      "name": "LinkedSink",
+      "classes": [
+        "ic2.api.energy.impl.LinkedSink"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/impl/LinkedSink.java"
+    },
+    {
+      "name": "LinkedSource",
+      "classes": [
+        "ic2.api.energy.impl.LinkedSource"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "INFERRED: uses Forge energy",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/energy/impl/LinkedSource.java"
+    },
+    {
+      "name": "ObserverBlockWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.ObserverBlockWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/ObserverBlockWrenchHandler.java"
+    },
+    {
+      "name": "PainterHelper",
+      "classes": [
+        "ic2.api.blocks.PainterHelper"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/PainterHelper.java"
+    },
+    {
+      "name": "PillarWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.PillarWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/PillarWrenchHandler.java"
+    },
+    {
+      "name": "PistonWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.PistonWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/PistonWrenchHandler.java"
+    },
+    {
+      "name": "RetextureEvent",
+      "classes": [
+        "ic2.api.events.RetextureEvent"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/events/RetextureEvent.java"
+    },
+    {
+      "name": "ScrapBoxEvent",
+      "classes": [
+        "ic2.api.events.ScrapBoxEvent"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/events/ScrapBoxEvent.java"
+    },
+    {
+      "name": "SimulatedStack",
+      "classes": [
+        "ic2.api.reactor.planner.SimulatedStack"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/planner/SimulatedStack.java"
+    },
+    {
+      "name": "StairWrenchHandler",
+      "classes": [
+        "ic2.api.blocks.wrench.StairWrenchHandler"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/wrench/StairWrenchHandler.java"
+    },
+    {
+      "name": "SubItemInput",
+      "classes": [
+        "ic2.api.recipes.ingridients.inputs.SubItemInput"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/recipes/ingridients/inputs/SubItemInput.java"
+    },
+    {
+      "name": "TeleporterTarget",
+      "classes": [
+        "ic2.api.tiles.teleporter.TeleporterTarget"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/teleporter/TeleporterTarget.java"
+    },
+    {
+      "name": "Tracker",
+      "classes": [
+        "ic2.api.reactor.planner.Tracker"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/reactor/planner/Tracker.java"
+    },
+    {
+      "name": "TransportedItem",
+      "classes": [
+        "ic2.api.tiles.tubes.TransportedItem"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/tiles/tubes/TransportedItem.java"
+    },
+    {
+      "name": "WrenchHelper",
+      "classes": [
+        "ic2.api.blocks.WrenchHelper"
+      ],
+      "blueprints": [],
+      "io": {
+        "energy": "",
+        "fluids": [],
+        "items": []
+      },
+      "notes": "INFERRED from keywords in ic2/api/blocks/WrenchHelper.java"
+    }
+  ],
+  "cables": [
+    {
+      "name": "FoamEvent",
+      "class": "ic2.api.events.FoamEvent",
+      "capacity": "?",
+      "tier": "?",
+      "loss": "?",
+      "notes": ""
+    },
+    {
+      "name": "IWrenchable",
+      "class": "ic2.api.blocks.IWrenchable",
+      "capacity": "?",
+      "tier": "?",
+      "loss": "?",
+      "notes": ""
+    }
+  ],
+  "network": {
+    "channel": "",
+    "protocol": "",
+    "packets": []
+  },
+  "configs": [],
+  "events": [],
+  "tags": []
+}

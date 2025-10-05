@@ -1,0 +1,21 @@
+API Inventory Scan Report
+============================
+
+blocks: 0
+items: 0
+block_entities: 0
+menus: 0
+entities: 0
+fluids: 0
+recipes: 0
+sounds: 0
+capabilities: 0
+multiblocks: 15
+reactors: 68
+cables: 2
+packets: 0
+configs: 0
+tags: 0
+
+Heuristics:
+- Entries marked as INFERRED originate from keyword or pattern matches; validate manually.
