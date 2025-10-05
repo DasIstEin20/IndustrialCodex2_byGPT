@@ -1,0 +1,5536 @@
+{
+  "packages": [
+    "ic2.api.addons",
+    "ic2.api.blocks",
+    "ic2.api.blocks.wrench",
+    "ic2.api.core",
+    "ic2.api.crops",
+    "ic2.api.energy",
+    "ic2.api.energy.impl",
+    "ic2.api.energy.tile",
+    "ic2.api.events",
+    "ic2.api.items",
+    "ic2.api.items.armor",
+    "ic2.api.items.electric",
+    "ic2.api.items.readers",
+    "ic2.api.network",
+    "ic2.api.network.buffer",
+    "ic2.api.network.container",
+    "ic2.api.network.item",
+    "ic2.api.network.tile",
+    "ic2.api.reactor",
+    "ic2.api.reactor.planner",
+    "ic2.api.recipes",
+    "ic2.api.recipes.ingridients.generators",
+    "ic2.api.recipes.ingridients.inputs",
+    "ic2.api.recipes.ingridients.queue",
+    "ic2.api.recipes.ingridients.recipes",
+    "ic2.api.recipes.misc",
+    "ic2.api.recipes.registries",
+    "ic2.api.ticks",
+    "ic2.api.tiles",
+    "ic2.api.tiles.display",
+    "ic2.api.tiles.display.impl",
+    "ic2.api.tiles.readers",
+    "ic2.api.tiles.teleporter",
+    "ic2.api.tiles.tubes",
+    "ic2.api.util"
+  ],
+  "interfaces": [
+    {
+      "fqcn": "ic2.api.addons.IModule",
+      "methods": [
+        {
+          "name": "canLoad",
+          "sig": "boolean canLoad(Dist side)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "loadConfigs",
+          "sig": "void loadConfigs()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "preInit",
+          "sig": "void preInit(IEventBus modBus)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "postInit",
+          "sig": "void postInit()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.blocks.IAdvancedComparable",
+      "methods": [
+        {
+          "name": "getComparatorInputOverride",
+          "sig": "int getComparatorInputOverride(BlockState state, Level world, BlockPos pos, Direction side)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.blocks.IWrenchable",
+      "methods": [
+        {
+          "name": "getFacing",
+          "sig": "Direction getFacing(BlockState state, Level world, BlockPos pos);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "canSetFacing",
+          "sig": "boolean canSetFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "setFacing",
+          "sig": "boolean setFacing(BlockState state, Level world, BlockPos pos, Player player, Direction side);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "doSpecialAction",
+          "sig": "boolean doSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "hasSpecialAction",
+          "sig": "AABB hasSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "canRemoveBlock",
+          "sig": "boolean canRemoveBlock(BlockState state, Level world, BlockPos pos, Player player);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "getDropRate",
+          "sig": "double getDropRate(BlockState state, Level world, BlockPos pos, Player player);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "getDrops",
+          "sig": "List<ItemStack> getDrops(BlockState state, Level world, BlockPos pos, Player player);",
+          "notes": "DECLARED (fallback)"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other",
+      "source": "ic2/api/blocks/IWrenchable.java"
+    },
+    {
+      "fqcn": "ic2.api.blocks.IPaintable",
+      "methods": [
+        {
+          "name": "recolor",
+          "sig": "boolean recolor(BlockState state, Level world, BlockPos pos, Vec3 exactClick, Direction dir, DyeColor color);",
+          "notes": "DECLARED (fallback)"
+        },
+        {
+          "name": "getColor",
+          "sig": "DyeColor getColor(BlockState state);",
+          "notes": "DECLARED (fallback)"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other",
+      "source": "ic2/api/blocks/PainterHelper.java"
+    },
+    {
+      "fqcn": "ic2.api.core.APIHelper",
+      "methods": [
+        {
+          "name": "getFluidContainers",
+          "sig": "List<ItemStack> getFluidContainers(Fluid fluid)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "createSteam",
+          "sig": "FluidStack createSteam(int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTickHelper",
+          "sig": "ITickScheduler getTickHelper()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNetworkManager",
+          "sig": "INetworkManager getNetworkManager()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNetworkManager",
+          "sig": "INetworkManager getNetworkManager(Dist side)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropModifier",
+      "methods": [
+        {
+          "name": "canChangeSeedMode",
+          "sig": "boolean canChangeSeedMode(ItemStack input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canToggleSeedMode",
+          "sig": "boolean canToggleSeedMode(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropRenderer",
+      "methods": [
+        {
+          "name": "createQuadsForStage",
+          "sig": "List<BakedQuad> createQuadsForStage(int stage, boolean fancy, FaceBakery baker)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropSeed",
+      "methods": [
+        {
+          "name": "getCrop",
+          "sig": "ICrop getCrop(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getScanLevel",
+          "sig": "int getScanLevel(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setScanLevel",
+          "sig": "void setScanLevel(ItemStack stack, int level)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "increaseScanLevel",
+          "sig": "void increaseScanLevel(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowth",
+          "sig": "int getGrowth(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setGrowth",
+          "sig": "void setGrowth(ItemStack stack, int growth)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGain",
+          "sig": "int getGain(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setGain",
+          "sig": "void setGain(ItemStack stack, int gain)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getResistance",
+          "sig": "int getResistance(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setResistance",
+          "sig": "void setResistance(ItemStack stack, int resistance)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "SCAN_COST",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "TIERS",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropTile",
+      "methods": [
+        {
+          "name": "getFarmland",
+          "sig": "IFarmland getFarmland()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isWaterLogged",
+          "sig": "boolean isWaterLogged()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setWaterlogged",
+          "sig": "void setWaterlogged(boolean water)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCrop",
+          "sig": "ICrop getCrop()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setCrop",
+          "sig": "void setCrop(ICrop crop)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowthStage",
+          "sig": "int getGrowthStage()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setGrowthStage",
+          "sig": "void setGrowthStage(int stage)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowthPoints",
+          "sig": "int getGrowthPoints()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setGrowthPoints",
+          "sig": "void setGrowthPoints(int points)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getScanLevel",
+          "sig": "int getScanLevel()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setScanLevel",
+          "sig": "void setScanLevel(int level)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isCrossBreeding",
+          "sig": "boolean isCrossBreeding()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setCrossBreeding",
+          "sig": "void setCrossBreeding(boolean breed)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGainStat",
+          "sig": "int getGainStat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setGainStat",
+          "sig": "void setGainStat(int level)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowthStat",
+          "sig": "int getGrowthStat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setGrowthStat",
+          "sig": "void setGrowthStat(int level)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getResistanceStat",
+          "sig": "int getResistanceStat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setResistanceStat",
+          "sig": "void setResistanceStat(int level)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canBreed",
+          "sig": "boolean canBreed()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "requestStateUpdate",
+          "sig": "void requestStateUpdate()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onCustomDataChanged",
+          "sig": "void onCustomDataChanged()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "calculateGrowthSpeed",
+          "sig": "int calculateGrowthSpeed()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "performManualHarvest",
+          "sig": "boolean performManualHarvest()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "performHarvest",
+          "sig": "List<ItemStack> performHarvest(boolean manual)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "pickCrop",
+          "sig": "boolean pickCrop()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeCrop",
+          "sig": "void removeCrop()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isBlockBelow",
+          "sig": "boolean isBlockBelow(BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isBlockBelow",
+          "sig": "boolean isBlockBelow(Block block)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isBlockBelow",
+          "sig": "boolean isBlockBelow(TagKey<Block> tag)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getBlocksBelow",
+          "sig": "Set<Block> getBlocksBelow()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCustomData",
+          "sig": "CompoundTag getCustomData()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getLightLevel",
+          "sig": "int getLightLevel()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnvironmentQuality",
+          "sig": "int getEnvironmentQuality()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNutrients",
+          "sig": "int getNutrients()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHumidity",
+          "sig": "int getHumidity()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getWaterStorage",
+          "sig": "int getWaterStorage()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setWaterStorage",
+          "sig": "void setWaterStorage(int water)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFertilizerStorage",
+          "sig": "int getFertilizerStorage()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setFertilizerStorage",
+          "sig": "void setFertilizerStorage(int fertilizer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getWeedExStorage",
+          "sig": "int getWeedExStorage()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setWeedExStorage",
+          "sig": "void setWeedExStorage(int weedEx)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "createSeeds",
+          "sig": "ItemStack createSeeds(ICrop crop, int growthStat, int gainStat, int resistanceStat, int scanLevel)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ILocation"
+      ],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.IFarmland",
+      "methods": [
+        {
+          "name": "getHumidity",
+          "sig": "int getHumidity(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHumidity",
+          "sig": "int getHumidity(BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNutrients",
+          "sig": "int getNutrients(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNutrients",
+          "sig": "int getNutrients(BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isSpecial",
+          "sig": "boolean isSpecial()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSpecialState",
+          "sig": "BlockState getSpecialState(Block block)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ISeedCrop",
+      "methods": [
+        {
+          "name": "isDroppingSeeds",
+          "sig": "boolean isDroppingSeeds(ICropTile tile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSeedDrops",
+          "sig": "ItemStack[] getSeedDrops(ICropTile tile)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ISubSoil",
+      "methods": [
+        {
+          "name": "getHumidity",
+          "sig": "int getHumidity(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHumidity",
+          "sig": "int getHumidity(BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNutrients",
+          "sig": "int getNutrients(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNutrients",
+          "sig": "int getNutrients(BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isSpecial",
+          "sig": "boolean isSpecial()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSpecialState",
+          "sig": "BlockState getSpecialState(Block block)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.energy.IEnergyNet",
+      "methods": [
+        {
+          "name": "getTile",
+          "sig": "IEnergyTile getTile(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSubTile",
+          "sig": "IEnergyTile getSubTile(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTiles",
+          "sig": "GridTile getTiles(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addTile",
+          "sig": "void addTile(IEnergyTile tile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeTile",
+          "sig": "void removeTile(IEnergyTile tile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateTile",
+          "sig": "void updateTile(IEnergyTile tile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getPowerFromTier",
+          "sig": "int getPowerFromTier(int tier)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTierFromPower",
+          "sig": "int getTierFromPower(int power)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDisplayTier",
+          "sig": "String getDisplayTier(int tier)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStats",
+          "sig": "TransferStats getStats(IEnergyTile tile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getPacketStats",
+          "sig": "List<PacketStats> getPacketStats(IEnergyTile tile)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyAcceptor",
+      "methods": [
+        {
+          "name": "canAcceptEnergy",
+          "sig": "boolean canAcceptEnergy(IEnergyEmitter emitter, Direction side)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductor",
+      "methods": [
+        {
+          "name": "isWaterlogged",
+          "sig": "boolean isWaterlogged()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isLavaLogged",
+          "sig": "boolean isLavaLogged()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getConductionLoss",
+          "sig": "double getConductionLoss()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getInsulationEnergyAbsorption",
+          "sig": "int getInsulationEnergyAbsorption()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getInsulationBreakdownEnergy",
+          "sig": "int getInsulationBreakdownEnergy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getConductorBreakdownEnergy",
+          "sig": "int getConductorBreakdownEnergy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeInsulation",
+          "sig": "void removeInsulation()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeConductor",
+          "sig": "void removeConductor()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyAcceptor",
+        "IEnergyEmitter"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductorAnchored",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "IEnergyConductor",
+        "IAnchorTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductorColored",
+      "methods": [
+        {
+          "name": "getColor",
+          "sig": "DyeColor getColor()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyConductor"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductorModifiable",
+      "methods": [
+        {
+          "name": "tryAddInsulation",
+          "sig": "boolean tryAddInsulation()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "tryRemoveInsulation",
+          "sig": "boolean tryRemoveInsulation()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyConductor"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyEmitter",
+      "methods": [
+        {
+          "name": "canEmitEnergy",
+          "sig": "boolean canEmitEnergy(IEnergyAcceptor acceptor, Direction side)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergySink",
+      "methods": [
+        {
+          "name": "getSinkTier",
+          "sig": "int getSinkTier()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRequestedEnergy",
+          "sig": "int getRequestedEnergy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "acceptEnergy",
+          "sig": "int acceptEnergy(Direction side, int amount, int voltage)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyAcceptor"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergySource",
+      "methods": [
+        {
+          "name": "getSourceTier",
+          "sig": "int getSourceTier()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxEnergyOutput",
+          "sig": "int getMaxEnergyOutput()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getProvidedEnergy",
+          "sig": "int getProvidedEnergy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "consumeEnergy",
+          "sig": "void consumeEnergy(int consumed)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onPacketFailed",
+          "sig": "void onPacketFailed()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSourceType",
+          "sig": "SourceType getSourceType()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyEmitter"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyTile",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "ILocation"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IMultiEnergySource",
+      "methods": [
+        {
+          "name": "hasMultiplePackets",
+          "sig": "boolean hasMultiplePackets()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getPacketCount",
+          "sig": "int getPacketCount()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergySource"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IMultiEnergyTile",
+      "methods": [
+        {
+          "name": "getTiles",
+          "sig": "List<IEnergyTile> getTiles()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.items.IAutoEatable",
+      "methods": [
+        {
+          "name": "canAutoEat",
+          "sig": "boolean canAutoEat(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFoodValue",
+          "sig": "int getFoodValue(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onEaten",
+          "sig": "ItemStack onEaten(ItemStack stack, Level level, Player player)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IBoxableItem",
+      "methods": [
+        {
+          "name": "canStoreIntoBox",
+          "sig": "boolean canStoreIntoBox(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ICoinItem",
+      "methods": [
+        {
+          "name": "getMoneyValue",
+          "sig": "int getMoneyValue(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ICutterItem",
+      "methods": [
+        {
+          "name": "cutInsulation",
+          "sig": "void cutInsulation(Player player, ItemStack stack, Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IDisplayProvider",
+      "methods": [
+        {
+          "name": "provideInfo",
+          "sig": "void provideInfo(ItemStack stack, Consumer<IDisplayInfo> infos)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IDrinkContainer",
+      "methods": [
+        {
+          "name": "getCapacity",
+          "sig": "int getCapacity()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getContent",
+          "sig": "IDrinkableFluid getContent(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasContent",
+          "sig": "boolean hasContent(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "fillWith",
+          "sig": "ItemStack fillWith(IDrinkableFluid fluid, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEmptyContainer",
+          "sig": "ItemStack getEmptyContainer()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IFoamOverrider",
+      "methods": [],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IFuelableItem",
+      "methods": [
+        {
+          "name": "fill",
+          "sig": "ItemStack fill(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canFuel",
+          "sig": "boolean canFuel(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasFuel",
+          "sig": "boolean hasFuel(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFuel",
+          "sig": "int getFuel(ItemStack stack, int requested, boolean doDrain)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IRepairable",
+      "methods": [
+        {
+          "name": "repairDamage",
+          "sig": "boolean repairDamage(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ItemLike"
+      ],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ITagBlock",
+      "methods": [
+        {
+          "name": "matches",
+          "sig": "boolean matches(ItemStack self, Block block)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getBlocks",
+          "sig": "List<Block> getBlocks(ItemStack self)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ITagItem",
+      "methods": [
+        {
+          "name": "matches",
+          "sig": "boolean matches(ItemStack self, ItemStack toCompare)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ITerraformerBP",
+      "methods": [
+        {
+          "name": "canInsert",
+          "sig": "boolean canInsert(ItemStack stack, Player player, Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onInsert",
+          "sig": "void onInsert(ItemStack stack, Player player, Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isRandomized",
+          "sig": "boolean isRandomized(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnergyUsage",
+          "sig": "int getEnergyUsage(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRadius",
+          "sig": "int getRadius(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "terraform",
+          "sig": "boolean terraform(ItemStack stack, Level world, BlockPos position, ITerraformer terraformer)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IUpgradeItem",
+      "methods": [
+        {
+          "name": "getType",
+          "sig": "UpgradeType getType(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFunctions",
+          "sig": "EnumSet<Functions> getFunctions(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onInstall",
+          "sig": "void onInstall(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getProcessingSpeedMultiplier",
+          "sig": "double getProcessingSpeedMultiplier(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExtraProcessingSpeed",
+          "sig": "int getExtraProcessingSpeed(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getProcessingTimeMultiplier",
+          "sig": "double getProcessingTimeMultiplier(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExtraProcessingTime",
+          "sig": "int getExtraProcessingTime(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnergyDemandMultiplier",
+          "sig": "double getEnergyDemandMultiplier(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExtraEnergyDemand",
+          "sig": "int getExtraEnergyDemand(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnergyStorageMultiplier",
+          "sig": "double getEnergyStorageMultiplier(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExtraEnergyStorage",
+          "sig": "int getExtraEnergyStorage(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExtraTier",
+          "sig": "int getExtraTier(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSoundMultiplier",
+          "sig": "float getSoundMultiplier(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "useRedstoneInvertion",
+          "sig": "boolean useRedstoneInvertion(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onTick",
+          "sig": "void onTick(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onMachineFinishedRecipePre",
+          "sig": "void onMachineFinishedRecipePre(ItemStack stack, IMachine machine, IRecipeOutput output, CompoundTag recipeFlags)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onMachineFinishedRecipePost",
+          "sig": "void onMachineFinishedRecipePost(ItemStack stack, IMachine machine, RecipeEntry entry, List<IStackOutput> drops)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onMachineProcessed",
+          "sig": "void onMachineProcessed(ItemStack stack, IMachine machine)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IWindmillBlade",
+      "methods": [
+        {
+          "name": "getRadius",
+          "sig": "int getRadius(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEffectiveness",
+          "sig": "float getEffectiveness(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTexture",
+          "sig": "ResourceLocation getTexture(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IArmorHud",
+      "methods": [
+        {
+          "name": "isHudEnabled",
+          "sig": "boolean isHudEnabled(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IArmorModule",
+      "methods": [
+        {
+          "name": "getType",
+          "sig": "ModuleType getType(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canInstallInArmor",
+          "sig": "boolean canInstallInArmor(ItemStack stack, ItemStack armor, EquipmentSlot type)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onInstall",
+          "sig": "void onInstall(ItemStack stack, ItemStack armor, IArmorModuleHolder holder)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onUninstall",
+          "sig": "void onUninstall(ItemStack stack, ItemStack armor, IArmorModuleHolder holder)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "transferToArmor",
+          "sig": "void transferToArmor(ItemStack stack, ItemStack oldArmor, ItemStack newArmor)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onTick",
+          "sig": "void onTick(ItemStack stack, ItemStack armor, Level world, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onEquipped",
+          "sig": "void onEquipped(ItemStack stack, ItemStack armor, Player entity)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onUnequipped",
+          "sig": "void onUnequipped(ItemStack stack, ItemStack armor, Player entity)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "provideCapabilities",
+          "sig": "void provideCapabilities(ItemStack stack, ItemStack armor)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "handlePacket",
+          "sig": "boolean handlePacket(Player player, ItemStack module, ItemStack armor, String id, INetworkDataBuffer buffer, Dist targetSide)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "handleToolTip",
+          "sig": "void handleToolTip(ItemStack stack, Consumer<MutableComponent> results)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.ICustomArmor",
+      "methods": [
+        {
+          "name": "getProperties",
+          "sig": "AbsorptionProperties getProperties(LivingEntity entity, ItemStack armor, DamageSource source, double damage, EquipmentSlot slot)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "damageArmor",
+          "sig": "void damageArmor(LivingEntity player, ItemStack stack, DamageSource source, int damage, EquipmentSlot slot, DamageType type)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canBlockDamageSource",
+          "sig": "boolean canBlockDamageSource(LivingEntity player, ItemStack stack, DamageSource source, EquipmentSlot slot)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IEnergyShieldArmor",
+      "methods": [
+        {
+          "name": "addsShieldEffect",
+          "sig": "boolean addsShieldEffect(EquipmentSlot type, LivingEntity entity, ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isEffectAlwaysOn",
+          "sig": "boolean isEffectAlwaysOn(EquipmentSlot type, LivingEntity entity, ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addsEnergyShieldEffect",
+          "sig": "boolean addsEnergyShieldEffect(LivingEntity living)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "shouldAlwaysShowEffect",
+          "sig": "boolean shouldAlwaysShowEffect(LivingEntity living)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IFoamSupplier",
+      "methods": [
+        {
+          "name": "canProvideFoam",
+          "sig": "boolean canProvideFoam(Player player, ItemStack stack, InventoryType inv, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "useFoam",
+          "sig": "void useFoam(Player player, ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFreeFoamSpace",
+          "sig": "int getFreeFoamSpace(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "fillFoam",
+          "sig": "void fillFoam(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IMetalArmor",
+      "methods": [
+        {
+          "name": "isMetalArmor",
+          "sig": "boolean isMetalArmor(ItemStack stack, Player player, EquipmentSlot targetSlot)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.ICustomElectricItem",
+      "methods": [
+        {
+          "name": "getManager",
+          "sig": "IElectricItemManager getManager(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IDamagelessElectricItem",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "IElectricItem"
+      ],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IElectricEnchantable",
+      "methods": [
+        {
+          "name": "getEnchantmentCompatibility",
+          "sig": "InteractionResult getEnchantmentCompatibility(ItemStack stack, Enchantment ench)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnchantmentType",
+          "sig": "EnchantmentCategory getEnchantmentType(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isBookEnchantable",
+          "sig": "boolean isBookEnchantable(ItemStack stack, ItemStack book)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IForgeItem"
+      ],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IElectricItem",
+      "methods": [
+        {
+          "name": "canProvideEnergy",
+          "sig": "boolean canProvideEnergy(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCapacity",
+          "sig": "int getCapacity(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTier",
+          "sig": "int getTier(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTransferLimit",
+          "sig": "int getTransferLimit(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IElectricItemManager",
+      "methods": [
+        {
+          "name": "charge",
+          "sig": "int charge(ItemStack stack, int amount, int tier, boolean ignoreTransferLimit, boolean simulate)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "discharge",
+          "sig": "int discharge(ItemStack stack, int amount, int tier, boolean ignoreTransferLimit, boolean externally, boolean simulate)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCharge",
+          "sig": "int getCharge(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCapacity",
+          "sig": "int getCapacity(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canUse",
+          "sig": "boolean canUse(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "use",
+          "sig": "boolean use(ItemStack stack, int amount, LivingEntity entity)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "chargeFromArmor",
+          "sig": "void chargeFromArmor(ItemStack stack, LivingEntity entity)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTier",
+          "sig": "int getTier(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTransferLimit",
+          "sig": "int getTransferLimit(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getToolTip",
+          "sig": "Component getToolTip(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IFluidScanner",
+      "methods": [
+        {
+          "name": "getScanRadius",
+          "sig": "int getScanRadius(ItemStack stack, boolean useEnergy)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isValuableFluid",
+          "sig": "boolean isValuableFluid(ItemStack stack, FluidState state, LevelReader world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isValuableFluid",
+          "sig": "boolean isValuableFluid(ItemStack stack, FluidState state)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IMiningDrill",
+      "methods": [
+        {
+          "name": "canMineBlock",
+          "sig": "boolean canMineBlock(ItemStack drill, BlockState state, LevelReader access, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMiningBoost",
+          "sig": "int getMiningBoost(ItemStack stack, BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExtraEnergyCost",
+          "sig": "int getExtraEnergyCost(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canDrillBeUsed",
+          "sig": "boolean canDrillBeUsed(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onDrillUsed",
+          "sig": "void onDrillUsed(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IScanner",
+      "methods": [
+        {
+          "name": "getScanRadius",
+          "sig": "int getScanRadius(ItemStack stack, boolean useEnergy)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasScanEffect",
+          "sig": "boolean hasScanEffect(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isOreValuable",
+          "sig": "boolean isOreValuable(ItemStack stack, BlockState state, LevelReader world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isOreValuable",
+          "sig": "boolean isOreValuable(ItemStack stack, BlockState state)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOreValue",
+          "sig": "int getOreValue(ItemStack stack, BlockState state, LevelReader world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOreValue",
+          "sig": "int getOreValue(ItemStack stack, BlockState state)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.ICropReader",
+      "methods": [
+        {
+          "name": "isCropReader",
+          "sig": "boolean isCropReader(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isCropReaderImpl",
+          "sig": "boolean isCropReaderImpl(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.IEUReader",
+      "methods": [
+        {
+          "name": "isEUReader",
+          "sig": "boolean isEUReader(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isEUReaderImpl",
+          "sig": "boolean isEUReaderImpl(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.IThermometer",
+      "methods": [
+        {
+          "name": "isThermometer",
+          "sig": "boolean isThermometer(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isThermometerImpl",
+          "sig": "boolean isThermometerImpl(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.IWrenchTool",
+      "methods": [
+        {
+          "name": "getActualLoss",
+          "sig": "double getActualLoss(ItemStack stack, double originalLoss)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "shouldRenderOverlay",
+          "sig": "boolean shouldRenderOverlay(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.network.INetworkManager",
+      "methods": [
+        {
+          "name": "registerDataBuffer",
+          "sig": "void registerDataBuffer(ResourceLocation location, Class<INetworkDataBuffer> clz, Supplier<INetworkDataBuffer> creator)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "startGuiTracking",
+          "sig": "void startGuiTracking(BlockEntity tile, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendInitialGuiData",
+          "sig": "void sendInitialGuiData(INetworkFieldProvider tile, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateGuiData",
+          "sig": "void updateGuiData(BlockEntity tile, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateTileField",
+          "sig": "void updateTileField(BlockEntity tile, String field)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateTileFields",
+          "sig": "void updateTileFields(BlockEntity tile, String... fields)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateGuiField",
+          "sig": "void updateGuiField(BlockEntity tile, String field)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateGuiFields",
+          "sig": "void updateGuiFields(BlockEntity tile, String... fields)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendInitialData",
+          "sig": "void sendInitialData(INetworkFieldProvider prov, CompoundTag nbt)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "handleInitialChange",
+          "sig": "void handleInitialChange(BlockEntity prov, CompoundTag nbt)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "requestInitialData",
+          "sig": "void requestInitialData(INetworkFieldProvider prov)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendTileEvent",
+          "sig": "void sendTileEvent(BlockEntity tile, int key, int value, PacketRange target)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendTileDataBufferEvent",
+          "sig": "void sendTileDataBufferEvent(BlockEntity tile, String id, INetworkDataBuffer buffer, PacketRange target)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendClientTileEvent",
+          "sig": "void sendClientTileEvent(BlockEntity tile, int key, int value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendClientTileDataBufferEvent",
+          "sig": "void sendClientTileDataBufferEvent(BlockEntity tile, String id, INetworkDataBuffer buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendItemEvent",
+          "sig": "void sendItemEvent(Player player, ItemStack stack, int key, int value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendItemBuffer",
+          "sig": "void sendItemBuffer(Player player, ItemStack stack, String id, INetworkDataBuffer buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendClientItemEvent",
+          "sig": "void sendClientItemEvent(ItemStack stack, int key, int value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "sendClientItemBuffer",
+          "sig": "void sendClientItemBuffer(ItemStack stack, String id, INetworkDataBuffer buffer)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.IPlayerPacket",
+      "methods": [
+        {
+          "name": "getContainer",
+          "sig": "T getContainer(Player player, Class<T> clz)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getContainer",
+          "sig": "void getContainer(Player player, Class<T> clz, Consumer<T> listener)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOptionalContainer",
+          "sig": "Optional<T> getOptionalContainer(Player player, Class<T> clz)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "findPlayerStack",
+          "sig": "ItemStack findPlayerStack(Player player, ItemStack send)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.IBitLevelOverride",
+      "methods": [
+        {
+          "name": "getOverride",
+          "sig": "BitLevel getOverride(int fieldID, String fieldName)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasOverride",
+          "sig": "boolean hasOverride(int fieldID, String fieldName)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.IInputBuffer",
+      "methods": [
+        {
+          "name": "readBoolean",
+          "sig": "boolean readBoolean()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readByte",
+          "sig": "byte readByte()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readShort",
+          "sig": "short readShort()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readMedium",
+          "sig": "int readMedium()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readInt",
+          "sig": "int readInt()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readVarInt",
+          "sig": "int readVarInt()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readFloat",
+          "sig": "float readFloat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readDouble",
+          "sig": "double readDouble()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readLong",
+          "sig": "long readLong()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readData",
+          "sig": "long readData(BitLevel length)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readChar",
+          "sig": "char readChar()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readEnum",
+          "sig": "T readEnum(Class<T> clz)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readBytes",
+          "sig": "byte[] readBytes()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readString",
+          "sig": "String readString()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readNBTData",
+          "sig": "CompoundTag readNBTData()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readForgeRegistryEntry",
+          "sig": "T readForgeRegistryEntry(IForgeRegistry<T> registry)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readItemStack",
+          "sig": "ItemStack readItemStack()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readFluidStack",
+          "sig": "FluidStack readFluidStack()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readUUID",
+          "sig": "UUID readUUID()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readRegistryKey",
+          "sig": "ResourceKey<T> readRegistryKey(ResourceKey<Registry<T>> key)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.INetworkDataBuffer",
+      "methods": [
+        {
+          "name": "write",
+          "sig": "void write(IOutputBuffer buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "read",
+          "sig": "void read(IInputBuffer buffer)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.IOutputBuffer",
+      "methods": [
+        {
+          "name": "writeBoolean",
+          "sig": "void writeBoolean(boolean value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeByte",
+          "sig": "void writeByte(byte value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeShort",
+          "sig": "void writeShort(short value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeMedium",
+          "sig": "void writeMedium(int value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeInt",
+          "sig": "void writeInt(int value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeVarInt",
+          "sig": "void writeVarInt(int value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeFloat",
+          "sig": "void writeFloat(float value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeDouble",
+          "sig": "void writeDouble(double value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeLong",
+          "sig": "void writeLong(long value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeData",
+          "sig": "void writeData(long value, BitLevel type)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeChar",
+          "sig": "void writeChar(char value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeEnum",
+          "sig": "void writeEnum(Enum<?> value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeString",
+          "sig": "void writeString(String value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeBytes",
+          "sig": "void writeBytes(byte[] value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeNBTData",
+          "sig": "void writeNBTData(CompoundTag value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeForgeEntry",
+          "sig": "void writeForgeEntry(T value, IForgeRegistry<T> registry)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeItemStack",
+          "sig": "void writeItemStack(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeFluidStack",
+          "sig": "void writeFluidStack(FluidStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeUUID",
+          "sig": "void writeUUID(UUID value)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeRegistryKey",
+          "sig": "void writeRegistryKey(ResourceKey<?> key)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeItemStack",
+          "sig": "void writeItemStack(ItemStack stack, IOutputBuffer buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeEnum",
+          "sig": "void writeEnum(Enum<?> value, IOutputBuffer buffer)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.container.IContainerDataEvent",
+      "methods": [
+        {
+          "name": "onDataReceived",
+          "sig": "void onDataReceived(int key, int value)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.item.INetworkItemBufferEvent",
+      "methods": [
+        {
+          "name": "onDataBufferReceived",
+          "sig": "void onDataBufferReceived(ItemStack stack, Player player, String id, T buffer, Dist targetSide)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.item.INetworkItemEvent",
+      "methods": [
+        {
+          "name": "onEventReceived",
+          "sig": "void onEventReceived(ItemStack stack, Player player, int key, int value, Dist target)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkClientEventListener",
+      "methods": [
+        {
+          "name": "onClientDataReceived",
+          "sig": "void onClientDataReceived(Player entity, int key, int value)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkDataEventListener",
+      "methods": [
+        {
+          "name": "onDataBufferReceived",
+          "sig": "void onDataBufferReceived(Player player, String id, INetworkDataBuffer data, Dist target)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkEventListener",
+      "methods": [
+        {
+          "name": "onServerDataReceived",
+          "sig": "void onServerDataReceived(int key, int value)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkFieldNotifier",
+      "methods": [
+        {
+          "name": "onNetworkFieldChanged",
+          "sig": "void onNetworkFieldChanged(Set<String> fields, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onGuiFieldChanged",
+          "sig": "void onGuiFieldChanged(Set<String> fields, Player player)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkFieldProvider",
+      "methods": [
+        {
+          "name": "getNetworkFields",
+          "sig": "List<String> getNetworkFields()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGuiFields",
+          "sig": "List<String> getGuiFields()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isDefaultData",
+          "sig": "boolean isDefaultData(String fieldName)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IChamberReactor",
+      "methods": [
+        {
+          "name": "refreshChambers",
+          "sig": "void refreshChambers()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getWidth",
+          "sig": "int getWidth()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHeight",
+          "sig": "int getHeight()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IReactor"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactor",
+      "methods": [
+        {
+          "name": "getHeat",
+          "sig": "int getHeat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setHeat",
+          "sig": "void setHeat(int newHeat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addHeat",
+          "sig": "void addHeat(int heat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxHeat",
+          "sig": "int getMaxHeat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setMaxHeat",
+          "sig": "void setMaxHeat(int heat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHeatEffectModifier",
+          "sig": "float getHeatEffectModifier()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setHeatEffectModifier",
+          "sig": "void setHeatEffectModifier(float hem)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnergyOutput",
+          "sig": "double getEnergyOutput()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addOutput",
+          "sig": "void addOutput(float output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStackInReactor",
+          "sig": "ItemStack getStackInReactor(int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setStackInReactor",
+          "sig": "void setStackInReactor(int x, int y, ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "explode",
+          "sig": "void explode()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTickRate",
+          "sig": "int getTickRate()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isProducingEnergy",
+          "sig": "boolean isProducingEnergy()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ILocation"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorChamber",
+      "methods": [
+        {
+          "name": "getReactor",
+          "sig": "IReactor getReactor()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorComponent",
+      "methods": [
+        {
+          "name": "isValidForReactor",
+          "sig": "boolean isValidForReactor(ItemStack stack, IReactor reactor)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "processChamber",
+          "sig": "void processChamber(ItemStack stack, IReactor reactor, int x, int y, boolean heatCalculation, boolean damageTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "boolean acceptUraniumPulse(ItemStack stack, IReactor reactor, ItemStack source, int myX, int myY, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "boolean canStoreHeat(ItemStack stack, IReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "int getStoredHeat(ItemStack stack, IReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "int getMaxStoredHeat(ItemStack stack, IReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "storeHeat",
+          "sig": "int storeHeat(ItemStack stack, IReactor reactor, int x, int y, int heatChange)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "float getExplosionInfluence(ItemStack stack, IReactor reactor)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IReactorProduct"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorPlannerComponent",
+      "methods": [
+        {
+          "name": "applyStackSize",
+          "sig": "ItemStack applyStackSize(ItemStack newStack, int size)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStackSize",
+          "sig": "int getStackSize(ItemStack input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "provideComponents",
+          "sig": "void provideComponents(NonNullList<ItemStack> list)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getComponentID",
+          "sig": "short getComponentID(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "createSimulationComponent",
+          "sig": "SimulatedStack createSimulationComponent(ItemStack self)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addToolTip",
+          "sig": "void addToolTip(ItemStack stack, Consumer<Component> tooltips)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addAffectedSlots",
+          "sig": "void addAffectedSlots(int x, int y, BiPredicate<Integer, Integer> slots)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSupportedReactor",
+          "sig": "ReactorType getSupportedReactor(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getType",
+          "sig": "ComponentType getType(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStats",
+          "sig": "List<ReactorStat> getStats(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getReactorStat",
+          "sig": "NumericTag getReactorStat(ReactorStat stat, ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getReactorStat",
+          "sig": "NumericTag getReactorStat(ReactorStat stat, ItemStack stack, IReactor planner, int x, int y)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "FORMAT",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "NULL_VALUE",
+          "value": "valueOf()",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [
+        "IReactorComponent"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorProduct",
+      "methods": [
+        {
+          "name": "isValidForReactor",
+          "sig": "boolean isValidForReactor(ItemStack stack, IReactor reactor)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.ISteamReactor",
+      "methods": [
+        {
+          "name": "getWaterTank",
+          "sig": "FluidTank getWaterTank()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSteamTank",
+          "sig": "FluidTank getSteamTank()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IReactor"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.ISteamReactorChamber",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "IReactorChamber"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IUsableUranium",
+      "methods": [
+        {
+          "name": "createDepletedUraniumRod",
+          "sig": "ItemStack createDepletedUraniumRod()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.ISimulatedReactor",
+      "methods": [
+        {
+          "name": "getItem",
+          "sig": "SimulatedStack getItem(int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "markBroken",
+          "sig": "void markBroken(int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addBreedingPulse",
+          "sig": "void addBreedingPulse()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addFuelPulse",
+          "sig": "void addFuelPulse()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHeat",
+          "sig": "int getHeat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setHeat",
+          "sig": "void setHeat(int newHeat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addHeat",
+          "sig": "void addHeat(int heat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxHeat",
+          "sig": "int getMaxHeat()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setMaxHeat",
+          "sig": "void setMaxHeat(int heat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHeatEffectModifier",
+          "sig": "float getHeatEffectModifier()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setHeatEffectModifier",
+          "sig": "void setHeatEffectModifier(float hem)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addOutput",
+          "sig": "void addOutput(float output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEnergyOutput",
+          "sig": "float getEnergyOutput()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSteam",
+          "sig": "void addSteam(int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "consumeWater",
+          "sig": "int consumeWater(int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isProducingEnergy",
+          "sig": "boolean isProducingEnergy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isSteamReactor",
+          "sig": "boolean isSteamReactor()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isSimulatingPulses",
+          "sig": "boolean isSimulatingPulses()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGameTime",
+          "sig": "long getGameTime()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.SimulatedStack",
+      "methods": [
+        {
+          "name": "syncStack",
+          "sig": "ItemStack syncStack(ItemStack original)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "save",
+          "sig": "CompoundTag save()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "load",
+          "sig": "void load(CompoundTag data)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "commitState",
+          "sig": "void commitState()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "reset",
+          "sig": "void reset()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "simulate",
+          "sig": "void simulate(ISimulatedReactor reactor, int x, int y, boolean heatTick, boolean damageTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "boolean acceptUraniumPulse(ISimulatedReactor reactor, int x, int y, SimulatedStack source, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "boolean canStoreHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "int getStoredHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "int getMaxStoredHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "storeHeat",
+          "sig": "int storeHeat(ISimulatedReactor reactor, int x, int y, int heatChange)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canViewHeat",
+          "sig": "boolean canViewHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "float getExplosionInfluence(ISimulatedReactor reactor)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getId",
+          "sig": "short getId()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStats",
+          "sig": "List<ReactorStat> getStats()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getValidType",
+          "sig": "ReactorType getValidType()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getComponentType",
+          "sig": "ComponentType getComponentType()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStat",
+          "sig": "NumericTag getStat(ReactorStat stat)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStat",
+          "sig": "NumericTag getStat(ReactorStat stat, ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "NULL_VALUE",
+          "value": "valueOf()",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.generators.IOutputGenerator",
+      "methods": [
+        {
+          "name": "addItems",
+          "sig": "void addItems(Consumer<ItemStack> output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "JsonObject serialize()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.inputs.IInput",
+      "methods": [
+        {
+          "name": "asIngredient",
+          "sig": "Ingredient asIngredient()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getComponents",
+          "sig": "List<ItemStack> getComponents()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getInputSize",
+          "sig": "int getInputSize()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "matches",
+          "sig": "boolean matches(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "matchesAll",
+          "sig": "boolean matchesAll(ItemStack... stacks)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "matchesAny",
+          "sig": "boolean matchesAny(ItemStack... stacks)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "JsonObject serialize()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeItemStack",
+          "sig": "JsonObject writeItemStack(ItemStack stack, boolean includeSize)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeFluidStack",
+          "sig": "JsonObject writeFluidStack(FluidStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readFluidStack",
+          "sig": "FluidStack readFluidStack(JsonObject obj)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readNBT",
+          "sig": "CompoundTag readNBT(String s)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "copyWithSize",
+          "sig": "ItemStack copyWithSize(ItemStack stack, int newSize)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isStackEqual",
+          "sig": "boolean isStackEqual(ItemStack key, ItemStack other)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isNBTExact",
+          "sig": "boolean isNBTExact(ItemStack subject, ItemStack target)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.inputs.INullableInput",
+      "methods": [
+        {
+          "name": "serialize",
+          "sig": "JsonObject serialize()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IInput"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.queue.IInputter",
+      "methods": [
+        {
+          "name": "addItemIntoSlot",
+          "sig": "void addItemIntoSlot(int slot, ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.queue.IStackOutput",
+      "methods": [
+        {
+          "name": "addToInventory",
+          "sig": "boolean addToInventory(IInputter inventory)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStack",
+          "sig": "ItemStack getStack()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "save",
+          "sig": "void save(CompoundTag save)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput",
+      "methods": [
+        {
+          "name": "onFluidRecipeProcessed",
+          "sig": "List<FluidStack> onFluidRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, ItemStack input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onFluidRecipeProcessed",
+          "sig": "List<FluidStack> onFluidRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, ItemStack input, IRecipeOverride overrides)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllFluidOutputs",
+          "sig": "List<FluidStack> getAllFluidOutputs()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "copyFluids",
+          "sig": "List<FluidStack> copyFluids(List<FluidStack> copy)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IRecipeOutput"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.IRecipeOutput",
+      "methods": [
+        {
+          "name": "onRecipeProcessed",
+          "sig": "List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onRecipeProcessed",
+          "sig": "List<ItemStack> onRecipeProcessed(RandomSource rand, CompoundTag persistentData, CompoundTag recipeFlags, IRecipeOverride overrides)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllOutputs",
+          "sig": "List<ItemStack> getAllOutputs()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMetadata",
+          "sig": "CompoundTag getMetadata()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExperience",
+          "sig": "float getExperience()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "JsonObject serialize()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "copyItems",
+          "sig": "List<ItemStack> copyItems(List<ItemStack> copy)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "EMPTY_COMPOUND",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.IRecipeOutputChance",
+      "methods": [
+        {
+          "name": "getChance",
+          "sig": "float getChance()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IRecipeOutput"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.misc.ICanEffect",
+      "methods": [
+        {
+          "name": "onFoodEaten",
+          "sig": "void onFoodEaten(ItemStack stack, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTooltip",
+          "sig": "Component getTooltip()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOverrideIcon",
+          "sig": "TextureAtlasSprite getOverrideIcon()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getID",
+          "sig": "ResourceLocation getID()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IAdvancedCraftingManager",
+      "methods": [
+        {
+          "name": "addShapedIC2Recipe",
+          "sig": "void addShapedIC2Recipe(String location, ItemStack output, Object... args)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addShapelessIC2Recipe",
+          "sig": "void addShapelessIC2Recipe(String location, ItemStack output, Object... args)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRepairIC2Recipe",
+          "sig": "void addRepairIC2Recipe(String location, IRepairable repair, IInput repairMaterial, int effect, Object... args)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addShapedRecipe",
+          "sig": "void addShapedRecipe(ResourceLocation location, ItemStack output, Object... args)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addShapelessRecipe",
+          "sig": "void addShapelessRecipe(ResourceLocation location, ItemStack output, Object... args)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRepairRecipe",
+          "sig": "void addRepairRecipe(ResourceLocation id, IRepairable repair, IInput repairMaterial, int effect, Object... args)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeCraftingRecipe",
+          "sig": "void removeCraftingRecipe(ResourceLocation id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2SmeltingRecipe",
+          "sig": "void addIC2SmeltingRecipe(String location, ItemStack output, Object input, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2SmeltingRecipe",
+          "sig": "void addIC2SmeltingRecipe(String location, ItemStack output, Object input, float xp, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2SmeltingRecipe",
+          "sig": "void addIC2SmeltingRecipe(String location, ItemStack output, Object input, float xp, float extraTime, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSmeltingRecipe",
+          "sig": "void addSmeltingRecipe(ResourceLocation location, ItemStack output, Object input, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSmeltingRecipe",
+          "sig": "void addSmeltingRecipe(ResourceLocation location, ItemStack output, Object input, float xp, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSmeltingRecipe",
+          "sig": "void addSmeltingRecipe(ResourceLocation location, ItemStack output, Object input, float xp, float extraTime, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeSmeltingRecipe",
+          "sig": "void removeSmeltingRecipe(ResourceLocation id, SmeltingType... types)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addStoneCutterRecipe",
+          "sig": "void addStoneCutterRecipe(ResourceLocation location, ItemStack output, Object input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addStoneCutterIC2Recipe",
+          "sig": "void addStoneCutterIC2Recipe(String location, ItemStack output, Object input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeStoneCutterRecipe",
+          "sig": "void removeStoneCutterRecipe(ResourceLocation id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSmithingRecipe",
+          "sig": "void addSmithingRecipe(ResourceLocation location, Object main, Object secondary, ItemStack output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSmithingIC2Recipe",
+          "sig": "void addSmithingIC2Recipe(String location, Object main, Object secondary, ItemStack output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeSmithingRecipe",
+          "sig": "void removeSmithingRecipe(ResourceLocation id)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IAdvancedCraftingManager>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.ICannerRecipeRegistry",
+      "methods": [
+        {
+          "name": "registerRepairable",
+          "sig": "void registerRepairable(IRepairable repair, IInput input, int repairAmount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeRepairable",
+          "sig": "void removeRepairable(IRepairable repair)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRepairableItem",
+          "sig": "Tuple<IInput, Integer> getRepairableItem(ItemStack input, ItemStack repair, boolean compareStack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRepairItems",
+          "sig": "Map<Item, List<Tuple<IInput, Integer>>> getRepairItems()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerFuelValue",
+          "sig": "void registerFuelValue(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerFuelMultiplier",
+          "sig": "void registerFuelMultiplier(ItemStack stack, float multiplier)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeValue",
+          "sig": "void removeValue(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getValueForStack",
+          "sig": "FuelValue getValueForStack(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFuels",
+          "sig": "List<FuelValue> getFuels()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerFillable",
+          "sig": "void registerFillable(ItemStack container, IInput fillable, ItemStack output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasContainer",
+          "sig": "boolean hasContainer(ItemStack container)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeFillable",
+          "sig": "void removeFillable(ItemStack container)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeFillable",
+          "sig": "void removeFillable(ItemStack container, ItemStack fillable)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFillOutput",
+          "sig": "Tuple<IInput, ItemStack> getFillOutput(ItemStack container, ItemStack toFill, boolean compareStack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFillables",
+          "sig": "Map<ItemStack, List<Tuple<IInput, ItemStack>>> getFillables()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<ICannerRecipeRegistry>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IElectrolyzerRecipeList",
+      "methods": [
+        {
+          "name": "addChargeRecipe",
+          "sig": "void addChargeRecipe(ResourceLocation id, ItemStack input, ItemStack output, int energy)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addDischargeRecipe",
+          "sig": "void addDischargeRecipe(ResourceLocation id, ItemStack input, ItemStack output, int energy)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addDualRecipe",
+          "sig": "void addDualRecipe(ResourceLocation id, ItemStack input, ItemStack output, int energy)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(ResourceLocation id, ItemStack input, ItemStack output, int flags, int energy)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "void removeRecipe(ItemStack input, boolean charge)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "void removeRecipe(ResourceLocation id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipes",
+          "sig": "List<ElectrolyzerRecipe> getRecipes()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ElectrolyzerRecipe getRecipe(ItemStack input, boolean charge, boolean compareSize)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "CHARGE",
+          "value": "1",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "DISCHARGE",
+          "value": "2",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [
+        "IListenableRegistry<IElectrolyzerRecipeList>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IFluidFuelRegistry",
+      "methods": [
+        {
+          "name": "addFuel",
+          "sig": "void addFuel(Fluid fluid, int ticksPerBucket, int euPerTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeFuel",
+          "sig": "void removeFuel(Fluid fluid)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFuels",
+          "sig": "List<FuelEntry> getFuels()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFuel",
+          "sig": "FuelEntry getFuel(Fluid fluid)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IFluidFuelRegistry>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IFoodCanRegistry",
+      "methods": [
+        {
+          "name": "registerEffect",
+          "sig": "Item registerEffect(ICanEffect effect)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEffect",
+          "sig": "ICanEffect getEffect(ResourceLocation location)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllEffects",
+          "sig": "List<ResourceLocation> getAllEffects()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEffectItem",
+          "sig": "Item getEffectItem(ResourceLocation item)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerItemForEffect",
+          "sig": "void registerItemForEffect(ItemStack stack, ResourceLocation location)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEffectForFood",
+          "sig": "ResourceLocation getEffectForFood(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getItemForFood",
+          "sig": "Item getItemForFood(ItemStack food)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IFusionRecipeList",
+      "methods": [
+        {
+          "name": "addFuel",
+          "sig": "void addFuel(Item fuel, int fuelValue, float productionRate, boolean consumed)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFuel",
+          "sig": "FusionFuel getFuel(Item item)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeFuel",
+          "sig": "void removeFuel(Item item)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFuels",
+          "sig": "List<FusionFuel> getFuels()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "FusionFuel",
+          "sig": "record FusionFuel(Item fuel, int fuelValue, float productionRate, boolean consumed)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IFusionRecipeList>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IIngredientRegistry",
+      "methods": [
+        {
+          "name": "registerInput",
+          "sig": "void registerInput(ResourceLocation location, Class<IInput> clz, Function<FriendlyByteBuf, IInput> creator, Function<JsonObject, IInput> serializer, Function<Object, IInput> maker)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerRecipeOutput",
+          "sig": "void registerRecipeOutput(ResourceLocation location, Class<IRecipeOutput> clz, Function<FriendlyByteBuf, IRecipeOutput> creator, Function<JsonObject, IRecipeOutput> serializer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerFluidOutput",
+          "sig": "void registerFluidOutput(ResourceLocation location, Class<IFluidRecipeOutput> clz, Function<FriendlyByteBuf, IFluidRecipeOutput> creator, Function<JsonObject, IFluidRecipeOutput> serializer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerQueue",
+          "sig": "void registerQueue(ResourceLocation location, Class<IStackOutput> clz, Function<CompoundTag, IStackOutput> creator)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerOutputGenerators",
+          "sig": "void registerOutputGenerators(ResourceLocation location, Class<IOutputGenerator> clz, Function<JsonObject, IOutputGenerator> creator)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeInput",
+          "sig": "void writeInput(IInput input, FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeRecipeOutput",
+          "sig": "void writeRecipeOutput(IRecipeOutput output, FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeFluidOutput",
+          "sig": "void writeFluidOutput(IFluidRecipeOutput output, FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "writeQueue",
+          "sig": "CompoundTag writeQueue(IStackOutput queue)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readInput",
+          "sig": "IInput readInput(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "createOutput",
+          "sig": "IRecipeOutput createOutput(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "createFluidOutput",
+          "sig": "IFluidRecipeOutput createFluidOutput(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readQueue",
+          "sig": "IStackOutput readQueue(CompoundTag nbt)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readInput",
+          "sig": "IInput readInput(JsonObject obj)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readOutput",
+          "sig": "IRecipeOutput readOutput(JsonObject obj)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readFluidOutput",
+          "sig": "IFluidRecipeOutput readFluidOutput(JsonObject obj)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "readOutputGenerator",
+          "sig": "IOutputGenerator readOutputGenerator(JsonObject obj)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "createInputFrom",
+          "sig": "IInput createInputFrom(Object obj)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serializeInput",
+          "sig": "JsonObject serializeInput(IInput input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serializeOutput",
+          "sig": "JsonObject serializeOutput(IRecipeOutput output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serializeFluidOutput",
+          "sig": "JsonObject serializeFluidOutput(IFluidRecipeOutput output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serializeOutputGenerator",
+          "sig": "JsonObject serializeOutputGenerator(IOutputGenerator generator)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IListenableRegistry",
+      "methods": [
+        {
+          "name": "registerListener",
+          "sig": "void registerListener(Consumer<T> listener)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IMachineRecipeList",
+      "methods": [
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(RecipeEntry recipe)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(ResourceLocation id, IRecipeOutput output, IInput... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSimpleRecipe",
+          "sig": "void addSimpleRecipe(ResourceLocation id, ItemStack output, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addSimpleRecipe",
+          "sig": "void addSimpleRecipe(ResourceLocation id, ItemStack output, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addXPRecipe",
+          "sig": "void addXPRecipe(ResourceLocation id, ItemStack output, float xp, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addXPRecipe",
+          "sig": "void addXPRecipe(ResourceLocation id, ItemStack output, float xp, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addChanceRecipe",
+          "sig": "void addChanceRecipe(ResourceLocation id, ItemStack output, float xp, float chance, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addChanceRecipe",
+          "sig": "void addChanceRecipe(ResourceLocation id, ItemStack output, float xp, float chance, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRangeRecipe",
+          "sig": "void addRangeRecipe(ResourceLocation id, ItemStack output, int minValue, int maxValue, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRangeRecipe",
+          "sig": "void addRangeRecipe(ResourceLocation id, ItemStack output, int minValue, int maxValue, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(ResourceLocation id, IRecipeOutput output, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2SimpleRecipe",
+          "sig": "void addIC2SimpleRecipe(String id, ItemStack output, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2SimpleRecipe",
+          "sig": "void addIC2SimpleRecipe(String id, ItemStack output, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2XPRecipe",
+          "sig": "void addIC2XPRecipe(String id, ItemStack output, float xp, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2XPRecipe",
+          "sig": "void addIC2XPRecipe(String id, ItemStack output, float xp, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2ChanceRecipe",
+          "sig": "void addIC2ChanceRecipe(String id, ItemStack output, float xp, float chance, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2ChanceRecipe",
+          "sig": "void addIC2ChanceRecipe(String id, ItemStack output, float xp, float chance, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2RangeRecipe",
+          "sig": "void addIC2RangeRecipe(String id, ItemStack output, int minValue, int maxValue, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2RangeRecipe",
+          "sig": "void addIC2RangeRecipe(String id, ItemStack output, int minValue, int maxValue, CompoundTag data, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addIC2Recipe",
+          "sig": "void addIC2Recipe(String id, IRecipeOutput output, Object... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasRecipeForItem",
+          "sig": "boolean hasRecipeForItem(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "RecipeEntry getRecipe(ResourceLocation location)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "RecipeEntry getRecipe(ItemStack stack, boolean hasStackSize)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "RecipeEntry getRecipe(Predicate<RecipeEntry> checker)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "RecipeEntry removeRecipe(ResourceLocation location)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllRecipes",
+          "sig": "List<ResourceLocation> getAllRecipes()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllEntries",
+          "sig": "List<RecipeEntry> getAllEntries()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "convertInputs",
+          "sig": "IInput[] convertInputs(Object... inputs)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IMachineRecipeList>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IPotionBrewRegistry",
+      "methods": [
+        {
+          "name": "registerBrew",
+          "sig": "void registerBrew(Item item, MobEffect potion)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerBrew",
+          "sig": "void registerBrew(Item item, MobEffect fromEffect, MobEffect toEffect)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeBrew",
+          "sig": "void removeBrew(Item item)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEffect",
+          "sig": "MobEffect getEffect(Item item, MobEffect original)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEffects",
+          "sig": "Map<Item, Map<MobEffect, MobEffect>> getEffects()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRequiredItems",
+          "sig": "List<Item> getRequiredItems(MobEffect desiredEffect)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerName",
+          "sig": "void registerName(MobEffect effect, String name)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getName",
+          "sig": "String getName(MobEffect effect)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerPotionContainer",
+          "sig": "void registerPotionContainer(Item input, PotionContainer output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getPotionContainer",
+          "sig": "PotionContainer getPotionContainer(Item input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getContainers",
+          "sig": "Map<Item, PotionContainer> getContainers()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IPotionBrewRegistry>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRareEarthRegistry",
+      "methods": [
+        {
+          "name": "registerOutput",
+          "sig": "void registerOutput(ResourceLocation id, ItemStack output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerInput",
+          "sig": "void registerInput(ResourceLocation id, float value, ItemStack... input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOutputFor",
+          "sig": "RareEntry getOutputFor(ItemStack input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOutputFor",
+          "sig": "ItemStack getOutputFor(ResourceLocation id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeInput",
+          "sig": "RareEntry removeInput(ItemStack input)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeOutput",
+          "sig": "void removeOutput(ItemStack output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "remove",
+          "sig": "void remove(ResourceLocation id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllRecipes",
+          "sig": "List<RareEntry> getAllRecipes()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IRareEarthRegistry>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRecipeFilter",
+      "methods": [
+        {
+          "name": "add",
+          "sig": "void add(ItemLike... items)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "add",
+          "sig": "void add(IInput... inputs)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "remove",
+          "sig": "void remove(ItemStack stack, int flags)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "contains",
+          "sig": "boolean contains(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFilteredItems",
+          "sig": "List<ItemStack> getFilteredItems()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "clear",
+          "sig": "void clear()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "JsonObject serialize()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "read",
+          "sig": "void read(JsonObject obj)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "SIMPLE",
+          "value": "1",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "FILTER",
+          "value": "2",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "BOTH",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRecyclerRecipeList",
+      "methods": [
+        {
+          "name": "getBlackList",
+          "sig": "IRecipeFilter getBlackList()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IMachineRecipeList"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRefiningRecipeList",
+      "methods": [
+        {
+          "name": "addIC2Recipe",
+          "sig": "Builder addIC2Recipe(String id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRecipe",
+          "sig": "Builder addRecipe(ResourceLocation id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(ResourceLocation location, FluidStack input, FluidStack secondInput, IInput catalyst, IFluidRecipeOutput output)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "FluidRecipe getRecipe(ResourceLocation location)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "FluidRecipe getRecipe(ItemStack item, FluidStack firstTank, FluidStack secondTank, boolean testAmounts)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRecipe",
+          "sig": "FluidRecipe getRecipe(Predicate<FluidRecipe> checker)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "FluidRecipe removeRecipe(ResourceLocation location, boolean includeInverted)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllRecipes",
+          "sig": "List<FluidRecipe> getAllRecipes()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isValidCatalyst",
+          "sig": "boolean isValidCatalyst(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isValidFirstFluid",
+          "sig": "boolean isValidFirstFluid(FluidStack fluid)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isValidSecondFluid",
+          "sig": "boolean isValidSecondFluid(FluidStack fluid)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IRefiningRecipeList>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IScrapBoxRegistry",
+      "methods": [
+        {
+          "name": "addDrop",
+          "sig": "void addDrop(ItemLike prov, float chance)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addDrop",
+          "sig": "void addDrop(ItemStack stack, float chance)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRandomDrop",
+          "sig": "IDrop getRandomDrop(ItemStack source, boolean consumeItem)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeDrops",
+          "sig": "void removeDrops(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeDrop",
+          "sig": "void removeDrop(IDrop drop)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAllDrops",
+          "sig": "List<IDrop> getAllDrops()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IScrapBoxRegistry>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IUUMatterRegistry",
+      "methods": [
+        {
+          "name": "registerUUShape",
+          "sig": "void registerUUShape(UUMatterBuilder builder)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerUUEntry",
+          "sig": "void registerUUEntry(ItemStack output, int milliUU)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEntries",
+          "sig": "List<UUMatterEntry> getEntries()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeUUEntry",
+          "sig": "void removeUUEntry(UUMatterEntry entry)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IListenableRegistry<IUUMatterRegistry>"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.ticks.ITickScheduler",
+      "methods": [
+        {
+          "name": "addWorldCallback",
+          "sig": "void addWorldCallback(Level world, ToIntFunction<Level> ticket)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addWorldCallback",
+          "sig": "void addWorldCallback(Level world, ToIntFunction<Level> ticket, int delay)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addServerCallback",
+          "sig": "void addServerCallback(ToIntFunction<MinecraftServer> ticket)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addServerCallback",
+          "sig": "void addServerCallback(ToIntFunction<MinecraftServer> ticket, int delay)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addClientCallback",
+          "sig": "void addClientCallback(IntSupplier ticket)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addClientCallback",
+          "sig": "void addClientCallback(IntSupplier ticket, int delay)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IAnchorTile",
+      "methods": [
+        {
+          "name": "hasAnchor",
+          "sig": "boolean hasAnchor(Direction side)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addAnchor",
+          "sig": "boolean addAnchor(Direction side)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "removeAnchor",
+          "sig": "boolean removeAnchor(Direction side)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.ICopyableSettings",
+      "methods": [
+        {
+          "name": "saveSettings",
+          "sig": "void saveSettings(CompoundTag compound)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "loadSettings",
+          "sig": "void loadSettings(CompoundTag compound)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IElectrolyzerProvider",
+      "methods": [
+        {
+          "name": "getProcessRate",
+          "sig": "int getProcessRate()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEnergyStorage"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IEnergyStorage",
+      "methods": [
+        {
+          "name": "addEnergy",
+          "sig": "int addEnergy(int power)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "drawEnergy",
+          "sig": "int drawEnergy(int power)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IEUStorage"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IFluidMachine",
+      "methods": [
+        {
+          "name": "getConnectedTank",
+          "sig": "IFluidHandler getConnectedTank(Direction dir)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IInputMachine",
+      "methods": [
+        {
+          "name": "getValidRoom",
+          "sig": "int getValidRoom(ItemStack stack)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IMachine",
+      "methods": [
+        {
+          "name": "getSupportedUpgradeTypes",
+          "sig": "EnumSet<UpgradeType> getSupportedUpgradeTypes()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onUpgradesChanged",
+          "sig": "void onUpgradesChanged()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAvailableEnergy",
+          "sig": "int getAvailableEnergy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "useEnergy",
+          "sig": "boolean useEnergy(int toUse, boolean doUse)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isMachineWorking",
+          "sig": "boolean isMachineWorking()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setRedstoneSensitive",
+          "sig": "void setRedstoneSensitive(boolean flag)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isRedstoneSensitive",
+          "sig": "boolean isRedstoneSensitive()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getConnectedInventory",
+          "sig": "IItemHandler getConnectedInventory(Direction dir)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getConnectedTube",
+          "sig": "ITube getConnectedTube(Direction dir)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ILocation",
+        "IInputMachine"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.INotifiableMachine",
+      "methods": [
+        {
+          "name": "onNotify",
+          "sig": "void onNotify()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IRecipeMachine",
+      "methods": [
+        {
+          "name": "getRecipeList",
+          "sig": "IMachineRecipeList getRecipeList()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IInputMachine"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.ITerraformer",
+      "methods": [
+        {
+          "name": "getBiome",
+          "sig": "Holder<Biome> getBiome(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setBiome",
+          "sig": "boolean setBiome(Level world, BlockPos pos, ResourceLocation biomeKey)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFirstSolidBlockFrom",
+          "sig": "BlockPos getFirstSolidBlockFrom(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFirstBlockFrom",
+          "sig": "BlockPos getFirstBlockFrom(Level world, BlockPos pos)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "switchGround",
+          "sig": "boolean switchGround(Level world, BlockPos pos, BlockState from, BlockState to, boolean upwards, boolean stateCompare)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.display.IDisplayInfo",
+      "methods": [
+        {
+          "name": "render",
+          "sig": "void render(PoseStack stack, int x, int y, int width, int height, Alignment align, IMonitorRenderer helper)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHeight",
+          "sig": "int getHeight(int width, Alignment align)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isValid",
+          "sig": "boolean isValid()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getServerData",
+          "sig": "Tag getServerData()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "REGISTRY",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.display.IDisplayRegistry",
+      "methods": [
+        {
+          "name": "register",
+          "sig": "void register(ResourceLocation id, Class<IDisplayInfo> info, Function<FriendlyByteBuf, IDisplayInfo> creator)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(IDisplayInfo info, FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "deserialize",
+          "sig": "IDisplayInfo deserialize(FriendlyByteBuf buffer)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.display.IMonitorRenderer",
+      "methods": [
+        {
+          "name": "getBatcher",
+          "sig": "MultiBufferSource getBatcher()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFont",
+          "sig": "Font getFont()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getItemRenderer",
+          "sig": "ItemRenderer getItemRenderer()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "renderGuiItems",
+          "sig": "void renderGuiItems(PoseStack matrix, ItemStack stack, float x, float y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "renderGuiItemText",
+          "sig": "void renderGuiItemText(PoseStack matrixstack, ItemStack stack, float x, float y, String text)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "renderGuiItemText",
+          "sig": "void renderGuiItemText(PoseStack matrixstack, Font font, ItemStack stack, float x, float y, String text)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IActivityProvider",
+      "methods": [
+        {
+          "name": "isActivated",
+          "sig": "boolean isActivated()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IAirSpeed",
+      "methods": [
+        {
+          "name": "getCurrentSpeed",
+          "sig": "float getCurrentSpeed()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxSpeed",
+          "sig": "float getMaxSpeed()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IEUProducer",
+      "methods": [
+        {
+          "name": "getEUProduction",
+          "sig": "float getEUProduction()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IEUStorage",
+      "methods": [
+        {
+          "name": "getStoredEU",
+          "sig": "int getStoredEU()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxEU",
+          "sig": "int getMaxEU()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTier",
+          "sig": "int getTier()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getChargeLevel",
+          "sig": "double getChargeLevel()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IFuelStorage",
+      "methods": [
+        {
+          "name": "getFuel",
+          "sig": "int getFuel()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxFuel",
+          "sig": "int getMaxFuel()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IProgressMachine",
+      "methods": [
+        {
+          "name": "getProgress",
+          "sig": "float getProgress()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxProgress",
+          "sig": "float getMaxProgress()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IPumpTile",
+      "methods": [
+        {
+          "name": "getPumpProgress",
+          "sig": "int getPumpProgress()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getPumpMaxProgress",
+          "sig": "int getPumpMaxProgress()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.ISpeedMachine",
+      "methods": [
+        {
+          "name": "getSpeed",
+          "sig": "int getSpeed()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxSpeed",
+          "sig": "int getMaxSpeed()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.ISubProgressMachine",
+      "methods": [
+        {
+          "name": "getSubProgress",
+          "sig": "float getSubProgress()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxSubProgress",
+          "sig": "float getMaxSubProgress()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IWorkProvider",
+      "methods": [
+        {
+          "name": "isWorking",
+          "sig": "boolean isWorking()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.teleporter.ITeleporterTarget",
+      "methods": [
+        {
+          "name": "getFacing",
+          "sig": "Direction getFacing()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSendType",
+          "sig": "TeleportType getSendType()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canReceive",
+          "sig": "boolean canReceive(TeleportType type)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "setTarget",
+          "sig": "boolean setTarget(TeleporterTarget target)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasTarget",
+          "sig": "boolean hasTarget(TeleporterTarget target)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.IItemCache",
+      "methods": [
+        {
+          "name": "getCache",
+          "sig": "IItemCache getCache()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getItem",
+          "sig": "Supplier<ItemStack> getItem(int id)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerItem",
+          "sig": "int registerItem(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "updateCache",
+          "sig": "void updateCache()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "clearCache",
+          "sig": "void clearCache()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "CACHE",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.ILimiterTube",
+      "methods": [
+        {
+          "name": "getValidColors",
+          "sig": "EnumSet<DyeColor> getValidColors()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ITube"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.IProviderTube",
+      "methods": [
+        {
+          "name": "provideItems",
+          "sig": "int provideItems(ItemStack stack, int amount, DyeColor color, UUID requestId)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getItemsProvided",
+          "sig": "void getItemsProvided(ObjIntConsumer<ItemStack> listener)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getProviderSource",
+          "sig": "long getProviderSource()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ITube"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.IRequestTube",
+      "methods": [
+        {
+          "name": "provideRequests",
+          "sig": "void provideRequests(ITubeRequester requested)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onRequestsReset",
+          "sig": "void onRequestsReset()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onRequestFulfilled",
+          "sig": "void onRequestFulfilled(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRequestId",
+          "sig": "UUID getRequestId()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onRequestLost",
+          "sig": "void onRequestLost(ItemStack stack, int amount)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRequestSource",
+          "sig": "long getRequestSource()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ITube"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.ITube",
+      "methods": [
+        {
+          "name": "addItem",
+          "sig": "void addItem(ItemStack item, Direction side)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addItem",
+          "sig": "void addItem(ItemStack item, Direction side, DyeColor color)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addItem",
+          "sig": "void addItem(TransportedItem item, Direction side)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canAddItem",
+          "sig": "boolean canAddItem(TransportedItem item, Direction side)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canConnect",
+          "sig": "boolean canConnect(ITube other, Direction dir)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTubeType",
+          "sig": "TubeType getTubeType()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.util.ILocation",
+      "methods": [
+        {
+          "name": "getWorldObj",
+          "sig": "Level getWorldObj()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getPosition",
+          "sig": "BlockPos getPosition()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    }
+  ],
+  "abstract_classes": [
+    {
+      "fqcn": "ic2.api.blocks.wrench.BaseWrenchHandler",
+      "methods": [
+        {
+          "name": "doSpecialAction",
+          "sig": "boolean doSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasSpecialAction",
+          "sig": "AABB hasSpecialAction(BlockState state, Level world, BlockPos pos, Direction dir, Player player, Vec3 hit)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canRemoveBlock",
+          "sig": "boolean canRemoveBlock(BlockState state, Level world, BlockPos pos, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDropRate",
+          "sig": "double getDropRate(BlockState state, Level world, BlockPos pos, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDrops",
+          "sig": "List<ItemStack> getDrops(BlockState state, Level world, BlockPos pos, Player player)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "IWrenchable"
+      ],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICrop",
+      "methods": [
+        {
+          "name": "id",
+          "sig": "ResourceLocation id()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "discoveredBy",
+          "sig": "Component discoveredBy()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getName",
+          "sig": "Component getName()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDisplayItem",
+          "sig": "ItemStack getDisplayItem()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getProperties",
+          "sig": "CropProperties getProperties()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCropType",
+          "sig": "CropType getCropType()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isWaterCleaningCrop",
+          "sig": "boolean isWaterCleaningCrop(ICropTile tile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAttributes",
+          "sig": "String[] getAttributes()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTextures",
+          "sig": "List<ResourceLocation> getTextures()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowthSteps",
+          "sig": "int getGrowthSteps()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getOptimalHarvestStep",
+          "sig": "int getOptimalHarvestStep(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowthDuration",
+          "sig": "int getGrowthDuration(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStatInfluence",
+          "sig": "int getStatInfluence(ICropTile cropTile, int humidity, int nutrients, int air)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canGrow",
+          "sig": "boolean canGrow(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canBeHarvested",
+          "sig": "boolean canBeHarvested(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getAfterHarvestStage",
+          "sig": "int getAfterHarvestStage(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDropChance",
+          "sig": "double getDropChance(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDrops",
+          "sig": "ItemStack[] getDrops(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSeedDropChance",
+          "sig": "float getSeedDropChance(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSeeds",
+          "sig": "ItemStack getSeeds(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canBreed",
+          "sig": "boolean canBreed(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "isWeed",
+          "sig": "boolean isWeed(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onRightClick",
+          "sig": "boolean onRightClick(ICropTile cropTile, Player player, InteractionHand hand)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onLeftClick",
+          "sig": "boolean onLeftClick(ICropTile cropTile, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onTick",
+          "sig": "void onTick(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onBlockUpdate",
+          "sig": "void onBlockUpdate(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onEntityCollision",
+          "sig": "void onEntityCollision(ICropTile cropTile, Entity entity)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "onCropPlaceFailed",
+          "sig": "void onCropPlaceFailed(BaseSeed seed, ICropTile cropTile, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasCustomCropPlaceFailedMessage",
+          "sig": "boolean hasCustomCropPlaceFailedMessage(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCustomCropPlaceFailedMessage",
+          "sig": "Component getCustomCropPlaceFailedMessage(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canEmitRedstone",
+          "sig": "boolean canEmitRedstone(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRedstoneLevel",
+          "sig": "int getRedstoneLevel(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getEmittedLight",
+          "sig": "int getEmittedLight(ICropTile cropTile)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "desc",
+          "sig": "String desc(int i)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGrowth",
+          "sig": "int getGrowth(int combo)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getGain",
+          "sig": "int getGain(int combo)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getResistance",
+          "sig": "int getResistance(int combo)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "combineStats",
+          "sig": "short combineStats(int growth, int gain, int resistance)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "UNKNOWN",
+          "value": "translatable()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "EMPTY_DROPS",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropRegistry",
+      "methods": [
+        {
+          "name": "registerCustomCropRenderer",
+          "sig": "void registerCustomCropRenderer(ResourceLocation location, ICropRenderer render)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerCustomStickRenderer",
+          "sig": "void registerCustomStickRenderer(ICropRenderer render)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerCrop",
+          "sig": "T registerCrop(T crop)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCrop",
+          "sig": "ICrop getCrop(String id, String name)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCrop",
+          "sig": "ICrop getCrop(ResourceLocation location)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getRandomCrop",
+          "sig": "ICrop getRandomCrop(OptionalLong seed)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCrop",
+          "sig": "ICrop getCrop(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getCrops",
+          "sig": "List<ICrop> getCrops()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerDisplayItem",
+          "sig": "void registerDisplayItem(ResourceLocation cropID, ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getDisplayItem",
+          "sig": "ItemStack getDisplayItem(ResourceLocation cropID)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerBaseSeed",
+          "sig": "void registerBaseSeed(Item item, BaseSeed seed)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSeedForStack",
+          "sig": "BaseSeed getSeedForStack(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSeedForCrop",
+          "sig": "ItemStack getSeedForCrop(ICrop crop)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addBiomeHumidityBonus",
+          "sig": "void addBiomeHumidityBonus(TagKey<Biome> type, int bonus)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getHumidityBonus",
+          "sig": "int getHumidityBonus(Holder<Biome> biome)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addBiomeNutrientBonus",
+          "sig": "void addBiomeNutrientBonus(TagKey<Biome> type, int bonus)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getNutrientBonus",
+          "sig": "int getNutrientBonus(Holder<Biome> biome)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "addBiomeWaterQualityBonus",
+          "sig": "void addBiomeWaterQualityBonus(TagKey<Biome> type, int bonus)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getWaterQualityBonus",
+          "sig": "int getWaterQualityBonus(Holder<Biome> biome)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerFarmland",
+          "sig": "void registerFarmland(IFarmland land, Block... blocks)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getFarmland",
+          "sig": "IFarmland getFarmland(Block block)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "registerSubSoil",
+          "sig": "void registerSubSoil(ISubSoil soil, Block... blocks)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSubSoil",
+          "sig": "ISubSoil getSubSoil(Block block)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "WEED",
+          "value": "null",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "SEA_WEED",
+          "value": "null",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "INSTANCE",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.events.FoamEvent",
+      "methods": [
+        {
+          "name": "getPos",
+          "sig": "BlockPos getPos()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getState",
+          "sig": "BlockState getState()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getBlockEntity",
+          "sig": "BlockEntity getBlockEntity()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [],
+      "related": [
+        "((), ReferenceType(arguments=None, dimensions=[], name=LevelEvent, sub_type=None))"
+      ],
+      "domain": "events"
+    },
+    {
+      "fqcn": "ic2.api.items.IDrinkableFluid",
+      "methods": [
+        {
+          "name": "drink",
+          "sig": "boolean drink(ItemStack stack, Level world, Player player)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hasSpecialName",
+          "sig": "boolean hasSpecialName()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getSpecialName",
+          "sig": "Component getSpecialName(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "generateSubStates",
+          "sig": "List<ItemStack> generateSubStates(ItemStack base, boolean textures)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTexture",
+          "sig": "ResourceLocation getTexture(ItemStack stack, String baseFolder)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getTextureIndex",
+          "sig": "int getTextureIndex(ItemStack stack)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getID",
+          "sig": "ResourceLocation getID()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "hashCode",
+          "sig": "int hashCode()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "equals",
+          "sig": "boolean equals(Object obj)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "REGISTRY",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.BaseDurabilitySimulatedStack",
+      "methods": [
+        {
+          "name": "save",
+          "sig": "CompoundTag save()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "load",
+          "sig": "void load(CompoundTag data)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "commitState",
+          "sig": "void commitState()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "reset",
+          "sig": "void reset()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "boolean acceptUraniumPulse(ISimulatedReactor reactor, int x, int y, SimulatedStack source, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "boolean canStoreHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "int getStoredHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "int getMaxStoredHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "storeHeat",
+          "sig": "int storeHeat(ISimulatedReactor reactor, int x, int y, int heatChange)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canViewHeat",
+          "sig": "boolean canViewHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "float getExplosionInfluence(ISimulatedReactor reactor)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getId",
+          "sig": "short getId()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "maxDamage",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "damage",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "id",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [
+        "SimulatedStack"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.BaseHeatSimulatedStack",
+      "methods": [
+        {
+          "name": "save",
+          "sig": "CompoundTag save()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "load",
+          "sig": "void load(CompoundTag data)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "commitState",
+          "sig": "void commitState()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "reset",
+          "sig": "void reset()",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "boolean acceptUraniumPulse(ISimulatedReactor reactor, int x, int y, SimulatedStack source, int sourceX, int sourceY, boolean heatRun, boolean damageTick)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "boolean canStoreHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "int getStoredHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "int getMaxStoredHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "storeHeat",
+          "sig": "int storeHeat(ISimulatedReactor reactor, int x, int y, int heatChange)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "canViewHeat",
+          "sig": "boolean canViewHeat(ISimulatedReactor reactor, int x, int y)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "float getExplosionInfluence(ISimulatedReactor reactor)",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "getId",
+          "sig": "short getId()",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "maxHeat",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "heat",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "id",
+          "value": "unknown",
+          "notes": "DECLARED"
+        },
+        {
+          "name": "heatChanges",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [
+        "SimulatedStack"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.BaseRecipeOutput",
+      "methods": [
+        {
+          "name": "handleGenerators",
+          "sig": "void handleGenerators(List<IOutputGenerator> generators, List<ItemStack> outputs)",
+          "notes": "DECLARED"
+        }
+      ],
+      "constants": [
+        {
+          "name": "generators",
+          "value": "unknown",
+          "notes": "DECLARED"
+        }
+      ],
+      "related": [
+        "IRecipeOutput"
+      ],
+      "domain": "recipes"
+    }
+  ],
+  "enums": [
+    {
+      "fqcn": "ic2.api.network.tile.PacketRange",
+      "values": [
+        "SHORT_RANGE",
+        "LONG_RANGE",
+        "CHUNK_TRACKED",
+        "ALL_DIM",
+        "ALL_SERVER"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.recipes.misc.RecipeFlags",
+      "values": [
+        "CONSUME_CONTAINERS",
+        "KEEP_IN_INPUT",
+        "HIDE_RECIPE"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.misc.RecipeMods",
+      "values": [
+        "ENERGY_USAGE",
+        "RECIPE_TIME"
+      ],
+      "domain": "recipes"
+    }
+  ],
+  "events": [
+    {
+      "fqcn": "ic2.api.events.ArmorSlotEvent",
+      "fields": [],
+      "when": "INFERRED"
+    },
+    {
+      "fqcn": "ic2.api.events.FoamEvent",
+      "fields": [],
+      "when": "INFERRED"
+    },
+    {
+      "fqcn": "ic2.api.events.LaserEvent",
+      "fields": [
+        {
+          "name": "laser",
+          "type": "Entity"
+        },
+        {
+          "name": "source",
+          "type": "LivingEntity"
+        },
+        {
+          "name": "range",
+          "type": "float"
+        },
+        {
+          "name": "power",
+          "type": "float"
+        },
+        {
+          "name": "blockBreaks",
+          "type": "int"
+        },
+        {
+          "name": "explosive",
+          "type": "boolean"
+        },
+        {
+          "name": "smelt",
+          "type": "boolean"
+        }
+      ],
+      "when": "INFERRED"
+    },
+    {
+      "fqcn": "ic2.api.events.RetextureEvent",
+      "fields": [],
+      "when": "INFERRED"
+    },
+    {
+      "fqcn": "ic2.api.events.ScrapBoxEvent",
+      "fields": [],
+      "when": "INFERRED"
+    }
+  ],
+  "capability_hints": [],
+  "reactor_blueprint_hints": [
+    {
+      "class": "ic2.api.reactor.IReactorPlannerComponent",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    },
+    {
+      "class": "ic2.api.reactor.planner.BaseDurabilitySimulatedStack",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    },
+    {
+      "class": "ic2.api.reactor.planner.BaseHeatSimulatedStack",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    },
+    {
+      "class": "ic2.api.reactor.planner.FloatTracker",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    },
+    {
+      "class": "ic2.api.reactor.planner.ISimulatedReactor",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    },
+    {
+      "class": "ic2.api.reactor.planner.SimulatedStack",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    },
+    {
+      "class": "ic2.api.reactor.planner.Tracker",
+      "hint": "INFERRED planner/simulated/tracker role from name"
+    }
+  ]
+}

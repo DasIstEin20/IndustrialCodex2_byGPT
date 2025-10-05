@@ -1,0 +1,25 @@
+graph TD
+    IEnergyTile -->|registered with| IEnergyNet
+    IEnergySink -->|extends| IEnergyAcceptor
+    IEnergySource -->|extends| IEnergyEmitter
+    IEnergyConductor -->|mediates| IEnergyAcceptor
+    LinkedSink -->|wraps| IEnergyAcceptor
+    LinkedSource -->|wraps| IEnergyEmitter
+    IReactorComponent -->|consumed by| IReactor
+    IReactorPlannerComponent -->|simulates| ISimulatedReactor
+    IReactorChamber -->|adjacent to| IReactor
+    ISteamReactor -->|extends| IReactor
+    SimulatedStack -->|ticks within| ISimulatedReactor
+    IMachine -->|connects to| ITube
+    ITube -->|transports| TransportedItem
+    IProviderTube -->|serves requests from| IRequestTube
+    IWrenchable -->|handled by| IWrenchTool
+    IElectricItem -->|managed by| IElectricItemManager
+    ElectricItem -->|delegates to| IElectricItemManager
+    INetworkFieldProvider -->|synced by| INetworkManager
+    INetworkFieldNotifier -->|notifies| INetworkManager
+    INetworkItemEvent -->|dispatched by| INetworkManager
+    IMachineRecipeList -->|retrieved from| RecipeRegistry
+    IAdvancedCraftingManager -->|owned by| RecipeRegistry
+    FoamEvent -->|emitted during| LevelEvents
+    LaserEvent -->|affects| LevelEvents
