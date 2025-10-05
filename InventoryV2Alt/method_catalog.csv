@@ -1,0 +1,1248 @@
+domain,fqcn,member,kind,signature_or_value,notes
+other,ic2.api.addons.IModule,canLoad,method,ic2.api.addons.boolean canLoad(net.minecraftforge.api.distmarker.Dist side),public
+other,ic2.api.addons.IModule,loadConfigs,method,void loadConfigs(),public
+other,ic2.api.addons.IModule,postInit,method,void postInit(),public
+other,ic2.api.addons.IModule,preInit,method,void preInit(net.minecraftforge.eventbus.api.IEventBus modBus),public
+other,ic2.api.blocks.BlockRegistries,getAllValueBlocks,method,java.util.List getAllValueBlocks(),public
+other,ic2.api.blocks.BlockRegistries,getBlocksForOreValue,method,java.util.Set getBlocksForOreValue(ic2.api.blocks.int value),public
+other,ic2.api.blocks.BlockRegistries,getOreValue,method,ic2.api.blocks.int getOreValue(net.minecraft.world.level.block.state.BlockState state),public
+other,ic2.api.blocks.BlockRegistries,getOreValue,method,ic2.api.blocks.int getOreValue(net.minecraft.world.level.block.Block block),public
+other,ic2.api.blocks.BlockRegistries,registerListener,method,void registerListener(ic2.api.blocks.Runnable run),public
+other,ic2.api.blocks.BlockRegistries,registerOre,method,"void registerOre(ic2.api.blocks.int value, net.minecraft.tags.TagKey tag)",public
+other,ic2.api.blocks.BlockRegistries,registerOre,method,"void registerOre(ic2.api.blocks.int value, net.minecraft.world.level.block.Block... blocks)",public
+other,ic2.api.blocks.BlockRegistries,reload,method,void reload(),public
+other,ic2.api.blocks.ExplosionWhitelist,addWhitelist,method,void addWhitelist(net.minecraft.world.level.block.Block... blocks),public
+other,ic2.api.blocks.ExplosionWhitelist,isWhitelisted,method,ic2.api.blocks.boolean isWhitelisted(net.minecraft.world.level.block.Block block),public
+other,ic2.api.blocks.ExplosionWhitelist,removeWhitelist,method,void removeWhitelist(net.minecraft.world.level.block.Block... blocks),public
+other,ic2.api.blocks.IAdvancedComparable,getComparatorInputOverride,method,"ic2.api.blocks.int getComparatorInputOverride(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.BaseWrenchHandler,canRemoveBlock,method,"ic2.api.blocks.wrench.boolean canRemoveBlock(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.blocks.wrench.BaseWrenchHandler,doSpecialAction,method,"ic2.api.blocks.wrench.boolean doSpecialAction(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.Vec3 hit)",public
+other,ic2.api.blocks.wrench.BaseWrenchHandler,getDropRate,method,"ic2.api.blocks.wrench.double getDropRate(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.blocks.wrench.BaseWrenchHandler,getDrops,method,"java.util.List getDrops(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.blocks.wrench.BaseWrenchHandler,hasSpecialAction,method,"net.minecraft.world.phys.AABB hasSpecialAction(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.Vec3 hit)",public
+other,ic2.api.blocks.wrench.ChestWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.ChestWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.DispenserWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.HopperWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.HopperWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.HopperWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.HopperWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.HorizontalWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.InvertedHorizontalWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.ObserverBlockWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.PillarWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.PillarWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.PillarWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.PillarWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.PistonWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.PistonWrenchHandler,canRemoveBlock,method,"ic2.api.blocks.wrench.boolean canRemoveBlock(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.blocks.wrench.PistonWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.PistonWrenchHandler,getDropRate,method,"ic2.api.blocks.wrench.double getDropRate(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.blocks.wrench.PistonWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.PistonWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.StairWrenchHandler,INSTANCE,field,ic2.api.blocks.IWrenchable INSTANCE,public
+other,ic2.api.blocks.wrench.StairWrenchHandler,canSetFacing,method,"ic2.api.blocks.wrench.boolean canSetFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.blocks.wrench.StairWrenchHandler,getFacing,method,"net.minecraft.core.Direction getFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.blocks.wrench.StairWrenchHandler,setFacing,method,"ic2.api.blocks.wrench.boolean setFacing(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player, net.minecraft.core.Direction side)",public
+other,ic2.api.core.APIHelper,createSteam,method,net.minecraftforge.fluids.FluidStack createSteam(ic2.api.core.int amount),public
+other,ic2.api.core.APIHelper,getFluidContainers,method,java.util.List getFluidContainers(net.minecraft.world.level.material.Fluid fluid),public
+other,ic2.api.core.APIHelper,getNetworkManager,method,ic2.api.network.INetworkManager getNetworkManager(),public
+other,ic2.api.core.APIHelper,getNetworkManager,method,ic2.api.network.INetworkManager getNetworkManager(net.minecraftforge.api.distmarker.Dist side),public
+other,ic2.api.core.APIHelper,getTickHelper,method,ic2.api.ticks.ITickScheduler getTickHelper(),public
+other,ic2.api.core.IC2Classic,ARMOR_CAPABILITY,field,net.minecraftforge.common.capabilities.Capability ARMOR_CAPABILITY = CapabilityManager.get(),public
+other,ic2.api.core.IC2Classic,NOTIFY_CAPABILITY,field,net.minecraftforge.common.capabilities.Capability NOTIFY_CAPABILITY = CapabilityManager.get(),public
+other,ic2.api.core.IC2Classic,TUBE_CAPABILITY,field,net.minecraftforge.common.capabilities.Capability TUBE_CAPABILITY = CapabilityManager.get(),public
+other,ic2.api.core.IC2Classic,getHelper,method,ic2.api.core.APIHelper getHelper(),public
+other,ic2.api.core.IC2Classic,setHelper,method,void setHelper(ic2.api.core.APIHelper helper),public
+other,ic2.api.crops.BaseSeed,crop,field,ic2.api.crops.ICrop crop,public
+other,ic2.api.crops.BaseSeed,gain,field,ic2.api.crops.int gain,public
+other,ic2.api.crops.BaseSeed,growth,field,ic2.api.crops.int growth,public
+other,ic2.api.crops.BaseSeed,resistance,field,ic2.api.crops.int resistance,public
+other,ic2.api.crops.BaseSeed,stack_size,field,ic2.api.crops.int stack_size,public
+other,ic2.api.crops.BaseSeed,stage,field,ic2.api.crops.int stage,public
+other,ic2.api.crops.CropDifficulty,getBreedingDifficulty,method,ic2.api.crops.int getBreedingDifficulty(),public
+other,ic2.api.crops.CropDifficulty,getCropGrowth,method,ic2.api.crops.int getCropGrowth(ic2.api.crops.int value),public
+other,ic2.api.crops.CropDifficulty,getCropStats,method,"ic2.api.crops.int getCropStats(java.util.List crops, net.minecraft.util.RandomSource rand)",public
+other,ic2.api.crops.CropDifficulty,getWeedChance,method,ic2.api.crops.int getWeedChance(),public
+other,ic2.api.crops.CropProperties,getAllProperties,method,ic2.api.crops.int getAllProperties(),public
+other,ic2.api.crops.CropProperties,getChemistry,method,ic2.api.crops.int getChemistry(),public
+other,ic2.api.crops.CropProperties,getColorful,method,ic2.api.crops.int getColorful(),public
+other,ic2.api.crops.CropProperties,getConsumable,method,ic2.api.crops.int getConsumable(),public
+other,ic2.api.crops.CropProperties,getDefensive,method,ic2.api.crops.int getDefensive(),public
+other,ic2.api.crops.CropProperties,getTier,method,ic2.api.crops.int getTier(),public
+other,ic2.api.crops.CropProperties,getWeed,method,ic2.api.crops.int getWeed(),public
+other,ic2.api.crops.ICrop,EMPTY_DROPS,field,net.minecraft.world.item.ItemStack EMPTY_DROPS,public
+other,ic2.api.crops.ICrop,UNKNOWN,field,"net.minecraft.network.chat.Component UNKNOWN = Component.translatable(""crop.ic2.unknown"")",public
+other,ic2.api.crops.ICrop,canBeHarvested,method,ic2.api.crops.boolean canBeHarvested(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,canBreed,method,ic2.api.crops.boolean canBreed(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,canEmitRedstone,method,ic2.api.crops.boolean canEmitRedstone(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,canGrow,method,ic2.api.crops.boolean canGrow(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,combineStats,method,"ic2.api.crops.short combineStats(ic2.api.crops.int growth, ic2.api.crops.int gain, ic2.api.crops.int resistance)",public
+other,ic2.api.crops.ICrop,desc,method,ic2.api.crops.String desc(ic2.api.crops.int i),public
+other,ic2.api.crops.ICrop,discoveredBy,method,net.minecraft.network.chat.Component discoveredBy(),public
+other,ic2.api.crops.ICrop,getAfterHarvestStage,method,ic2.api.crops.int getAfterHarvestStage(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getAttributes,method,ic2.api.crops.String getAttributes(),public
+other,ic2.api.crops.ICrop,getCropType,method,ic2.api.crops.CropType getCropType(),public
+other,ic2.api.crops.ICrop,getCustomCropPlaceFailedMessage,method,net.minecraft.network.chat.Component getCustomCropPlaceFailedMessage(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getDisplayItem,method,net.minecraft.world.item.ItemStack getDisplayItem(),public
+other,ic2.api.crops.ICrop,getDropChance,method,ic2.api.crops.double getDropChance(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getDrops,method,net.minecraft.world.item.ItemStack getDrops(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getEmittedLight,method,ic2.api.crops.int getEmittedLight(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getGain,method,ic2.api.crops.int getGain(ic2.api.crops.int combo),public
+other,ic2.api.crops.ICrop,getGrowth,method,ic2.api.crops.int getGrowth(ic2.api.crops.int combo),public
+other,ic2.api.crops.ICrop,getGrowthDuration,method,ic2.api.crops.int getGrowthDuration(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getGrowthSteps,method,ic2.api.crops.int getGrowthSteps(),public
+other,ic2.api.crops.ICrop,getName,method,net.minecraft.network.chat.Component getName(),public
+other,ic2.api.crops.ICrop,getOptimalHarvestStep,method,ic2.api.crops.int getOptimalHarvestStep(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getProperties,method,ic2.api.crops.CropProperties getProperties(),public
+other,ic2.api.crops.ICrop,getRedstoneLevel,method,ic2.api.crops.int getRedstoneLevel(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getResistance,method,ic2.api.crops.int getResistance(ic2.api.crops.int combo),public
+other,ic2.api.crops.ICrop,getSeedDropChance,method,ic2.api.crops.float getSeedDropChance(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getSeeds,method,net.minecraft.world.item.ItemStack getSeeds(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,getStatInfluence,method,"ic2.api.crops.int getStatInfluence(ic2.api.crops.ICropTile cropTile, ic2.api.crops.int humidity, ic2.api.crops.int nutrients, ic2.api.crops.int air)",public
+other,ic2.api.crops.ICrop,getTextures,method,java.util.List getTextures(),public
+other,ic2.api.crops.ICrop,hasCustomCropPlaceFailedMessage,method,ic2.api.crops.boolean hasCustomCropPlaceFailedMessage(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,id,method,net.minecraft.resources.ResourceLocation id(),public
+other,ic2.api.crops.ICrop,isWaterCleaningCrop,method,ic2.api.crops.boolean isWaterCleaningCrop(ic2.api.crops.ICropTile tile),public
+other,ic2.api.crops.ICrop,isWeed,method,ic2.api.crops.boolean isWeed(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,onBlockUpdate,method,void onBlockUpdate(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICrop,onCropPlaceFailed,method,"void onCropPlaceFailed(ic2.api.crops.BaseSeed seed, ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.crops.ICrop,onEntityCollision,method,"void onEntityCollision(ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.Entity entity)",public
+other,ic2.api.crops.ICrop,onLeftClick,method,"ic2.api.crops.boolean onLeftClick(ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.player.Player player)",public
+other,ic2.api.crops.ICrop,onRightClick,method,"ic2.api.crops.boolean onRightClick(ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.player.Player player, net.minecraft.world.InteractionHand hand)",public
+other,ic2.api.crops.ICrop,onTick,method,void onTick(ic2.api.crops.ICropTile cropTile),public
+other,ic2.api.crops.ICropRegistry,INSTANCE,field,ic2.api.crops.ICropRegistry INSTANCE,public
+other,ic2.api.crops.ICropRegistry,SEA_WEED,field,ic2.api.crops.ICrop SEA_WEED = null,public
+other,ic2.api.crops.ICropRegistry,WEED,field,ic2.api.crops.ICrop WEED = null,public
+other,ic2.api.crops.ICropRegistry,addBiomeHumidityBonus,method,"void addBiomeHumidityBonus(net.minecraft.tags.TagKey type, ic2.api.crops.int bonus)",public
+other,ic2.api.crops.ICropRegistry,addBiomeNutrientBonus,method,"void addBiomeNutrientBonus(net.minecraft.tags.TagKey type, ic2.api.crops.int bonus)",public
+other,ic2.api.crops.ICropRegistry,addBiomeWaterQualityBonus,method,"void addBiomeWaterQualityBonus(net.minecraft.tags.TagKey type, ic2.api.crops.int bonus)",public
+other,ic2.api.crops.ICropRegistry,getCrop,method,"ic2.api.crops.ICrop getCrop(ic2.api.crops.String id, ic2.api.crops.String name)",public
+other,ic2.api.crops.ICropRegistry,getCrop,method,ic2.api.crops.ICrop getCrop(net.minecraft.resources.ResourceLocation location),public
+other,ic2.api.crops.ICropRegistry,getCrop,method,ic2.api.crops.ICrop getCrop(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropRegistry,getCrops,method,java.util.List getCrops(),public
+other,ic2.api.crops.ICropRegistry,getDisplayItem,method,net.minecraft.world.item.ItemStack getDisplayItem(net.minecraft.resources.ResourceLocation cropID),public
+other,ic2.api.crops.ICropRegistry,getFarmland,method,ic2.api.crops.IFarmland getFarmland(net.minecraft.world.level.block.Block block),public
+other,ic2.api.crops.ICropRegistry,getHumidityBonus,method,ic2.api.crops.int getHumidityBonus(net.minecraft.core.Holder biome),public
+other,ic2.api.crops.ICropRegistry,getNutrientBonus,method,ic2.api.crops.int getNutrientBonus(net.minecraft.core.Holder biome),public
+other,ic2.api.crops.ICropRegistry,getRandomCrop,method,ic2.api.crops.ICrop getRandomCrop(java.util.OptionalLong seed),public
+other,ic2.api.crops.ICropRegistry,getSeedForCrop,method,net.minecraft.world.item.ItemStack getSeedForCrop(ic2.api.crops.ICrop crop),public
+other,ic2.api.crops.ICropRegistry,getSeedForStack,method,ic2.api.crops.BaseSeed getSeedForStack(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropRegistry,getSubSoil,method,ic2.api.crops.ISubSoil getSubSoil(net.minecraft.world.level.block.Block block),public
+other,ic2.api.crops.ICropRegistry,getWaterQualityBonus,method,ic2.api.crops.int getWaterQualityBonus(net.minecraft.core.Holder biome),public
+other,ic2.api.crops.ICropRegistry,registerBaseSeed,method,"void registerBaseSeed(net.minecraft.world.item.Item item, ic2.api.crops.BaseSeed seed)",public
+other,ic2.api.crops.ICropRegistry,registerCrop,method,ic2.api.crops.T registerCrop(ic2.api.crops.T crop),public
+other,ic2.api.crops.ICropRegistry,registerCustomCropRenderer,method,"void registerCustomCropRenderer(net.minecraft.resources.ResourceLocation location, ic2.api.crops.ICropRenderer render)",public
+other,ic2.api.crops.ICropRegistry,registerCustomStickRenderer,method,void registerCustomStickRenderer(ic2.api.crops.ICropRenderer render),public
+other,ic2.api.crops.ICropRegistry,registerDisplayItem,method,"void registerDisplayItem(net.minecraft.resources.ResourceLocation cropID, net.minecraft.world.item.ItemStack stack)",public
+other,ic2.api.crops.ICropRegistry,registerFarmland,method,"void registerFarmland(ic2.api.crops.IFarmland land, net.minecraft.world.level.block.Block... blocks)",public
+other,ic2.api.crops.ICropRegistry,registerSubSoil,method,"void registerSubSoil(ic2.api.crops.ISubSoil soil, net.minecraft.world.level.block.Block... blocks)",public
+other,ic2.api.crops.ICropRenderer,createQuadsForStage,method,"java.util.List createQuadsForStage(ic2.api.crops.int stage, ic2.api.crops.boolean fancy, net.minecraft.client.renderer.block.model.FaceBakery baker)",public
+other,ic2.api.crops.ICropSeed,getCrop,method,ic2.api.crops.ICrop getCrop(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropSeed,getGain,method,ic2.api.crops.int getGain(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropSeed,getGrowth,method,ic2.api.crops.int getGrowth(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropSeed,getResistance,method,ic2.api.crops.int getResistance(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropSeed,getScanLevel,method,ic2.api.crops.int getScanLevel(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropSeed,increaseScanLevel,method,void increaseScanLevel(net.minecraft.world.item.ItemStack stack),public
+other,ic2.api.crops.ICropSeed,setGain,method,"void setGain(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int gain)",public
+other,ic2.api.crops.ICropSeed,setGrowth,method,"void setGrowth(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int growth)",public
+other,ic2.api.crops.ICropSeed,setResistance,method,"void setResistance(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int resistance)",public
+other,ic2.api.crops.ICropSeed,setScanLevel,method,"void setScanLevel(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int level)",public
+other,ic2.api.crops.ICropTile,calculateGrowthSpeed,method,ic2.api.crops.int calculateGrowthSpeed(),public
+other,ic2.api.crops.ICropTile,canBreed,method,ic2.api.crops.boolean canBreed(),public
+other,ic2.api.crops.ICropTile,createSeeds,method,"net.minecraft.world.item.ItemStack createSeeds(ic2.api.crops.ICrop crop, ic2.api.crops.int growthStat, ic2.api.crops.int gainStat, ic2.api.crops.int resistanceStat, ic2.api.crops.int scanLevel)",public
+other,ic2.api.crops.ICropTile,getBlocksBelow,method,java.util.Set getBlocksBelow(),public
+other,ic2.api.crops.ICropTile,getCrop,method,ic2.api.crops.ICrop getCrop(),public
+other,ic2.api.crops.ICropTile,getCustomData,method,net.minecraft.nbt.CompoundTag getCustomData(),public
+other,ic2.api.crops.ICropTile,getEnvironmentQuality,method,ic2.api.crops.int getEnvironmentQuality(),public
+other,ic2.api.crops.ICropTile,getFarmland,method,ic2.api.crops.IFarmland getFarmland(),public
+other,ic2.api.crops.ICropTile,getFertilizerStorage,method,ic2.api.crops.int getFertilizerStorage(),public
+other,ic2.api.crops.ICropTile,getGainStat,method,ic2.api.crops.int getGainStat(),public
+other,ic2.api.crops.ICropTile,getGrowthPoints,method,ic2.api.crops.int getGrowthPoints(),public
+other,ic2.api.crops.ICropTile,getGrowthStage,method,ic2.api.crops.int getGrowthStage(),public
+other,ic2.api.crops.ICropTile,getGrowthStat,method,ic2.api.crops.int getGrowthStat(),public
+other,ic2.api.crops.ICropTile,getHumidity,method,ic2.api.crops.int getHumidity(),public
+other,ic2.api.crops.ICropTile,getLightLevel,method,ic2.api.crops.int getLightLevel(),public
+other,ic2.api.crops.ICropTile,getNutrients,method,ic2.api.crops.int getNutrients(),public
+other,ic2.api.crops.ICropTile,getResistanceStat,method,ic2.api.crops.int getResistanceStat(),public
+other,ic2.api.crops.ICropTile,getScanLevel,method,ic2.api.crops.int getScanLevel(),public
+other,ic2.api.crops.ICropTile,getWaterStorage,method,ic2.api.crops.int getWaterStorage(),public
+other,ic2.api.crops.ICropTile,getWeedExStorage,method,ic2.api.crops.int getWeedExStorage(),public
+other,ic2.api.crops.ICropTile,isBlockBelow,method,ic2.api.crops.boolean isBlockBelow(net.minecraft.world.level.block.state.BlockState state),public
+other,ic2.api.crops.ICropTile,isBlockBelow,method,ic2.api.crops.boolean isBlockBelow(net.minecraft.world.level.block.Block block),public
+other,ic2.api.crops.ICropTile,isBlockBelow,method,ic2.api.crops.boolean isBlockBelow(net.minecraft.tags.TagKey tag),public
+other,ic2.api.crops.ICropTile,isCrossBreeding,method,ic2.api.crops.boolean isCrossBreeding(),public
+other,ic2.api.crops.ICropTile,isWaterLogged,method,ic2.api.crops.boolean isWaterLogged(),public
+other,ic2.api.crops.ICropTile,onCustomDataChanged,method,void onCustomDataChanged(),public
+other,ic2.api.crops.ICropTile,performHarvest,method,java.util.List performHarvest(ic2.api.crops.boolean manual),public
+other,ic2.api.crops.ICropTile,performManualHarvest,method,ic2.api.crops.boolean performManualHarvest(),public
+other,ic2.api.crops.ICropTile,pickCrop,method,ic2.api.crops.boolean pickCrop(),public
+other,ic2.api.crops.ICropTile,removeCrop,method,void removeCrop(),public
+other,ic2.api.crops.ICropTile,requestStateUpdate,method,void requestStateUpdate(),public
+other,ic2.api.crops.ICropTile,setCrop,method,void setCrop(ic2.api.crops.ICrop crop),public
+other,ic2.api.crops.ICropTile,setCrossBreeding,method,void setCrossBreeding(ic2.api.crops.boolean breed),public
+other,ic2.api.crops.ICropTile,setFertilizerStorage,method,void setFertilizerStorage(ic2.api.crops.int fertilizer),public
+other,ic2.api.crops.ICropTile,setGainStat,method,void setGainStat(ic2.api.crops.int level),public
+other,ic2.api.crops.ICropTile,setGrowthPoints,method,void setGrowthPoints(ic2.api.crops.int points),public
+other,ic2.api.crops.ICropTile,setGrowthStage,method,void setGrowthStage(ic2.api.crops.int stage),public
+other,ic2.api.crops.ICropTile,setGrowthStat,method,void setGrowthStat(ic2.api.crops.int level),public
+other,ic2.api.crops.ICropTile,setResistanceStat,method,void setResistanceStat(ic2.api.crops.int level),public
+other,ic2.api.crops.ICropTile,setScanLevel,method,void setScanLevel(ic2.api.crops.int level),public
+other,ic2.api.crops.ICropTile,setWaterStorage,method,void setWaterStorage(ic2.api.crops.int water),public
+other,ic2.api.crops.ICropTile,setWaterlogged,method,void setWaterlogged(ic2.api.crops.boolean water),public
+other,ic2.api.crops.ICropTile,setWeedExStorage,method,void setWeedExStorage(ic2.api.crops.int weedEx),public
+other,ic2.api.crops.IFarmland,getHumidity,method,"ic2.api.crops.int getHumidity(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.crops.IFarmland,getHumidity,method,ic2.api.crops.int getHumidity(net.minecraft.world.level.block.state.BlockState state),public
+other,ic2.api.crops.IFarmland,getNutrients,method,"ic2.api.crops.int getNutrients(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.crops.IFarmland,getNutrients,method,ic2.api.crops.int getNutrients(net.minecraft.world.level.block.state.BlockState state),public
+other,ic2.api.crops.IFarmland,getSpecialState,method,net.minecraft.world.level.block.state.BlockState getSpecialState(net.minecraft.world.level.block.Block block),public
+other,ic2.api.crops.IFarmland,isSpecial,method,ic2.api.crops.boolean isSpecial(),public
+other,ic2.api.crops.ISeedCrop,getSeedDrops,method,net.minecraft.world.item.ItemStack getSeedDrops(ic2.api.crops.ICropTile tile),public
+other,ic2.api.crops.ISeedCrop,isDroppingSeeds,method,ic2.api.crops.boolean isDroppingSeeds(ic2.api.crops.ICropTile tile),public
+other,ic2.api.crops.ISubSoil,getHumidity,method,"ic2.api.crops.int getHumidity(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.crops.ISubSoil,getHumidity,method,ic2.api.crops.int getHumidity(net.minecraft.world.level.block.state.BlockState state),public
+other,ic2.api.crops.ISubSoil,getNutrients,method,"ic2.api.crops.int getNutrients(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+other,ic2.api.crops.ISubSoil,getNutrients,method,ic2.api.crops.int getNutrients(net.minecraft.world.level.block.state.BlockState state),public
+other,ic2.api.crops.ISubSoil,getSpecialState,method,net.minecraft.world.level.block.state.BlockState getSpecialState(net.minecraft.world.level.block.Block block),public
+other,ic2.api.crops.ISubSoil,isSpecial,method,ic2.api.crops.boolean isSpecial(),public
+energy,ic2.api.energy.EnergyNet,INSTANCE,field,ic2.api.energy.IEnergyNet INSTANCE,public
+energy,ic2.api.energy.IEnergyNet,addTile,method,void addTile(ic2.api.energy.tile.IEnergyTile tile),public
+energy,ic2.api.energy.IEnergyNet,getDisplayTier,method,ic2.api.energy.String getDisplayTier(ic2.api.energy.int tier),public
+energy,ic2.api.energy.IEnergyNet,getPacketStats,method,java.util.List getPacketStats(ic2.api.energy.tile.IEnergyTile tile),public
+energy,ic2.api.energy.IEnergyNet,getPowerFromTier,method,ic2.api.energy.int getPowerFromTier(ic2.api.energy.int tier),public
+energy,ic2.api.energy.IEnergyNet,getStats,method,ic2.api.energy.TransferStats getStats(ic2.api.energy.tile.IEnergyTile tile),public
+energy,ic2.api.energy.IEnergyNet,getSubTile,method,"ic2.api.energy.tile.IEnergyTile getSubTile(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+energy,ic2.api.energy.IEnergyNet,getTierFromPower,method,ic2.api.energy.int getTierFromPower(ic2.api.energy.int power),public
+energy,ic2.api.energy.IEnergyNet,getTile,method,"ic2.api.energy.tile.IEnergyTile getTile(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+energy,ic2.api.energy.IEnergyNet,getTiles,method,"ic2.api.energy.GridTile getTiles(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+energy,ic2.api.energy.IEnergyNet,removeTile,method,void removeTile(ic2.api.energy.tile.IEnergyTile tile),public
+energy,ic2.api.energy.IEnergyNet,updateTile,method,void updateTile(ic2.api.energy.tile.IEnergyTile tile),public
+energy,ic2.api.energy.PacketStats,getPackets,method,ic2.api.energy.long getPackets(),public
+energy,ic2.api.energy.PacketStats,getPower,method,ic2.api.energy.long getPower(),public
+energy,ic2.api.energy.PacketStats,getTile,method,ic2.api.energy.tile.IEnergyTile getTile(),public
+energy,ic2.api.energy.PacketStats,isAccepting,method,ic2.api.energy.boolean isAccepting(),public
+energy,ic2.api.energy.TransferStats,getEnergyIn,method,ic2.api.energy.long getEnergyIn(),public
+energy,ic2.api.energy.TransferStats,getEnergyLossIn,method,ic2.api.energy.long getEnergyLossIn(),public
+energy,ic2.api.energy.TransferStats,getEnergyLossOut,method,ic2.api.energy.long getEnergyLossOut(),public
+energy,ic2.api.energy.TransferStats,getEnergyOut,method,ic2.api.energy.long getEnergyOut(),public
+energy,ic2.api.energy.TransferStats,toString,method,ic2.api.energy.String toString(),public
+energy,ic2.api.energy.impl.LinkedSink,canAcceptEnergy,method,"ic2.api.energy.impl.boolean canAcceptEnergy(ic2.api.energy.tile.IEnergyEmitter emitter, net.minecraft.core.Direction side)",public
+energy,ic2.api.energy.impl.LinkedSink,getPosition,method,net.minecraft.core.BlockPos getPosition(),public
+energy,ic2.api.energy.impl.LinkedSink,getWorldObj,method,net.minecraft.world.level.Level getWorldObj(),public
+energy,ic2.api.energy.impl.LinkedSource,canEmitEnergy,method,"ic2.api.energy.impl.boolean canEmitEnergy(ic2.api.energy.tile.IEnergyAcceptor acceptor, net.minecraft.core.Direction side)",public
+energy,ic2.api.energy.impl.LinkedSource,getPosition,method,net.minecraft.core.BlockPos getPosition(),public
+energy,ic2.api.energy.impl.LinkedSource,getWorldObj,method,net.minecraft.world.level.Level getWorldObj(),public
+energy,ic2.api.energy.tile.IEnergyAcceptor,canAcceptEnergy,method,"ic2.api.energy.tile.boolean canAcceptEnergy(ic2.api.energy.tile.IEnergyEmitter emitter, net.minecraft.core.Direction side)",public
+energy,ic2.api.energy.tile.IEnergyConductor,getConductionLoss,method,ic2.api.energy.tile.double getConductionLoss(),public
+energy,ic2.api.energy.tile.IEnergyConductor,getConductorBreakdownEnergy,method,ic2.api.energy.tile.int getConductorBreakdownEnergy(),public
+energy,ic2.api.energy.tile.IEnergyConductor,getInsulationBreakdownEnergy,method,ic2.api.energy.tile.int getInsulationBreakdownEnergy(),public
+energy,ic2.api.energy.tile.IEnergyConductor,getInsulationEnergyAbsorption,method,ic2.api.energy.tile.int getInsulationEnergyAbsorption(),public
+energy,ic2.api.energy.tile.IEnergyConductor,isLavaLogged,method,ic2.api.energy.tile.boolean isLavaLogged(),public
+energy,ic2.api.energy.tile.IEnergyConductor,isWaterlogged,method,ic2.api.energy.tile.boolean isWaterlogged(),public
+energy,ic2.api.energy.tile.IEnergyConductor,removeConductor,method,void removeConductor(),public
+energy,ic2.api.energy.tile.IEnergyConductor,removeInsulation,method,void removeInsulation(),public
+energy,ic2.api.energy.tile.IEnergyConductorColored,getColor,method,net.minecraft.world.item.DyeColor getColor(),public
+energy,ic2.api.energy.tile.IEnergyConductorModifiable,tryAddInsulation,method,ic2.api.energy.tile.boolean tryAddInsulation(),public
+energy,ic2.api.energy.tile.IEnergyConductorModifiable,tryRemoveInsulation,method,ic2.api.energy.tile.boolean tryRemoveInsulation(),public
+energy,ic2.api.energy.tile.IEnergyEmitter,canEmitEnergy,method,"ic2.api.energy.tile.boolean canEmitEnergy(ic2.api.energy.tile.IEnergyAcceptor acceptor, net.minecraft.core.Direction side)",public
+energy,ic2.api.energy.tile.IEnergySink,acceptEnergy,method,"ic2.api.energy.tile.int acceptEnergy(net.minecraft.core.Direction side, ic2.api.energy.tile.int amount, ic2.api.energy.tile.int voltage)",public
+energy,ic2.api.energy.tile.IEnergySink,getRequestedEnergy,method,ic2.api.energy.tile.int getRequestedEnergy(),public
+energy,ic2.api.energy.tile.IEnergySink,getSinkTier,method,ic2.api.energy.tile.int getSinkTier(),public
+energy,ic2.api.energy.tile.IEnergySource,consumeEnergy,method,void consumeEnergy(ic2.api.energy.tile.int consumed),public
+energy,ic2.api.energy.tile.IEnergySource,getMaxEnergyOutput,method,ic2.api.energy.tile.int getMaxEnergyOutput(),public
+energy,ic2.api.energy.tile.IEnergySource,getProvidedEnergy,method,ic2.api.energy.tile.int getProvidedEnergy(),public
+energy,ic2.api.energy.tile.IEnergySource,getSourceTier,method,ic2.api.energy.tile.int getSourceTier(),public
+energy,ic2.api.energy.tile.IEnergySource,getSourceType,method,ic2.api.energy.tile.SourceType getSourceType(),public
+energy,ic2.api.energy.tile.IEnergySource,onPacketFailed,method,void onPacketFailed(),public
+energy,ic2.api.energy.tile.IMultiEnergySource,getPacketCount,method,ic2.api.energy.tile.int getPacketCount(),public
+energy,ic2.api.energy.tile.IMultiEnergySource,hasMultiplePackets,method,ic2.api.energy.tile.boolean hasMultiplePackets(),public
+energy,ic2.api.energy.tile.IMultiEnergyTile,getTiles,method,java.util.List getTiles(),public
+events,ic2.api.events.ArmorSlotEvent,addSlots,method,"void addSlots(ic2.api.items.armor.IArmorModule.ModuleType type, ic2.api.events.int amount)",public
+events,ic2.api.events.ArmorSlotEvent,getEquipmentSlot,method,net.minecraft.world.entity.EquipmentSlot getEquipmentSlot(),public
+events,ic2.api.events.ArmorSlotEvent,getId,method,ic2.api.events.String getId(),public
+events,ic2.api.events.ArmorSlotEvent,getItem,method,net.minecraft.world.item.Item getItem(),public
+events,ic2.api.events.ArmorSlotEvent,getSlots,method,it.unimi.dsi.fastutil.objects.Object2IntMap getSlots(),public
+events,ic2.api.events.FoamEvent,getBlockEntity,method,net.minecraft.world.level.block.entity.BlockEntity getBlockEntity(),public
+events,ic2.api.events.FoamEvent,getPos,method,net.minecraft.core.BlockPos getPos(),public
+events,ic2.api.events.FoamEvent,getState,method,net.minecraft.world.level.block.state.BlockState getState(),public
+events,ic2.api.events.LaserEvent,blockBreaks,field,ic2.api.events.int blockBreaks = 0,public
+events,ic2.api.events.LaserEvent,explosive,field,ic2.api.events.boolean explosive = false,public
+events,ic2.api.events.LaserEvent,laser,field,net.minecraft.world.entity.Entity laser,public
+events,ic2.api.events.LaserEvent,power,field,ic2.api.events.float power = 0F,public
+events,ic2.api.events.LaserEvent,range,field,ic2.api.events.float range = 0F,public
+events,ic2.api.events.LaserEvent,smelt,field,ic2.api.events.boolean smelt = false,public
+events,ic2.api.events.LaserEvent,source,field,net.minecraft.world.entity.LivingEntity source,public
+events,ic2.api.events.RetextureEvent,getApplyingPlayer,method,net.minecraft.world.entity.player.Player getApplyingPlayer(),public
+events,ic2.api.events.RetextureEvent,getBlockEntity,method,net.minecraft.world.level.block.entity.BlockEntity getBlockEntity(),public
+events,ic2.api.events.RetextureEvent,getBlockState,method,net.minecraft.world.level.block.state.BlockState getBlockState(),public
+events,ic2.api.events.RetextureEvent,getContainer,method,ic2.api.events.TextureContainer getContainer(),public
+events,ic2.api.events.RetextureEvent,getPos,method,net.minecraft.core.BlockPos getPos(),public
+events,ic2.api.events.RetextureEvent,getSide,method,net.minecraft.core.Direction getSide(),public
+events,ic2.api.events.RetextureEvent,isApplied,method,ic2.api.events.boolean isApplied(),public
+events,ic2.api.events.RetextureEvent,setApplied,method,void setApplied(ic2.api.events.boolean apply),public
+events,ic2.api.events.ScrapBoxEvent,getDrops,method,java.util.List getDrops(),public
+events,ic2.api.events.ScrapBoxEvent,getScrapBox,method,net.minecraft.world.item.ItemStack getScrapBox(),public
+items,ic2.api.items.IAutoEatable,canAutoEat,method,ic2.api.items.boolean canAutoEat(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IAutoEatable,getFoodValue,method,ic2.api.items.int getFoodValue(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IAutoEatable,onEaten,method,"net.minecraft.world.item.ItemStack onEaten(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level level, net.minecraft.world.entity.player.Player player)",public
+items,ic2.api.items.IBoxableItem,canStoreIntoBox,method,ic2.api.items.boolean canStoreIntoBox(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ICoinItem,getMoneyValue,method,ic2.api.items.int getMoneyValue(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ICutterItem,cutInsulation,method,"void cutInsulation(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.IDisplayProvider,provideInfo,method,"void provideInfo(net.minecraft.world.item.ItemStack stack, java.util.function.Consumer infos)",public
+items,ic2.api.items.IDrinkContainer,fillWith,method,"net.minecraft.world.item.ItemStack fillWith(ic2.api.items.IDrinkableFluid fluid, ic2.api.items.int amount)",public
+items,ic2.api.items.IDrinkContainer,getCapacity,method,ic2.api.items.int getCapacity(),public
+items,ic2.api.items.IDrinkContainer,getContent,method,ic2.api.items.IDrinkableFluid getContent(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IDrinkContainer,getEmptyContainer,method,net.minecraft.world.item.ItemStack getEmptyContainer(),public
+items,ic2.api.items.IDrinkContainer,hasContent,method,ic2.api.items.boolean hasContent(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IDrinkableFluid,REGISTRY,field,java.util.Map REGISTRY,public
+items,ic2.api.items.IDrinkableFluid,drink,method,"ic2.api.items.boolean drink(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level world, net.minecraft.world.entity.player.Player player)",public
+items,ic2.api.items.IDrinkableFluid,equals,method,ic2.api.items.boolean equals(ic2.api.items.Object obj),public
+items,ic2.api.items.IDrinkableFluid,generateSubStates,method,"java.util.List generateSubStates(net.minecraft.world.item.ItemStack base, ic2.api.items.boolean textures)",public
+items,ic2.api.items.IDrinkableFluid,getID,method,net.minecraft.resources.ResourceLocation getID(),public
+items,ic2.api.items.IDrinkableFluid,getSpecialName,method,net.minecraft.network.chat.Component getSpecialName(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IDrinkableFluid,getTexture,method,"net.minecraft.resources.ResourceLocation getTexture(net.minecraft.world.item.ItemStack stack, ic2.api.items.String baseFolder)",public
+items,ic2.api.items.IDrinkableFluid,getTextureIndex,method,ic2.api.items.int getTextureIndex(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IDrinkableFluid,hasSpecialName,method,ic2.api.items.boolean hasSpecialName(),public
+items,ic2.api.items.IDrinkableFluid,hashCode,method,ic2.api.items.int hashCode(),public
+items,ic2.api.items.IFuelableItem,canFuel,method,ic2.api.items.boolean canFuel(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IFuelableItem,fill,method,"net.minecraft.world.item.ItemStack fill(net.minecraft.world.item.ItemStack stack, ic2.api.items.int amount)",public
+items,ic2.api.items.IFuelableItem,getFuel,method,"ic2.api.items.int getFuel(net.minecraft.world.item.ItemStack stack, ic2.api.items.int requested, ic2.api.items.boolean doDrain)",public
+items,ic2.api.items.IFuelableItem,hasFuel,method,ic2.api.items.boolean hasFuel(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IRepairable,repairDamage,method,"ic2.api.items.boolean repairDamage(net.minecraft.world.item.ItemStack stack, ic2.api.items.int amount)",public
+items,ic2.api.items.ITagBlock,getBlocks,method,java.util.List getBlocks(net.minecraft.world.item.ItemStack self),public
+items,ic2.api.items.ITagBlock,matches,method,"ic2.api.items.boolean matches(net.minecraft.world.item.ItemStack self, net.minecraft.world.level.block.Block block)",public
+items,ic2.api.items.ITagItem,matches,method,"ic2.api.items.boolean matches(net.minecraft.world.item.ItemStack self, net.minecraft.world.item.ItemStack toCompare)",public
+items,ic2.api.items.ITerraformerBP,canInsert,method,"ic2.api.items.boolean canInsert(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.ITerraformerBP,getEnergyUsage,method,ic2.api.items.int getEnergyUsage(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ITerraformerBP,getRadius,method,ic2.api.items.int getRadius(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ITerraformerBP,isRandomized,method,ic2.api.items.boolean isRandomized(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ITerraformerBP,onInsert,method,"void onInsert(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.ITerraformerBP,terraform,method,"ic2.api.items.boolean terraform(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos position, ic2.api.tiles.ITerraformer terraformer)",public
+items,ic2.api.items.IUpgradeItem,getEnergyDemandMultiplier,method,"ic2.api.items.double getEnergyDemandMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getEnergyStorageMultiplier,method,"ic2.api.items.double getEnergyStorageMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getExtraEnergyDemand,method,"ic2.api.items.int getExtraEnergyDemand(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getExtraEnergyStorage,method,"ic2.api.items.int getExtraEnergyStorage(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getExtraProcessingSpeed,method,"ic2.api.items.int getExtraProcessingSpeed(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getExtraProcessingTime,method,"ic2.api.items.int getExtraProcessingTime(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getExtraTier,method,"ic2.api.items.int getExtraTier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getFunctions,method,java.util.EnumSet getFunctions(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IUpgradeItem,getProcessingSpeedMultiplier,method,"ic2.api.items.double getProcessingSpeedMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getProcessingTimeMultiplier,method,"ic2.api.items.double getProcessingTimeMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getSoundMultiplier,method,"ic2.api.items.float getSoundMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,getType,method,ic2.api.items.UpgradeType getType(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IUpgradeItem,onInstall,method,"void onInstall(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,onMachineFinishedRecipePost,method,"void onMachineFinishedRecipePost(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine, ic2.api.recipes.registries.IMachineRecipeList.RecipeEntry entry, java.util.List drops)",public
+items,ic2.api.items.IUpgradeItem,onMachineFinishedRecipePre,method,"void onMachineFinishedRecipePre(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, net.minecraft.nbt.CompoundTag recipeFlags)",public
+items,ic2.api.items.IUpgradeItem,onMachineProcessed,method,"void onMachineProcessed(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,onTick,method,"void onTick(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IUpgradeItem,useRedstoneInvertion,method,"ic2.api.items.boolean useRedstoneInvertion(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",public
+items,ic2.api.items.IWindmillBlade,getEffectiveness,method,ic2.api.items.float getEffectiveness(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IWindmillBlade,getRadius,method,ic2.api.items.int getRadius(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.IWindmillBlade,getTexture,method,net.minecraft.resources.ResourceLocation getTexture(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ItemRegistries,generateCoins,method,"net.minecraft.core.NonNullList generateCoins(ic2.api.items.int coinValue, net.minecraft.core.NonNullList result, ic2.api.items.boolean limit)",public
+items,ic2.api.items.ItemRegistries,isBoxable,method,ic2.api.items.boolean isBoxable(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.ItemRegistries,isDamageSourceBlockable,method,"ic2.api.items.boolean isDamageSourceBlockable(net.minecraft.world.item.ShieldItem shield, net.minecraft.world.damagesource.DamageSource source)",public
+items,ic2.api.items.ItemRegistries,isMetalArmor,method,"ic2.api.items.boolean isMetalArmor(net.minecraft.world.entity.player.Player player, net.minecraft.world.entity.EquipmentSlot slot)",public
+items,ic2.api.items.ItemRegistries,registerBlockableDamageSource,method,"void registerBlockableDamageSource(net.minecraft.world.item.ShieldItem shield, net.minecraft.world.damagesource.DamageSource source)",public
+items,ic2.api.items.ItemRegistries,registerBlockableDamageSource,method,void registerBlockableDamageSource(net.minecraft.world.damagesource.DamageSource source),public
+items,ic2.api.items.ItemRegistries,registerBoxableItems,method,"void registerBoxableItems(ic2.api.items.IBoxableItem box, net.minecraft.world.item.Item... items)",public
+items,ic2.api.items.ItemRegistries,registerCoin,method,void registerCoin(net.minecraft.world.item.Item item),public
+items,ic2.api.items.ItemRegistries,registerMetalArmor,method,"void registerMetalArmor(ic2.api.items.armor.IMetalArmor armor, net.minecraft.world.item.Item... items)",public
+items,ic2.api.items.armor.IArmorHud,isHudEnabled,method,ic2.api.items.armor.boolean isHudEnabled(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.armor.IArmorModule,canInstallInArmor,method,"ic2.api.items.armor.boolean canInstallInArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.entity.EquipmentSlot type)",public
+items,ic2.api.items.armor.IArmorModule,getType,method,ic2.api.items.armor.ModuleType getType(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.armor.IArmorModule,handlePacket,method,"ic2.api.items.armor.boolean handlePacket(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack module, net.minecraft.world.item.ItemStack armor, ic2.api.items.armor.String id, ic2.api.network.buffer.INetworkDataBuffer buffer, net.minecraftforge.api.distmarker.Dist targetSide)",public
+items,ic2.api.items.armor.IArmorModule,handleToolTip,method,"void handleToolTip(net.minecraft.world.item.ItemStack stack, java.util.function.Consumer results)",public
+items,ic2.api.items.armor.IArmorModule,onEquipped,method,"void onEquipped(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.entity.player.Player entity)",public
+items,ic2.api.items.armor.IArmorModule,onInstall,method,"void onInstall(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, ic2.api.items.armor.IArmorModuleHolder holder)",public
+items,ic2.api.items.armor.IArmorModule,onTick,method,"void onTick(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.level.Level world, net.minecraft.world.entity.player.Player player)",public
+items,ic2.api.items.armor.IArmorModule,onUnequipped,method,"void onUnequipped(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.entity.player.Player entity)",public
+items,ic2.api.items.armor.IArmorModule,onUninstall,method,"void onUninstall(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, ic2.api.items.armor.IArmorModuleHolder holder)",public
+items,ic2.api.items.armor.IArmorModule,provideCapabilities,method,"void provideCapabilities(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor)",public
+items,ic2.api.items.armor.IArmorModule,transferToArmor,method,"void transferToArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack oldArmor, net.minecraft.world.item.ItemStack newArmor)",public
+items,ic2.api.items.armor.ICustomArmor,canBlockDamageSource,method,"ic2.api.items.armor.boolean canBlockDamageSource(net.minecraft.world.entity.LivingEntity player, net.minecraft.world.item.ItemStack stack, net.minecraft.world.damagesource.DamageSource source, net.minecraft.world.entity.EquipmentSlot slot)",public
+items,ic2.api.items.armor.ICustomArmor,damageArmor,method,"void damageArmor(net.minecraft.world.entity.LivingEntity player, net.minecraft.world.item.ItemStack stack, net.minecraft.world.damagesource.DamageSource source, ic2.api.items.armor.int damage, net.minecraft.world.entity.EquipmentSlot slot, ic2.api.items.armor.DamageType type)",public
+items,ic2.api.items.armor.ICustomArmor,getProperties,method,"ic2.api.items.armor.AbsorptionProperties getProperties(net.minecraft.world.entity.LivingEntity entity, net.minecraft.world.item.ItemStack armor, net.minecraft.world.damagesource.DamageSource source, ic2.api.items.armor.double damage, net.minecraft.world.entity.EquipmentSlot slot)",public
+items,ic2.api.items.armor.IEnergyShieldArmor,addsEnergyShieldEffect,method,ic2.api.items.armor.boolean addsEnergyShieldEffect(net.minecraft.world.entity.LivingEntity living),public
+items,ic2.api.items.armor.IEnergyShieldArmor,addsShieldEffect,method,"ic2.api.items.armor.boolean addsShieldEffect(net.minecraft.world.entity.EquipmentSlot type, net.minecraft.world.entity.LivingEntity entity, net.minecraft.world.item.ItemStack stack)",public
+items,ic2.api.items.armor.IEnergyShieldArmor,isEffectAlwaysOn,method,"ic2.api.items.armor.boolean isEffectAlwaysOn(net.minecraft.world.entity.EquipmentSlot type, net.minecraft.world.entity.LivingEntity entity, net.minecraft.world.item.ItemStack stack)",public
+items,ic2.api.items.armor.IEnergyShieldArmor,shouldAlwaysShowEffect,method,ic2.api.items.armor.boolean shouldAlwaysShowEffect(net.minecraft.world.entity.LivingEntity living),public
+items,ic2.api.items.armor.IFoamSupplier,canProvideFoam,method,"ic2.api.items.armor.boolean canProvideFoam(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.items.armor.InventoryType inv, ic2.api.items.armor.int amount)",public
+items,ic2.api.items.armor.IFoamSupplier,fillFoam,method,"void fillFoam(net.minecraft.world.item.ItemStack stack, ic2.api.items.armor.int amount)",public
+items,ic2.api.items.armor.IFoamSupplier,getFreeFoamSpace,method,ic2.api.items.armor.int getFreeFoamSpace(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.armor.IFoamSupplier,useFoam,method,"void useFoam(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.items.armor.int amount)",public
+items,ic2.api.items.armor.IMetalArmor,isMetalArmor,method,"ic2.api.items.armor.boolean isMetalArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, net.minecraft.world.entity.EquipmentSlot targetSlot)",public
+items,ic2.api.items.electric.ElectricItem,DIRECT_MANAGER,field,ic2.api.items.electric.IElectricItemManager DIRECT_MANAGER,public
+items,ic2.api.items.electric.ElectricItem,MANAGER,field,ic2.api.items.electric.IElectricItemManager MANAGER,public
+items,ic2.api.items.electric.ElectricItem,applyEnchantmentEffect,method,"ic2.api.items.electric.int applyEnchantmentEffect(net.minecraft.world.item.ItemStack item, ic2.api.items.electric.int amount)",public
+items,ic2.api.items.electric.ElectricItem,chargeArmor,method,"ic2.api.items.electric.int chargeArmor(net.minecraft.world.entity.player.Player player, ic2.api.items.electric.int provided)",public
+items,ic2.api.items.electric.ElectricItem,chargeArmor,method,"ic2.api.items.electric.int chargeArmor(net.minecraft.world.entity.player.Player player, ic2.api.items.electric.int provided, ic2.api.items.electric.boolean whitelist, net.minecraft.world.entity.EquipmentSlot... slots)",public
+items,ic2.api.items.electric.ElectricItem,chargeArmor,method,"ic2.api.items.electric.int chargeArmor(net.minecraft.world.entity.player.Player player, ic2.api.items.electric.int provided, ic2.api.items.electric.boolean whitelist, ic2.api.items.electric.boolean allowCurio, net.minecraft.world.entity.EquipmentSlot... slots)",public
+items,ic2.api.items.electric.ElectricItem,chargeCurio,method,"ic2.api.items.electric.int chargeCurio(net.minecraftforge.items.IItemHandler handler, ic2.api.items.electric.int energyProvided)",public
+items,ic2.api.items.electric.ElectricItem,getBackupManager,method,ic2.api.items.electric.IElectricItemManager getBackupManager(net.minecraft.world.item.Item item),public
+items,ic2.api.items.electric.ElectricItem,registerBackupManager,method,"void registerBackupManager(ic2.api.items.electric.IElectricItemManager manager, net.minecraft.world.level.ItemLike... items)",public
+items,ic2.api.items.electric.ElectricItem,setCurioSupport,method,void setCurioSupport(java.util.function.Function curio),public
+items,ic2.api.items.electric.ICustomElectricItem,getManager,method,ic2.api.items.electric.IElectricItemManager getManager(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricEnchantable,getEnchantmentCompatibility,method,"net.minecraft.world.InteractionResult getEnchantmentCompatibility(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.enchantment.Enchantment ench)",public
+items,ic2.api.items.electric.IElectricEnchantable,getEnchantmentType,method,net.minecraft.world.item.enchantment.EnchantmentCategory getEnchantmentType(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricEnchantable,isBookEnchantable,method,"ic2.api.items.electric.boolean isBookEnchantable(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack book)",public
+items,ic2.api.items.electric.IElectricItem,canProvideEnergy,method,ic2.api.items.electric.boolean canProvideEnergy(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItem,getCapacity,method,ic2.api.items.electric.int getCapacity(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItem,getTier,method,ic2.api.items.electric.int getTier(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItem,getTransferLimit,method,ic2.api.items.electric.int getTransferLimit(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItemManager,canUse,method,"ic2.api.items.electric.boolean canUse(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount)",public
+items,ic2.api.items.electric.IElectricItemManager,charge,method,"ic2.api.items.electric.int charge(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount, ic2.api.items.electric.int tier, ic2.api.items.electric.boolean ignoreTransferLimit, ic2.api.items.electric.boolean simulate)",public
+items,ic2.api.items.electric.IElectricItemManager,chargeFromArmor,method,"void chargeFromArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.LivingEntity entity)",public
+items,ic2.api.items.electric.IElectricItemManager,discharge,method,"ic2.api.items.electric.int discharge(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount, ic2.api.items.electric.int tier, ic2.api.items.electric.boolean ignoreTransferLimit, ic2.api.items.electric.boolean externally, ic2.api.items.electric.boolean simulate)",public
+items,ic2.api.items.electric.IElectricItemManager,getCapacity,method,ic2.api.items.electric.int getCapacity(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItemManager,getCharge,method,ic2.api.items.electric.int getCharge(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItemManager,getTier,method,ic2.api.items.electric.int getTier(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItemManager,getToolTip,method,net.minecraft.network.chat.Component getToolTip(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItemManager,getTransferLimit,method,ic2.api.items.electric.int getTransferLimit(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IElectricItemManager,use,method,"ic2.api.items.electric.boolean use(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount, net.minecraft.world.entity.LivingEntity entity)",public
+items,ic2.api.items.electric.IFluidScanner,getScanRadius,method,"ic2.api.items.electric.int getScanRadius(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.boolean useEnergy)",public
+items,ic2.api.items.electric.IFluidScanner,isValuableFluid,method,"ic2.api.items.electric.boolean isValuableFluid(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.material.FluidState state, net.minecraft.world.level.LevelReader world, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.electric.IFluidScanner,isValuableFluid,method,"ic2.api.items.electric.boolean isValuableFluid(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.material.FluidState state)",public
+items,ic2.api.items.electric.IMiningDrill,canDrillBeUsed,method,ic2.api.items.electric.boolean canDrillBeUsed(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IMiningDrill,canMineBlock,method,"ic2.api.items.electric.boolean canMineBlock(net.minecraft.world.item.ItemStack drill, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.LevelReader access, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.electric.IMiningDrill,getExtraEnergyCost,method,ic2.api.items.electric.int getExtraEnergyCost(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IMiningDrill,getMiningBoost,method,"ic2.api.items.electric.int getMiningBoost(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state)",public
+items,ic2.api.items.electric.IMiningDrill,onDrillUsed,method,void onDrillUsed(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IScanner,getOreValue,method,"ic2.api.items.electric.int getOreValue(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.LevelReader world, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.electric.IScanner,getOreValue,method,"ic2.api.items.electric.int getOreValue(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state)",public
+items,ic2.api.items.electric.IScanner,getScanRadius,method,"ic2.api.items.electric.int getScanRadius(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.boolean useEnergy)",public
+items,ic2.api.items.electric.IScanner,hasScanEffect,method,ic2.api.items.electric.boolean hasScanEffect(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.electric.IScanner,isOreValuable,method,"ic2.api.items.electric.boolean isOreValuable(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.LevelReader world, net.minecraft.core.BlockPos pos)",public
+items,ic2.api.items.electric.IScanner,isOreValuable,method,"ic2.api.items.electric.boolean isOreValuable(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state)",public
+items,ic2.api.items.readers.ICropReader,isCropReader,method,ic2.api.items.readers.boolean isCropReader(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.readers.ICropReader,isCropReaderImpl,method,ic2.api.items.readers.boolean isCropReaderImpl(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.readers.IEUReader,isEUReader,method,ic2.api.items.readers.boolean isEUReader(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.readers.IEUReader,isEUReaderImpl,method,ic2.api.items.readers.boolean isEUReaderImpl(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.readers.IThermometer,isThermometer,method,ic2.api.items.readers.boolean isThermometer(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.readers.IThermometer,isThermometerImpl,method,ic2.api.items.readers.boolean isThermometerImpl(net.minecraft.world.item.ItemStack stack),public
+items,ic2.api.items.readers.IWrenchTool,getActualLoss,method,"ic2.api.items.readers.double getActualLoss(net.minecraft.world.item.ItemStack stack, ic2.api.items.readers.double originalLoss)",public
+items,ic2.api.items.readers.IWrenchTool,shouldRenderOverlay,method,ic2.api.items.readers.boolean shouldRenderOverlay(net.minecraft.world.item.ItemStack stack),public
+network,ic2.api.network.INetworkManager,handleInitialChange,method,"void handleInitialChange(net.minecraft.world.level.block.entity.BlockEntity prov, net.minecraft.nbt.CompoundTag nbt)",public
+network,ic2.api.network.INetworkManager,registerDataBuffer,method,"void registerDataBuffer(net.minecraft.resources.ResourceLocation location, ic2.api.network.Class clz, java.util.function.Supplier creator)",public
+network,ic2.api.network.INetworkManager,requestInitialData,method,void requestInitialData(ic2.api.network.tile.INetworkFieldProvider prov),public
+network,ic2.api.network.INetworkManager,sendClientItemBuffer,method,"void sendClientItemBuffer(net.minecraft.world.item.ItemStack stack, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer)",public
+network,ic2.api.network.INetworkManager,sendClientItemEvent,method,"void sendClientItemEvent(net.minecraft.world.item.ItemStack stack, ic2.api.network.int key, ic2.api.network.int value)",public
+network,ic2.api.network.INetworkManager,sendClientTileDataBufferEvent,method,"void sendClientTileDataBufferEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer)",public
+network,ic2.api.network.INetworkManager,sendClientTileEvent,method,"void sendClientTileEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.int key, ic2.api.network.int value)",public
+network,ic2.api.network.INetworkManager,sendInitialData,method,"void sendInitialData(ic2.api.network.tile.INetworkFieldProvider prov, net.minecraft.nbt.CompoundTag nbt)",public
+network,ic2.api.network.INetworkManager,sendInitialGuiData,method,"void sendInitialGuiData(ic2.api.network.tile.INetworkFieldProvider tile, net.minecraft.world.entity.player.Player player)",public
+network,ic2.api.network.INetworkManager,sendItemBuffer,method,"void sendItemBuffer(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer)",public
+network,ic2.api.network.INetworkManager,sendItemEvent,method,"void sendItemEvent(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.network.int key, ic2.api.network.int value)",public
+network,ic2.api.network.INetworkManager,sendTileDataBufferEvent,method,"void sendTileDataBufferEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer, ic2.api.network.tile.PacketRange target)",public
+network,ic2.api.network.INetworkManager,sendTileEvent,method,"void sendTileEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.int key, ic2.api.network.int value, ic2.api.network.tile.PacketRange target)",public
+network,ic2.api.network.INetworkManager,startGuiTracking,method,"void startGuiTracking(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.world.entity.player.Player player)",public
+network,ic2.api.network.INetworkManager,updateGuiData,method,"void updateGuiData(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.world.entity.player.Player player)",public
+network,ic2.api.network.INetworkManager,updateGuiField,method,"void updateGuiField(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String field)",public
+network,ic2.api.network.INetworkManager,updateGuiFields,method,"void updateGuiFields(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String... fields)",public
+network,ic2.api.network.INetworkManager,updateTileField,method,"void updateTileField(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String field)",public
+network,ic2.api.network.INetworkManager,updateTileFields,method,"void updateTileFields(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String... fields)",public
+network,ic2.api.network.IPlayerPacket,findPlayerStack,method,"net.minecraft.world.item.ItemStack findPlayerStack(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack send)",public
+network,ic2.api.network.IPlayerPacket,getContainer,method,"ic2.api.network.T getContainer(net.minecraft.world.entity.player.Player player, ic2.api.network.Class clz)",public
+network,ic2.api.network.IPlayerPacket,getContainer,method,"void getContainer(net.minecraft.world.entity.player.Player player, ic2.api.network.Class clz, java.util.function.Consumer listener)",public
+network,ic2.api.network.IPlayerPacket,getOptionalContainer,method,"java.util.Optional getOptionalContainer(net.minecraft.world.entity.player.Player player, ic2.api.network.Class clz)",public
+network,ic2.api.network.buffer.EmptyDataBuffer,INSTANCE,field,ic2.api.network.buffer.EmptyDataBuffer INSTANCE,public
+network,ic2.api.network.buffer.EmptyDataBuffer,read,method,void read(ic2.api.network.buffer.IInputBuffer buffer),public
+network,ic2.api.network.buffer.EmptyDataBuffer,write,method,void write(ic2.api.network.buffer.IOutputBuffer buffer),public
+network,ic2.api.network.buffer.IBitLevelOverride,getOverride,method,"ic2.api.network.buffer.NetworkInfo.BitLevel getOverride(ic2.api.network.buffer.int fieldID, ic2.api.network.buffer.String fieldName)",public
+network,ic2.api.network.buffer.IBitLevelOverride,hasOverride,method,"ic2.api.network.buffer.boolean hasOverride(ic2.api.network.buffer.int fieldID, ic2.api.network.buffer.String fieldName)",public
+network,ic2.api.network.buffer.IInputBuffer,readBoolean,method,ic2.api.network.buffer.boolean readBoolean(),public
+network,ic2.api.network.buffer.IInputBuffer,readByte,method,ic2.api.network.buffer.byte readByte(),public
+network,ic2.api.network.buffer.IInputBuffer,readBytes,method,ic2.api.network.buffer.byte readBytes(),public
+network,ic2.api.network.buffer.IInputBuffer,readChar,method,ic2.api.network.buffer.char readChar(),public
+network,ic2.api.network.buffer.IInputBuffer,readData,method,ic2.api.network.buffer.long readData(ic2.api.network.buffer.NetworkInfo.BitLevel length),public
+network,ic2.api.network.buffer.IInputBuffer,readDouble,method,ic2.api.network.buffer.double readDouble(),public
+network,ic2.api.network.buffer.IInputBuffer,readEnum,method,ic2.api.network.buffer.T readEnum(ic2.api.network.buffer.Class clz),public
+network,ic2.api.network.buffer.IInputBuffer,readFloat,method,ic2.api.network.buffer.float readFloat(),public
+network,ic2.api.network.buffer.IInputBuffer,readFluidStack,method,net.minecraftforge.fluids.FluidStack readFluidStack(),public
+network,ic2.api.network.buffer.IInputBuffer,readForgeRegistryEntry,method,ic2.api.network.buffer.T readForgeRegistryEntry(net.minecraftforge.registries.IForgeRegistry registry),public
+network,ic2.api.network.buffer.IInputBuffer,readInt,method,ic2.api.network.buffer.int readInt(),public
+network,ic2.api.network.buffer.IInputBuffer,readItemStack,method,net.minecraft.world.item.ItemStack readItemStack(),public
+network,ic2.api.network.buffer.IInputBuffer,readLong,method,ic2.api.network.buffer.long readLong(),public
+network,ic2.api.network.buffer.IInputBuffer,readMedium,method,ic2.api.network.buffer.int readMedium(),public
+network,ic2.api.network.buffer.IInputBuffer,readNBTData,method,net.minecraft.nbt.CompoundTag readNBTData(),public
+network,ic2.api.network.buffer.IInputBuffer,readRegistryKey,method,net.minecraft.resources.ResourceKey readRegistryKey(net.minecraft.resources.ResourceKey key),public
+network,ic2.api.network.buffer.IInputBuffer,readShort,method,ic2.api.network.buffer.short readShort(),public
+network,ic2.api.network.buffer.IInputBuffer,readString,method,ic2.api.network.buffer.String readString(),public
+network,ic2.api.network.buffer.IInputBuffer,readUUID,method,java.util.UUID readUUID(),public
+network,ic2.api.network.buffer.IInputBuffer,readVarInt,method,ic2.api.network.buffer.int readVarInt(),public
+network,ic2.api.network.buffer.INetworkDataBuffer,read,method,void read(ic2.api.network.buffer.IInputBuffer buffer),public
+network,ic2.api.network.buffer.INetworkDataBuffer,write,method,void write(ic2.api.network.buffer.IOutputBuffer buffer),public
+network,ic2.api.network.buffer.IOutputBuffer,writeBoolean,method,void writeBoolean(ic2.api.network.buffer.boolean value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeByte,method,void writeByte(ic2.api.network.buffer.byte value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeBytes,method,void writeBytes(ic2.api.network.buffer.byte[] value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeChar,method,void writeChar(ic2.api.network.buffer.char value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeData,method,"void writeData(ic2.api.network.buffer.long value, ic2.api.network.buffer.NetworkInfo.BitLevel type)",public
+network,ic2.api.network.buffer.IOutputBuffer,writeDouble,method,void writeDouble(ic2.api.network.buffer.double value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeEnum,method,void writeEnum(ic2.api.network.buffer.Enum value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeEnum,method,"void writeEnum(ic2.api.network.buffer.Enum value, ic2.api.network.buffer.IOutputBuffer buffer)",public
+network,ic2.api.network.buffer.IOutputBuffer,writeFloat,method,void writeFloat(ic2.api.network.buffer.float value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeFluidStack,method,void writeFluidStack(net.minecraftforge.fluids.FluidStack stack),public
+network,ic2.api.network.buffer.IOutputBuffer,writeForgeEntry,method,"void writeForgeEntry(ic2.api.network.buffer.T value, net.minecraftforge.registries.IForgeRegistry registry)",public
+network,ic2.api.network.buffer.IOutputBuffer,writeInt,method,void writeInt(ic2.api.network.buffer.int value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeItemStack,method,void writeItemStack(net.minecraft.world.item.ItemStack stack),public
+network,ic2.api.network.buffer.IOutputBuffer,writeItemStack,method,"void writeItemStack(net.minecraft.world.item.ItemStack stack, ic2.api.network.buffer.IOutputBuffer buffer)",public
+network,ic2.api.network.buffer.IOutputBuffer,writeLong,method,void writeLong(ic2.api.network.buffer.long value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeMedium,method,void writeMedium(ic2.api.network.buffer.int value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeNBTData,method,void writeNBTData(net.minecraft.nbt.CompoundTag value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeRegistryKey,method,void writeRegistryKey(net.minecraft.resources.ResourceKey key),public
+network,ic2.api.network.buffer.IOutputBuffer,writeShort,method,void writeShort(ic2.api.network.buffer.short value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeString,method,void writeString(ic2.api.network.buffer.String value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeUUID,method,void writeUUID(java.util.UUID value),public
+network,ic2.api.network.buffer.IOutputBuffer,writeVarInt,method,void writeVarInt(ic2.api.network.buffer.int value),public
+network,ic2.api.network.container.IContainerDataEvent,onDataReceived,method,"void onDataReceived(ic2.api.network.container.int key, ic2.api.network.container.int value)",public
+network,ic2.api.network.item.INetworkItemBufferEvent,onDataBufferReceived,method,"void onDataBufferReceived(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, ic2.api.network.item.String id, ic2.api.network.item.T buffer, net.minecraftforge.api.distmarker.Dist targetSide)",public
+network,ic2.api.network.item.INetworkItemEvent,onEventReceived,method,"void onEventReceived(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, ic2.api.network.item.int key, ic2.api.network.item.int value, net.minecraftforge.api.distmarker.Dist target)",public
+network,ic2.api.network.tile.INetworkClientEventListener,onClientDataReceived,method,"void onClientDataReceived(net.minecraft.world.entity.player.Player entity, ic2.api.network.tile.int key, ic2.api.network.tile.int value)",public
+network,ic2.api.network.tile.INetworkDataEventListener,onDataBufferReceived,method,"void onDataBufferReceived(net.minecraft.world.entity.player.Player player, ic2.api.network.tile.String id, ic2.api.network.buffer.INetworkDataBuffer data, net.minecraftforge.api.distmarker.Dist target)",public
+network,ic2.api.network.tile.INetworkEventListener,onServerDataReceived,method,"void onServerDataReceived(ic2.api.network.tile.int key, ic2.api.network.tile.int value)",public
+network,ic2.api.network.tile.INetworkFieldNotifier,onGuiFieldChanged,method,"void onGuiFieldChanged(java.util.Set fields, net.minecraft.world.entity.player.Player player)",public
+network,ic2.api.network.tile.INetworkFieldNotifier,onNetworkFieldChanged,method,"void onNetworkFieldChanged(java.util.Set fields, net.minecraft.world.entity.player.Player player)",public
+network,ic2.api.network.tile.INetworkFieldProvider,getGuiFields,method,java.util.List getGuiFields(),public
+network,ic2.api.network.tile.INetworkFieldProvider,getNetworkFields,method,java.util.List getNetworkFields(),public
+network,ic2.api.network.tile.INetworkFieldProvider,isDefaultData,method,ic2.api.network.tile.boolean isDefaultData(ic2.api.network.tile.String fieldName),public
+network,ic2.api.network.tile.PacketRange,"SHORT_RANGE,LONG_RANGE,CHUNK_TRACKED,ALL_DIM,ALL_SERVER",enum,SHORT_RANGE|LONG_RANGE|CHUNK_TRACKED|ALL_DIM|ALL_SERVER,constants
+reactor,ic2.api.reactor.IChamberReactor,getHeight,method,ic2.api.reactor.int getHeight(),public
+reactor,ic2.api.reactor.IChamberReactor,getWidth,method,ic2.api.reactor.int getWidth(),public
+reactor,ic2.api.reactor.IChamberReactor,refreshChambers,method,void refreshChambers(),public
+reactor,ic2.api.reactor.IReactor,addHeat,method,void addHeat(ic2.api.reactor.int heat),public
+reactor,ic2.api.reactor.IReactor,addOutput,method,void addOutput(ic2.api.reactor.float output),public
+reactor,ic2.api.reactor.IReactor,explode,method,void explode(),public
+reactor,ic2.api.reactor.IReactor,getEnergyOutput,method,ic2.api.reactor.double getEnergyOutput(),public
+reactor,ic2.api.reactor.IReactor,getHeat,method,ic2.api.reactor.int getHeat(),public
+reactor,ic2.api.reactor.IReactor,getHeatEffectModifier,method,ic2.api.reactor.float getHeatEffectModifier(),public
+reactor,ic2.api.reactor.IReactor,getMaxHeat,method,ic2.api.reactor.int getMaxHeat(),public
+reactor,ic2.api.reactor.IReactor,getStackInReactor,method,"net.minecraft.world.item.ItemStack getStackInReactor(ic2.api.reactor.int x, ic2.api.reactor.int y)",public
+reactor,ic2.api.reactor.IReactor,getTickRate,method,ic2.api.reactor.int getTickRate(),public
+reactor,ic2.api.reactor.IReactor,isProducingEnergy,method,ic2.api.reactor.boolean isProducingEnergy(),public
+reactor,ic2.api.reactor.IReactor,setHeat,method,void setHeat(ic2.api.reactor.int newHeat),public
+reactor,ic2.api.reactor.IReactor,setHeatEffectModifier,method,void setHeatEffectModifier(ic2.api.reactor.float hem),public
+reactor,ic2.api.reactor.IReactor,setMaxHeat,method,void setMaxHeat(ic2.api.reactor.int heat),public
+reactor,ic2.api.reactor.IReactor,setStackInReactor,method,"void setStackInReactor(ic2.api.reactor.int x, ic2.api.reactor.int y, net.minecraft.world.item.ItemStack stack)",public
+reactor,ic2.api.reactor.IReactorChamber,getReactor,method,ic2.api.reactor.IReactor getReactor(),public
+reactor,ic2.api.reactor.IReactorComponent,acceptUraniumPulse,method,"ic2.api.reactor.boolean acceptUraniumPulse(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, net.minecraft.world.item.ItemStack source, ic2.api.reactor.int myX, ic2.api.reactor.int myY, ic2.api.reactor.int sourceX, ic2.api.reactor.int sourceY, ic2.api.reactor.boolean heatRun, ic2.api.reactor.boolean damageTick)",public
+reactor,ic2.api.reactor.IReactorComponent,canStoreHeat,method,"ic2.api.reactor.boolean canStoreHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y)",public
+reactor,ic2.api.reactor.IReactorComponent,getExplosionInfluence,method,"ic2.api.reactor.float getExplosionInfluence(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor)",public
+reactor,ic2.api.reactor.IReactorComponent,getMaxStoredHeat,method,"ic2.api.reactor.int getMaxStoredHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y)",public
+reactor,ic2.api.reactor.IReactorComponent,getStoredHeat,method,"ic2.api.reactor.int getStoredHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y)",public
+reactor,ic2.api.reactor.IReactorComponent,isValidForReactor,method,"ic2.api.reactor.boolean isValidForReactor(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor)",public
+reactor,ic2.api.reactor.IReactorComponent,processChamber,method,"void processChamber(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y, ic2.api.reactor.boolean heatCalculation, ic2.api.reactor.boolean damageTick)",public
+reactor,ic2.api.reactor.IReactorComponent,storeHeat,method,"ic2.api.reactor.int storeHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y, ic2.api.reactor.int heatChange)",public
+reactor,ic2.api.reactor.IReactorPlannerComponent,addAffectedSlots,method,"void addAffectedSlots(ic2.api.reactor.int x, ic2.api.reactor.int y, java.util.function.BiPredicate slots)",public
+reactor,ic2.api.reactor.IReactorPlannerComponent,addToolTip,method,"void addToolTip(net.minecraft.world.item.ItemStack stack, java.util.function.Consumer tooltips)",public
+reactor,ic2.api.reactor.IReactorPlannerComponent,applyStackSize,method,"net.minecraft.world.item.ItemStack applyStackSize(net.minecraft.world.item.ItemStack newStack, ic2.api.reactor.int size)",public
+reactor,ic2.api.reactor.IReactorPlannerComponent,createSimulationComponent,method,ic2.api.reactor.planner.SimulatedStack createSimulationComponent(net.minecraft.world.item.ItemStack self),public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getComponentID,method,ic2.api.reactor.short getComponentID(net.minecraft.world.item.ItemStack stack),public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getReactorStat,method,"net.minecraft.nbt.NumericTag getReactorStat(ic2.api.reactor.ReactorStat stat, net.minecraft.world.item.ItemStack stack)",public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getReactorStat,method,"net.minecraft.nbt.NumericTag getReactorStat(ic2.api.reactor.ReactorStat stat, net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor planner, ic2.api.reactor.int x, ic2.api.reactor.int y)",public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getStackSize,method,ic2.api.reactor.int getStackSize(net.minecraft.world.item.ItemStack input),public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getStats,method,java.util.List getStats(net.minecraft.world.item.ItemStack stack),public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getSupportedReactor,method,ic2.api.reactor.ReactorType getSupportedReactor(net.minecraft.world.item.ItemStack stack),public
+reactor,ic2.api.reactor.IReactorPlannerComponent,getType,method,ic2.api.reactor.ComponentType getType(net.minecraft.world.item.ItemStack stack),public
+reactor,ic2.api.reactor.IReactorPlannerComponent,provideComponents,method,void provideComponents(net.minecraft.core.NonNullList list),public
+reactor,ic2.api.reactor.IReactorProduct,isValidForReactor,method,"ic2.api.reactor.boolean isValidForReactor(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor)",public
+reactor,ic2.api.reactor.ISteamReactor,getSteamTank,method,net.minecraftforge.fluids.capability.templates.FluidTank getSteamTank(),public
+reactor,ic2.api.reactor.ISteamReactor,getWaterTank,method,net.minecraftforge.fluids.capability.templates.FluidTank getWaterTank(),public
+reactor,ic2.api.reactor.IUsableUranium,createDepletedUraniumRod,method,net.minecraft.world.item.ItemStack createDepletedUraniumRod(),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,acceptUraniumPulse,method,"ic2.api.reactor.planner.boolean acceptUraniumPulse(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.SimulatedStack source, ic2.api.reactor.planner.int sourceX, ic2.api.reactor.planner.int sourceY, ic2.api.reactor.planner.boolean heatRun, ic2.api.reactor.planner.boolean damageTick)",public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,canStoreHeat,method,"ic2.api.reactor.planner.boolean canStoreHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,canViewHeat,method,"ic2.api.reactor.planner.boolean canViewHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,commitState,method,void commitState(),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getExplosionInfluence,method,ic2.api.reactor.planner.float getExplosionInfluence(ic2.api.reactor.planner.ISimulatedReactor reactor),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getId,method,ic2.api.reactor.planner.short getId(),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getMaxStoredHeat,method,"ic2.api.reactor.planner.int getMaxStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,getStoredHeat,method,"ic2.api.reactor.planner.int getStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,load,method,void load(net.minecraft.nbt.CompoundTag data),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,reset,method,void reset(),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,save,method,net.minecraft.nbt.CompoundTag save(),public
+reactor,ic2.api.reactor.planner.BaseDurabilitySimulatedStack,storeHeat,method,"ic2.api.reactor.planner.int storeHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.int heatChange)",public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,acceptUraniumPulse,method,"ic2.api.reactor.planner.boolean acceptUraniumPulse(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.SimulatedStack source, ic2.api.reactor.planner.int sourceX, ic2.api.reactor.planner.int sourceY, ic2.api.reactor.planner.boolean heatRun, ic2.api.reactor.planner.boolean damageTick)",public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,canStoreHeat,method,"ic2.api.reactor.planner.boolean canStoreHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,canViewHeat,method,"ic2.api.reactor.planner.boolean canViewHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,commitState,method,void commitState(),public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getExplosionInfluence,method,ic2.api.reactor.planner.float getExplosionInfluence(ic2.api.reactor.planner.ISimulatedReactor reactor),public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getId,method,ic2.api.reactor.planner.short getId(),public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getMaxStoredHeat,method,"ic2.api.reactor.planner.int getMaxStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,getStoredHeat,method,"ic2.api.reactor.planner.int getStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,load,method,void load(net.minecraft.nbt.CompoundTag data),public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,reset,method,void reset(),public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,save,method,net.minecraft.nbt.CompoundTag save(),public
+reactor,ic2.api.reactor.planner.BaseHeatSimulatedStack,storeHeat,method,"ic2.api.reactor.planner.int storeHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.int heatChange)",public
+reactor,ic2.api.reactor.planner.FloatTracker,addChange,method,void addChange(ic2.api.reactor.planner.float value),public
+reactor,ic2.api.reactor.planner.FloatTracker,commit,method,void commit(),public
+reactor,ic2.api.reactor.planner.FloatTracker,getAverage,method,ic2.api.reactor.planner.float getAverage(),public
+reactor,ic2.api.reactor.planner.FloatTracker,reset,method,void reset(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addBreedingPulse,method,void addBreedingPulse(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addFuelPulse,method,void addFuelPulse(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addHeat,method,void addHeat(ic2.api.reactor.planner.int heat),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addOutput,method,void addOutput(ic2.api.reactor.planner.float output),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,addSteam,method,void addSteam(ic2.api.reactor.planner.int amount),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,consumeWater,method,ic2.api.reactor.planner.int consumeWater(ic2.api.reactor.planner.int amount),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getEnergyOutput,method,ic2.api.reactor.planner.float getEnergyOutput(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getGameTime,method,ic2.api.reactor.planner.long getGameTime(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getHeat,method,ic2.api.reactor.planner.int getHeat(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getHeatEffectModifier,method,ic2.api.reactor.planner.float getHeatEffectModifier(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getItem,method,"ic2.api.reactor.planner.SimulatedStack getItem(ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,getMaxHeat,method,ic2.api.reactor.planner.int getMaxHeat(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,isProducingEnergy,method,ic2.api.reactor.planner.boolean isProducingEnergy(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,isSimulatingPulses,method,ic2.api.reactor.planner.boolean isSimulatingPulses(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,isSteamReactor,method,ic2.api.reactor.planner.boolean isSteamReactor(),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,markBroken,method,"void markBroken(ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,setHeat,method,void setHeat(ic2.api.reactor.planner.int newHeat),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,setHeatEffectModifier,method,void setHeatEffectModifier(ic2.api.reactor.planner.float hem),public
+reactor,ic2.api.reactor.planner.ISimulatedReactor,setMaxHeat,method,void setMaxHeat(ic2.api.reactor.planner.int heat),public
+reactor,ic2.api.reactor.planner.SimulatedStack,acceptUraniumPulse,method,"ic2.api.reactor.planner.boolean acceptUraniumPulse(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.SimulatedStack source, ic2.api.reactor.planner.int sourceX, ic2.api.reactor.planner.int sourceY, ic2.api.reactor.planner.boolean heatRun, ic2.api.reactor.planner.boolean damageTick)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,canStoreHeat,method,"ic2.api.reactor.planner.boolean canStoreHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,canViewHeat,method,"ic2.api.reactor.planner.boolean canViewHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,commitState,method,void commitState(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,getComponentType,method,ic2.api.reactor.IReactorPlannerComponent.ComponentType getComponentType(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,getExplosionInfluence,method,ic2.api.reactor.planner.float getExplosionInfluence(ic2.api.reactor.planner.ISimulatedReactor reactor),public
+reactor,ic2.api.reactor.planner.SimulatedStack,getId,method,ic2.api.reactor.planner.short getId(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,getMaxStoredHeat,method,"ic2.api.reactor.planner.int getMaxStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,getStat,method,net.minecraft.nbt.NumericTag getStat(ic2.api.reactor.IReactorPlannerComponent.ReactorStat stat),public
+reactor,ic2.api.reactor.planner.SimulatedStack,getStat,method,"net.minecraft.nbt.NumericTag getStat(ic2.api.reactor.IReactorPlannerComponent.ReactorStat stat, ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,getStats,method,java.util.List getStats(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,getStoredHeat,method,"ic2.api.reactor.planner.int getStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,getValidType,method,ic2.api.reactor.IReactorPlannerComponent.ReactorType getValidType(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,load,method,void load(net.minecraft.nbt.CompoundTag data),public
+reactor,ic2.api.reactor.planner.SimulatedStack,reset,method,void reset(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,save,method,net.minecraft.nbt.CompoundTag save(),public
+reactor,ic2.api.reactor.planner.SimulatedStack,simulate,method,"void simulate(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.boolean heatTick, ic2.api.reactor.planner.boolean damageTick)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,storeHeat,method,"ic2.api.reactor.planner.int storeHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.int heatChange)",public
+reactor,ic2.api.reactor.planner.SimulatedStack,syncStack,method,net.minecraft.world.item.ItemStack syncStack(net.minecraft.world.item.ItemStack original),public
+reactor,ic2.api.reactor.planner.Tracker,addChange,method,void addChange(ic2.api.reactor.planner.int value),public
+reactor,ic2.api.reactor.planner.Tracker,commit,method,void commit(),public
+reactor,ic2.api.reactor.planner.Tracker,getAverage,method,ic2.api.reactor.planner.float getAverage(),public
+reactor,ic2.api.reactor.planner.Tracker,getCount,method,ic2.api.reactor.planner.int getCount(),public
+reactor,ic2.api.reactor.planner.Tracker,getTotal,method,ic2.api.reactor.planner.int getTotal(),public
+reactor,ic2.api.reactor.planner.Tracker,load,method,void load(net.minecraft.nbt.CompoundTag tag),public
+reactor,ic2.api.reactor.planner.Tracker,reset,method,void reset(),public
+reactor,ic2.api.reactor.planner.Tracker,save,method,net.minecraft.nbt.CompoundTag save(net.minecraft.nbt.CompoundTag tag),public
+recipes,ic2.api.recipes.RecipeRegistry,BLAST_FURNACE,field,ic2.api.util.SidedObject BLAST_FURNACE,public
+recipes,ic2.api.recipes.RecipeRegistry,CANNER,field,ic2.api.util.SidedObject CANNER,public
+recipes,ic2.api.recipes.RecipeRegistry,CAN_EFFECTS,field,ic2.api.recipes.registries.IFoodCanRegistry CAN_EFFECTS,public
+recipes,ic2.api.recipes.RecipeRegistry,COMPRESSOR,field,ic2.api.util.SidedObject COMPRESSOR,public
+recipes,ic2.api.recipes.RecipeRegistry,CRAFTING,field,ic2.api.recipes.registries.IAdvancedCraftingManager CRAFTING,public
+recipes,ic2.api.recipes.RecipeRegistry,ELECTROLYZER,field,ic2.api.util.SidedObject ELECTROLYZER,public
+recipes,ic2.api.recipes.RecipeRegistry,EXTRACTOR,field,ic2.api.util.SidedObject EXTRACTOR,public
+recipes,ic2.api.recipes.RecipeRegistry,FLUID_FUELS,field,ic2.api.util.SidedObject FLUID_FUELS,public
+recipes,ic2.api.recipes.RecipeRegistry,FURNACE,field,ic2.api.util.SidedObject FURNACE,public
+recipes,ic2.api.recipes.RecipeRegistry,FUSION_REACTOR,field,ic2.api.util.SidedObject FUSION_REACTOR,public
+recipes,ic2.api.recipes.RecipeRegistry,INGREDIENTS,field,ic2.api.recipes.registries.IIngredientRegistry INGREDIENTS,public
+recipes,ic2.api.recipes.RecipeRegistry,MACERATOR,field,ic2.api.util.SidedObject MACERATOR,public
+recipes,ic2.api.recipes.RecipeRegistry,MASS_FABRICATOR,field,ic2.api.util.SidedObject MASS_FABRICATOR,public
+recipes,ic2.api.recipes.RecipeRegistry,MIXING_FURNACE,field,ic2.api.util.SidedObject MIXING_FURNACE,public
+recipes,ic2.api.recipes.RecipeRegistry,POTION_BREWING,field,ic2.api.util.SidedObject POTION_BREWING,public
+recipes,ic2.api.recipes.RecipeRegistry,RARE_EARTH,field,ic2.api.util.SidedObject RARE_EARTH,public
+recipes,ic2.api.recipes.RecipeRegistry,RECYCLER,field,ic2.api.util.SidedObject RECYCLER,public
+recipes,ic2.api.recipes.RecipeRegistry,SAWMILL,field,ic2.api.util.SidedObject SAWMILL,public
+recipes,ic2.api.recipes.RecipeRegistry,SCRAP_BOX,field,ic2.api.util.SidedObject SCRAP_BOX,public
+recipes,ic2.api.recipes.RecipeRegistry,SMOKER,field,ic2.api.util.SidedObject SMOKER,public
+recipes,ic2.api.recipes.RecipeRegistry,UU_SHAPES,field,ic2.api.util.SidedObject UU_SHAPES,public
+recipes,ic2.api.recipes.ingridients.generators.EmptyGenerator,EMPTY,field,ic2.api.recipes.ingridients.generators.IOutputGenerator EMPTY,public
+recipes,ic2.api.recipes.ingridients.generators.EmptyGenerator,addItems,method,void addItems(java.util.function.Consumer output),public
+recipes,ic2.api.recipes.ingridients.generators.EmptyGenerator,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.generators.IOutputGenerator,addItems,method,void addItems(java.util.function.Consumer output),public
+recipes,ic2.api.recipes.ingridients.generators.IOutputGenerator,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.generators.ItemGenerator,addItems,method,void addItems(java.util.function.Consumer output),public
+recipes,ic2.api.recipes.ingridients.generators.ItemGenerator,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.generators.ItemWithNBTGenerator,addItems,method,void addItems(java.util.function.Consumer output),public
+recipes,ic2.api.recipes.ingridients.generators.ItemWithNBTGenerator,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.ArrayInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,INSTANCE,field,ic2.api.recipes.ingridients.inputs.IInput INSTANCE,public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,asIngredient,method,net.minecraft.world.item.crafting.Ingredient asIngredient(),public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.EmptyInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.FluidInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,asIngredient,method,net.minecraft.world.item.crafting.Ingredient asIngredient(),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,copyWithSize,method,"net.minecraft.world.item.ItemStack copyWithSize(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.ingridients.inputs.int newSize)",public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,isNBTExact,method,"ic2.api.recipes.ingridients.inputs.boolean isNBTExact(net.minecraft.world.item.ItemStack subject, net.minecraft.world.item.ItemStack target)",public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,isStackEqual,method,"ic2.api.recipes.ingridients.inputs.boolean isStackEqual(net.minecraft.world.item.ItemStack key, net.minecraft.world.item.ItemStack other)",public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,matchesAll,method,ic2.api.recipes.ingridients.inputs.boolean matchesAll(net.minecraft.world.item.ItemStack... stacks),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,matchesAny,method,ic2.api.recipes.ingridients.inputs.boolean matchesAny(net.minecraft.world.item.ItemStack... stacks),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,readFluidStack,method,net.minecraftforge.fluids.FluidStack readFluidStack(com.google.gson.JsonObject obj),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,readNBT,method,net.minecraft.nbt.CompoundTag readNBT(ic2.api.recipes.ingridients.inputs.String s),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,writeFluidStack,method,com.google.gson.JsonObject writeFluidStack(net.minecraftforge.fluids.FluidStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.IInput,writeItemStack,method,"com.google.gson.JsonObject writeItemStack(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.ingridients.inputs.boolean includeSize)",public
+recipes,ic2.api.recipes.ingridients.inputs.INullableInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,asIngredient,method,net.minecraft.world.item.crafting.Ingredient asIngredient(),public
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.IngredientInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,asIngredient,method,net.minecraft.world.item.crafting.Ingredient asIngredient(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,ic2.api.recipes.ingridients.inputs.IInput createItemList(net.minecraft.world.level.ItemLike... prov),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"ic2.api.recipes.ingridients.inputs.IInput createItemList(ic2.api.recipes.ingridients.inputs.int size, net.minecraft.world.level.ItemLike... prov)",public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"ic2.api.recipes.ingridients.inputs.IInput createItemList(ic2.api.recipes.ingridients.inputs.int size, ic2.api.recipes.ingridients.inputs.boolean or, net.minecraft.world.level.ItemLike... prov)",public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,ic2.api.recipes.ingridients.inputs.IInput createItemList(net.minecraft.world.item.ItemStack... prov),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"ic2.api.recipes.ingridients.inputs.IInput createItemList(ic2.api.recipes.ingridients.inputs.int size, net.minecraft.world.item.ItemStack... prov)",public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,createItemList,method,"ic2.api.recipes.ingridients.inputs.IInput createItemList(ic2.api.recipes.ingridients.inputs.int size, ic2.api.recipes.ingridients.inputs.boolean or, net.minecraft.world.item.ItemStack... stacks)",public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemListInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemStackInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,asIngredient,method,net.minecraft.world.item.crafting.Ingredient asIngredient(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.ItemTagInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,asIngredient,method,net.minecraft.world.item.crafting.Ingredient asIngredient(),public
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,getComponents,method,java.util.List getComponents(),public
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,getInputSize,method,ic2.api.recipes.ingridients.inputs.int getInputSize(),public
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,matches,method,ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.inputs.SubItemInput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.queue.IInputter,addItemIntoSlot,method,"void addItemIntoSlot(ic2.api.recipes.ingridients.queue.int slot, net.minecraft.world.item.ItemStack stack)",public
+recipes,ic2.api.recipes.ingridients.queue.IStackOutput,addToInventory,method,ic2.api.recipes.ingridients.queue.boolean addToInventory(ic2.api.recipes.ingridients.queue.IInputter inventory),public
+recipes,ic2.api.recipes.ingridients.queue.IStackOutput,getStack,method,net.minecraft.world.item.ItemStack getStack(),public
+recipes,ic2.api.recipes.ingridients.queue.IStackOutput,save,method,void save(net.minecraft.nbt.CompoundTag save),public
+recipes,ic2.api.recipes.ingridients.queue.MultiStackOutput,addToInventory,method,ic2.api.recipes.ingridients.queue.boolean addToInventory(ic2.api.recipes.ingridients.queue.IInputter inventory),public
+recipes,ic2.api.recipes.ingridients.queue.MultiStackOutput,getStack,method,net.minecraft.world.item.ItemStack getStack(),public
+recipes,ic2.api.recipes.ingridients.queue.MultiStackOutput,save,method,void save(net.minecraft.nbt.CompoundTag save),public
+recipes,ic2.api.recipes.ingridients.queue.SimpleStackOutput,addToInventory,method,ic2.api.recipes.ingridients.queue.boolean addToInventory(ic2.api.recipes.ingridients.queue.IInputter inventory),public
+recipes,ic2.api.recipes.ingridients.queue.SimpleStackOutput,getStack,method,net.minecraft.world.item.ItemStack getStack(),public
+recipes,ic2.api.recipes.ingridients.queue.SimpleStackOutput,save,method,void save(net.minecraft.nbt.CompoundTag save),public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getAllOutputs,method,java.util.List getAllOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getChance,method,ic2.api.recipes.ingridients.recipes.float getChance(),public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getExperience,method,ic2.api.recipes.ingridients.recipes.float getExperience(),public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,getMetadata,method,net.minecraft.nbt.CompoundTag getMetadata(),public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, ic2.api.recipes.ingridients.recipes.IRecipeOverride overrides)",public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.recipes.ChanceRecipeOutput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,copyFluids,method,java.util.List copyFluids(java.util.List copy),public
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,getAllFluidOutputs,method,java.util.List getAllFluidOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,onFluidRecipeProcessed,method,"java.util.List onFluidRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, net.minecraft.world.item.ItemStack input)",public
+recipes,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput,onFluidRecipeProcessed,method,"java.util.List onFluidRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, net.minecraft.world.item.ItemStack input, ic2.api.recipes.ingridients.recipes.IRecipeOverride overrides)",public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,copyItems,method,java.util.List copyItems(java.util.List copy),public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,getAllOutputs,method,java.util.List getAllOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,getExperience,method,ic2.api.recipes.ingridients.recipes.float getExperience(),public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,getMetadata,method,net.minecraft.nbt.CompoundTag getMetadata(),public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, ic2.api.recipes.ingridients.recipes.IRecipeOverride overrides)",public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.recipes.IRecipeOutputChance,getChance,method,ic2.api.recipes.ingridients.recipes.float getChance(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getAllFluidOutputs,method,java.util.List getAllFluidOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getAllOutputs,method,java.util.List getAllOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getExperience,method,ic2.api.recipes.ingridients.recipes.float getExperience(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,getMetadata,method,net.minecraft.nbt.CompoundTag getMetadata(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,onFluidRecipeProcessed,method,"java.util.List onFluidRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, net.minecraft.world.item.ItemStack input)",public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeFluidOutput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,getAllOutputs,method,java.util.List getAllOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,getExperience,method,ic2.api.recipes.ingridients.recipes.float getExperience(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,getMetadata,method,net.minecraft.nbt.CompoundTag getMetadata(),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",public
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.recipes.RangeRecipeOutput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.recipes.SawMillOutput,RECIPE_FLAG,field,"ic2.api.recipes.ingridients.recipes.String RECIPE_FLAG = ""saw_upgrade""",public
+recipes,ic2.api.recipes.ingridients.recipes.SawMillOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,getAllFluidOutputs,method,java.util.List getAllFluidOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,onFluidRecipeProcessed,method,"java.util.List onFluidRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, net.minecraft.world.item.ItemStack input)",public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleFluidOutput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,getAllOutputs,method,java.util.List getAllOutputs(),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,getExperience,method,ic2.api.recipes.ingridients.recipes.float getExperience(),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,getMetadata,method,net.minecraft.nbt.CompoundTag getMetadata(),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,onRecipeProcessed,method,"java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.ingridients.recipes.SimpleRecipeOutput,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.misc.ICanEffect,getID,method,net.minecraft.resources.ResourceLocation getID(),public
+recipes,ic2.api.recipes.misc.ICanEffect,getOverrideIcon,method,net.minecraft.client.renderer.texture.TextureAtlasSprite getOverrideIcon(),public
+recipes,ic2.api.recipes.misc.ICanEffect,getTooltip,method,net.minecraft.network.chat.Component getTooltip(),public
+recipes,ic2.api.recipes.misc.ICanEffect,onFoodEaten,method,"void onFoodEaten(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player)",public
+recipes,ic2.api.recipes.misc.RecipeFlags,"CONSUME_CONTAINERS,KEEP_IN_INPUT,HIDE_RECIPE",enum,CONSUME_CONTAINERS|KEEP_IN_INPUT|HIDE_RECIPE,constants
+recipes,ic2.api.recipes.misc.RecipeFlags,apply,method,net.minecraft.nbt.CompoundTag apply(),public
+recipes,ic2.api.recipes.misc.RecipeFlags,applyFlag,method,"net.minecraft.nbt.CompoundTag applyFlag(net.minecraft.nbt.CompoundTag nbt, ic2.api.recipes.misc.boolean flag)",public
+recipes,ic2.api.recipes.misc.RecipeFlags,getFlag,method,"ic2.api.recipes.misc.boolean getFlag(net.minecraft.nbt.CompoundTag nbt, ic2.api.recipes.misc.boolean defaultValue)",public
+recipes,ic2.api.recipes.misc.RecipeMods,"ENERGY_USAGE,RECIPE_TIME",enum,ENERGY_USAGE|RECIPE_TIME,constants
+recipes,ic2.api.recipes.misc.RecipeMods,apply,method,"ic2.api.recipes.misc.int apply(net.minecraft.nbt.CompoundTag compound, ic2.api.recipes.misc.int base)",public
+recipes,ic2.api.recipes.misc.RecipeMods,apply,method,"ic2.api.recipes.misc.int apply(ic2.api.recipes.misc.int min, ic2.api.recipes.misc.int base, ic2.api.recipes.misc.int extra, ic2.api.recipes.misc.double multiplier)",public
+recipes,ic2.api.recipes.misc.RecipeMods,apply,method,"ic2.api.recipes.misc.int apply(ic2.api.recipes.misc.int base, ic2.api.recipes.misc.int extra, ic2.api.recipes.misc.double multiplier)",public
+recipes,ic2.api.recipes.misc.RecipeMods,apply,method,"ic2.api.recipes.misc.float apply(ic2.api.recipes.misc.float min, ic2.api.recipes.misc.float base, ic2.api.recipes.misc.float extra, ic2.api.recipes.misc.double multiplier)",public
+recipes,ic2.api.recipes.misc.RecipeMods,apply,method,"ic2.api.recipes.misc.float apply(ic2.api.recipes.misc.float base, ic2.api.recipes.misc.float extra, ic2.api.recipes.misc.double multiplier)",public
+recipes,ic2.api.recipes.misc.RecipeMods,create,method,"net.minecraft.nbt.CompoundTag create(net.minecraft.nbt.CompoundTag compound, ic2.api.recipes.misc.double mod, ic2.api.recipes.misc.int add)",public
+recipes,ic2.api.recipes.misc.RecipeMods,create,method,"net.minecraft.nbt.CompoundTag create(ic2.api.recipes.misc.double mod, ic2.api.recipes.misc.int add)",public
+recipes,ic2.api.recipes.misc.RecipeMods,create,method,"net.minecraft.nbt.CompoundTag create(net.minecraft.nbt.CompoundTag compound, ic2.api.recipes.misc.double mod)",public
+recipes,ic2.api.recipes.misc.RecipeMods,create,method,net.minecraft.nbt.CompoundTag create(ic2.api.recipes.misc.double mod),public
+recipes,ic2.api.recipes.misc.RecipeMods,create,method,"net.minecraft.nbt.CompoundTag create(net.minecraft.nbt.CompoundTag compound, ic2.api.recipes.misc.int add)",public
+recipes,ic2.api.recipes.misc.RecipeMods,create,method,net.minecraft.nbt.CompoundTag create(ic2.api.recipes.misc.int add),public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,getID,method,net.minecraft.resources.ResourceLocation getID(),public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,getOverrideIcon,method,net.minecraft.client.renderer.texture.TextureAtlasSprite getOverrideIcon(),public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,getTooltip,method,net.minecraft.network.chat.Component getTooltip(),public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,onFoodEaten,method,"void onFoodEaten(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player)",public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,setRandom,method,ic2.api.recipes.misc.SimpleCanEffect setRandom(ic2.api.recipes.misc.float chance),public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,setTexture,method,ic2.api.recipes.misc.SimpleCanEffect setTexture(net.minecraft.resources.ResourceLocation texture),public
+recipes,ic2.api.recipes.misc.SimpleCanEffect,setTooltip,method,ic2.api.recipes.misc.SimpleCanEffect setTooltip(net.minecraft.network.chat.Component component),public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addIC2SmeltingRecipe,method,"void addIC2SmeltingRecipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addIC2SmeltingRecipe,method,"void addIC2SmeltingRecipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addIC2SmeltingRecipe,method,"void addIC2SmeltingRecipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float extraTime, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addRepairIC2Recipe,method,"void addRepairIC2Recipe(ic2.api.recipes.registries.String location, ic2.api.items.IRepairable repair, ic2.api.recipes.ingridients.inputs.IInput repairMaterial, ic2.api.recipes.registries.int effect, ic2.api.recipes.registries.Object... args)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addRepairRecipe,method,"void addRepairRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.items.IRepairable repair, ic2.api.recipes.ingridients.inputs.IInput repairMaterial, ic2.api.recipes.registries.int effect, ic2.api.recipes.registries.Object... args)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapedIC2Recipe,method,"void addShapedIC2Recipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapedRecipe,method,"void addShapedRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapelessIC2Recipe,method,"void addShapelessIC2Recipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addShapelessRecipe,method,"void addShapelessRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmeltingRecipe,method,"void addSmeltingRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmeltingRecipe,method,"void addSmeltingRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmeltingRecipe,method,"void addSmeltingRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float extraTime, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmithingIC2Recipe,method,"void addSmithingIC2Recipe(ic2.api.recipes.registries.String location, ic2.api.recipes.registries.Object main, ic2.api.recipes.registries.Object secondary, net.minecraft.world.item.ItemStack output)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addSmithingRecipe,method,"void addSmithingRecipe(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Object main, ic2.api.recipes.registries.Object secondary, net.minecraft.world.item.ItemStack output)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addStoneCutterIC2Recipe,method,"void addStoneCutterIC2Recipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,addStoneCutterRecipe,method,"void addStoneCutterRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeCraftingRecipe,method,void removeCraftingRecipe(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeSmeltingRecipe,method,"void removeSmeltingRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.registries.SmeltingType... types)",public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeSmithingRecipe,method,void removeSmithingRecipe(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.IAdvancedCraftingManager,removeStoneCutterRecipe,method,void removeStoneCutterRecipe(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getFillOutput,method,"net.minecraft.util.Tuple getFillOutput(net.minecraft.world.item.ItemStack container, net.minecraft.world.item.ItemStack toFill, ic2.api.recipes.registries.boolean compareStack)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getFillables,method,java.util.Map getFillables(),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getFuels,method,java.util.List getFuels(),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getRepairItems,method,java.util.Map getRepairItems(),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getRepairableItem,method,"net.minecraft.util.Tuple getRepairableItem(net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack repair, ic2.api.recipes.registries.boolean compareStack)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,getValueForStack,method,ic2.api.recipes.registries.FuelValue getValueForStack(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,hasContainer,method,ic2.api.recipes.registries.boolean hasContainer(net.minecraft.world.item.ItemStack container),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerFillable,method,"void registerFillable(net.minecraft.world.item.ItemStack container, ic2.api.recipes.ingridients.inputs.IInput fillable, net.minecraft.world.item.ItemStack output)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerFuelMultiplier,method,"void registerFuelMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.float multiplier)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerFuelValue,method,"void registerFuelValue(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.int amount)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,registerRepairable,method,"void registerRepairable(ic2.api.items.IRepairable repair, ic2.api.recipes.ingridients.inputs.IInput input, ic2.api.recipes.registries.int repairAmount)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeFillable,method,void removeFillable(net.minecraft.world.item.ItemStack container),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeFillable,method,"void removeFillable(net.minecraft.world.item.ItemStack container, net.minecraft.world.item.ItemStack fillable)",public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeRepairable,method,void removeRepairable(ic2.api.items.IRepairable repair),public
+recipes,ic2.api.recipes.registries.ICannerRecipeRegistry,removeValue,method,void removeValue(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addChargeRecipe,method,"void addChargeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int energy)",public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addDischargeRecipe,method,"void addDischargeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int energy)",public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addDualRecipe,method,"void addDualRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int energy)",public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,addRecipe,method,"void addRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int flags, ic2.api.recipes.registries.int energy)",public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,getRecipe,method,"ic2.api.recipes.registries.ElectrolyzerRecipe getRecipe(net.minecraft.world.item.ItemStack input, ic2.api.recipes.registries.boolean charge, ic2.api.recipes.registries.boolean compareSize)",public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,getRecipes,method,java.util.List getRecipes(),public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,removeRecipe,method,"void removeRecipe(net.minecraft.world.item.ItemStack input, ic2.api.recipes.registries.boolean charge)",public
+recipes,ic2.api.recipes.registries.IElectrolyzerRecipeList,removeRecipe,method,void removeRecipe(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,addFuel,method,"void addFuel(net.minecraft.world.level.material.Fluid fluid, ic2.api.recipes.registries.int ticksPerBucket, ic2.api.recipes.registries.int euPerTick)",public
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,getFuel,method,ic2.api.recipes.registries.FuelEntry getFuel(net.minecraft.world.level.material.Fluid fluid),public
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,getFuels,method,java.util.List getFuels(),public
+recipes,ic2.api.recipes.registries.IFluidFuelRegistry,removeFuel,method,void removeFuel(net.minecraft.world.level.material.Fluid fluid),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getAllEffects,method,java.util.List getAllEffects(),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getEffect,method,ic2.api.recipes.misc.ICanEffect getEffect(net.minecraft.resources.ResourceLocation location),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getEffectForFood,method,net.minecraft.resources.ResourceLocation getEffectForFood(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getEffectItem,method,net.minecraft.world.item.Item getEffectItem(net.minecraft.resources.ResourceLocation item),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,getItemForFood,method,net.minecraft.world.item.Item getItemForFood(net.minecraft.world.item.ItemStack food),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,registerEffect,method,net.minecraft.world.item.Item registerEffect(ic2.api.recipes.misc.ICanEffect effect),public
+recipes,ic2.api.recipes.registries.IFoodCanRegistry,registerItemForEffect,method,"void registerItemForEffect(net.minecraft.world.item.ItemStack stack, net.minecraft.resources.ResourceLocation location)",public
+recipes,ic2.api.recipes.registries.IFusionRecipeList,FusionFuel,method,"ic2.api.recipes.registries.record FusionFuel(net.minecraft.world.item.Item fuel, ic2.api.recipes.registries.int fuelValue, ic2.api.recipes.registries.float productionRate, ic2.api.recipes.registries.boolean consumed)",public
+recipes,ic2.api.recipes.registries.IFusionRecipeList,addFuel,method,"void addFuel(net.minecraft.world.item.Item fuel, ic2.api.recipes.registries.int fuelValue, ic2.api.recipes.registries.float productionRate, ic2.api.recipes.registries.boolean consumed)",public
+recipes,ic2.api.recipes.registries.IFusionRecipeList,getFuel,method,ic2.api.recipes.registries.FusionFuel getFuel(net.minecraft.world.item.Item item),public
+recipes,ic2.api.recipes.registries.IFusionRecipeList,getFuels,method,java.util.List getFuels(),public
+recipes,ic2.api.recipes.registries.IFusionRecipeList,removeFuel,method,void removeFuel(net.minecraft.world.item.Item item),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,createFluidOutput,method,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput createFluidOutput(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,createInputFrom,method,ic2.api.recipes.ingridients.inputs.IInput createInputFrom(ic2.api.recipes.registries.Object obj),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,createOutput,method,ic2.api.recipes.ingridients.recipes.IRecipeOutput createOutput(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readFluidOutput,method,ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput readFluidOutput(com.google.gson.JsonObject obj),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readInput,method,ic2.api.recipes.ingridients.inputs.IInput readInput(net.minecraft.network.FriendlyByteBuf buffer),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readInput,method,ic2.api.recipes.ingridients.inputs.IInput readInput(com.google.gson.JsonObject obj),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readOutput,method,ic2.api.recipes.ingridients.recipes.IRecipeOutput readOutput(com.google.gson.JsonObject obj),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readOutputGenerator,method,ic2.api.recipes.ingridients.generators.IOutputGenerator readOutputGenerator(com.google.gson.JsonObject obj),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,readQueue,method,ic2.api.recipes.ingridients.queue.IStackOutput readQueue(net.minecraft.nbt.CompoundTag nbt),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerFluidOutput,method,"void registerFluidOutput(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator, java.util.function.Function serializer)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerInput,method,"void registerInput(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator, java.util.function.Function serializer, java.util.function.Function maker)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerOutputGenerators,method,"void registerOutputGenerators(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerQueue,method,"void registerQueue(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,registerRecipeOutput,method,"void registerRecipeOutput(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator, java.util.function.Function serializer)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeFluidOutput,method,com.google.gson.JsonObject serializeFluidOutput(ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput output),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeInput,method,com.google.gson.JsonObject serializeInput(ic2.api.recipes.ingridients.inputs.IInput input),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeOutput,method,com.google.gson.JsonObject serializeOutput(ic2.api.recipes.ingridients.recipes.IRecipeOutput output),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,serializeOutputGenerator,method,com.google.gson.JsonObject serializeOutputGenerator(ic2.api.recipes.ingridients.generators.IOutputGenerator generator),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeFluidOutput,method,"void writeFluidOutput(ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput output, net.minecraft.network.FriendlyByteBuf buffer)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeInput,method,"void writeInput(ic2.api.recipes.ingridients.inputs.IInput input, net.minecraft.network.FriendlyByteBuf buffer)",public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeQueue,method,net.minecraft.nbt.CompoundTag writeQueue(ic2.api.recipes.ingridients.queue.IStackOutput queue),public
+recipes,ic2.api.recipes.registries.IIngredientRegistry,writeRecipeOutput,method,"void writeRecipeOutput(ic2.api.recipes.ingridients.recipes.IRecipeOutput output, net.minecraft.network.FriendlyByteBuf buffer)",public
+recipes,ic2.api.recipes.registries.IListenableRegistry,registerListener,method,void registerListener(java.util.function.Consumer listener),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addChanceRecipe,method,"void addChanceRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addChanceRecipe,method,"void addChanceRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2ChanceRecipe,method,"void addIC2ChanceRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2ChanceRecipe,method,"void addIC2ChanceRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2RangeRecipe,method,"void addIC2RangeRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2RangeRecipe,method,"void addIC2RangeRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2Recipe,method,"void addIC2Recipe(ic2.api.recipes.registries.String id, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2SimpleRecipe,method,"void addIC2SimpleRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2SimpleRecipe,method,"void addIC2SimpleRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2XPRecipe,method,"void addIC2XPRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addIC2XPRecipe,method,"void addIC2XPRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRangeRecipe,method,"void addRangeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRangeRecipe,method,"void addRangeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRecipe,method,void addRecipe(ic2.api.recipes.registries.RecipeEntry recipe),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRecipe,method,"void addRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, ic2.api.recipes.ingridients.inputs.IInput... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addRecipe,method,"void addRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addSimpleRecipe,method,"void addSimpleRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addSimpleRecipe,method,"void addSimpleRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addXPRecipe,method,"void addXPRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,addXPRecipe,method,"void addXPRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,convertInputs,method,ic2.api.recipes.ingridients.inputs.IInput convertInputs(ic2.api.recipes.registries.Object... inputs),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getAllEntries,method,java.util.List getAllEntries(),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getAllRecipes,method,java.util.List getAllRecipes(),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getRecipe,method,ic2.api.recipes.registries.RecipeEntry getRecipe(net.minecraft.resources.ResourceLocation location),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getRecipe,method,"ic2.api.recipes.registries.RecipeEntry getRecipe(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.boolean hasStackSize)",public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,getRecipe,method,ic2.api.recipes.registries.RecipeEntry getRecipe(java.util.function.Predicate checker),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,hasRecipeForItem,method,ic2.api.recipes.registries.boolean hasRecipeForItem(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.IMachineRecipeList,removeRecipe,method,ic2.api.recipes.registries.RecipeEntry removeRecipe(net.minecraft.resources.ResourceLocation location),public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getContainers,method,java.util.Map getContainers(),public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getEffect,method,"net.minecraft.world.effect.MobEffect getEffect(net.minecraft.world.item.Item item, net.minecraft.world.effect.MobEffect original)",public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getEffects,method,java.util.Map getEffects(),public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getName,method,ic2.api.recipes.registries.String getName(net.minecraft.world.effect.MobEffect effect),public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getPotionContainer,method,ic2.api.recipes.registries.PotionContainer getPotionContainer(net.minecraft.world.item.Item input),public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,getRequiredItems,method,java.util.List getRequiredItems(net.minecraft.world.effect.MobEffect desiredEffect),public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerBrew,method,"void registerBrew(net.minecraft.world.item.Item item, net.minecraft.world.effect.MobEffect potion)",public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerBrew,method,"void registerBrew(net.minecraft.world.item.Item item, net.minecraft.world.effect.MobEffect fromEffect, net.minecraft.world.effect.MobEffect toEffect)",public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerName,method,"void registerName(net.minecraft.world.effect.MobEffect effect, ic2.api.recipes.registries.String name)",public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,registerPotionContainer,method,"void registerPotionContainer(net.minecraft.world.item.Item input, ic2.api.recipes.registries.PotionContainer output)",public
+recipes,ic2.api.recipes.registries.IPotionBrewRegistry,removeBrew,method,void removeBrew(net.minecraft.world.item.Item item),public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,getAllRecipes,method,java.util.List getAllRecipes(),public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,getOutputFor,method,ic2.api.recipes.registries.RareEntry getOutputFor(net.minecraft.world.item.ItemStack input),public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,getOutputFor,method,net.minecraft.world.item.ItemStack getOutputFor(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,registerInput,method,"void registerInput(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.registries.float value, net.minecraft.world.item.ItemStack... input)",public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,registerOutput,method,"void registerOutput(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output)",public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,remove,method,void remove(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,removeInput,method,ic2.api.recipes.registries.RareEntry removeInput(net.minecraft.world.item.ItemStack input),public
+recipes,ic2.api.recipes.registries.IRareEarthRegistry,removeOutput,method,void removeOutput(net.minecraft.world.item.ItemStack output),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,add,method,void add(net.minecraft.world.level.ItemLike... items),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,add,method,void add(ic2.api.recipes.ingridients.inputs.IInput... inputs),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,clear,method,void clear(),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,contains,method,ic2.api.recipes.registries.boolean contains(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,getFilteredItems,method,java.util.List getFilteredItems(),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,read,method,void read(com.google.gson.JsonObject obj),public
+recipes,ic2.api.recipes.registries.IRecipeFilter,remove,method,"void remove(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.int flags)",public
+recipes,ic2.api.recipes.registries.IRecipeFilter,serialize,method,com.google.gson.JsonObject serialize(),public
+recipes,ic2.api.recipes.registries.IRecyclerRecipeList,getBlackList,method,ic2.api.recipes.registries.IRecipeFilter getBlackList(),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,addIC2Recipe,method,ic2.api.recipes.registries.Builder addIC2Recipe(ic2.api.recipes.registries.String id),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,addRecipe,method,ic2.api.recipes.registries.Builder addRecipe(net.minecraft.resources.ResourceLocation id),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,addRecipe,method,"void addRecipe(net.minecraft.resources.ResourceLocation location, net.minecraftforge.fluids.FluidStack input, net.minecraftforge.fluids.FluidStack secondInput, ic2.api.recipes.ingridients.inputs.IInput catalyst, ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput output)",public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getAllRecipes,method,java.util.List getAllRecipes(),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getRecipe,method,ic2.api.recipes.registries.FluidRecipe getRecipe(net.minecraft.resources.ResourceLocation location),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getRecipe,method,"ic2.api.recipes.registries.FluidRecipe getRecipe(net.minecraft.world.item.ItemStack item, net.minecraftforge.fluids.FluidStack firstTank, net.minecraftforge.fluids.FluidStack secondTank, ic2.api.recipes.registries.boolean testAmounts)",public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,getRecipe,method,ic2.api.recipes.registries.FluidRecipe getRecipe(java.util.function.Predicate checker),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,isValidCatalyst,method,ic2.api.recipes.registries.boolean isValidCatalyst(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,isValidFirstFluid,method,ic2.api.recipes.registries.boolean isValidFirstFluid(net.minecraftforge.fluids.FluidStack fluid),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,isValidSecondFluid,method,ic2.api.recipes.registries.boolean isValidSecondFluid(net.minecraftforge.fluids.FluidStack fluid),public
+recipes,ic2.api.recipes.registries.IRefiningRecipeList,removeRecipe,method,"ic2.api.recipes.registries.FluidRecipe removeRecipe(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.boolean includeInverted)",public
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,addDrop,method,"void addDrop(net.minecraft.world.level.ItemLike prov, ic2.api.recipes.registries.float chance)",public
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,addDrop,method,"void addDrop(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.float chance)",public
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,getAllDrops,method,java.util.List getAllDrops(),public
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,getRandomDrop,method,"ic2.api.recipes.registries.IDrop getRandomDrop(net.minecraft.world.item.ItemStack source, ic2.api.recipes.registries.boolean consumeItem)",public
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,removeDrop,method,void removeDrop(ic2.api.recipes.registries.IDrop drop),public
+recipes,ic2.api.recipes.registries.IScrapBoxRegistry,removeDrops,method,void removeDrops(net.minecraft.world.item.ItemStack stack),public
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,getEntries,method,java.util.List getEntries(),public
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,registerUUEntry,method,"void registerUUEntry(net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int milliUU)",public
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,registerUUShape,method,void registerUUShape(ic2.api.recipes.registries.UUMatterBuilder builder),public
+recipes,ic2.api.recipes.registries.IUUMatterRegistry,removeUUEntry,method,void removeUUEntry(ic2.api.recipes.registries.UUMatterEntry entry),public
+other,ic2.api.ticks.ITickScheduler,addClientCallback,method,void addClientCallback(java.util.function.IntSupplier ticket),public
+other,ic2.api.ticks.ITickScheduler,addClientCallback,method,"void addClientCallback(java.util.function.IntSupplier ticket, ic2.api.ticks.int delay)",public
+other,ic2.api.ticks.ITickScheduler,addServerCallback,method,void addServerCallback(java.util.function.ToIntFunction ticket),public
+other,ic2.api.ticks.ITickScheduler,addServerCallback,method,"void addServerCallback(java.util.function.ToIntFunction ticket, ic2.api.ticks.int delay)",public
+other,ic2.api.ticks.ITickScheduler,addWorldCallback,method,"void addWorldCallback(net.minecraft.world.level.Level world, java.util.function.ToIntFunction ticket)",public
+other,ic2.api.ticks.ITickScheduler,addWorldCallback,method,"void addWorldCallback(net.minecraft.world.level.Level world, java.util.function.ToIntFunction ticket, ic2.api.ticks.int delay)",public
+tiles,ic2.api.tiles.ArrayTube,addItem,method,"void addItem(net.minecraft.world.item.ItemStack item, net.minecraft.core.Direction side, net.minecraft.world.item.DyeColor color)",public
+tiles,ic2.api.tiles.ArrayTube,addItem,method,"void addItem(ic2.api.tiles.tubes.TransportedItem item, net.minecraft.core.Direction side)",public
+tiles,ic2.api.tiles.ArrayTube,canAddItem,method,"ic2.api.tiles.boolean canAddItem(ic2.api.tiles.tubes.TransportedItem item, net.minecraft.core.Direction side)",public
+tiles,ic2.api.tiles.ArrayTube,canConnect,method,"ic2.api.tiles.boolean canConnect(ic2.api.tiles.tubes.ITube other, net.minecraft.core.Direction dir)",public
+tiles,ic2.api.tiles.ArrayTube,getTubeType,method,ic2.api.tiles.TubeType getTubeType(),public
+tiles,ic2.api.tiles.FakePlayerMachine,getAvailableEnergy,method,ic2.api.tiles.int getAvailableEnergy(),public
+tiles,ic2.api.tiles.FakePlayerMachine,getConnectedInventory,method,net.minecraftforge.items.IItemHandler getConnectedInventory(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.FakePlayerMachine,getConnectedTube,method,ic2.api.tiles.tubes.ITube getConnectedTube(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.FakePlayerMachine,getPosition,method,net.minecraft.core.BlockPos getPosition(),public
+tiles,ic2.api.tiles.FakePlayerMachine,getSupportedUpgradeTypes,method,java.util.EnumSet getSupportedUpgradeTypes(),public
+tiles,ic2.api.tiles.FakePlayerMachine,getValidRoom,method,ic2.api.tiles.int getValidRoom(net.minecraft.world.item.ItemStack stack),public
+tiles,ic2.api.tiles.FakePlayerMachine,getWorldObj,method,net.minecraft.world.level.Level getWorldObj(),public
+tiles,ic2.api.tiles.FakePlayerMachine,isMachineWorking,method,ic2.api.tiles.boolean isMachineWorking(),public
+tiles,ic2.api.tiles.FakePlayerMachine,isRedstoneSensitive,method,ic2.api.tiles.boolean isRedstoneSensitive(),public
+tiles,ic2.api.tiles.FakePlayerMachine,onUpgradesChanged,method,void onUpgradesChanged(),public
+tiles,ic2.api.tiles.FakePlayerMachine,setRedstoneSensitive,method,void setRedstoneSensitive(ic2.api.tiles.boolean flag),public
+tiles,ic2.api.tiles.FakePlayerMachine,useEnergy,method,"ic2.api.tiles.boolean useEnergy(ic2.api.tiles.int toUse, ic2.api.tiles.boolean doUse)",public
+tiles,ic2.api.tiles.IAnchorTile,addAnchor,method,ic2.api.tiles.boolean addAnchor(net.minecraft.core.Direction side),public
+tiles,ic2.api.tiles.IAnchorTile,hasAnchor,method,ic2.api.tiles.boolean hasAnchor(net.minecraft.core.Direction side),public
+tiles,ic2.api.tiles.IAnchorTile,removeAnchor,method,ic2.api.tiles.boolean removeAnchor(net.minecraft.core.Direction side),public
+tiles,ic2.api.tiles.ICopyableSettings,loadSettings,method,void loadSettings(net.minecraft.nbt.CompoundTag compound),public
+tiles,ic2.api.tiles.ICopyableSettings,saveSettings,method,void saveSettings(net.minecraft.nbt.CompoundTag compound),public
+tiles,ic2.api.tiles.IElectrolyzerProvider,getProcessRate,method,ic2.api.tiles.int getProcessRate(),public
+tiles,ic2.api.tiles.IEnergyStorage,addEnergy,method,ic2.api.tiles.int addEnergy(ic2.api.tiles.int power),public
+tiles,ic2.api.tiles.IEnergyStorage,drawEnergy,method,ic2.api.tiles.int drawEnergy(ic2.api.tiles.int power),public
+tiles,ic2.api.tiles.IFluidMachine,getConnectedTank,method,net.minecraftforge.fluids.capability.IFluidHandler getConnectedTank(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.IInputMachine,getValidRoom,method,ic2.api.tiles.int getValidRoom(net.minecraft.world.item.ItemStack stack),public
+tiles,ic2.api.tiles.IMachine,getAvailableEnergy,method,ic2.api.tiles.int getAvailableEnergy(),public
+tiles,ic2.api.tiles.IMachine,getConnectedInventory,method,net.minecraftforge.items.IItemHandler getConnectedInventory(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.IMachine,getConnectedTube,method,ic2.api.tiles.tubes.ITube getConnectedTube(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.IMachine,getSupportedUpgradeTypes,method,java.util.EnumSet getSupportedUpgradeTypes(),public
+tiles,ic2.api.tiles.IMachine,isMachineWorking,method,ic2.api.tiles.boolean isMachineWorking(),public
+tiles,ic2.api.tiles.IMachine,isRedstoneSensitive,method,ic2.api.tiles.boolean isRedstoneSensitive(),public
+tiles,ic2.api.tiles.IMachine,onUpgradesChanged,method,void onUpgradesChanged(),public
+tiles,ic2.api.tiles.IMachine,setRedstoneSensitive,method,void setRedstoneSensitive(ic2.api.tiles.boolean flag),public
+tiles,ic2.api.tiles.IMachine,useEnergy,method,"ic2.api.tiles.boolean useEnergy(ic2.api.tiles.int toUse, ic2.api.tiles.boolean doUse)",public
+tiles,ic2.api.tiles.INotifiableMachine,onNotify,method,void onNotify(),public
+tiles,ic2.api.tiles.IRecipeMachine,getRecipeList,method,ic2.api.recipes.registries.IMachineRecipeList getRecipeList(),public
+tiles,ic2.api.tiles.ITerraformer,getBiome,method,"net.minecraft.core.Holder getBiome(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+tiles,ic2.api.tiles.ITerraformer,getFirstBlockFrom,method,"net.minecraft.core.BlockPos getFirstBlockFrom(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+tiles,ic2.api.tiles.ITerraformer,getFirstSolidBlockFrom,method,"net.minecraft.core.BlockPos getFirstSolidBlockFrom(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",public
+tiles,ic2.api.tiles.ITerraformer,setBiome,method,"ic2.api.tiles.boolean setBiome(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.resources.ResourceLocation biomeKey)",public
+tiles,ic2.api.tiles.ITerraformer,switchGround,method,"ic2.api.tiles.boolean switchGround(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.level.block.state.BlockState from, net.minecraft.world.level.block.state.BlockState to, ic2.api.tiles.boolean upwards, ic2.api.tiles.boolean stateCompare)",public
+tiles,ic2.api.tiles.display.IDisplayInfo,getHeight,method,"ic2.api.tiles.display.int getHeight(ic2.api.tiles.display.int width, ic2.api.tiles.display.Alignment align)",public
+tiles,ic2.api.tiles.display.IDisplayInfo,getServerData,method,net.minecraft.nbt.Tag getServerData(),public
+tiles,ic2.api.tiles.display.IDisplayInfo,isValid,method,ic2.api.tiles.display.boolean isValid(),public
+tiles,ic2.api.tiles.display.IDisplayInfo,render,method,"void render(com.mojang.blaze3d.vertex.PoseStack stack, ic2.api.tiles.display.int x, ic2.api.tiles.display.int y, ic2.api.tiles.display.int width, ic2.api.tiles.display.int height, ic2.api.tiles.display.Alignment align, ic2.api.tiles.display.IMonitorRenderer helper)",public
+tiles,ic2.api.tiles.display.IDisplayInfo,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+tiles,ic2.api.tiles.display.IDisplayRegistry,deserialize,method,ic2.api.tiles.display.IDisplayInfo deserialize(net.minecraft.network.FriendlyByteBuf buffer),public
+tiles,ic2.api.tiles.display.IDisplayRegistry,register,method,"void register(net.minecraft.resources.ResourceLocation id, ic2.api.tiles.display.Class info, java.util.function.Function creator)",public
+tiles,ic2.api.tiles.display.IDisplayRegistry,serialize,method,"void serialize(ic2.api.tiles.display.IDisplayInfo info, net.minecraft.network.FriendlyByteBuf buffer)",public
+tiles,ic2.api.tiles.display.IMonitorRenderer,getBatcher,method,net.minecraft.client.renderer.MultiBufferSource getBatcher(),public
+tiles,ic2.api.tiles.display.IMonitorRenderer,getFont,method,net.minecraft.client.gui.Font getFont(),public
+tiles,ic2.api.tiles.display.IMonitorRenderer,getItemRenderer,method,net.minecraft.client.renderer.entity.ItemRenderer getItemRenderer(),public
+tiles,ic2.api.tiles.display.IMonitorRenderer,renderGuiItemText,method,"void renderGuiItemText(com.mojang.blaze3d.vertex.PoseStack matrixstack, net.minecraft.world.item.ItemStack stack, ic2.api.tiles.display.float x, ic2.api.tiles.display.float y, ic2.api.tiles.display.String text)",public
+tiles,ic2.api.tiles.display.IMonitorRenderer,renderGuiItemText,method,"void renderGuiItemText(com.mojang.blaze3d.vertex.PoseStack matrixstack, net.minecraft.client.gui.Font font, net.minecraft.world.item.ItemStack stack, ic2.api.tiles.display.float x, ic2.api.tiles.display.float y, ic2.api.tiles.display.String text)",public
+tiles,ic2.api.tiles.display.IMonitorRenderer,renderGuiItems,method,"void renderGuiItems(com.mojang.blaze3d.vertex.PoseStack matrix, net.minecraft.world.item.ItemStack stack, ic2.api.tiles.display.float x, ic2.api.tiles.display.float y)",public
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,getHeight,method,"ic2.api.tiles.display.impl.int getHeight(ic2.api.tiles.display.impl.int width, ic2.api.tiles.display.impl.Alignment align)",public
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,getServerData,method,net.minecraft.nbt.Tag getServerData(),public
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,isValid,method,ic2.api.tiles.display.impl.boolean isValid(),public
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,render,method,"void render(com.mojang.blaze3d.vertex.PoseStack stack, ic2.api.tiles.display.impl.int x, ic2.api.tiles.display.impl.int y, ic2.api.tiles.display.impl.int width, ic2.api.tiles.display.impl.int height, ic2.api.tiles.display.impl.Alignment align, ic2.api.tiles.display.IMonitorRenderer helper)",public
+tiles,ic2.api.tiles.display.impl.ItemDisplayInfo,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,darker,method,"ic2.api.tiles.display.impl.int darker(ic2.api.tiles.display.impl.int color, ic2.api.tiles.display.impl.float factor)",public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,drawColorFrame,method,"void drawColorFrame(com.mojang.blaze3d.vertex.PoseStack stack, com.mojang.blaze3d.vertex.VertexConsumer builder, ic2.api.tiles.display.impl.float x, ic2.api.tiles.display.impl.float y, ic2.api.tiles.display.impl.float width, ic2.api.tiles.display.impl.float height, ic2.api.tiles.display.impl.int color)",public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,getHeight,method,"ic2.api.tiles.display.impl.int getHeight(ic2.api.tiles.display.impl.int width, ic2.api.tiles.display.impl.Alignment align)",public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,getServerData,method,net.minecraft.nbt.Tag getServerData(),public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,isValid,method,ic2.api.tiles.display.impl.boolean isValid(),public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,render,method,"void render(com.mojang.blaze3d.vertex.PoseStack stack, ic2.api.tiles.display.impl.int x, ic2.api.tiles.display.impl.int y, ic2.api.tiles.display.impl.int width, ic2.api.tiles.display.impl.int height, ic2.api.tiles.display.impl.Alignment align, ic2.api.tiles.display.IMonitorRenderer helper)",public
+tiles,ic2.api.tiles.display.impl.ProgressDisplayInfo,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,getHeight,method,"ic2.api.tiles.display.impl.int getHeight(ic2.api.tiles.display.impl.int width, ic2.api.tiles.display.impl.Alignment align)",public
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,getServerData,method,net.minecraft.nbt.Tag getServerData(),public
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,isValid,method,ic2.api.tiles.display.impl.boolean isValid(),public
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,render,method,"void render(com.mojang.blaze3d.vertex.PoseStack stack, ic2.api.tiles.display.impl.int x, ic2.api.tiles.display.impl.int y, ic2.api.tiles.display.impl.int width, ic2.api.tiles.display.impl.int height, ic2.api.tiles.display.impl.Alignment align, ic2.api.tiles.display.IMonitorRenderer helper)",public
+tiles,ic2.api.tiles.display.impl.StringDisplayInfo,serialize,method,void serialize(net.minecraft.network.FriendlyByteBuf buffer),public
+tiles,ic2.api.tiles.readers.IActivityProvider,isActivated,method,ic2.api.tiles.readers.boolean isActivated(),public
+tiles,ic2.api.tiles.readers.IAirSpeed,getCurrentSpeed,method,ic2.api.tiles.readers.float getCurrentSpeed(),public
+tiles,ic2.api.tiles.readers.IAirSpeed,getMaxSpeed,method,ic2.api.tiles.readers.float getMaxSpeed(),public
+tiles,ic2.api.tiles.readers.IEUProducer,getEUProduction,method,ic2.api.tiles.readers.float getEUProduction(),public
+tiles,ic2.api.tiles.readers.IEUStorage,getChargeLevel,method,ic2.api.tiles.readers.double getChargeLevel(),public
+tiles,ic2.api.tiles.readers.IEUStorage,getMaxEU,method,ic2.api.tiles.readers.int getMaxEU(),public
+tiles,ic2.api.tiles.readers.IEUStorage,getStoredEU,method,ic2.api.tiles.readers.int getStoredEU(),public
+tiles,ic2.api.tiles.readers.IEUStorage,getTier,method,ic2.api.tiles.readers.int getTier(),public
+tiles,ic2.api.tiles.readers.IFuelStorage,getFuel,method,ic2.api.tiles.readers.int getFuel(),public
+tiles,ic2.api.tiles.readers.IFuelStorage,getMaxFuel,method,ic2.api.tiles.readers.int getMaxFuel(),public
+tiles,ic2.api.tiles.readers.IProgressMachine,getMaxProgress,method,ic2.api.tiles.readers.float getMaxProgress(),public
+tiles,ic2.api.tiles.readers.IProgressMachine,getProgress,method,ic2.api.tiles.readers.float getProgress(),public
+tiles,ic2.api.tiles.readers.IPumpTile,getPumpMaxProgress,method,ic2.api.tiles.readers.int getPumpMaxProgress(),public
+tiles,ic2.api.tiles.readers.IPumpTile,getPumpProgress,method,ic2.api.tiles.readers.int getPumpProgress(),public
+tiles,ic2.api.tiles.readers.ISpeedMachine,getMaxSpeed,method,ic2.api.tiles.readers.int getMaxSpeed(),public
+tiles,ic2.api.tiles.readers.ISpeedMachine,getSpeed,method,ic2.api.tiles.readers.int getSpeed(),public
+tiles,ic2.api.tiles.readers.ISubProgressMachine,getMaxSubProgress,method,ic2.api.tiles.readers.float getMaxSubProgress(),public
+tiles,ic2.api.tiles.readers.ISubProgressMachine,getSubProgress,method,ic2.api.tiles.readers.float getSubProgress(),public
+tiles,ic2.api.tiles.readers.IWorkProvider,isWorking,method,ic2.api.tiles.readers.boolean isWorking(),public
+tiles,ic2.api.tiles.readers.ReaderProvider,getActivityProvider,method,ic2.api.tiles.readers.IActivityProvider getActivityProvider(net.minecraft.world.level.block.entity.BlockEntity tile),public
+tiles,ic2.api.tiles.readers.ReaderProvider,getFuelProvider,method,ic2.api.tiles.readers.IFuelStorage getFuelProvider(net.minecraft.world.level.block.entity.BlockEntity tile),public
+tiles,ic2.api.tiles.readers.ReaderProvider,getProgressProvider,method,ic2.api.tiles.readers.IProgressMachine getProgressProvider(net.minecraft.world.level.block.entity.BlockEntity tile),public
+tiles,ic2.api.tiles.readers.ReaderProvider,registerActiveProvider,method,"void registerActiveProvider(ic2.api.tiles.readers.Class clz, com.google.common.base.Function provider)",public
+tiles,ic2.api.tiles.readers.ReaderProvider,registerFuelProvider,method,"void registerFuelProvider(ic2.api.tiles.readers.Class clz, com.google.common.base.Function provider)",public
+tiles,ic2.api.tiles.readers.ReaderProvider,registerProgressProvider,method,"void registerProgressProvider(ic2.api.tiles.readers.Class clz, com.google.common.base.Function provider)",public
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,canReceive,method,ic2.api.tiles.teleporter.boolean canReceive(ic2.api.tiles.teleporter.TeleportType type),public
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,getFacing,method,net.minecraft.core.Direction getFacing(),public
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,getSendType,method,ic2.api.tiles.teleporter.TeleportType getSendType(),public
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,hasTarget,method,ic2.api.tiles.teleporter.boolean hasTarget(ic2.api.tiles.teleporter.TeleporterTarget target),public
+tiles,ic2.api.tiles.teleporter.ITeleporterTarget,setTarget,method,ic2.api.tiles.teleporter.boolean setTarget(ic2.api.tiles.teleporter.TeleporterTarget target),public
+tiles,ic2.api.tiles.teleporter.TargetRegistry,INSTANCE,field,ic2.api.tiles.teleporter.TargetRegistry INSTANCE,public
+tiles,ic2.api.tiles.teleporter.TargetRegistry,addTarget,method,"void addTarget(ic2.api.tiles.teleporter.TeleporterTarget target, ic2.api.tiles.teleporter.String name)",public
+tiles,ic2.api.tiles.teleporter.TargetRegistry,getTargetName,method,ic2.api.tiles.teleporter.String getTargetName(ic2.api.tiles.teleporter.TeleporterTarget target),public
+tiles,ic2.api.tiles.teleporter.TargetRegistry,removeTarget,method,void removeTarget(ic2.api.tiles.teleporter.TeleporterTarget target),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,equals,method,ic2.api.tiles.teleporter.boolean equals(ic2.api.tiles.teleporter.Object obj),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getDimension,method,net.minecraft.resources.ResourceKey getDimension(),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getTargetPosition,method,net.minecraft.core.BlockPos getTargetPosition(),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getTile,method,net.minecraft.world.level.block.entity.BlockEntity getTile(),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,getWorld,method,net.minecraft.server.level.ServerLevel getWorld(),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,hashCode,method,ic2.api.tiles.teleporter.int hashCode(),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,isSame,method,ic2.api.tiles.teleporter.boolean isSame(net.minecraft.world.level.block.entity.BlockEntity tile),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,isSame,method,"ic2.api.tiles.teleporter.boolean isSame(net.minecraft.resources.ResourceKey type, net.minecraft.core.BlockPos pos)",public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,read,method,void read(ic2.api.network.buffer.IInputBuffer buffer),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,read,method,ic2.api.tiles.teleporter.TeleporterTarget read(net.minecraft.nbt.CompoundTag nbt),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,readFromBuffer,method,ic2.api.tiles.teleporter.TeleporterTarget readFromBuffer(ic2.api.network.buffer.IInputBuffer buffer),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,write,method,void write(ic2.api.network.buffer.IOutputBuffer buffer),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,write,method,net.minecraft.nbt.CompoundTag write(),public
+tiles,ic2.api.tiles.teleporter.TeleporterTarget,write,method,net.minecraft.nbt.CompoundTag write(net.minecraft.nbt.CompoundTag nbt),public
+tiles,ic2.api.tiles.tubes.IItemCache,clearCache,method,void clearCache(),public
+tiles,ic2.api.tiles.tubes.IItemCache,getCache,method,ic2.api.tiles.tubes.IItemCache getCache(),public
+tiles,ic2.api.tiles.tubes.IItemCache,getItem,method,java.util.function.Supplier getItem(ic2.api.tiles.tubes.int id),public
+tiles,ic2.api.tiles.tubes.IItemCache,registerItem,method,ic2.api.tiles.tubes.int registerItem(net.minecraft.world.item.ItemStack stack),public
+tiles,ic2.api.tiles.tubes.IItemCache,updateCache,method,void updateCache(),public
+tiles,ic2.api.tiles.tubes.ILimiterTube,getValidColors,method,java.util.EnumSet getValidColors(),public
+tiles,ic2.api.tiles.tubes.IProviderTube,getItemsProvided,method,void getItemsProvided(java.util.function.ObjIntConsumer listener),public
+tiles,ic2.api.tiles.tubes.IProviderTube,getProviderSource,method,ic2.api.tiles.tubes.long getProviderSource(),public
+tiles,ic2.api.tiles.tubes.IProviderTube,provideItems,method,"ic2.api.tiles.tubes.int provideItems(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.tubes.int amount, net.minecraft.world.item.DyeColor color, java.util.UUID requestId)",public
+tiles,ic2.api.tiles.tubes.IRequestTube,getRequestId,method,java.util.UUID getRequestId(),public
+tiles,ic2.api.tiles.tubes.IRequestTube,getRequestSource,method,ic2.api.tiles.tubes.long getRequestSource(),public
+tiles,ic2.api.tiles.tubes.IRequestTube,onRequestFulfilled,method,"void onRequestFulfilled(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.tubes.int amount)",public
+tiles,ic2.api.tiles.tubes.IRequestTube,onRequestLost,method,"void onRequestLost(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.tubes.int amount)",public
+tiles,ic2.api.tiles.tubes.IRequestTube,onRequestsReset,method,void onRequestsReset(),public
+tiles,ic2.api.tiles.tubes.IRequestTube,provideRequests,method,void provideRequests(ic2.api.tiles.tubes.ITubeRequester requested),public
+tiles,ic2.api.tiles.tubes.ITube,addItem,method,"void addItem(net.minecraft.world.item.ItemStack item, net.minecraft.core.Direction side)",public
+tiles,ic2.api.tiles.tubes.ITube,addItem,method,"void addItem(net.minecraft.world.item.ItemStack item, net.minecraft.core.Direction side, net.minecraft.world.item.DyeColor color)",public
+tiles,ic2.api.tiles.tubes.ITube,addItem,method,"void addItem(ic2.api.tiles.tubes.TransportedItem item, net.minecraft.core.Direction side)",public
+tiles,ic2.api.tiles.tubes.ITube,canAddItem,method,"ic2.api.tiles.tubes.boolean canAddItem(ic2.api.tiles.tubes.TransportedItem item, net.minecraft.core.Direction side)",public
+tiles,ic2.api.tiles.tubes.ITube,canConnect,method,"ic2.api.tiles.tubes.boolean canConnect(ic2.api.tiles.tubes.ITube other, net.minecraft.core.Direction dir)",public
+tiles,ic2.api.tiles.tubes.ITube,getTubeType,method,ic2.api.tiles.tubes.TubeType getTubeType(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,MAX_SPEED,field,ic2.api.tiles.tubes.int MAX_SPEED = 100,public
+tiles,ic2.api.tiles.tubes.TransportedItem,MIN_SPEED,field,ic2.api.tiles.tubes.int MIN_SPEED = 1,public
+tiles,ic2.api.tiles.tubes.TransportedItem,clearDirections,method,void clearDirections(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,deserializeEssentials,method,void deserializeEssentials(ic2.api.tiles.tubes.short data),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getAttemptedDirections,method,ic2.api.util.DirectionList getAttemptedDirections(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getColor,method,net.minecraft.world.item.DyeColor getColor(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getId,method,ic2.api.tiles.tubes.int getId(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getProgress,method,ic2.api.tiles.tubes.byte getProgress(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getRequestId,method,java.util.UUID getRequestId(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getServerStack,method,net.minecraft.world.item.ItemStack getServerStack(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getStack,method,net.minecraft.world.item.ItemStack getStack(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getTransferDirection,method,net.minecraft.core.Direction getTransferDirection(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,getTravelingDirection,method,net.minecraft.core.Direction getTravelingDirection(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,hasReachedCenter,method,ic2.api.tiles.tubes.boolean hasReachedCenter(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,hasReachedEnd,method,ic2.api.tiles.tubes.boolean hasReachedEnd(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,invalidate,method,void invalidate(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,isCentering,method,ic2.api.tiles.tubes.boolean isCentering(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,isInvalid,method,ic2.api.tiles.tubes.boolean isInvalid(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,read,method,ic2.api.tiles.tubes.TransportedItem read(net.minecraft.nbt.CompoundTag nbt),public
+tiles,ic2.api.tiles.tubes.TransportedItem,read,method,void read(ic2.api.network.buffer.IInputBuffer buffer),public
+tiles,ic2.api.tiles.tubes.TransportedItem,readFromNBT,method,void readFromNBT(net.minecraft.nbt.CompoundTag nbt),public
+tiles,ic2.api.tiles.tubes.TransportedItem,readFromNetwork,method,ic2.api.tiles.tubes.TransportedItem readFromNetwork(ic2.api.network.buffer.IInputBuffer buffer),public
+tiles,ic2.api.tiles.tubes.TransportedItem,serializeEssentials,method,ic2.api.tiles.tubes.short serializeEssentials(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setAttemptedDirections,method,void setAttemptedDirections(ic2.api.util.DirectionList list),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setCentering,method,void setCentering(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setColor,method,ic2.api.tiles.tubes.TransportedItem setColor(net.minecraft.world.item.DyeColor color),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setExportDirection,method,void setExportDirection(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setInsertionDirection,method,void setInsertionDirection(net.minecraft.core.Direction dir),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setRequestId,method,ic2.api.tiles.tubes.TransportedItem setRequestId(java.util.UUID id),public
+tiles,ic2.api.tiles.tubes.TransportedItem,setStartSpeed,method,ic2.api.tiles.tubes.TransportedItem setStartSpeed(ic2.api.tiles.tubes.int speed),public
+tiles,ic2.api.tiles.tubes.TransportedItem,update,method,void update(),public
+tiles,ic2.api.tiles.tubes.TransportedItem,updateSpeed,method,"ic2.api.tiles.tubes.boolean updateSpeed(ic2.api.tiles.tubes.int newSpeed, ic2.api.tiles.tubes.int change)",public
+tiles,ic2.api.tiles.tubes.TransportedItem,write,method,void write(ic2.api.network.buffer.IOutputBuffer buffer),public
+tiles,ic2.api.tiles.tubes.TransportedItem,writeToNBT,method,net.minecraft.nbt.CompoundTag writeToNBT(net.minecraft.nbt.CompoundTag nbt),public
+other,ic2.api.util.DirectionList,ALL,field,ic2.api.util.DirectionList ALL = ofNumber(63),public
+other,ic2.api.util.DirectionList,DOWN,field,ic2.api.util.DirectionList DOWN = ofFacing(Direction.DOWN),public
+other,ic2.api.util.DirectionList,EAST,field,ic2.api.util.DirectionList EAST = ofFacing(Direction.EAST),public
+other,ic2.api.util.DirectionList,EMPTY,field,ic2.api.util.DirectionList EMPTY = ofNumber(0),public
+other,ic2.api.util.DirectionList,HORIZONTAL,field,"ic2.api.util.DirectionList HORIZONTAL = ofFacings(Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST)",public
+other,ic2.api.util.DirectionList,NEGATIVE,field,"ic2.api.util.DirectionList NEGATIVE = ofFacings(Direction.DOWN, Direction.NORTH, Direction.WEST)",public
+other,ic2.api.util.DirectionList,NORTH,field,ic2.api.util.DirectionList NORTH = ofFacing(Direction.NORTH),public
+other,ic2.api.util.DirectionList,N_CORNER,field,ic2.api.util.DirectionList N_CORNER = NORTH.add(WEST),public
+other,ic2.api.util.DirectionList,POSITIVE,field,"ic2.api.util.DirectionList POSITIVE = ofFacings(Direction.UP, Direction.SOUTH, Direction.EAST)",public
+other,ic2.api.util.DirectionList,P_CORNER,field,ic2.api.util.DirectionList P_CORNER = SOUTH.add(EAST),public
+other,ic2.api.util.DirectionList,SOUTH,field,ic2.api.util.DirectionList SOUTH = ofFacing(Direction.SOUTH),public
+other,ic2.api.util.DirectionList,UP,field,ic2.api.util.DirectionList UP = ofFacing(Direction.UP),public
+other,ic2.api.util.DirectionList,VERTICAL,field,ic2.api.util.DirectionList VERTICAL = DOWN.add(UP),public
+other,ic2.api.util.DirectionList,WEST,field,ic2.api.util.DirectionList WEST = ofFacing(Direction.WEST),public
+other,ic2.api.util.DirectionList,XY_AXIS,field,ic2.api.util.DirectionList XY_AXIS = X_AXIS.add(VERTICAL),public
+other,ic2.api.util.DirectionList,X_AXIS,field,ic2.api.util.DirectionList X_AXIS = EAST.add(WEST),public
+other,ic2.api.util.DirectionList,YZ_AXIS,field,ic2.api.util.DirectionList YZ_AXIS = Z_AXIS.add(VERTICAL),public
+other,ic2.api.util.DirectionList,Z_AXIS,field,ic2.api.util.DirectionList Z_AXIS = NORTH.add(SOUTH),public
+other,ic2.api.util.DirectionList,add,method,ic2.api.util.DirectionList add(net.minecraft.core.Direction facing),public
+other,ic2.api.util.DirectionList,add,method,ic2.api.util.DirectionList add(ic2.api.util.DirectionList facings),public
+other,ic2.api.util.DirectionList,contains,method,ic2.api.util.boolean contains(net.minecraft.core.Direction direction),public
+other,ic2.api.util.DirectionList,contains,method,ic2.api.util.boolean contains(ic2.api.util.DirectionList facings),public
+other,ic2.api.util.DirectionList,containsAny,method,ic2.api.util.boolean containsAny(ic2.api.util.DirectionList facings),public
+other,ic2.api.util.DirectionList,containsNot,method,ic2.api.util.boolean containsNot(ic2.api.util.DirectionList facings),public
+other,ic2.api.util.DirectionList,flip,method,ic2.api.util.DirectionList flip(net.minecraft.core.Direction dir),public
+other,ic2.api.util.DirectionList,getCode,method,ic2.api.util.int getCode(),public
+other,ic2.api.util.DirectionList,getDefaultFacing,method,net.minecraft.core.Direction getDefaultFacing(),public
+other,ic2.api.util.DirectionList,getName,method,net.minecraft.network.chat.MutableComponent getName(net.minecraft.core.Direction dir),public
+other,ic2.api.util.DirectionList,getNeighborCapability,method,"net.minecraftforge.common.util.LazyOptional getNeighborCapability(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.core.Direction dir, net.minecraftforge.common.capabilities.Capability capability)",public
+other,ic2.api.util.DirectionList,getNeighborCapability,method,"net.minecraftforge.common.util.LazyOptional getNeighborCapability(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir, net.minecraftforge.common.capabilities.Capability capability)",public
+other,ic2.api.util.DirectionList,getNeighborInterface,method,"ic2.api.util.T getNeighborInterface(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.core.Direction dir, ic2.api.util.Class clazz)",public
+other,ic2.api.util.DirectionList,getNeighborInterface,method,"ic2.api.util.T getNeighborInterface(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir, ic2.api.util.Class clazz)",public
+other,ic2.api.util.DirectionList,getNeighborState,method,"net.minecraft.world.level.block.state.BlockState getNeighborState(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.core.Direction dir)",public
+other,ic2.api.util.DirectionList,getNeighborState,method,"net.minecraft.world.level.block.state.BlockState getNeighborState(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir)",public
+other,ic2.api.util.DirectionList,getNeighborTile,method,"net.minecraft.world.level.block.entity.BlockEntity getNeighborTile(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.core.Direction dir)",public
+other,ic2.api.util.DirectionList,getNeighborTile,method,"net.minecraft.world.level.block.entity.BlockEntity getNeighborTile(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir)",public
+other,ic2.api.util.DirectionList,getNextFacing,method,net.minecraft.core.Direction getNextFacing(net.minecraft.core.Direction facing),public
+other,ic2.api.util.DirectionList,getOffset,method,net.minecraft.core.BlockPos getOffset(),public
+other,ic2.api.util.DirectionList,getPrevFacing,method,net.minecraft.core.Direction getPrevFacing(net.minecraft.core.Direction facing),public
+other,ic2.api.util.DirectionList,getRandomFacing,method,net.minecraft.core.Direction getRandomFacing(),public
+other,ic2.api.util.DirectionList,getRandomFacing,method,net.minecraft.core.Direction getRandomFacing(net.minecraft.core.Direction defaultValue),public
+other,ic2.api.util.DirectionList,getRandomIterator,method,ic2.api.util.Iterable getRandomIterator(),public
+other,ic2.api.util.DirectionList,getRotation,method,"net.minecraft.world.level.block.Rotation getRotation(net.minecraft.core.Direction source, net.minecraft.core.Direction other)",public
+other,ic2.api.util.DirectionList,invert,method,ic2.api.util.DirectionList invert(),public
+other,ic2.api.util.DirectionList,invertFacing,method,ic2.api.util.DirectionList invertFacing(net.minecraft.core.Direction facing),public
+other,ic2.api.util.DirectionList,isEmpty,method,ic2.api.util.boolean isEmpty(),public
+other,ic2.api.util.DirectionList,isFull,method,ic2.api.util.boolean isFull(),public
+other,ic2.api.util.DirectionList,iterator,method,java.util.Iterator iterator(),public
+other,ic2.api.util.DirectionList,keep,method,ic2.api.util.DirectionList keep(ic2.api.util.DirectionList facings),public
+other,ic2.api.util.DirectionList,notContains,method,ic2.api.util.boolean notContains(net.minecraft.core.Direction direction),public
+other,ic2.api.util.DirectionList,ofAxis,method,ic2.api.util.DirectionList ofAxis(net.minecraft.core.Direction.Axis axis),public
+other,ic2.api.util.DirectionList,ofFacing,method,ic2.api.util.DirectionList ofFacing(net.minecraft.core.Direction facing),public
+other,ic2.api.util.DirectionList,ofFacings,method,ic2.api.util.DirectionList ofFacings(net.minecraft.core.Direction... facings),public
+other,ic2.api.util.DirectionList,ofFacings,method,ic2.api.util.DirectionList ofFacings(java.util.Collection facings),public
+other,ic2.api.util.DirectionList,ofFlags,method,ic2.api.util.DirectionList ofFlags(ic2.api.util.boolean... flags),public
+other,ic2.api.util.DirectionList,ofNumber,method,ic2.api.util.DirectionList ofNumber(ic2.api.util.int index),public
+other,ic2.api.util.DirectionList,opposite,method,ic2.api.util.DirectionList opposite(),public
+other,ic2.api.util.DirectionList,remove,method,ic2.api.util.DirectionList remove(net.minecraft.core.Direction facing),public
+other,ic2.api.util.DirectionList,remove,method,ic2.api.util.DirectionList remove(ic2.api.util.DirectionList facings),public
+other,ic2.api.util.DirectionList,replace,method,"ic2.api.util.DirectionList replace(net.minecraft.core.Direction oldFacing, net.minecraft.core.Direction newFacing)",public
+other,ic2.api.util.DirectionList,rotate,method,ic2.api.util.DirectionList rotate(ic2.api.util.int amount),public
+other,ic2.api.util.DirectionList,rotateAround,method,"net.minecraft.core.Direction rotateAround(net.minecraft.core.Direction dir, net.minecraft.core.Direction axis)",public
+other,ic2.api.util.DirectionList,rotateY,method,net.minecraft.core.Direction rotateY(net.minecraft.core.Direction dir),public
+other,ic2.api.util.DirectionList,set,method,"ic2.api.util.DirectionList set(net.minecraft.core.Direction facing, ic2.api.util.boolean value)",public
+other,ic2.api.util.DirectionList,size,method,ic2.api.util.int size(),public
+other,ic2.api.util.DirectionList,test,method,ic2.api.util.boolean test(net.minecraft.core.Direction t),public
+other,ic2.api.util.DirectionList,toFacings,method,java.util.Set toFacings(),public
+other,ic2.api.util.DirectionList,toFlags,method,ic2.api.util.boolean toFlags(),public
+other,ic2.api.util.DirectionList,toFlags,method,ic2.api.util.boolean toFlags(net.minecraft.core.Direction... facings),public
+other,ic2.api.util.DirectionList,toNumber,method,ic2.api.util.int toNumber(net.minecraft.core.Direction... facings),public
+other,ic2.api.util.DirectionList,toNumber,method,ic2.api.util.int toNumber(java.util.Collection facings),public
+other,ic2.api.util.DirectionList,toNumber,method,ic2.api.util.int toNumber(ic2.api.util.boolean... facings),public
+other,ic2.api.util.DirectionList,toString,method,ic2.api.util.String toString(),public
+other,ic2.api.util.IC2DamageSource,ELECTRICITY,field,ic2.api.util.IC2DamageSource ELECTRICITY,public
+other,ic2.api.util.IC2DamageSource,NUKE,field,ic2.api.util.IC2DamageSource NUKE,public
+other,ic2.api.util.IC2DamageSource,RADIATION,field,ic2.api.util.IC2DamageSource RADIATION,public
+other,ic2.api.util.IC2DamageSource,getEntity,method,net.minecraft.world.entity.Entity getEntity(),public
+other,ic2.api.util.IC2DamageSource,newShockDamage,method,ic2.api.util.IC2DamageSource newShockDamage(net.minecraft.world.entity.Entity entity),public
+other,ic2.api.util.ILocation,getPosition,method,net.minecraft.core.BlockPos getPosition(),public
+other,ic2.api.util.ILocation,getWorldObj,method,net.minecraft.world.level.Level getWorldObj(),public
+other,ic2.api.util.SidedObject,get,method,ic2.api.util.T get(),public
+other,ic2.api.util.SidedObject,get,method,ic2.api.util.T get(ic2.api.util.boolean serverSide),public
+other,ic2.api.util.SidedObject,set,method,"void set(ic2.api.util.T value, ic2.api.util.boolean serverSide)",public

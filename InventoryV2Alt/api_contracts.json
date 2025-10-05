@@ -1,0 +1,5307 @@
+{
+  "packages": [
+    "ic2.api.addons",
+    "ic2.api.blocks",
+    "ic2.api.blocks.wrench",
+    "ic2.api.core",
+    "ic2.api.crops",
+    "ic2.api.energy",
+    "ic2.api.energy.impl",
+    "ic2.api.energy.tile",
+    "ic2.api.events",
+    "ic2.api.items",
+    "ic2.api.items.armor",
+    "ic2.api.items.electric",
+    "ic2.api.items.readers",
+    "ic2.api.network",
+    "ic2.api.network.buffer",
+    "ic2.api.network.container",
+    "ic2.api.network.item",
+    "ic2.api.network.tile",
+    "ic2.api.reactor",
+    "ic2.api.reactor.planner",
+    "ic2.api.recipes",
+    "ic2.api.recipes.ingridients.generators",
+    "ic2.api.recipes.ingridients.inputs",
+    "ic2.api.recipes.ingridients.queue",
+    "ic2.api.recipes.ingridients.recipes",
+    "ic2.api.recipes.misc",
+    "ic2.api.recipes.registries",
+    "ic2.api.ticks",
+    "ic2.api.tiles",
+    "ic2.api.tiles.display",
+    "ic2.api.tiles.display.impl",
+    "ic2.api.tiles.readers",
+    "ic2.api.tiles.teleporter",
+    "ic2.api.tiles.tubes",
+    "ic2.api.util"
+  ],
+  "interfaces": [
+    {
+      "fqcn": "ic2.api.addons.IModule",
+      "methods": [
+        {
+          "name": "canLoad",
+          "sig": "ic2.api.addons.boolean canLoad(net.minecraftforge.api.distmarker.Dist side)",
+          "notes": ""
+        },
+        {
+          "name": "loadConfigs",
+          "sig": "void loadConfigs()",
+          "notes": ""
+        },
+        {
+          "name": "preInit",
+          "sig": "void preInit(net.minecraftforge.eventbus.api.IEventBus modBus)",
+          "notes": ""
+        },
+        {
+          "name": "postInit",
+          "sig": "void postInit()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.blocks.IAdvancedComparable",
+      "methods": [
+        {
+          "name": "getComparatorInputOverride",
+          "sig": "ic2.api.blocks.int getComparatorInputOverride(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction side)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.core.APIHelper",
+      "methods": [
+        {
+          "name": "getFluidContainers",
+          "sig": "java.util.List getFluidContainers(net.minecraft.world.level.material.Fluid fluid)",
+          "notes": ""
+        },
+        {
+          "name": "createSteam",
+          "sig": "net.minecraftforge.fluids.FluidStack createSteam(ic2.api.core.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "getTickHelper",
+          "sig": "ic2.api.ticks.ITickScheduler getTickHelper()",
+          "notes": ""
+        },
+        {
+          "name": "getNetworkManager",
+          "sig": "ic2.api.network.INetworkManager getNetworkManager()",
+          "notes": ""
+        },
+        {
+          "name": "getNetworkManager",
+          "sig": "ic2.api.network.INetworkManager getNetworkManager(net.minecraftforge.api.distmarker.Dist side)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropRenderer",
+      "methods": [
+        {
+          "name": "createQuadsForStage",
+          "sig": "java.util.List createQuadsForStage(ic2.api.crops.int stage, ic2.api.crops.boolean fancy, net.minecraft.client.renderer.block.model.FaceBakery baker)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropSeed",
+      "methods": [
+        {
+          "name": "getCrop",
+          "sig": "ic2.api.crops.ICrop getCrop(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getScanLevel",
+          "sig": "ic2.api.crops.int getScanLevel(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "setScanLevel",
+          "sig": "void setScanLevel(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int level)",
+          "notes": ""
+        },
+        {
+          "name": "increaseScanLevel",
+          "sig": "void increaseScanLevel(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getGrowth",
+          "sig": "ic2.api.crops.int getGrowth(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "setGrowth",
+          "sig": "void setGrowth(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int growth)",
+          "notes": ""
+        },
+        {
+          "name": "getGain",
+          "sig": "ic2.api.crops.int getGain(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "setGain",
+          "sig": "void setGain(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int gain)",
+          "notes": ""
+        },
+        {
+          "name": "getResistance",
+          "sig": "ic2.api.crops.int getResistance(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "setResistance",
+          "sig": "void setResistance(net.minecraft.world.item.ItemStack stack, ic2.api.crops.int resistance)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropTile",
+      "methods": [
+        {
+          "name": "getFarmland",
+          "sig": "ic2.api.crops.IFarmland getFarmland()",
+          "notes": ""
+        },
+        {
+          "name": "isWaterLogged",
+          "sig": "ic2.api.crops.boolean isWaterLogged()",
+          "notes": ""
+        },
+        {
+          "name": "setWaterlogged",
+          "sig": "void setWaterlogged(ic2.api.crops.boolean water)",
+          "notes": ""
+        },
+        {
+          "name": "getCrop",
+          "sig": "ic2.api.crops.ICrop getCrop()",
+          "notes": ""
+        },
+        {
+          "name": "setCrop",
+          "sig": "void setCrop(ic2.api.crops.ICrop crop)",
+          "notes": ""
+        },
+        {
+          "name": "getGrowthStage",
+          "sig": "ic2.api.crops.int getGrowthStage()",
+          "notes": ""
+        },
+        {
+          "name": "setGrowthStage",
+          "sig": "void setGrowthStage(ic2.api.crops.int stage)",
+          "notes": ""
+        },
+        {
+          "name": "getGrowthPoints",
+          "sig": "ic2.api.crops.int getGrowthPoints()",
+          "notes": ""
+        },
+        {
+          "name": "setGrowthPoints",
+          "sig": "void setGrowthPoints(ic2.api.crops.int points)",
+          "notes": ""
+        },
+        {
+          "name": "getScanLevel",
+          "sig": "ic2.api.crops.int getScanLevel()",
+          "notes": ""
+        },
+        {
+          "name": "setScanLevel",
+          "sig": "void setScanLevel(ic2.api.crops.int level)",
+          "notes": ""
+        },
+        {
+          "name": "isCrossBreeding",
+          "sig": "ic2.api.crops.boolean isCrossBreeding()",
+          "notes": ""
+        },
+        {
+          "name": "setCrossBreeding",
+          "sig": "void setCrossBreeding(ic2.api.crops.boolean breed)",
+          "notes": ""
+        },
+        {
+          "name": "getGainStat",
+          "sig": "ic2.api.crops.int getGainStat()",
+          "notes": ""
+        },
+        {
+          "name": "setGainStat",
+          "sig": "void setGainStat(ic2.api.crops.int level)",
+          "notes": ""
+        },
+        {
+          "name": "getGrowthStat",
+          "sig": "ic2.api.crops.int getGrowthStat()",
+          "notes": ""
+        },
+        {
+          "name": "setGrowthStat",
+          "sig": "void setGrowthStat(ic2.api.crops.int level)",
+          "notes": ""
+        },
+        {
+          "name": "getResistanceStat",
+          "sig": "ic2.api.crops.int getResistanceStat()",
+          "notes": ""
+        },
+        {
+          "name": "setResistanceStat",
+          "sig": "void setResistanceStat(ic2.api.crops.int level)",
+          "notes": ""
+        },
+        {
+          "name": "canBreed",
+          "sig": "ic2.api.crops.boolean canBreed()",
+          "notes": ""
+        },
+        {
+          "name": "requestStateUpdate",
+          "sig": "void requestStateUpdate()",
+          "notes": ""
+        },
+        {
+          "name": "onCustomDataChanged",
+          "sig": "void onCustomDataChanged()",
+          "notes": ""
+        },
+        {
+          "name": "calculateGrowthSpeed",
+          "sig": "ic2.api.crops.int calculateGrowthSpeed()",
+          "notes": ""
+        },
+        {
+          "name": "performManualHarvest",
+          "sig": "ic2.api.crops.boolean performManualHarvest()",
+          "notes": ""
+        },
+        {
+          "name": "performHarvest",
+          "sig": "java.util.List performHarvest(ic2.api.crops.boolean manual)",
+          "notes": ""
+        },
+        {
+          "name": "pickCrop",
+          "sig": "ic2.api.crops.boolean pickCrop()",
+          "notes": ""
+        },
+        {
+          "name": "removeCrop",
+          "sig": "void removeCrop()",
+          "notes": ""
+        },
+        {
+          "name": "isBlockBelow",
+          "sig": "ic2.api.crops.boolean isBlockBelow(net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "isBlockBelow",
+          "sig": "ic2.api.crops.boolean isBlockBelow(net.minecraft.world.level.block.Block block)",
+          "notes": ""
+        },
+        {
+          "name": "isBlockBelow",
+          "sig": "ic2.api.crops.boolean isBlockBelow(net.minecraft.tags.TagKey tag)",
+          "notes": ""
+        },
+        {
+          "name": "getBlocksBelow",
+          "sig": "java.util.Set getBlocksBelow()",
+          "notes": ""
+        },
+        {
+          "name": "getCustomData",
+          "sig": "net.minecraft.nbt.CompoundTag getCustomData()",
+          "notes": ""
+        },
+        {
+          "name": "getLightLevel",
+          "sig": "ic2.api.crops.int getLightLevel()",
+          "notes": ""
+        },
+        {
+          "name": "getEnvironmentQuality",
+          "sig": "ic2.api.crops.int getEnvironmentQuality()",
+          "notes": ""
+        },
+        {
+          "name": "getNutrients",
+          "sig": "ic2.api.crops.int getNutrients()",
+          "notes": ""
+        },
+        {
+          "name": "getHumidity",
+          "sig": "ic2.api.crops.int getHumidity()",
+          "notes": ""
+        },
+        {
+          "name": "getWaterStorage",
+          "sig": "ic2.api.crops.int getWaterStorage()",
+          "notes": ""
+        },
+        {
+          "name": "setWaterStorage",
+          "sig": "void setWaterStorage(ic2.api.crops.int water)",
+          "notes": ""
+        },
+        {
+          "name": "getFertilizerStorage",
+          "sig": "ic2.api.crops.int getFertilizerStorage()",
+          "notes": ""
+        },
+        {
+          "name": "setFertilizerStorage",
+          "sig": "void setFertilizerStorage(ic2.api.crops.int fertilizer)",
+          "notes": ""
+        },
+        {
+          "name": "getWeedExStorage",
+          "sig": "ic2.api.crops.int getWeedExStorage()",
+          "notes": ""
+        },
+        {
+          "name": "setWeedExStorage",
+          "sig": "void setWeedExStorage(ic2.api.crops.int weedEx)",
+          "notes": ""
+        },
+        {
+          "name": "createSeeds",
+          "sig": "net.minecraft.world.item.ItemStack createSeeds(ic2.api.crops.ICrop crop, ic2.api.crops.int growthStat, ic2.api.crops.int gainStat, ic2.api.crops.int resistanceStat, ic2.api.crops.int scanLevel)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.IFarmland",
+      "methods": [
+        {
+          "name": "getHumidity",
+          "sig": "ic2.api.crops.int getHumidity(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getHumidity",
+          "sig": "ic2.api.crops.int getHumidity(net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "getNutrients",
+          "sig": "ic2.api.crops.int getNutrients(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getNutrients",
+          "sig": "ic2.api.crops.int getNutrients(net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "isSpecial",
+          "sig": "ic2.api.crops.boolean isSpecial()",
+          "notes": ""
+        },
+        {
+          "name": "getSpecialState",
+          "sig": "net.minecraft.world.level.block.state.BlockState getSpecialState(net.minecraft.world.level.block.Block block)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ISeedCrop",
+      "methods": [
+        {
+          "name": "isDroppingSeeds",
+          "sig": "ic2.api.crops.boolean isDroppingSeeds(ic2.api.crops.ICropTile tile)",
+          "notes": ""
+        },
+        {
+          "name": "getSeedDrops",
+          "sig": "net.minecraft.world.item.ItemStack getSeedDrops(ic2.api.crops.ICropTile tile)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ISubSoil",
+      "methods": [
+        {
+          "name": "getHumidity",
+          "sig": "ic2.api.crops.int getHumidity(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getHumidity",
+          "sig": "ic2.api.crops.int getHumidity(net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "getNutrients",
+          "sig": "ic2.api.crops.int getNutrients(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getNutrients",
+          "sig": "ic2.api.crops.int getNutrients(net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "isSpecial",
+          "sig": "ic2.api.crops.boolean isSpecial()",
+          "notes": ""
+        },
+        {
+          "name": "getSpecialState",
+          "sig": "net.minecraft.world.level.block.state.BlockState getSpecialState(net.minecraft.world.level.block.Block block)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.energy.IEnergyNet",
+      "methods": [
+        {
+          "name": "getTile",
+          "sig": "ic2.api.energy.tile.IEnergyTile getTile(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getSubTile",
+          "sig": "ic2.api.energy.tile.IEnergyTile getSubTile(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getTiles",
+          "sig": "ic2.api.energy.GridTile getTiles(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "addTile",
+          "sig": "void addTile(ic2.api.energy.tile.IEnergyTile tile)",
+          "notes": ""
+        },
+        {
+          "name": "removeTile",
+          "sig": "void removeTile(ic2.api.energy.tile.IEnergyTile tile)",
+          "notes": ""
+        },
+        {
+          "name": "updateTile",
+          "sig": "void updateTile(ic2.api.energy.tile.IEnergyTile tile)",
+          "notes": ""
+        },
+        {
+          "name": "getPowerFromTier",
+          "sig": "ic2.api.energy.int getPowerFromTier(ic2.api.energy.int tier)",
+          "notes": ""
+        },
+        {
+          "name": "getTierFromPower",
+          "sig": "ic2.api.energy.int getTierFromPower(ic2.api.energy.int power)",
+          "notes": ""
+        },
+        {
+          "name": "getDisplayTier",
+          "sig": "ic2.api.energy.String getDisplayTier(ic2.api.energy.int tier)",
+          "notes": ""
+        },
+        {
+          "name": "getStats",
+          "sig": "ic2.api.energy.TransferStats getStats(ic2.api.energy.tile.IEnergyTile tile)",
+          "notes": ""
+        },
+        {
+          "name": "getPacketStats",
+          "sig": "java.util.List getPacketStats(ic2.api.energy.tile.IEnergyTile tile)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyAcceptor",
+      "methods": [
+        {
+          "name": "canAcceptEnergy",
+          "sig": "ic2.api.energy.tile.boolean canAcceptEnergy(ic2.api.energy.tile.IEnergyEmitter emitter, net.minecraft.core.Direction side)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductor",
+      "methods": [
+        {
+          "name": "isWaterlogged",
+          "sig": "ic2.api.energy.tile.boolean isWaterlogged()",
+          "notes": ""
+        },
+        {
+          "name": "isLavaLogged",
+          "sig": "ic2.api.energy.tile.boolean isLavaLogged()",
+          "notes": ""
+        },
+        {
+          "name": "getConductionLoss",
+          "sig": "ic2.api.energy.tile.double getConductionLoss()",
+          "notes": ""
+        },
+        {
+          "name": "getInsulationEnergyAbsorption",
+          "sig": "ic2.api.energy.tile.int getInsulationEnergyAbsorption()",
+          "notes": ""
+        },
+        {
+          "name": "getInsulationBreakdownEnergy",
+          "sig": "ic2.api.energy.tile.int getInsulationBreakdownEnergy()",
+          "notes": ""
+        },
+        {
+          "name": "getConductorBreakdownEnergy",
+          "sig": "ic2.api.energy.tile.int getConductorBreakdownEnergy()",
+          "notes": ""
+        },
+        {
+          "name": "removeInsulation",
+          "sig": "void removeInsulation()",
+          "notes": ""
+        },
+        {
+          "name": "removeConductor",
+          "sig": "void removeConductor()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyAcceptor",
+        "ic2.api.energy.tile.IEnergyEmitter"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductorAnchored",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyConductor",
+        "ic2.api.tiles.IAnchorTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductorColored",
+      "methods": [
+        {
+          "name": "getColor",
+          "sig": "net.minecraft.world.item.DyeColor getColor()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyConductor"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyConductorModifiable",
+      "methods": [
+        {
+          "name": "tryAddInsulation",
+          "sig": "ic2.api.energy.tile.boolean tryAddInsulation()",
+          "notes": ""
+        },
+        {
+          "name": "tryRemoveInsulation",
+          "sig": "ic2.api.energy.tile.boolean tryRemoveInsulation()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyConductor"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyEmitter",
+      "methods": [
+        {
+          "name": "canEmitEnergy",
+          "sig": "ic2.api.energy.tile.boolean canEmitEnergy(ic2.api.energy.tile.IEnergyAcceptor acceptor, net.minecraft.core.Direction side)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergySink",
+      "methods": [
+        {
+          "name": "getSinkTier",
+          "sig": "ic2.api.energy.tile.int getSinkTier()",
+          "notes": ""
+        },
+        {
+          "name": "getRequestedEnergy",
+          "sig": "ic2.api.energy.tile.int getRequestedEnergy()",
+          "notes": ""
+        },
+        {
+          "name": "acceptEnergy",
+          "sig": "ic2.api.energy.tile.int acceptEnergy(net.minecraft.core.Direction side, ic2.api.energy.tile.int amount, ic2.api.energy.tile.int voltage)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyAcceptor"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergySource",
+      "methods": [
+        {
+          "name": "getSourceTier",
+          "sig": "ic2.api.energy.tile.int getSourceTier()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxEnergyOutput",
+          "sig": "ic2.api.energy.tile.int getMaxEnergyOutput()",
+          "notes": ""
+        },
+        {
+          "name": "getProvidedEnergy",
+          "sig": "ic2.api.energy.tile.int getProvidedEnergy()",
+          "notes": ""
+        },
+        {
+          "name": "consumeEnergy",
+          "sig": "void consumeEnergy(ic2.api.energy.tile.int consumed)",
+          "notes": ""
+        },
+        {
+          "name": "onPacketFailed",
+          "sig": "void onPacketFailed()",
+          "notes": ""
+        },
+        {
+          "name": "getSourceType",
+          "sig": "ic2.api.energy.tile.SourceType getSourceType()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyEmitter"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IEnergyTile",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IMultiEnergySource",
+      "methods": [
+        {
+          "name": "hasMultiplePackets",
+          "sig": "ic2.api.energy.tile.boolean hasMultiplePackets()",
+          "notes": ""
+        },
+        {
+          "name": "getPacketCount",
+          "sig": "ic2.api.energy.tile.int getPacketCount()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergySource"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.energy.tile.IMultiEnergyTile",
+      "methods": [
+        {
+          "name": "getTiles",
+          "sig": "java.util.List getTiles()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.energy.tile.IEnergyTile"
+      ],
+      "domain": "energy"
+    },
+    {
+      "fqcn": "ic2.api.items.IAutoEatable",
+      "methods": [
+        {
+          "name": "canAutoEat",
+          "sig": "ic2.api.items.boolean canAutoEat(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getFoodValue",
+          "sig": "ic2.api.items.int getFoodValue(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "onEaten",
+          "sig": "net.minecraft.world.item.ItemStack onEaten(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level level, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IBoxableItem",
+      "methods": [
+        {
+          "name": "canStoreIntoBox",
+          "sig": "ic2.api.items.boolean canStoreIntoBox(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ICoinItem",
+      "methods": [
+        {
+          "name": "getMoneyValue",
+          "sig": "ic2.api.items.int getMoneyValue(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ICutterItem",
+      "methods": [
+        {
+          "name": "cutInsulation",
+          "sig": "void cutInsulation(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IDisplayProvider",
+      "methods": [
+        {
+          "name": "provideInfo",
+          "sig": "void provideInfo(net.minecraft.world.item.ItemStack stack, java.util.function.Consumer infos)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IDrinkContainer",
+      "methods": [
+        {
+          "name": "getCapacity",
+          "sig": "ic2.api.items.int getCapacity()",
+          "notes": ""
+        },
+        {
+          "name": "getContent",
+          "sig": "ic2.api.items.IDrinkableFluid getContent(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "hasContent",
+          "sig": "ic2.api.items.boolean hasContent(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "fillWith",
+          "sig": "net.minecraft.world.item.ItemStack fillWith(ic2.api.items.IDrinkableFluid fluid, ic2.api.items.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "getEmptyContainer",
+          "sig": "net.minecraft.world.item.ItemStack getEmptyContainer()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IFoamOverrider",
+      "methods": [],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IFuelableItem",
+      "methods": [
+        {
+          "name": "fill",
+          "sig": "net.minecraft.world.item.ItemStack fill(net.minecraft.world.item.ItemStack stack, ic2.api.items.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "canFuel",
+          "sig": "ic2.api.items.boolean canFuel(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "hasFuel",
+          "sig": "ic2.api.items.boolean hasFuel(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getFuel",
+          "sig": "ic2.api.items.int getFuel(net.minecraft.world.item.ItemStack stack, ic2.api.items.int requested, ic2.api.items.boolean doDrain)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IRepairable",
+      "methods": [
+        {
+          "name": "repairDamage",
+          "sig": "ic2.api.items.boolean repairDamage(net.minecraft.world.item.ItemStack stack, ic2.api.items.int amount)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "net.minecraft.world.level.ItemLike"
+      ],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ITagBlock",
+      "methods": [
+        {
+          "name": "matches",
+          "sig": "ic2.api.items.boolean matches(net.minecraft.world.item.ItemStack self, net.minecraft.world.level.block.Block block)",
+          "notes": ""
+        },
+        {
+          "name": "getBlocks",
+          "sig": "java.util.List getBlocks(net.minecraft.world.item.ItemStack self)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ITagItem",
+      "methods": [
+        {
+          "name": "matches",
+          "sig": "ic2.api.items.boolean matches(net.minecraft.world.item.ItemStack self, net.minecraft.world.item.ItemStack toCompare)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.ITerraformerBP",
+      "methods": [
+        {
+          "name": "canInsert",
+          "sig": "ic2.api.items.boolean canInsert(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "onInsert",
+          "sig": "void onInsert(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "isRandomized",
+          "sig": "ic2.api.items.boolean isRandomized(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getEnergyUsage",
+          "sig": "ic2.api.items.int getEnergyUsage(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getRadius",
+          "sig": "ic2.api.items.int getRadius(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "terraform",
+          "sig": "ic2.api.items.boolean terraform(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos position, ic2.api.tiles.ITerraformer terraformer)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IUpgradeItem",
+      "methods": [
+        {
+          "name": "getType",
+          "sig": "ic2.api.items.UpgradeType getType(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getFunctions",
+          "sig": "java.util.EnumSet getFunctions(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "onInstall",
+          "sig": "void onInstall(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getProcessingSpeedMultiplier",
+          "sig": "ic2.api.items.double getProcessingSpeedMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getExtraProcessingSpeed",
+          "sig": "ic2.api.items.int getExtraProcessingSpeed(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getProcessingTimeMultiplier",
+          "sig": "ic2.api.items.double getProcessingTimeMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getExtraProcessingTime",
+          "sig": "ic2.api.items.int getExtraProcessingTime(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getEnergyDemandMultiplier",
+          "sig": "ic2.api.items.double getEnergyDemandMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getExtraEnergyDemand",
+          "sig": "ic2.api.items.int getExtraEnergyDemand(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getEnergyStorageMultiplier",
+          "sig": "ic2.api.items.double getEnergyStorageMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getExtraEnergyStorage",
+          "sig": "ic2.api.items.int getExtraEnergyStorage(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getExtraTier",
+          "sig": "ic2.api.items.int getExtraTier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "getSoundMultiplier",
+          "sig": "ic2.api.items.float getSoundMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "useRedstoneInvertion",
+          "sig": "ic2.api.items.boolean useRedstoneInvertion(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "onTick",
+          "sig": "void onTick(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        },
+        {
+          "name": "onMachineFinishedRecipePre",
+          "sig": "void onMachineFinishedRecipePre(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, net.minecraft.nbt.CompoundTag recipeFlags)",
+          "notes": ""
+        },
+        {
+          "name": "onMachineFinishedRecipePost",
+          "sig": "void onMachineFinishedRecipePost(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine, ic2.api.recipes.registries.IMachineRecipeList.RecipeEntry entry, java.util.List drops)",
+          "notes": ""
+        },
+        {
+          "name": "onMachineProcessed",
+          "sig": "void onMachineProcessed(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.IMachine machine)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.IWindmillBlade",
+      "methods": [
+        {
+          "name": "getRadius",
+          "sig": "ic2.api.items.int getRadius(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getEffectiveness",
+          "sig": "ic2.api.items.float getEffectiveness(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getTexture",
+          "sig": "net.minecraft.resources.ResourceLocation getTexture(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IArmorHud",
+      "methods": [
+        {
+          "name": "isHudEnabled",
+          "sig": "ic2.api.items.armor.boolean isHudEnabled(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IArmorModule",
+      "methods": [
+        {
+          "name": "getType",
+          "sig": "ic2.api.items.armor.ModuleType getType(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "canInstallInArmor",
+          "sig": "ic2.api.items.armor.boolean canInstallInArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.entity.EquipmentSlot type)",
+          "notes": ""
+        },
+        {
+          "name": "onInstall",
+          "sig": "void onInstall(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, ic2.api.items.armor.IArmorModuleHolder holder)",
+          "notes": ""
+        },
+        {
+          "name": "onUninstall",
+          "sig": "void onUninstall(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, ic2.api.items.armor.IArmorModuleHolder holder)",
+          "notes": ""
+        },
+        {
+          "name": "transferToArmor",
+          "sig": "void transferToArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack oldArmor, net.minecraft.world.item.ItemStack newArmor)",
+          "notes": ""
+        },
+        {
+          "name": "onTick",
+          "sig": "void onTick(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.level.Level world, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "onEquipped",
+          "sig": "void onEquipped(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.entity.player.Player entity)",
+          "notes": ""
+        },
+        {
+          "name": "onUnequipped",
+          "sig": "void onUnequipped(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor, net.minecraft.world.entity.player.Player entity)",
+          "notes": ""
+        },
+        {
+          "name": "provideCapabilities",
+          "sig": "void provideCapabilities(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack armor)",
+          "notes": ""
+        },
+        {
+          "name": "handlePacket",
+          "sig": "ic2.api.items.armor.boolean handlePacket(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack module, net.minecraft.world.item.ItemStack armor, ic2.api.items.armor.String id, ic2.api.network.buffer.INetworkDataBuffer buffer, net.minecraftforge.api.distmarker.Dist targetSide)",
+          "notes": ""
+        },
+        {
+          "name": "handleToolTip",
+          "sig": "void handleToolTip(net.minecraft.world.item.ItemStack stack, java.util.function.Consumer results)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.ICustomArmor",
+      "methods": [
+        {
+          "name": "getProperties",
+          "sig": "ic2.api.items.armor.AbsorptionProperties getProperties(net.minecraft.world.entity.LivingEntity entity, net.minecraft.world.item.ItemStack armor, net.minecraft.world.damagesource.DamageSource source, ic2.api.items.armor.double damage, net.minecraft.world.entity.EquipmentSlot slot)",
+          "notes": ""
+        },
+        {
+          "name": "damageArmor",
+          "sig": "void damageArmor(net.minecraft.world.entity.LivingEntity player, net.minecraft.world.item.ItemStack stack, net.minecraft.world.damagesource.DamageSource source, ic2.api.items.armor.int damage, net.minecraft.world.entity.EquipmentSlot slot, ic2.api.items.armor.DamageType type)",
+          "notes": ""
+        },
+        {
+          "name": "canBlockDamageSource",
+          "sig": "ic2.api.items.armor.boolean canBlockDamageSource(net.minecraft.world.entity.LivingEntity player, net.minecraft.world.item.ItemStack stack, net.minecraft.world.damagesource.DamageSource source, net.minecraft.world.entity.EquipmentSlot slot)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IEnergyShieldArmor",
+      "methods": [
+        {
+          "name": "addsShieldEffect",
+          "sig": "ic2.api.items.armor.boolean addsShieldEffect(net.minecraft.world.entity.EquipmentSlot type, net.minecraft.world.entity.LivingEntity entity, net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isEffectAlwaysOn",
+          "sig": "ic2.api.items.armor.boolean isEffectAlwaysOn(net.minecraft.world.entity.EquipmentSlot type, net.minecraft.world.entity.LivingEntity entity, net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "addsEnergyShieldEffect",
+          "sig": "ic2.api.items.armor.boolean addsEnergyShieldEffect(net.minecraft.world.entity.LivingEntity living)",
+          "notes": ""
+        },
+        {
+          "name": "shouldAlwaysShowEffect",
+          "sig": "ic2.api.items.armor.boolean shouldAlwaysShowEffect(net.minecraft.world.entity.LivingEntity living)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IFoamSupplier",
+      "methods": [
+        {
+          "name": "canProvideFoam",
+          "sig": "ic2.api.items.armor.boolean canProvideFoam(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.items.armor.InventoryType inv, ic2.api.items.armor.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "useFoam",
+          "sig": "void useFoam(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.items.armor.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "getFreeFoamSpace",
+          "sig": "ic2.api.items.armor.int getFreeFoamSpace(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "fillFoam",
+          "sig": "void fillFoam(net.minecraft.world.item.ItemStack stack, ic2.api.items.armor.int amount)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.armor.IMetalArmor",
+      "methods": [
+        {
+          "name": "isMetalArmor",
+          "sig": "ic2.api.items.armor.boolean isMetalArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, net.minecraft.world.entity.EquipmentSlot targetSlot)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.ICustomElectricItem",
+      "methods": [
+        {
+          "name": "getManager",
+          "sig": "ic2.api.items.electric.IElectricItemManager getManager(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IDamagelessElectricItem",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "ic2.api.items.electric.IElectricItem"
+      ],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IElectricEnchantable",
+      "methods": [
+        {
+          "name": "getEnchantmentCompatibility",
+          "sig": "net.minecraft.world.InteractionResult getEnchantmentCompatibility(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.enchantment.Enchantment ench)",
+          "notes": ""
+        },
+        {
+          "name": "getEnchantmentType",
+          "sig": "net.minecraft.world.item.enchantment.EnchantmentCategory getEnchantmentType(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isBookEnchantable",
+          "sig": "ic2.api.items.electric.boolean isBookEnchantable(net.minecraft.world.item.ItemStack stack, net.minecraft.world.item.ItemStack book)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "net.minecraftforge.common.extensions.IForgeItem"
+      ],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IElectricItem",
+      "methods": [
+        {
+          "name": "canProvideEnergy",
+          "sig": "ic2.api.items.electric.boolean canProvideEnergy(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getCapacity",
+          "sig": "ic2.api.items.electric.int getCapacity(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getTier",
+          "sig": "ic2.api.items.electric.int getTier(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getTransferLimit",
+          "sig": "ic2.api.items.electric.int getTransferLimit(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IElectricItemManager",
+      "methods": [
+        {
+          "name": "charge",
+          "sig": "ic2.api.items.electric.int charge(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount, ic2.api.items.electric.int tier, ic2.api.items.electric.boolean ignoreTransferLimit, ic2.api.items.electric.boolean simulate)",
+          "notes": ""
+        },
+        {
+          "name": "discharge",
+          "sig": "ic2.api.items.electric.int discharge(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount, ic2.api.items.electric.int tier, ic2.api.items.electric.boolean ignoreTransferLimit, ic2.api.items.electric.boolean externally, ic2.api.items.electric.boolean simulate)",
+          "notes": ""
+        },
+        {
+          "name": "getCharge",
+          "sig": "ic2.api.items.electric.int getCharge(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getCapacity",
+          "sig": "ic2.api.items.electric.int getCapacity(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "canUse",
+          "sig": "ic2.api.items.electric.boolean canUse(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "use",
+          "sig": "ic2.api.items.electric.boolean use(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.int amount, net.minecraft.world.entity.LivingEntity entity)",
+          "notes": ""
+        },
+        {
+          "name": "chargeFromArmor",
+          "sig": "void chargeFromArmor(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.LivingEntity entity)",
+          "notes": ""
+        },
+        {
+          "name": "getTier",
+          "sig": "ic2.api.items.electric.int getTier(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getTransferLimit",
+          "sig": "ic2.api.items.electric.int getTransferLimit(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getToolTip",
+          "sig": "net.minecraft.network.chat.Component getToolTip(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IFluidScanner",
+      "methods": [
+        {
+          "name": "getScanRadius",
+          "sig": "ic2.api.items.electric.int getScanRadius(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.boolean useEnergy)",
+          "notes": ""
+        },
+        {
+          "name": "isValuableFluid",
+          "sig": "ic2.api.items.electric.boolean isValuableFluid(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.material.FluidState state, net.minecraft.world.level.LevelReader world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "isValuableFluid",
+          "sig": "ic2.api.items.electric.boolean isValuableFluid(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.material.FluidState state)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IMiningDrill",
+      "methods": [
+        {
+          "name": "canMineBlock",
+          "sig": "ic2.api.items.electric.boolean canMineBlock(net.minecraft.world.item.ItemStack drill, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.LevelReader access, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getMiningBoost",
+          "sig": "ic2.api.items.electric.int getMiningBoost(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "getExtraEnergyCost",
+          "sig": "ic2.api.items.electric.int getExtraEnergyCost(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "canDrillBeUsed",
+          "sig": "ic2.api.items.electric.boolean canDrillBeUsed(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "onDrillUsed",
+          "sig": "void onDrillUsed(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.electric.IScanner",
+      "methods": [
+        {
+          "name": "getScanRadius",
+          "sig": "ic2.api.items.electric.int getScanRadius(net.minecraft.world.item.ItemStack stack, ic2.api.items.electric.boolean useEnergy)",
+          "notes": ""
+        },
+        {
+          "name": "hasScanEffect",
+          "sig": "ic2.api.items.electric.boolean hasScanEffect(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isOreValuable",
+          "sig": "ic2.api.items.electric.boolean isOreValuable(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.LevelReader world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "isOreValuable",
+          "sig": "ic2.api.items.electric.boolean isOreValuable(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        },
+        {
+          "name": "getOreValue",
+          "sig": "ic2.api.items.electric.int getOreValue(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.LevelReader world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getOreValue",
+          "sig": "ic2.api.items.electric.int getOreValue(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.block.state.BlockState state)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.ICropReader",
+      "methods": [
+        {
+          "name": "isCropReader",
+          "sig": "ic2.api.items.readers.boolean isCropReader(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isCropReaderImpl",
+          "sig": "ic2.api.items.readers.boolean isCropReaderImpl(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.IEUReader",
+      "methods": [
+        {
+          "name": "isEUReader",
+          "sig": "ic2.api.items.readers.boolean isEUReader(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isEUReaderImpl",
+          "sig": "ic2.api.items.readers.boolean isEUReaderImpl(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.IThermometer",
+      "methods": [
+        {
+          "name": "isThermometer",
+          "sig": "ic2.api.items.readers.boolean isThermometer(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isThermometerImpl",
+          "sig": "ic2.api.items.readers.boolean isThermometerImpl(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.items.readers.IWrenchTool",
+      "methods": [
+        {
+          "name": "getActualLoss",
+          "sig": "ic2.api.items.readers.double getActualLoss(net.minecraft.world.item.ItemStack stack, ic2.api.items.readers.double originalLoss)",
+          "notes": ""
+        },
+        {
+          "name": "shouldRenderOverlay",
+          "sig": "ic2.api.items.readers.boolean shouldRenderOverlay(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.network.INetworkManager",
+      "methods": [
+        {
+          "name": "registerDataBuffer",
+          "sig": "void registerDataBuffer(net.minecraft.resources.ResourceLocation location, ic2.api.network.Class clz, java.util.function.Supplier creator)",
+          "notes": ""
+        },
+        {
+          "name": "startGuiTracking",
+          "sig": "void startGuiTracking(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "sendInitialGuiData",
+          "sig": "void sendInitialGuiData(ic2.api.network.tile.INetworkFieldProvider tile, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "updateGuiData",
+          "sig": "void updateGuiData(net.minecraft.world.level.block.entity.BlockEntity tile, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "updateTileField",
+          "sig": "void updateTileField(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String field)",
+          "notes": ""
+        },
+        {
+          "name": "updateTileFields",
+          "sig": "void updateTileFields(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String... fields)",
+          "notes": ""
+        },
+        {
+          "name": "updateGuiField",
+          "sig": "void updateGuiField(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String field)",
+          "notes": ""
+        },
+        {
+          "name": "updateGuiFields",
+          "sig": "void updateGuiFields(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String... fields)",
+          "notes": ""
+        },
+        {
+          "name": "sendInitialData",
+          "sig": "void sendInitialData(ic2.api.network.tile.INetworkFieldProvider prov, net.minecraft.nbt.CompoundTag nbt)",
+          "notes": ""
+        },
+        {
+          "name": "handleInitialChange",
+          "sig": "void handleInitialChange(net.minecraft.world.level.block.entity.BlockEntity prov, net.minecraft.nbt.CompoundTag nbt)",
+          "notes": ""
+        },
+        {
+          "name": "requestInitialData",
+          "sig": "void requestInitialData(ic2.api.network.tile.INetworkFieldProvider prov)",
+          "notes": ""
+        },
+        {
+          "name": "sendTileEvent",
+          "sig": "void sendTileEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.int key, ic2.api.network.int value, ic2.api.network.tile.PacketRange target)",
+          "notes": ""
+        },
+        {
+          "name": "sendTileDataBufferEvent",
+          "sig": "void sendTileDataBufferEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer, ic2.api.network.tile.PacketRange target)",
+          "notes": ""
+        },
+        {
+          "name": "sendClientTileEvent",
+          "sig": "void sendClientTileEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.int key, ic2.api.network.int value)",
+          "notes": ""
+        },
+        {
+          "name": "sendClientTileDataBufferEvent",
+          "sig": "void sendClientTileDataBufferEvent(net.minecraft.world.level.block.entity.BlockEntity tile, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer)",
+          "notes": ""
+        },
+        {
+          "name": "sendItemEvent",
+          "sig": "void sendItemEvent(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.network.int key, ic2.api.network.int value)",
+          "notes": ""
+        },
+        {
+          "name": "sendItemBuffer",
+          "sig": "void sendItemBuffer(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack stack, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer)",
+          "notes": ""
+        },
+        {
+          "name": "sendClientItemEvent",
+          "sig": "void sendClientItemEvent(net.minecraft.world.item.ItemStack stack, ic2.api.network.int key, ic2.api.network.int value)",
+          "notes": ""
+        },
+        {
+          "name": "sendClientItemBuffer",
+          "sig": "void sendClientItemBuffer(net.minecraft.world.item.ItemStack stack, ic2.api.network.String id, ic2.api.network.buffer.INetworkDataBuffer buffer)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.IPlayerPacket",
+      "methods": [
+        {
+          "name": "getContainer",
+          "sig": "ic2.api.network.T getContainer(net.minecraft.world.entity.player.Player player, ic2.api.network.Class clz)",
+          "notes": ""
+        },
+        {
+          "name": "getContainer",
+          "sig": "void getContainer(net.minecraft.world.entity.player.Player player, ic2.api.network.Class clz, java.util.function.Consumer listener)",
+          "notes": ""
+        },
+        {
+          "name": "getOptionalContainer",
+          "sig": "java.util.Optional getOptionalContainer(net.minecraft.world.entity.player.Player player, ic2.api.network.Class clz)",
+          "notes": ""
+        },
+        {
+          "name": "findPlayerStack",
+          "sig": "net.minecraft.world.item.ItemStack findPlayerStack(net.minecraft.world.entity.player.Player player, net.minecraft.world.item.ItemStack send)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.IBitLevelOverride",
+      "methods": [
+        {
+          "name": "getOverride",
+          "sig": "ic2.api.network.buffer.NetworkInfo.BitLevel getOverride(ic2.api.network.buffer.int fieldID, ic2.api.network.buffer.String fieldName)",
+          "notes": ""
+        },
+        {
+          "name": "hasOverride",
+          "sig": "ic2.api.network.buffer.boolean hasOverride(ic2.api.network.buffer.int fieldID, ic2.api.network.buffer.String fieldName)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.IInputBuffer",
+      "methods": [
+        {
+          "name": "readBoolean",
+          "sig": "ic2.api.network.buffer.boolean readBoolean()",
+          "notes": ""
+        },
+        {
+          "name": "readByte",
+          "sig": "ic2.api.network.buffer.byte readByte()",
+          "notes": ""
+        },
+        {
+          "name": "readShort",
+          "sig": "ic2.api.network.buffer.short readShort()",
+          "notes": ""
+        },
+        {
+          "name": "readMedium",
+          "sig": "ic2.api.network.buffer.int readMedium()",
+          "notes": ""
+        },
+        {
+          "name": "readInt",
+          "sig": "ic2.api.network.buffer.int readInt()",
+          "notes": ""
+        },
+        {
+          "name": "readVarInt",
+          "sig": "ic2.api.network.buffer.int readVarInt()",
+          "notes": ""
+        },
+        {
+          "name": "readFloat",
+          "sig": "ic2.api.network.buffer.float readFloat()",
+          "notes": ""
+        },
+        {
+          "name": "readDouble",
+          "sig": "ic2.api.network.buffer.double readDouble()",
+          "notes": ""
+        },
+        {
+          "name": "readLong",
+          "sig": "ic2.api.network.buffer.long readLong()",
+          "notes": ""
+        },
+        {
+          "name": "readData",
+          "sig": "ic2.api.network.buffer.long readData(ic2.api.network.buffer.NetworkInfo.BitLevel length)",
+          "notes": ""
+        },
+        {
+          "name": "readChar",
+          "sig": "ic2.api.network.buffer.char readChar()",
+          "notes": ""
+        },
+        {
+          "name": "readEnum",
+          "sig": "ic2.api.network.buffer.T readEnum(ic2.api.network.buffer.Class clz)",
+          "notes": ""
+        },
+        {
+          "name": "readBytes",
+          "sig": "ic2.api.network.buffer.byte readBytes()",
+          "notes": ""
+        },
+        {
+          "name": "readString",
+          "sig": "ic2.api.network.buffer.String readString()",
+          "notes": ""
+        },
+        {
+          "name": "readNBTData",
+          "sig": "net.minecraft.nbt.CompoundTag readNBTData()",
+          "notes": ""
+        },
+        {
+          "name": "readForgeRegistryEntry",
+          "sig": "ic2.api.network.buffer.T readForgeRegistryEntry(net.minecraftforge.registries.IForgeRegistry registry)",
+          "notes": ""
+        },
+        {
+          "name": "readItemStack",
+          "sig": "net.minecraft.world.item.ItemStack readItemStack()",
+          "notes": ""
+        },
+        {
+          "name": "readFluidStack",
+          "sig": "net.minecraftforge.fluids.FluidStack readFluidStack()",
+          "notes": ""
+        },
+        {
+          "name": "readUUID",
+          "sig": "java.util.UUID readUUID()",
+          "notes": ""
+        },
+        {
+          "name": "readRegistryKey",
+          "sig": "net.minecraft.resources.ResourceKey readRegistryKey(net.minecraft.resources.ResourceKey key)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.INetworkDataBuffer",
+      "methods": [
+        {
+          "name": "write",
+          "sig": "void write(ic2.api.network.buffer.IOutputBuffer buffer)",
+          "notes": ""
+        },
+        {
+          "name": "read",
+          "sig": "void read(ic2.api.network.buffer.IInputBuffer buffer)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.buffer.IOutputBuffer",
+      "methods": [
+        {
+          "name": "writeBoolean",
+          "sig": "void writeBoolean(ic2.api.network.buffer.boolean value)",
+          "notes": ""
+        },
+        {
+          "name": "writeByte",
+          "sig": "void writeByte(ic2.api.network.buffer.byte value)",
+          "notes": ""
+        },
+        {
+          "name": "writeShort",
+          "sig": "void writeShort(ic2.api.network.buffer.short value)",
+          "notes": ""
+        },
+        {
+          "name": "writeMedium",
+          "sig": "void writeMedium(ic2.api.network.buffer.int value)",
+          "notes": ""
+        },
+        {
+          "name": "writeInt",
+          "sig": "void writeInt(ic2.api.network.buffer.int value)",
+          "notes": ""
+        },
+        {
+          "name": "writeVarInt",
+          "sig": "void writeVarInt(ic2.api.network.buffer.int value)",
+          "notes": ""
+        },
+        {
+          "name": "writeFloat",
+          "sig": "void writeFloat(ic2.api.network.buffer.float value)",
+          "notes": ""
+        },
+        {
+          "name": "writeDouble",
+          "sig": "void writeDouble(ic2.api.network.buffer.double value)",
+          "notes": ""
+        },
+        {
+          "name": "writeLong",
+          "sig": "void writeLong(ic2.api.network.buffer.long value)",
+          "notes": ""
+        },
+        {
+          "name": "writeData",
+          "sig": "void writeData(ic2.api.network.buffer.long value, ic2.api.network.buffer.NetworkInfo.BitLevel type)",
+          "notes": ""
+        },
+        {
+          "name": "writeChar",
+          "sig": "void writeChar(ic2.api.network.buffer.char value)",
+          "notes": ""
+        },
+        {
+          "name": "writeEnum",
+          "sig": "void writeEnum(ic2.api.network.buffer.Enum value)",
+          "notes": ""
+        },
+        {
+          "name": "writeString",
+          "sig": "void writeString(ic2.api.network.buffer.String value)",
+          "notes": ""
+        },
+        {
+          "name": "writeBytes",
+          "sig": "void writeBytes(ic2.api.network.buffer.byte[] value)",
+          "notes": ""
+        },
+        {
+          "name": "writeNBTData",
+          "sig": "void writeNBTData(net.minecraft.nbt.CompoundTag value)",
+          "notes": ""
+        },
+        {
+          "name": "writeForgeEntry",
+          "sig": "void writeForgeEntry(ic2.api.network.buffer.T value, net.minecraftforge.registries.IForgeRegistry registry)",
+          "notes": ""
+        },
+        {
+          "name": "writeItemStack",
+          "sig": "void writeItemStack(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "writeFluidStack",
+          "sig": "void writeFluidStack(net.minecraftforge.fluids.FluidStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "writeUUID",
+          "sig": "void writeUUID(java.util.UUID value)",
+          "notes": ""
+        },
+        {
+          "name": "writeRegistryKey",
+          "sig": "void writeRegistryKey(net.minecraft.resources.ResourceKey key)",
+          "notes": ""
+        },
+        {
+          "name": "writeItemStack",
+          "sig": "void writeItemStack(net.minecraft.world.item.ItemStack stack, ic2.api.network.buffer.IOutputBuffer buffer)",
+          "notes": ""
+        },
+        {
+          "name": "writeEnum",
+          "sig": "void writeEnum(ic2.api.network.buffer.Enum value, ic2.api.network.buffer.IOutputBuffer buffer)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.container.IContainerDataEvent",
+      "methods": [
+        {
+          "name": "onDataReceived",
+          "sig": "void onDataReceived(ic2.api.network.container.int key, ic2.api.network.container.int value)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.item.INetworkItemBufferEvent",
+      "methods": [
+        {
+          "name": "onDataBufferReceived",
+          "sig": "void onDataBufferReceived(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, ic2.api.network.item.String id, ic2.api.network.item.T buffer, net.minecraftforge.api.distmarker.Dist targetSide)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.network.IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.item.INetworkItemEvent",
+      "methods": [
+        {
+          "name": "onEventReceived",
+          "sig": "void onEventReceived(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player, ic2.api.network.item.int key, ic2.api.network.item.int value, net.minecraftforge.api.distmarker.Dist target)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.network.IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkClientEventListener",
+      "methods": [
+        {
+          "name": "onClientDataReceived",
+          "sig": "void onClientDataReceived(net.minecraft.world.entity.player.Player entity, ic2.api.network.tile.int key, ic2.api.network.tile.int value)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.network.IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkDataEventListener",
+      "methods": [
+        {
+          "name": "onDataBufferReceived",
+          "sig": "void onDataBufferReceived(net.minecraft.world.entity.player.Player player, ic2.api.network.tile.String id, ic2.api.network.buffer.INetworkDataBuffer data, net.minecraftforge.api.distmarker.Dist target)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.network.IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkEventListener",
+      "methods": [
+        {
+          "name": "onServerDataReceived",
+          "sig": "void onServerDataReceived(ic2.api.network.tile.int key, ic2.api.network.tile.int value)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkFieldNotifier",
+      "methods": [
+        {
+          "name": "onNetworkFieldChanged",
+          "sig": "void onNetworkFieldChanged(java.util.Set fields, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "onGuiFieldChanged",
+          "sig": "void onGuiFieldChanged(java.util.Set fields, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.network.IPlayerPacket"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.network.tile.INetworkFieldProvider",
+      "methods": [
+        {
+          "name": "getNetworkFields",
+          "sig": "java.util.List getNetworkFields()",
+          "notes": ""
+        },
+        {
+          "name": "getGuiFields",
+          "sig": "java.util.List getGuiFields()",
+          "notes": ""
+        },
+        {
+          "name": "isDefaultData",
+          "sig": "ic2.api.network.tile.boolean isDefaultData(ic2.api.network.tile.String fieldName)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IChamberReactor",
+      "methods": [
+        {
+          "name": "refreshChambers",
+          "sig": "void refreshChambers()",
+          "notes": ""
+        },
+        {
+          "name": "getWidth",
+          "sig": "ic2.api.reactor.int getWidth()",
+          "notes": ""
+        },
+        {
+          "name": "getHeight",
+          "sig": "ic2.api.reactor.int getHeight()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.reactor.IReactor"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactor",
+      "methods": [
+        {
+          "name": "getHeat",
+          "sig": "ic2.api.reactor.int getHeat()",
+          "notes": ""
+        },
+        {
+          "name": "setHeat",
+          "sig": "void setHeat(ic2.api.reactor.int newHeat)",
+          "notes": ""
+        },
+        {
+          "name": "addHeat",
+          "sig": "void addHeat(ic2.api.reactor.int heat)",
+          "notes": ""
+        },
+        {
+          "name": "getMaxHeat",
+          "sig": "ic2.api.reactor.int getMaxHeat()",
+          "notes": ""
+        },
+        {
+          "name": "setMaxHeat",
+          "sig": "void setMaxHeat(ic2.api.reactor.int heat)",
+          "notes": ""
+        },
+        {
+          "name": "getHeatEffectModifier",
+          "sig": "ic2.api.reactor.float getHeatEffectModifier()",
+          "notes": ""
+        },
+        {
+          "name": "setHeatEffectModifier",
+          "sig": "void setHeatEffectModifier(ic2.api.reactor.float hem)",
+          "notes": ""
+        },
+        {
+          "name": "getEnergyOutput",
+          "sig": "ic2.api.reactor.double getEnergyOutput()",
+          "notes": ""
+        },
+        {
+          "name": "addOutput",
+          "sig": "void addOutput(ic2.api.reactor.float output)",
+          "notes": ""
+        },
+        {
+          "name": "getStackInReactor",
+          "sig": "net.minecraft.world.item.ItemStack getStackInReactor(ic2.api.reactor.int x, ic2.api.reactor.int y)",
+          "notes": ""
+        },
+        {
+          "name": "setStackInReactor",
+          "sig": "void setStackInReactor(ic2.api.reactor.int x, ic2.api.reactor.int y, net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "explode",
+          "sig": "void explode()",
+          "notes": ""
+        },
+        {
+          "name": "getTickRate",
+          "sig": "ic2.api.reactor.int getTickRate()",
+          "notes": ""
+        },
+        {
+          "name": "isProducingEnergy",
+          "sig": "ic2.api.reactor.boolean isProducingEnergy()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorChamber",
+      "methods": [
+        {
+          "name": "getReactor",
+          "sig": "ic2.api.reactor.IReactor getReactor()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorComponent",
+      "methods": [
+        {
+          "name": "isValidForReactor",
+          "sig": "ic2.api.reactor.boolean isValidForReactor(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor)",
+          "notes": ""
+        },
+        {
+          "name": "processChamber",
+          "sig": "void processChamber(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y, ic2.api.reactor.boolean heatCalculation, ic2.api.reactor.boolean damageTick)",
+          "notes": ""
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "ic2.api.reactor.boolean acceptUraniumPulse(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, net.minecraft.world.item.ItemStack source, ic2.api.reactor.int myX, ic2.api.reactor.int myY, ic2.api.reactor.int sourceX, ic2.api.reactor.int sourceY, ic2.api.reactor.boolean heatRun, ic2.api.reactor.boolean damageTick)",
+          "notes": ""
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "ic2.api.reactor.boolean canStoreHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "ic2.api.reactor.int getStoredHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "ic2.api.reactor.int getMaxStoredHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y)",
+          "notes": ""
+        },
+        {
+          "name": "storeHeat",
+          "sig": "ic2.api.reactor.int storeHeat(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor, ic2.api.reactor.int x, ic2.api.reactor.int y, ic2.api.reactor.int heatChange)",
+          "notes": ""
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "ic2.api.reactor.float getExplosionInfluence(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.reactor.IReactorProduct"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorPlannerComponent",
+      "methods": [
+        {
+          "name": "applyStackSize",
+          "sig": "net.minecraft.world.item.ItemStack applyStackSize(net.minecraft.world.item.ItemStack newStack, ic2.api.reactor.int size)",
+          "notes": ""
+        },
+        {
+          "name": "getStackSize",
+          "sig": "ic2.api.reactor.int getStackSize(net.minecraft.world.item.ItemStack input)",
+          "notes": ""
+        },
+        {
+          "name": "provideComponents",
+          "sig": "void provideComponents(net.minecraft.core.NonNullList list)",
+          "notes": ""
+        },
+        {
+          "name": "getComponentID",
+          "sig": "ic2.api.reactor.short getComponentID(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "createSimulationComponent",
+          "sig": "ic2.api.reactor.planner.SimulatedStack createSimulationComponent(net.minecraft.world.item.ItemStack self)",
+          "notes": ""
+        },
+        {
+          "name": "addToolTip",
+          "sig": "void addToolTip(net.minecraft.world.item.ItemStack stack, java.util.function.Consumer tooltips)",
+          "notes": ""
+        },
+        {
+          "name": "addAffectedSlots",
+          "sig": "void addAffectedSlots(ic2.api.reactor.int x, ic2.api.reactor.int y, java.util.function.BiPredicate slots)",
+          "notes": ""
+        },
+        {
+          "name": "getSupportedReactor",
+          "sig": "ic2.api.reactor.ReactorType getSupportedReactor(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getType",
+          "sig": "ic2.api.reactor.ComponentType getType(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getStats",
+          "sig": "java.util.List getStats(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getReactorStat",
+          "sig": "net.minecraft.nbt.NumericTag getReactorStat(ic2.api.reactor.ReactorStat stat, net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getReactorStat",
+          "sig": "net.minecraft.nbt.NumericTag getReactorStat(ic2.api.reactor.ReactorStat stat, net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor planner, ic2.api.reactor.int x, ic2.api.reactor.int y)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.reactor.IReactorComponent"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IReactorProduct",
+      "methods": [
+        {
+          "name": "isValidForReactor",
+          "sig": "ic2.api.reactor.boolean isValidForReactor(net.minecraft.world.item.ItemStack stack, ic2.api.reactor.IReactor reactor)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.ISteamReactor",
+      "methods": [
+        {
+          "name": "getWaterTank",
+          "sig": "net.minecraftforge.fluids.capability.templates.FluidTank getWaterTank()",
+          "notes": ""
+        },
+        {
+          "name": "getSteamTank",
+          "sig": "net.minecraftforge.fluids.capability.templates.FluidTank getSteamTank()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.reactor.IReactor"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.ISteamReactorChamber",
+      "methods": [],
+      "constants": [],
+      "related": [
+        "ic2.api.reactor.IReactorChamber"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.IUsableUranium",
+      "methods": [
+        {
+          "name": "createDepletedUraniumRod",
+          "sig": "net.minecraft.world.item.ItemStack createDepletedUraniumRod()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.ISimulatedReactor",
+      "methods": [
+        {
+          "name": "getItem",
+          "sig": "ic2.api.reactor.planner.SimulatedStack getItem(ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "markBroken",
+          "sig": "void markBroken(ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "addBreedingPulse",
+          "sig": "void addBreedingPulse()",
+          "notes": ""
+        },
+        {
+          "name": "addFuelPulse",
+          "sig": "void addFuelPulse()",
+          "notes": ""
+        },
+        {
+          "name": "getHeat",
+          "sig": "ic2.api.reactor.planner.int getHeat()",
+          "notes": ""
+        },
+        {
+          "name": "setHeat",
+          "sig": "void setHeat(ic2.api.reactor.planner.int newHeat)",
+          "notes": ""
+        },
+        {
+          "name": "addHeat",
+          "sig": "void addHeat(ic2.api.reactor.planner.int heat)",
+          "notes": ""
+        },
+        {
+          "name": "getMaxHeat",
+          "sig": "ic2.api.reactor.planner.int getMaxHeat()",
+          "notes": ""
+        },
+        {
+          "name": "setMaxHeat",
+          "sig": "void setMaxHeat(ic2.api.reactor.planner.int heat)",
+          "notes": ""
+        },
+        {
+          "name": "getHeatEffectModifier",
+          "sig": "ic2.api.reactor.planner.float getHeatEffectModifier()",
+          "notes": ""
+        },
+        {
+          "name": "setHeatEffectModifier",
+          "sig": "void setHeatEffectModifier(ic2.api.reactor.planner.float hem)",
+          "notes": ""
+        },
+        {
+          "name": "addOutput",
+          "sig": "void addOutput(ic2.api.reactor.planner.float output)",
+          "notes": ""
+        },
+        {
+          "name": "getEnergyOutput",
+          "sig": "ic2.api.reactor.planner.float getEnergyOutput()",
+          "notes": ""
+        },
+        {
+          "name": "addSteam",
+          "sig": "void addSteam(ic2.api.reactor.planner.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "consumeWater",
+          "sig": "ic2.api.reactor.planner.int consumeWater(ic2.api.reactor.planner.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "isProducingEnergy",
+          "sig": "ic2.api.reactor.planner.boolean isProducingEnergy()",
+          "notes": ""
+        },
+        {
+          "name": "isSteamReactor",
+          "sig": "ic2.api.reactor.planner.boolean isSteamReactor()",
+          "notes": ""
+        },
+        {
+          "name": "isSimulatingPulses",
+          "sig": "ic2.api.reactor.planner.boolean isSimulatingPulses()",
+          "notes": ""
+        },
+        {
+          "name": "getGameTime",
+          "sig": "ic2.api.reactor.planner.long getGameTime()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.SimulatedStack",
+      "methods": [
+        {
+          "name": "syncStack",
+          "sig": "net.minecraft.world.item.ItemStack syncStack(net.minecraft.world.item.ItemStack original)",
+          "notes": ""
+        },
+        {
+          "name": "save",
+          "sig": "net.minecraft.nbt.CompoundTag save()",
+          "notes": ""
+        },
+        {
+          "name": "load",
+          "sig": "void load(net.minecraft.nbt.CompoundTag data)",
+          "notes": ""
+        },
+        {
+          "name": "commitState",
+          "sig": "void commitState()",
+          "notes": ""
+        },
+        {
+          "name": "reset",
+          "sig": "void reset()",
+          "notes": ""
+        },
+        {
+          "name": "simulate",
+          "sig": "void simulate(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.boolean heatTick, ic2.api.reactor.planner.boolean damageTick)",
+          "notes": ""
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "ic2.api.reactor.planner.boolean acceptUraniumPulse(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.SimulatedStack source, ic2.api.reactor.planner.int sourceX, ic2.api.reactor.planner.int sourceY, ic2.api.reactor.planner.boolean heatRun, ic2.api.reactor.planner.boolean damageTick)",
+          "notes": ""
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "ic2.api.reactor.planner.boolean canStoreHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "ic2.api.reactor.planner.int getStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "ic2.api.reactor.planner.int getMaxStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "storeHeat",
+          "sig": "ic2.api.reactor.planner.int storeHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.int heatChange)",
+          "notes": ""
+        },
+        {
+          "name": "canViewHeat",
+          "sig": "ic2.api.reactor.planner.boolean canViewHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "ic2.api.reactor.planner.float getExplosionInfluence(ic2.api.reactor.planner.ISimulatedReactor reactor)",
+          "notes": ""
+        },
+        {
+          "name": "getId",
+          "sig": "ic2.api.reactor.planner.short getId()",
+          "notes": ""
+        },
+        {
+          "name": "getStats",
+          "sig": "java.util.List getStats()",
+          "notes": ""
+        },
+        {
+          "name": "getValidType",
+          "sig": "ic2.api.reactor.IReactorPlannerComponent.ReactorType getValidType()",
+          "notes": ""
+        },
+        {
+          "name": "getComponentType",
+          "sig": "ic2.api.reactor.IReactorPlannerComponent.ComponentType getComponentType()",
+          "notes": ""
+        },
+        {
+          "name": "getStat",
+          "sig": "net.minecraft.nbt.NumericTag getStat(ic2.api.reactor.IReactorPlannerComponent.ReactorStat stat)",
+          "notes": ""
+        },
+        {
+          "name": "getStat",
+          "sig": "net.minecraft.nbt.NumericTag getStat(ic2.api.reactor.IReactorPlannerComponent.ReactorStat stat, ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.generators.IOutputGenerator",
+      "methods": [
+        {
+          "name": "addItems",
+          "sig": "void addItems(java.util.function.Consumer output)",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "com.google.gson.JsonObject serialize()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.inputs.IInput",
+      "methods": [
+        {
+          "name": "asIngredient",
+          "sig": "net.minecraft.world.item.crafting.Ingredient asIngredient()",
+          "notes": ""
+        },
+        {
+          "name": "getComponents",
+          "sig": "java.util.List getComponents()",
+          "notes": ""
+        },
+        {
+          "name": "getInputSize",
+          "sig": "ic2.api.recipes.ingridients.inputs.int getInputSize()",
+          "notes": ""
+        },
+        {
+          "name": "matches",
+          "sig": "ic2.api.recipes.ingridients.inputs.boolean matches(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "matchesAll",
+          "sig": "ic2.api.recipes.ingridients.inputs.boolean matchesAll(net.minecraft.world.item.ItemStack... stacks)",
+          "notes": ""
+        },
+        {
+          "name": "matchesAny",
+          "sig": "ic2.api.recipes.ingridients.inputs.boolean matchesAny(net.minecraft.world.item.ItemStack... stacks)",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "com.google.gson.JsonObject serialize()",
+          "notes": ""
+        },
+        {
+          "name": "writeItemStack",
+          "sig": "com.google.gson.JsonObject writeItemStack(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.ingridients.inputs.boolean includeSize)",
+          "notes": ""
+        },
+        {
+          "name": "writeFluidStack",
+          "sig": "com.google.gson.JsonObject writeFluidStack(net.minecraftforge.fluids.FluidStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "readFluidStack",
+          "sig": "net.minecraftforge.fluids.FluidStack readFluidStack(com.google.gson.JsonObject obj)",
+          "notes": ""
+        },
+        {
+          "name": "readNBT",
+          "sig": "net.minecraft.nbt.CompoundTag readNBT(ic2.api.recipes.ingridients.inputs.String s)",
+          "notes": ""
+        },
+        {
+          "name": "copyWithSize",
+          "sig": "net.minecraft.world.item.ItemStack copyWithSize(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.ingridients.inputs.int newSize)",
+          "notes": ""
+        },
+        {
+          "name": "isStackEqual",
+          "sig": "ic2.api.recipes.ingridients.inputs.boolean isStackEqual(net.minecraft.world.item.ItemStack key, net.minecraft.world.item.ItemStack other)",
+          "notes": ""
+        },
+        {
+          "name": "isNBTExact",
+          "sig": "ic2.api.recipes.ingridients.inputs.boolean isNBTExact(net.minecraft.world.item.ItemStack subject, net.minecraft.world.item.ItemStack target)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.inputs.INullableInput",
+      "methods": [
+        {
+          "name": "serialize",
+          "sig": "com.google.gson.JsonObject serialize()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.ingridients.inputs.IInput"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.queue.IInputter",
+      "methods": [
+        {
+          "name": "addItemIntoSlot",
+          "sig": "void addItemIntoSlot(ic2.api.recipes.ingridients.queue.int slot, net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.queue.IStackOutput",
+      "methods": [
+        {
+          "name": "addToInventory",
+          "sig": "ic2.api.recipes.ingridients.queue.boolean addToInventory(ic2.api.recipes.ingridients.queue.IInputter inventory)",
+          "notes": ""
+        },
+        {
+          "name": "getStack",
+          "sig": "net.minecraft.world.item.ItemStack getStack()",
+          "notes": ""
+        },
+        {
+          "name": "save",
+          "sig": "void save(net.minecraft.nbt.CompoundTag save)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput",
+      "methods": [
+        {
+          "name": "onFluidRecipeProcessed",
+          "sig": "java.util.List onFluidRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, net.minecraft.world.item.ItemStack input)",
+          "notes": ""
+        },
+        {
+          "name": "onFluidRecipeProcessed",
+          "sig": "java.util.List onFluidRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, net.minecraft.world.item.ItemStack input, ic2.api.recipes.ingridients.recipes.IRecipeOverride overrides)",
+          "notes": ""
+        },
+        {
+          "name": "getAllFluidOutputs",
+          "sig": "java.util.List getAllFluidOutputs()",
+          "notes": ""
+        },
+        {
+          "name": "copyFluids",
+          "sig": "java.util.List copyFluids(java.util.List copy)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.ingridients.recipes.IRecipeOutput"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.IRecipeOutput",
+      "methods": [
+        {
+          "name": "onRecipeProcessed",
+          "sig": "java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags)",
+          "notes": ""
+        },
+        {
+          "name": "onRecipeProcessed",
+          "sig": "java.util.List onRecipeProcessed(net.minecraft.util.RandomSource rand, net.minecraft.nbt.CompoundTag persistentData, net.minecraft.nbt.CompoundTag recipeFlags, ic2.api.recipes.ingridients.recipes.IRecipeOverride overrides)",
+          "notes": ""
+        },
+        {
+          "name": "getAllOutputs",
+          "sig": "java.util.List getAllOutputs()",
+          "notes": ""
+        },
+        {
+          "name": "getMetadata",
+          "sig": "net.minecraft.nbt.CompoundTag getMetadata()",
+          "notes": ""
+        },
+        {
+          "name": "getExperience",
+          "sig": "ic2.api.recipes.ingridients.recipes.float getExperience()",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "com.google.gson.JsonObject serialize()",
+          "notes": ""
+        },
+        {
+          "name": "copyItems",
+          "sig": "java.util.List copyItems(java.util.List copy)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.IRecipeOutputChance",
+      "methods": [
+        {
+          "name": "getChance",
+          "sig": "ic2.api.recipes.ingridients.recipes.float getChance()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.ingridients.recipes.IRecipeOutput"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.misc.ICanEffect",
+      "methods": [
+        {
+          "name": "onFoodEaten",
+          "sig": "void onFoodEaten(net.minecraft.world.item.ItemStack stack, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "getTooltip",
+          "sig": "net.minecraft.network.chat.Component getTooltip()",
+          "notes": ""
+        },
+        {
+          "name": "getOverrideIcon",
+          "sig": "net.minecraft.client.renderer.texture.TextureAtlasSprite getOverrideIcon()",
+          "notes": ""
+        },
+        {
+          "name": "getID",
+          "sig": "net.minecraft.resources.ResourceLocation getID()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IAdvancedCraftingManager",
+      "methods": [
+        {
+          "name": "addShapedIC2Recipe",
+          "sig": "void addShapedIC2Recipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",
+          "notes": ""
+        },
+        {
+          "name": "addShapelessIC2Recipe",
+          "sig": "void addShapelessIC2Recipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",
+          "notes": ""
+        },
+        {
+          "name": "addRepairIC2Recipe",
+          "sig": "void addRepairIC2Recipe(ic2.api.recipes.registries.String location, ic2.api.items.IRepairable repair, ic2.api.recipes.ingridients.inputs.IInput repairMaterial, ic2.api.recipes.registries.int effect, ic2.api.recipes.registries.Object... args)",
+          "notes": ""
+        },
+        {
+          "name": "addShapedRecipe",
+          "sig": "void addShapedRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",
+          "notes": ""
+        },
+        {
+          "name": "addShapelessRecipe",
+          "sig": "void addShapelessRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... args)",
+          "notes": ""
+        },
+        {
+          "name": "addRepairRecipe",
+          "sig": "void addRepairRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.items.IRepairable repair, ic2.api.recipes.ingridients.inputs.IInput repairMaterial, ic2.api.recipes.registries.int effect, ic2.api.recipes.registries.Object... args)",
+          "notes": ""
+        },
+        {
+          "name": "removeCraftingRecipe",
+          "sig": "void removeCraftingRecipe(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2SmeltingRecipe",
+          "sig": "void addIC2SmeltingRecipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2SmeltingRecipe",
+          "sig": "void addIC2SmeltingRecipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2SmeltingRecipe",
+          "sig": "void addIC2SmeltingRecipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float extraTime, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "addSmeltingRecipe",
+          "sig": "void addSmeltingRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "addSmeltingRecipe",
+          "sig": "void addSmeltingRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "addSmeltingRecipe",
+          "sig": "void addSmeltingRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float extraTime, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "removeSmeltingRecipe",
+          "sig": "void removeSmeltingRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.registries.SmeltingType... types)",
+          "notes": ""
+        },
+        {
+          "name": "addStoneCutterRecipe",
+          "sig": "void addStoneCutterRecipe(net.minecraft.resources.ResourceLocation location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input)",
+          "notes": ""
+        },
+        {
+          "name": "addStoneCutterIC2Recipe",
+          "sig": "void addStoneCutterIC2Recipe(ic2.api.recipes.registries.String location, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object input)",
+          "notes": ""
+        },
+        {
+          "name": "removeStoneCutterRecipe",
+          "sig": "void removeStoneCutterRecipe(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        },
+        {
+          "name": "addSmithingRecipe",
+          "sig": "void addSmithingRecipe(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Object main, ic2.api.recipes.registries.Object secondary, net.minecraft.world.item.ItemStack output)",
+          "notes": ""
+        },
+        {
+          "name": "addSmithingIC2Recipe",
+          "sig": "void addSmithingIC2Recipe(ic2.api.recipes.registries.String location, ic2.api.recipes.registries.Object main, ic2.api.recipes.registries.Object secondary, net.minecraft.world.item.ItemStack output)",
+          "notes": ""
+        },
+        {
+          "name": "removeSmithingRecipe",
+          "sig": "void removeSmithingRecipe(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.ICannerRecipeRegistry",
+      "methods": [
+        {
+          "name": "registerRepairable",
+          "sig": "void registerRepairable(ic2.api.items.IRepairable repair, ic2.api.recipes.ingridients.inputs.IInput input, ic2.api.recipes.registries.int repairAmount)",
+          "notes": ""
+        },
+        {
+          "name": "removeRepairable",
+          "sig": "void removeRepairable(ic2.api.items.IRepairable repair)",
+          "notes": ""
+        },
+        {
+          "name": "getRepairableItem",
+          "sig": "net.minecraft.util.Tuple getRepairableItem(net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack repair, ic2.api.recipes.registries.boolean compareStack)",
+          "notes": ""
+        },
+        {
+          "name": "getRepairItems",
+          "sig": "java.util.Map getRepairItems()",
+          "notes": ""
+        },
+        {
+          "name": "registerFuelValue",
+          "sig": "void registerFuelValue(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "registerFuelMultiplier",
+          "sig": "void registerFuelMultiplier(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.float multiplier)",
+          "notes": ""
+        },
+        {
+          "name": "removeValue",
+          "sig": "void removeValue(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getValueForStack",
+          "sig": "ic2.api.recipes.registries.FuelValue getValueForStack(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getFuels",
+          "sig": "java.util.List getFuels()",
+          "notes": ""
+        },
+        {
+          "name": "registerFillable",
+          "sig": "void registerFillable(net.minecraft.world.item.ItemStack container, ic2.api.recipes.ingridients.inputs.IInput fillable, net.minecraft.world.item.ItemStack output)",
+          "notes": ""
+        },
+        {
+          "name": "hasContainer",
+          "sig": "ic2.api.recipes.registries.boolean hasContainer(net.minecraft.world.item.ItemStack container)",
+          "notes": ""
+        },
+        {
+          "name": "removeFillable",
+          "sig": "void removeFillable(net.minecraft.world.item.ItemStack container)",
+          "notes": ""
+        },
+        {
+          "name": "removeFillable",
+          "sig": "void removeFillable(net.minecraft.world.item.ItemStack container, net.minecraft.world.item.ItemStack fillable)",
+          "notes": ""
+        },
+        {
+          "name": "getFillOutput",
+          "sig": "net.minecraft.util.Tuple getFillOutput(net.minecraft.world.item.ItemStack container, net.minecraft.world.item.ItemStack toFill, ic2.api.recipes.registries.boolean compareStack)",
+          "notes": ""
+        },
+        {
+          "name": "getFillables",
+          "sig": "java.util.Map getFillables()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IElectrolyzerRecipeList",
+      "methods": [
+        {
+          "name": "addChargeRecipe",
+          "sig": "void addChargeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int energy)",
+          "notes": ""
+        },
+        {
+          "name": "addDischargeRecipe",
+          "sig": "void addDischargeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int energy)",
+          "notes": ""
+        },
+        {
+          "name": "addDualRecipe",
+          "sig": "void addDualRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int energy)",
+          "notes": ""
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack input, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int flags, ic2.api.recipes.registries.int energy)",
+          "notes": ""
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "void removeRecipe(net.minecraft.world.item.ItemStack input, ic2.api.recipes.registries.boolean charge)",
+          "notes": ""
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "void removeRecipe(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipes",
+          "sig": "java.util.List getRecipes()",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.ElectrolyzerRecipe getRecipe(net.minecraft.world.item.ItemStack input, ic2.api.recipes.registries.boolean charge, ic2.api.recipes.registries.boolean compareSize)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IFluidFuelRegistry",
+      "methods": [
+        {
+          "name": "addFuel",
+          "sig": "void addFuel(net.minecraft.world.level.material.Fluid fluid, ic2.api.recipes.registries.int ticksPerBucket, ic2.api.recipes.registries.int euPerTick)",
+          "notes": ""
+        },
+        {
+          "name": "removeFuel",
+          "sig": "void removeFuel(net.minecraft.world.level.material.Fluid fluid)",
+          "notes": ""
+        },
+        {
+          "name": "getFuels",
+          "sig": "java.util.List getFuels()",
+          "notes": ""
+        },
+        {
+          "name": "getFuel",
+          "sig": "ic2.api.recipes.registries.FuelEntry getFuel(net.minecraft.world.level.material.Fluid fluid)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IFoodCanRegistry",
+      "methods": [
+        {
+          "name": "registerEffect",
+          "sig": "net.minecraft.world.item.Item registerEffect(ic2.api.recipes.misc.ICanEffect effect)",
+          "notes": ""
+        },
+        {
+          "name": "getEffect",
+          "sig": "ic2.api.recipes.misc.ICanEffect getEffect(net.minecraft.resources.ResourceLocation location)",
+          "notes": ""
+        },
+        {
+          "name": "getAllEffects",
+          "sig": "java.util.List getAllEffects()",
+          "notes": ""
+        },
+        {
+          "name": "getEffectItem",
+          "sig": "net.minecraft.world.item.Item getEffectItem(net.minecraft.resources.ResourceLocation item)",
+          "notes": ""
+        },
+        {
+          "name": "registerItemForEffect",
+          "sig": "void registerItemForEffect(net.minecraft.world.item.ItemStack stack, net.minecraft.resources.ResourceLocation location)",
+          "notes": ""
+        },
+        {
+          "name": "getEffectForFood",
+          "sig": "net.minecraft.resources.ResourceLocation getEffectForFood(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getItemForFood",
+          "sig": "net.minecraft.world.item.Item getItemForFood(net.minecraft.world.item.ItemStack food)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IFusionRecipeList",
+      "methods": [
+        {
+          "name": "addFuel",
+          "sig": "void addFuel(net.minecraft.world.item.Item fuel, ic2.api.recipes.registries.int fuelValue, ic2.api.recipes.registries.float productionRate, ic2.api.recipes.registries.boolean consumed)",
+          "notes": ""
+        },
+        {
+          "name": "getFuel",
+          "sig": "ic2.api.recipes.registries.FusionFuel getFuel(net.minecraft.world.item.Item item)",
+          "notes": ""
+        },
+        {
+          "name": "removeFuel",
+          "sig": "void removeFuel(net.minecraft.world.item.Item item)",
+          "notes": ""
+        },
+        {
+          "name": "getFuels",
+          "sig": "java.util.List getFuels()",
+          "notes": ""
+        },
+        {
+          "name": "FusionFuel",
+          "sig": "ic2.api.recipes.registries.record FusionFuel(net.minecraft.world.item.Item fuel, ic2.api.recipes.registries.int fuelValue, ic2.api.recipes.registries.float productionRate, ic2.api.recipes.registries.boolean consumed)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IIngredientRegistry",
+      "methods": [
+        {
+          "name": "registerInput",
+          "sig": "void registerInput(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator, java.util.function.Function serializer, java.util.function.Function maker)",
+          "notes": ""
+        },
+        {
+          "name": "registerRecipeOutput",
+          "sig": "void registerRecipeOutput(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator, java.util.function.Function serializer)",
+          "notes": ""
+        },
+        {
+          "name": "registerFluidOutput",
+          "sig": "void registerFluidOutput(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator, java.util.function.Function serializer)",
+          "notes": ""
+        },
+        {
+          "name": "registerQueue",
+          "sig": "void registerQueue(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator)",
+          "notes": ""
+        },
+        {
+          "name": "registerOutputGenerators",
+          "sig": "void registerOutputGenerators(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.Class clz, java.util.function.Function creator)",
+          "notes": ""
+        },
+        {
+          "name": "writeInput",
+          "sig": "void writeInput(ic2.api.recipes.ingridients.inputs.IInput input, net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "writeRecipeOutput",
+          "sig": "void writeRecipeOutput(ic2.api.recipes.ingridients.recipes.IRecipeOutput output, net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "writeFluidOutput",
+          "sig": "void writeFluidOutput(ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput output, net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "writeQueue",
+          "sig": "net.minecraft.nbt.CompoundTag writeQueue(ic2.api.recipes.ingridients.queue.IStackOutput queue)",
+          "notes": ""
+        },
+        {
+          "name": "readInput",
+          "sig": "ic2.api.recipes.ingridients.inputs.IInput readInput(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "createOutput",
+          "sig": "ic2.api.recipes.ingridients.recipes.IRecipeOutput createOutput(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "createFluidOutput",
+          "sig": "ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput createFluidOutput(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "readQueue",
+          "sig": "ic2.api.recipes.ingridients.queue.IStackOutput readQueue(net.minecraft.nbt.CompoundTag nbt)",
+          "notes": ""
+        },
+        {
+          "name": "readInput",
+          "sig": "ic2.api.recipes.ingridients.inputs.IInput readInput(com.google.gson.JsonObject obj)",
+          "notes": ""
+        },
+        {
+          "name": "readOutput",
+          "sig": "ic2.api.recipes.ingridients.recipes.IRecipeOutput readOutput(com.google.gson.JsonObject obj)",
+          "notes": ""
+        },
+        {
+          "name": "readFluidOutput",
+          "sig": "ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput readFluidOutput(com.google.gson.JsonObject obj)",
+          "notes": ""
+        },
+        {
+          "name": "readOutputGenerator",
+          "sig": "ic2.api.recipes.ingridients.generators.IOutputGenerator readOutputGenerator(com.google.gson.JsonObject obj)",
+          "notes": ""
+        },
+        {
+          "name": "createInputFrom",
+          "sig": "ic2.api.recipes.ingridients.inputs.IInput createInputFrom(ic2.api.recipes.registries.Object obj)",
+          "notes": ""
+        },
+        {
+          "name": "serializeInput",
+          "sig": "com.google.gson.JsonObject serializeInput(ic2.api.recipes.ingridients.inputs.IInput input)",
+          "notes": ""
+        },
+        {
+          "name": "serializeOutput",
+          "sig": "com.google.gson.JsonObject serializeOutput(ic2.api.recipes.ingridients.recipes.IRecipeOutput output)",
+          "notes": ""
+        },
+        {
+          "name": "serializeFluidOutput",
+          "sig": "com.google.gson.JsonObject serializeFluidOutput(ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput output)",
+          "notes": ""
+        },
+        {
+          "name": "serializeOutputGenerator",
+          "sig": "com.google.gson.JsonObject serializeOutputGenerator(ic2.api.recipes.ingridients.generators.IOutputGenerator generator)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IListenableRegistry",
+      "methods": [
+        {
+          "name": "registerListener",
+          "sig": "void registerListener(java.util.function.Consumer listener)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IMachineRecipeList",
+      "methods": [
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(ic2.api.recipes.registries.RecipeEntry recipe)",
+          "notes": ""
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, ic2.api.recipes.ingridients.inputs.IInput... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addSimpleRecipe",
+          "sig": "void addSimpleRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addSimpleRecipe",
+          "sig": "void addSimpleRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addXPRecipe",
+          "sig": "void addXPRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addXPRecipe",
+          "sig": "void addXPRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addChanceRecipe",
+          "sig": "void addChanceRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addChanceRecipe",
+          "sig": "void addChanceRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addRangeRecipe",
+          "sig": "void addRangeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addRangeRecipe",
+          "sig": "void addRangeRecipe(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2SimpleRecipe",
+          "sig": "void addIC2SimpleRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2SimpleRecipe",
+          "sig": "void addIC2SimpleRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2XPRecipe",
+          "sig": "void addIC2XPRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2XPRecipe",
+          "sig": "void addIC2XPRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2ChanceRecipe",
+          "sig": "void addIC2ChanceRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2ChanceRecipe",
+          "sig": "void addIC2ChanceRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.float xp, ic2.api.recipes.registries.float chance, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2RangeRecipe",
+          "sig": "void addIC2RangeRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2RangeRecipe",
+          "sig": "void addIC2RangeRecipe(ic2.api.recipes.registries.String id, net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int minValue, ic2.api.recipes.registries.int maxValue, net.minecraft.nbt.CompoundTag data, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "addIC2Recipe",
+          "sig": "void addIC2Recipe(ic2.api.recipes.registries.String id, ic2.api.recipes.ingridients.recipes.IRecipeOutput output, ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "hasRecipeForItem",
+          "sig": "ic2.api.recipes.registries.boolean hasRecipeForItem(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.RecipeEntry getRecipe(net.minecraft.resources.ResourceLocation location)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.RecipeEntry getRecipe(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.boolean hasStackSize)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.RecipeEntry getRecipe(java.util.function.Predicate checker)",
+          "notes": ""
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "ic2.api.recipes.registries.RecipeEntry removeRecipe(net.minecraft.resources.ResourceLocation location)",
+          "notes": ""
+        },
+        {
+          "name": "getAllRecipes",
+          "sig": "java.util.List getAllRecipes()",
+          "notes": ""
+        },
+        {
+          "name": "getAllEntries",
+          "sig": "java.util.List getAllEntries()",
+          "notes": ""
+        },
+        {
+          "name": "convertInputs",
+          "sig": "ic2.api.recipes.ingridients.inputs.IInput convertInputs(ic2.api.recipes.registries.Object... inputs)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IPotionBrewRegistry",
+      "methods": [
+        {
+          "name": "registerBrew",
+          "sig": "void registerBrew(net.minecraft.world.item.Item item, net.minecraft.world.effect.MobEffect potion)",
+          "notes": ""
+        },
+        {
+          "name": "registerBrew",
+          "sig": "void registerBrew(net.minecraft.world.item.Item item, net.minecraft.world.effect.MobEffect fromEffect, net.minecraft.world.effect.MobEffect toEffect)",
+          "notes": ""
+        },
+        {
+          "name": "removeBrew",
+          "sig": "void removeBrew(net.minecraft.world.item.Item item)",
+          "notes": ""
+        },
+        {
+          "name": "getEffect",
+          "sig": "net.minecraft.world.effect.MobEffect getEffect(net.minecraft.world.item.Item item, net.minecraft.world.effect.MobEffect original)",
+          "notes": ""
+        },
+        {
+          "name": "getEffects",
+          "sig": "java.util.Map getEffects()",
+          "notes": ""
+        },
+        {
+          "name": "getRequiredItems",
+          "sig": "java.util.List getRequiredItems(net.minecraft.world.effect.MobEffect desiredEffect)",
+          "notes": ""
+        },
+        {
+          "name": "registerName",
+          "sig": "void registerName(net.minecraft.world.effect.MobEffect effect, ic2.api.recipes.registries.String name)",
+          "notes": ""
+        },
+        {
+          "name": "getName",
+          "sig": "ic2.api.recipes.registries.String getName(net.minecraft.world.effect.MobEffect effect)",
+          "notes": ""
+        },
+        {
+          "name": "registerPotionContainer",
+          "sig": "void registerPotionContainer(net.minecraft.world.item.Item input, ic2.api.recipes.registries.PotionContainer output)",
+          "notes": ""
+        },
+        {
+          "name": "getPotionContainer",
+          "sig": "ic2.api.recipes.registries.PotionContainer getPotionContainer(net.minecraft.world.item.Item input)",
+          "notes": ""
+        },
+        {
+          "name": "getContainers",
+          "sig": "java.util.Map getContainers()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRareEarthRegistry",
+      "methods": [
+        {
+          "name": "registerOutput",
+          "sig": "void registerOutput(net.minecraft.resources.ResourceLocation id, net.minecraft.world.item.ItemStack output)",
+          "notes": ""
+        },
+        {
+          "name": "registerInput",
+          "sig": "void registerInput(net.minecraft.resources.ResourceLocation id, ic2.api.recipes.registries.float value, net.minecraft.world.item.ItemStack... input)",
+          "notes": ""
+        },
+        {
+          "name": "getOutputFor",
+          "sig": "ic2.api.recipes.registries.RareEntry getOutputFor(net.minecraft.world.item.ItemStack input)",
+          "notes": ""
+        },
+        {
+          "name": "getOutputFor",
+          "sig": "net.minecraft.world.item.ItemStack getOutputFor(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        },
+        {
+          "name": "removeInput",
+          "sig": "ic2.api.recipes.registries.RareEntry removeInput(net.minecraft.world.item.ItemStack input)",
+          "notes": ""
+        },
+        {
+          "name": "removeOutput",
+          "sig": "void removeOutput(net.minecraft.world.item.ItemStack output)",
+          "notes": ""
+        },
+        {
+          "name": "remove",
+          "sig": "void remove(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        },
+        {
+          "name": "getAllRecipes",
+          "sig": "java.util.List getAllRecipes()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRecipeFilter",
+      "methods": [
+        {
+          "name": "add",
+          "sig": "void add(net.minecraft.world.level.ItemLike... items)",
+          "notes": ""
+        },
+        {
+          "name": "add",
+          "sig": "void add(ic2.api.recipes.ingridients.inputs.IInput... inputs)",
+          "notes": ""
+        },
+        {
+          "name": "remove",
+          "sig": "void remove(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.int flags)",
+          "notes": ""
+        },
+        {
+          "name": "contains",
+          "sig": "ic2.api.recipes.registries.boolean contains(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getFilteredItems",
+          "sig": "java.util.List getFilteredItems()",
+          "notes": ""
+        },
+        {
+          "name": "clear",
+          "sig": "void clear()",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "com.google.gson.JsonObject serialize()",
+          "notes": ""
+        },
+        {
+          "name": "read",
+          "sig": "void read(com.google.gson.JsonObject obj)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRecyclerRecipeList",
+      "methods": [
+        {
+          "name": "getBlackList",
+          "sig": "ic2.api.recipes.registries.IRecipeFilter getBlackList()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IMachineRecipeList"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IRefiningRecipeList",
+      "methods": [
+        {
+          "name": "addIC2Recipe",
+          "sig": "ic2.api.recipes.registries.Builder addIC2Recipe(ic2.api.recipes.registries.String id)",
+          "notes": ""
+        },
+        {
+          "name": "addRecipe",
+          "sig": "ic2.api.recipes.registries.Builder addRecipe(net.minecraft.resources.ResourceLocation id)",
+          "notes": ""
+        },
+        {
+          "name": "addRecipe",
+          "sig": "void addRecipe(net.minecraft.resources.ResourceLocation location, net.minecraftforge.fluids.FluidStack input, net.minecraftforge.fluids.FluidStack secondInput, ic2.api.recipes.ingridients.inputs.IInput catalyst, ic2.api.recipes.ingridients.recipes.IFluidRecipeOutput output)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.FluidRecipe getRecipe(net.minecraft.resources.ResourceLocation location)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.FluidRecipe getRecipe(net.minecraft.world.item.ItemStack item, net.minecraftforge.fluids.FluidStack firstTank, net.minecraftforge.fluids.FluidStack secondTank, ic2.api.recipes.registries.boolean testAmounts)",
+          "notes": ""
+        },
+        {
+          "name": "getRecipe",
+          "sig": "ic2.api.recipes.registries.FluidRecipe getRecipe(java.util.function.Predicate checker)",
+          "notes": ""
+        },
+        {
+          "name": "removeRecipe",
+          "sig": "ic2.api.recipes.registries.FluidRecipe removeRecipe(net.minecraft.resources.ResourceLocation location, ic2.api.recipes.registries.boolean includeInverted)",
+          "notes": ""
+        },
+        {
+          "name": "getAllRecipes",
+          "sig": "java.util.List getAllRecipes()",
+          "notes": ""
+        },
+        {
+          "name": "isValidCatalyst",
+          "sig": "ic2.api.recipes.registries.boolean isValidCatalyst(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "isValidFirstFluid",
+          "sig": "ic2.api.recipes.registries.boolean isValidFirstFluid(net.minecraftforge.fluids.FluidStack fluid)",
+          "notes": ""
+        },
+        {
+          "name": "isValidSecondFluid",
+          "sig": "ic2.api.recipes.registries.boolean isValidSecondFluid(net.minecraftforge.fluids.FluidStack fluid)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IScrapBoxRegistry",
+      "methods": [
+        {
+          "name": "addDrop",
+          "sig": "void addDrop(net.minecraft.world.level.ItemLike prov, ic2.api.recipes.registries.float chance)",
+          "notes": ""
+        },
+        {
+          "name": "addDrop",
+          "sig": "void addDrop(net.minecraft.world.item.ItemStack stack, ic2.api.recipes.registries.float chance)",
+          "notes": ""
+        },
+        {
+          "name": "getRandomDrop",
+          "sig": "ic2.api.recipes.registries.IDrop getRandomDrop(net.minecraft.world.item.ItemStack source, ic2.api.recipes.registries.boolean consumeItem)",
+          "notes": ""
+        },
+        {
+          "name": "removeDrops",
+          "sig": "void removeDrops(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "removeDrop",
+          "sig": "void removeDrop(ic2.api.recipes.registries.IDrop drop)",
+          "notes": ""
+        },
+        {
+          "name": "getAllDrops",
+          "sig": "java.util.List getAllDrops()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.registries.IUUMatterRegistry",
+      "methods": [
+        {
+          "name": "registerUUShape",
+          "sig": "void registerUUShape(ic2.api.recipes.registries.UUMatterBuilder builder)",
+          "notes": ""
+        },
+        {
+          "name": "registerUUEntry",
+          "sig": "void registerUUEntry(net.minecraft.world.item.ItemStack output, ic2.api.recipes.registries.int milliUU)",
+          "notes": ""
+        },
+        {
+          "name": "getEntries",
+          "sig": "java.util.List getEntries()",
+          "notes": ""
+        },
+        {
+          "name": "removeUUEntry",
+          "sig": "void removeUUEntry(ic2.api.recipes.registries.UUMatterEntry entry)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.recipes.registries.IListenableRegistry"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.ticks.ITickScheduler",
+      "methods": [
+        {
+          "name": "addWorldCallback",
+          "sig": "void addWorldCallback(net.minecraft.world.level.Level world, java.util.function.ToIntFunction ticket)",
+          "notes": ""
+        },
+        {
+          "name": "addWorldCallback",
+          "sig": "void addWorldCallback(net.minecraft.world.level.Level world, java.util.function.ToIntFunction ticket, ic2.api.ticks.int delay)",
+          "notes": ""
+        },
+        {
+          "name": "addServerCallback",
+          "sig": "void addServerCallback(java.util.function.ToIntFunction ticket)",
+          "notes": ""
+        },
+        {
+          "name": "addServerCallback",
+          "sig": "void addServerCallback(java.util.function.ToIntFunction ticket, ic2.api.ticks.int delay)",
+          "notes": ""
+        },
+        {
+          "name": "addClientCallback",
+          "sig": "void addClientCallback(java.util.function.IntSupplier ticket)",
+          "notes": ""
+        },
+        {
+          "name": "addClientCallback",
+          "sig": "void addClientCallback(java.util.function.IntSupplier ticket, ic2.api.ticks.int delay)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IAnchorTile",
+      "methods": [
+        {
+          "name": "hasAnchor",
+          "sig": "ic2.api.tiles.boolean hasAnchor(net.minecraft.core.Direction side)",
+          "notes": ""
+        },
+        {
+          "name": "addAnchor",
+          "sig": "ic2.api.tiles.boolean addAnchor(net.minecraft.core.Direction side)",
+          "notes": ""
+        },
+        {
+          "name": "removeAnchor",
+          "sig": "ic2.api.tiles.boolean removeAnchor(net.minecraft.core.Direction side)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.ICopyableSettings",
+      "methods": [
+        {
+          "name": "saveSettings",
+          "sig": "void saveSettings(net.minecraft.nbt.CompoundTag compound)",
+          "notes": ""
+        },
+        {
+          "name": "loadSettings",
+          "sig": "void loadSettings(net.minecraft.nbt.CompoundTag compound)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IElectrolyzerProvider",
+      "methods": [
+        {
+          "name": "getProcessRate",
+          "sig": "ic2.api.tiles.int getProcessRate()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.IEnergyStorage"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IEnergyStorage",
+      "methods": [
+        {
+          "name": "addEnergy",
+          "sig": "ic2.api.tiles.int addEnergy(ic2.api.tiles.int power)",
+          "notes": ""
+        },
+        {
+          "name": "drawEnergy",
+          "sig": "ic2.api.tiles.int drawEnergy(ic2.api.tiles.int power)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.readers.IEUStorage"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IFluidMachine",
+      "methods": [
+        {
+          "name": "getConnectedTank",
+          "sig": "net.minecraftforge.fluids.capability.IFluidHandler getConnectedTank(net.minecraft.core.Direction dir)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IInputMachine",
+      "methods": [
+        {
+          "name": "getValidRoom",
+          "sig": "ic2.api.tiles.int getValidRoom(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IMachine",
+      "methods": [
+        {
+          "name": "getSupportedUpgradeTypes",
+          "sig": "java.util.EnumSet getSupportedUpgradeTypes()",
+          "notes": ""
+        },
+        {
+          "name": "onUpgradesChanged",
+          "sig": "void onUpgradesChanged()",
+          "notes": ""
+        },
+        {
+          "name": "getAvailableEnergy",
+          "sig": "ic2.api.tiles.int getAvailableEnergy()",
+          "notes": ""
+        },
+        {
+          "name": "useEnergy",
+          "sig": "ic2.api.tiles.boolean useEnergy(ic2.api.tiles.int toUse, ic2.api.tiles.boolean doUse)",
+          "notes": ""
+        },
+        {
+          "name": "isMachineWorking",
+          "sig": "ic2.api.tiles.boolean isMachineWorking()",
+          "notes": ""
+        },
+        {
+          "name": "setRedstoneSensitive",
+          "sig": "void setRedstoneSensitive(ic2.api.tiles.boolean flag)",
+          "notes": ""
+        },
+        {
+          "name": "isRedstoneSensitive",
+          "sig": "ic2.api.tiles.boolean isRedstoneSensitive()",
+          "notes": ""
+        },
+        {
+          "name": "getConnectedInventory",
+          "sig": "net.minecraftforge.items.IItemHandler getConnectedInventory(net.minecraft.core.Direction dir)",
+          "notes": ""
+        },
+        {
+          "name": "getConnectedTube",
+          "sig": "ic2.api.tiles.tubes.ITube getConnectedTube(net.minecraft.core.Direction dir)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.IInputMachine",
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.INotifiableMachine",
+      "methods": [
+        {
+          "name": "onNotify",
+          "sig": "void onNotify()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.IRecipeMachine",
+      "methods": [
+        {
+          "name": "getRecipeList",
+          "sig": "ic2.api.recipes.registries.IMachineRecipeList getRecipeList()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.IInputMachine"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.ITerraformer",
+      "methods": [
+        {
+          "name": "getBiome",
+          "sig": "net.minecraft.core.Holder getBiome(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "setBiome",
+          "sig": "ic2.api.tiles.boolean setBiome(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.resources.ResourceLocation biomeKey)",
+          "notes": ""
+        },
+        {
+          "name": "getFirstSolidBlockFrom",
+          "sig": "net.minecraft.core.BlockPos getFirstSolidBlockFrom(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "getFirstBlockFrom",
+          "sig": "net.minecraft.core.BlockPos getFirstBlockFrom(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos)",
+          "notes": ""
+        },
+        {
+          "name": "switchGround",
+          "sig": "ic2.api.tiles.boolean switchGround(net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.level.block.state.BlockState from, net.minecraft.world.level.block.state.BlockState to, ic2.api.tiles.boolean upwards, ic2.api.tiles.boolean stateCompare)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.display.IDisplayInfo",
+      "methods": [
+        {
+          "name": "render",
+          "sig": "void render(com.mojang.blaze3d.vertex.PoseStack stack, ic2.api.tiles.display.int x, ic2.api.tiles.display.int y, ic2.api.tiles.display.int width, ic2.api.tiles.display.int height, ic2.api.tiles.display.Alignment align, ic2.api.tiles.display.IMonitorRenderer helper)",
+          "notes": ""
+        },
+        {
+          "name": "getHeight",
+          "sig": "ic2.api.tiles.display.int getHeight(ic2.api.tiles.display.int width, ic2.api.tiles.display.Alignment align)",
+          "notes": ""
+        },
+        {
+          "name": "isValid",
+          "sig": "ic2.api.tiles.display.boolean isValid()",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "getServerData",
+          "sig": "net.minecraft.nbt.Tag getServerData()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.display.IDisplayRegistry",
+      "methods": [
+        {
+          "name": "register",
+          "sig": "void register(net.minecraft.resources.ResourceLocation id, ic2.api.tiles.display.Class info, java.util.function.Function creator)",
+          "notes": ""
+        },
+        {
+          "name": "serialize",
+          "sig": "void serialize(ic2.api.tiles.display.IDisplayInfo info, net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        },
+        {
+          "name": "deserialize",
+          "sig": "ic2.api.tiles.display.IDisplayInfo deserialize(net.minecraft.network.FriendlyByteBuf buffer)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.display.IMonitorRenderer",
+      "methods": [
+        {
+          "name": "getBatcher",
+          "sig": "net.minecraft.client.renderer.MultiBufferSource getBatcher()",
+          "notes": ""
+        },
+        {
+          "name": "getFont",
+          "sig": "net.minecraft.client.gui.Font getFont()",
+          "notes": ""
+        },
+        {
+          "name": "getItemRenderer",
+          "sig": "net.minecraft.client.renderer.entity.ItemRenderer getItemRenderer()",
+          "notes": ""
+        },
+        {
+          "name": "renderGuiItems",
+          "sig": "void renderGuiItems(com.mojang.blaze3d.vertex.PoseStack matrix, net.minecraft.world.item.ItemStack stack, ic2.api.tiles.display.float x, ic2.api.tiles.display.float y)",
+          "notes": ""
+        },
+        {
+          "name": "renderGuiItemText",
+          "sig": "void renderGuiItemText(com.mojang.blaze3d.vertex.PoseStack matrixstack, net.minecraft.world.item.ItemStack stack, ic2.api.tiles.display.float x, ic2.api.tiles.display.float y, ic2.api.tiles.display.String text)",
+          "notes": ""
+        },
+        {
+          "name": "renderGuiItemText",
+          "sig": "void renderGuiItemText(com.mojang.blaze3d.vertex.PoseStack matrixstack, net.minecraft.client.gui.Font font, net.minecraft.world.item.ItemStack stack, ic2.api.tiles.display.float x, ic2.api.tiles.display.float y, ic2.api.tiles.display.String text)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IActivityProvider",
+      "methods": [
+        {
+          "name": "isActivated",
+          "sig": "ic2.api.tiles.readers.boolean isActivated()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IAirSpeed",
+      "methods": [
+        {
+          "name": "getCurrentSpeed",
+          "sig": "ic2.api.tiles.readers.float getCurrentSpeed()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxSpeed",
+          "sig": "ic2.api.tiles.readers.float getMaxSpeed()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IEUProducer",
+      "methods": [
+        {
+          "name": "getEUProduction",
+          "sig": "ic2.api.tiles.readers.float getEUProduction()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IEUStorage",
+      "methods": [
+        {
+          "name": "getStoredEU",
+          "sig": "ic2.api.tiles.readers.int getStoredEU()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxEU",
+          "sig": "ic2.api.tiles.readers.int getMaxEU()",
+          "notes": ""
+        },
+        {
+          "name": "getTier",
+          "sig": "ic2.api.tiles.readers.int getTier()",
+          "notes": ""
+        },
+        {
+          "name": "getChargeLevel",
+          "sig": "ic2.api.tiles.readers.double getChargeLevel()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IFuelStorage",
+      "methods": [
+        {
+          "name": "getFuel",
+          "sig": "ic2.api.tiles.readers.int getFuel()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxFuel",
+          "sig": "ic2.api.tiles.readers.int getMaxFuel()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IProgressMachine",
+      "methods": [
+        {
+          "name": "getProgress",
+          "sig": "ic2.api.tiles.readers.float getProgress()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxProgress",
+          "sig": "ic2.api.tiles.readers.float getMaxProgress()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IPumpTile",
+      "methods": [
+        {
+          "name": "getPumpProgress",
+          "sig": "ic2.api.tiles.readers.int getPumpProgress()",
+          "notes": ""
+        },
+        {
+          "name": "getPumpMaxProgress",
+          "sig": "ic2.api.tiles.readers.int getPumpMaxProgress()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.ISpeedMachine",
+      "methods": [
+        {
+          "name": "getSpeed",
+          "sig": "ic2.api.tiles.readers.int getSpeed()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxSpeed",
+          "sig": "ic2.api.tiles.readers.int getMaxSpeed()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.ISubProgressMachine",
+      "methods": [
+        {
+          "name": "getSubProgress",
+          "sig": "ic2.api.tiles.readers.float getSubProgress()",
+          "notes": ""
+        },
+        {
+          "name": "getMaxSubProgress",
+          "sig": "ic2.api.tiles.readers.float getMaxSubProgress()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.readers.IWorkProvider",
+      "methods": [
+        {
+          "name": "isWorking",
+          "sig": "ic2.api.tiles.readers.boolean isWorking()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.teleporter.ITeleporterTarget",
+      "methods": [
+        {
+          "name": "getFacing",
+          "sig": "net.minecraft.core.Direction getFacing()",
+          "notes": ""
+        },
+        {
+          "name": "getSendType",
+          "sig": "ic2.api.tiles.teleporter.TeleportType getSendType()",
+          "notes": ""
+        },
+        {
+          "name": "canReceive",
+          "sig": "ic2.api.tiles.teleporter.boolean canReceive(ic2.api.tiles.teleporter.TeleportType type)",
+          "notes": ""
+        },
+        {
+          "name": "setTarget",
+          "sig": "ic2.api.tiles.teleporter.boolean setTarget(ic2.api.tiles.teleporter.TeleporterTarget target)",
+          "notes": ""
+        },
+        {
+          "name": "hasTarget",
+          "sig": "ic2.api.tiles.teleporter.boolean hasTarget(ic2.api.tiles.teleporter.TeleporterTarget target)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.IItemCache",
+      "methods": [
+        {
+          "name": "getCache",
+          "sig": "ic2.api.tiles.tubes.IItemCache getCache()",
+          "notes": ""
+        },
+        {
+          "name": "getItem",
+          "sig": "java.util.function.Supplier getItem(ic2.api.tiles.tubes.int id)",
+          "notes": ""
+        },
+        {
+          "name": "registerItem",
+          "sig": "ic2.api.tiles.tubes.int registerItem(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "updateCache",
+          "sig": "void updateCache()",
+          "notes": ""
+        },
+        {
+          "name": "clearCache",
+          "sig": "void clearCache()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.ILimiterTube",
+      "methods": [
+        {
+          "name": "getValidColors",
+          "sig": "java.util.EnumSet getValidColors()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.tubes.ITube"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.IProviderTube",
+      "methods": [
+        {
+          "name": "provideItems",
+          "sig": "ic2.api.tiles.tubes.int provideItems(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.tubes.int amount, net.minecraft.world.item.DyeColor color, java.util.UUID requestId)",
+          "notes": ""
+        },
+        {
+          "name": "getItemsProvided",
+          "sig": "void getItemsProvided(java.util.function.ObjIntConsumer listener)",
+          "notes": ""
+        },
+        {
+          "name": "getProviderSource",
+          "sig": "ic2.api.tiles.tubes.long getProviderSource()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.tubes.ITube"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.IRequestTube",
+      "methods": [
+        {
+          "name": "provideRequests",
+          "sig": "void provideRequests(ic2.api.tiles.tubes.ITubeRequester requested)",
+          "notes": ""
+        },
+        {
+          "name": "onRequestsReset",
+          "sig": "void onRequestsReset()",
+          "notes": ""
+        },
+        {
+          "name": "onRequestFulfilled",
+          "sig": "void onRequestFulfilled(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.tubes.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "getRequestId",
+          "sig": "java.util.UUID getRequestId()",
+          "notes": ""
+        },
+        {
+          "name": "onRequestLost",
+          "sig": "void onRequestLost(net.minecraft.world.item.ItemStack stack, ic2.api.tiles.tubes.int amount)",
+          "notes": ""
+        },
+        {
+          "name": "getRequestSource",
+          "sig": "ic2.api.tiles.tubes.long getRequestSource()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.tiles.tubes.ITube"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.tiles.tubes.ITube",
+      "methods": [
+        {
+          "name": "addItem",
+          "sig": "void addItem(net.minecraft.world.item.ItemStack item, net.minecraft.core.Direction side)",
+          "notes": ""
+        },
+        {
+          "name": "addItem",
+          "sig": "void addItem(net.minecraft.world.item.ItemStack item, net.minecraft.core.Direction side, net.minecraft.world.item.DyeColor color)",
+          "notes": ""
+        },
+        {
+          "name": "addItem",
+          "sig": "void addItem(ic2.api.tiles.tubes.TransportedItem item, net.minecraft.core.Direction side)",
+          "notes": ""
+        },
+        {
+          "name": "canAddItem",
+          "sig": "ic2.api.tiles.tubes.boolean canAddItem(ic2.api.tiles.tubes.TransportedItem item, net.minecraft.core.Direction side)",
+          "notes": ""
+        },
+        {
+          "name": "canConnect",
+          "sig": "ic2.api.tiles.tubes.boolean canConnect(ic2.api.tiles.tubes.ITube other, net.minecraft.core.Direction dir)",
+          "notes": ""
+        },
+        {
+          "name": "getTubeType",
+          "sig": "ic2.api.tiles.tubes.TubeType getTubeType()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [
+        "ic2.api.util.ILocation"
+      ],
+      "domain": "tiles"
+    },
+    {
+      "fqcn": "ic2.api.util.ILocation",
+      "methods": [
+        {
+          "name": "getWorldObj",
+          "sig": "net.minecraft.world.level.Level getWorldObj()",
+          "notes": ""
+        },
+        {
+          "name": "getPosition",
+          "sig": "net.minecraft.core.BlockPos getPosition()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "related": [],
+      "domain": "other"
+    }
+  ],
+  "abstract_classes": [
+    {
+      "fqcn": "ic2.api.blocks.wrench.BaseWrenchHandler",
+      "methods": [
+        {
+          "name": "doSpecialAction",
+          "sig": "ic2.api.blocks.wrench.boolean doSpecialAction(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.Vec3 hit)",
+          "notes": ""
+        },
+        {
+          "name": "hasSpecialAction",
+          "sig": "net.minecraft.world.phys.AABB hasSpecialAction(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.core.Direction dir, net.minecraft.world.entity.player.Player player, net.minecraft.world.phys.Vec3 hit)",
+          "notes": ""
+        },
+        {
+          "name": "canRemoveBlock",
+          "sig": "ic2.api.blocks.wrench.boolean canRemoveBlock(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "getDropRate",
+          "sig": "ic2.api.blocks.wrench.double getDropRate(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "getDrops",
+          "sig": "java.util.List getDrops(net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.Level world, net.minecraft.core.BlockPos pos, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "extends": [],
+      "implements": [
+        "ic2.api.blocks.IWrenchable"
+      ],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICrop",
+      "methods": [
+        {
+          "name": "id",
+          "sig": "net.minecraft.resources.ResourceLocation id()",
+          "notes": ""
+        },
+        {
+          "name": "discoveredBy",
+          "sig": "net.minecraft.network.chat.Component discoveredBy()",
+          "notes": ""
+        },
+        {
+          "name": "getName",
+          "sig": "net.minecraft.network.chat.Component getName()",
+          "notes": ""
+        },
+        {
+          "name": "getDisplayItem",
+          "sig": "net.minecraft.world.item.ItemStack getDisplayItem()",
+          "notes": ""
+        },
+        {
+          "name": "getProperties",
+          "sig": "ic2.api.crops.CropProperties getProperties()",
+          "notes": ""
+        },
+        {
+          "name": "getCropType",
+          "sig": "ic2.api.crops.CropType getCropType()",
+          "notes": ""
+        },
+        {
+          "name": "isWaterCleaningCrop",
+          "sig": "ic2.api.crops.boolean isWaterCleaningCrop(ic2.api.crops.ICropTile tile)",
+          "notes": ""
+        },
+        {
+          "name": "getAttributes",
+          "sig": "ic2.api.crops.String getAttributes()",
+          "notes": ""
+        },
+        {
+          "name": "getTextures",
+          "sig": "java.util.List getTextures()",
+          "notes": ""
+        },
+        {
+          "name": "getGrowthSteps",
+          "sig": "ic2.api.crops.int getGrowthSteps()",
+          "notes": ""
+        },
+        {
+          "name": "getOptimalHarvestStep",
+          "sig": "ic2.api.crops.int getOptimalHarvestStep(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getGrowthDuration",
+          "sig": "ic2.api.crops.int getGrowthDuration(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getStatInfluence",
+          "sig": "ic2.api.crops.int getStatInfluence(ic2.api.crops.ICropTile cropTile, ic2.api.crops.int humidity, ic2.api.crops.int nutrients, ic2.api.crops.int air)",
+          "notes": ""
+        },
+        {
+          "name": "canGrow",
+          "sig": "ic2.api.crops.boolean canGrow(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "canBeHarvested",
+          "sig": "ic2.api.crops.boolean canBeHarvested(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getAfterHarvestStage",
+          "sig": "ic2.api.crops.int getAfterHarvestStage(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getDropChance",
+          "sig": "ic2.api.crops.double getDropChance(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getDrops",
+          "sig": "net.minecraft.world.item.ItemStack getDrops(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getSeedDropChance",
+          "sig": "ic2.api.crops.float getSeedDropChance(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getSeeds",
+          "sig": "net.minecraft.world.item.ItemStack getSeeds(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "canBreed",
+          "sig": "ic2.api.crops.boolean canBreed(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "isWeed",
+          "sig": "ic2.api.crops.boolean isWeed(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "onRightClick",
+          "sig": "ic2.api.crops.boolean onRightClick(ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.player.Player player, net.minecraft.world.InteractionHand hand)",
+          "notes": ""
+        },
+        {
+          "name": "onLeftClick",
+          "sig": "ic2.api.crops.boolean onLeftClick(ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "onTick",
+          "sig": "void onTick(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "onBlockUpdate",
+          "sig": "void onBlockUpdate(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "onEntityCollision",
+          "sig": "void onEntityCollision(ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.Entity entity)",
+          "notes": ""
+        },
+        {
+          "name": "onCropPlaceFailed",
+          "sig": "void onCropPlaceFailed(ic2.api.crops.BaseSeed seed, ic2.api.crops.ICropTile cropTile, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "hasCustomCropPlaceFailedMessage",
+          "sig": "ic2.api.crops.boolean hasCustomCropPlaceFailedMessage(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getCustomCropPlaceFailedMessage",
+          "sig": "net.minecraft.network.chat.Component getCustomCropPlaceFailedMessage(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "canEmitRedstone",
+          "sig": "ic2.api.crops.boolean canEmitRedstone(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getRedstoneLevel",
+          "sig": "ic2.api.crops.int getRedstoneLevel(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "getEmittedLight",
+          "sig": "ic2.api.crops.int getEmittedLight(ic2.api.crops.ICropTile cropTile)",
+          "notes": ""
+        },
+        {
+          "name": "desc",
+          "sig": "ic2.api.crops.String desc(ic2.api.crops.int i)",
+          "notes": ""
+        },
+        {
+          "name": "getGrowth",
+          "sig": "ic2.api.crops.int getGrowth(ic2.api.crops.int combo)",
+          "notes": ""
+        },
+        {
+          "name": "getGain",
+          "sig": "ic2.api.crops.int getGain(ic2.api.crops.int combo)",
+          "notes": ""
+        },
+        {
+          "name": "getResistance",
+          "sig": "ic2.api.crops.int getResistance(ic2.api.crops.int combo)",
+          "notes": ""
+        },
+        {
+          "name": "combineStats",
+          "sig": "ic2.api.crops.short combineStats(ic2.api.crops.int growth, ic2.api.crops.int gain, ic2.api.crops.int resistance)",
+          "notes": ""
+        }
+      ],
+      "constants": [
+        {
+          "name": "UNKNOWN",
+          "value": "Component.translatable(\"crop.ic2.unknown\")",
+          "notes": ""
+        },
+        {
+          "name": "EMPTY_DROPS",
+          "value": "",
+          "notes": ""
+        }
+      ],
+      "extends": [],
+      "implements": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.crops.ICropRegistry",
+      "methods": [
+        {
+          "name": "registerCustomCropRenderer",
+          "sig": "void registerCustomCropRenderer(net.minecraft.resources.ResourceLocation location, ic2.api.crops.ICropRenderer render)",
+          "notes": ""
+        },
+        {
+          "name": "registerCustomStickRenderer",
+          "sig": "void registerCustomStickRenderer(ic2.api.crops.ICropRenderer render)",
+          "notes": ""
+        },
+        {
+          "name": "registerCrop",
+          "sig": "ic2.api.crops.T registerCrop(ic2.api.crops.T crop)",
+          "notes": ""
+        },
+        {
+          "name": "getCrop",
+          "sig": "ic2.api.crops.ICrop getCrop(ic2.api.crops.String id, ic2.api.crops.String name)",
+          "notes": ""
+        },
+        {
+          "name": "getCrop",
+          "sig": "ic2.api.crops.ICrop getCrop(net.minecraft.resources.ResourceLocation location)",
+          "notes": ""
+        },
+        {
+          "name": "getRandomCrop",
+          "sig": "ic2.api.crops.ICrop getRandomCrop(java.util.OptionalLong seed)",
+          "notes": ""
+        },
+        {
+          "name": "getCrop",
+          "sig": "ic2.api.crops.ICrop getCrop(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getCrops",
+          "sig": "java.util.List getCrops()",
+          "notes": ""
+        },
+        {
+          "name": "registerDisplayItem",
+          "sig": "void registerDisplayItem(net.minecraft.resources.ResourceLocation cropID, net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getDisplayItem",
+          "sig": "net.minecraft.world.item.ItemStack getDisplayItem(net.minecraft.resources.ResourceLocation cropID)",
+          "notes": ""
+        },
+        {
+          "name": "registerBaseSeed",
+          "sig": "void registerBaseSeed(net.minecraft.world.item.Item item, ic2.api.crops.BaseSeed seed)",
+          "notes": ""
+        },
+        {
+          "name": "getSeedForStack",
+          "sig": "ic2.api.crops.BaseSeed getSeedForStack(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getSeedForCrop",
+          "sig": "net.minecraft.world.item.ItemStack getSeedForCrop(ic2.api.crops.ICrop crop)",
+          "notes": ""
+        },
+        {
+          "name": "addBiomeHumidityBonus",
+          "sig": "void addBiomeHumidityBonus(net.minecraft.tags.TagKey type, ic2.api.crops.int bonus)",
+          "notes": ""
+        },
+        {
+          "name": "getHumidityBonus",
+          "sig": "ic2.api.crops.int getHumidityBonus(net.minecraft.core.Holder biome)",
+          "notes": ""
+        },
+        {
+          "name": "addBiomeNutrientBonus",
+          "sig": "void addBiomeNutrientBonus(net.minecraft.tags.TagKey type, ic2.api.crops.int bonus)",
+          "notes": ""
+        },
+        {
+          "name": "getNutrientBonus",
+          "sig": "ic2.api.crops.int getNutrientBonus(net.minecraft.core.Holder biome)",
+          "notes": ""
+        },
+        {
+          "name": "addBiomeWaterQualityBonus",
+          "sig": "void addBiomeWaterQualityBonus(net.minecraft.tags.TagKey type, ic2.api.crops.int bonus)",
+          "notes": ""
+        },
+        {
+          "name": "getWaterQualityBonus",
+          "sig": "ic2.api.crops.int getWaterQualityBonus(net.minecraft.core.Holder biome)",
+          "notes": ""
+        },
+        {
+          "name": "registerFarmland",
+          "sig": "void registerFarmland(ic2.api.crops.IFarmland land, net.minecraft.world.level.block.Block... blocks)",
+          "notes": ""
+        },
+        {
+          "name": "getFarmland",
+          "sig": "ic2.api.crops.IFarmland getFarmland(net.minecraft.world.level.block.Block block)",
+          "notes": ""
+        },
+        {
+          "name": "registerSubSoil",
+          "sig": "void registerSubSoil(ic2.api.crops.ISubSoil soil, net.minecraft.world.level.block.Block... blocks)",
+          "notes": ""
+        },
+        {
+          "name": "getSubSoil",
+          "sig": "ic2.api.crops.ISubSoil getSubSoil(net.minecraft.world.level.block.Block block)",
+          "notes": ""
+        }
+      ],
+      "constants": [
+        {
+          "name": "WEED",
+          "value": "null",
+          "notes": ""
+        },
+        {
+          "name": "SEA_WEED",
+          "value": "null",
+          "notes": ""
+        },
+        {
+          "name": "INSTANCE",
+          "value": "",
+          "notes": ""
+        }
+      ],
+      "extends": [],
+      "implements": [],
+      "domain": "other"
+    },
+    {
+      "fqcn": "ic2.api.events.FoamEvent",
+      "methods": [
+        {
+          "name": "getPos",
+          "sig": "net.minecraft.core.BlockPos getPos()",
+          "notes": ""
+        },
+        {
+          "name": "getState",
+          "sig": "net.minecraft.world.level.block.state.BlockState getState()",
+          "notes": ""
+        },
+        {
+          "name": "getBlockEntity",
+          "sig": "net.minecraft.world.level.block.entity.BlockEntity getBlockEntity()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "extends": [
+        "net.minecraftforge.event.level.LevelEvent"
+      ],
+      "implements": [],
+      "domain": "events"
+    },
+    {
+      "fqcn": "ic2.api.items.IDrinkableFluid",
+      "methods": [
+        {
+          "name": "drink",
+          "sig": "ic2.api.items.boolean drink(net.minecraft.world.item.ItemStack stack, net.minecraft.world.level.Level world, net.minecraft.world.entity.player.Player player)",
+          "notes": ""
+        },
+        {
+          "name": "hasSpecialName",
+          "sig": "ic2.api.items.boolean hasSpecialName()",
+          "notes": ""
+        },
+        {
+          "name": "getSpecialName",
+          "sig": "net.minecraft.network.chat.Component getSpecialName(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "generateSubStates",
+          "sig": "java.util.List generateSubStates(net.minecraft.world.item.ItemStack base, ic2.api.items.boolean textures)",
+          "notes": ""
+        },
+        {
+          "name": "getTexture",
+          "sig": "net.minecraft.resources.ResourceLocation getTexture(net.minecraft.world.item.ItemStack stack, ic2.api.items.String baseFolder)",
+          "notes": ""
+        },
+        {
+          "name": "getTextureIndex",
+          "sig": "ic2.api.items.int getTextureIndex(net.minecraft.world.item.ItemStack stack)",
+          "notes": ""
+        },
+        {
+          "name": "getID",
+          "sig": "net.minecraft.resources.ResourceLocation getID()",
+          "notes": ""
+        },
+        {
+          "name": "hashCode",
+          "sig": "ic2.api.items.int hashCode()",
+          "notes": ""
+        },
+        {
+          "name": "equals",
+          "sig": "ic2.api.items.boolean equals(ic2.api.items.Object obj)",
+          "notes": ""
+        }
+      ],
+      "constants": [
+        {
+          "name": "REGISTRY",
+          "value": "",
+          "notes": ""
+        }
+      ],
+      "extends": [],
+      "implements": [],
+      "domain": "items"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.BaseDurabilitySimulatedStack",
+      "methods": [
+        {
+          "name": "save",
+          "sig": "net.minecraft.nbt.CompoundTag save()",
+          "notes": ""
+        },
+        {
+          "name": "load",
+          "sig": "void load(net.minecraft.nbt.CompoundTag data)",
+          "notes": ""
+        },
+        {
+          "name": "commitState",
+          "sig": "void commitState()",
+          "notes": ""
+        },
+        {
+          "name": "reset",
+          "sig": "void reset()",
+          "notes": ""
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "ic2.api.reactor.planner.boolean acceptUraniumPulse(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.SimulatedStack source, ic2.api.reactor.planner.int sourceX, ic2.api.reactor.planner.int sourceY, ic2.api.reactor.planner.boolean heatRun, ic2.api.reactor.planner.boolean damageTick)",
+          "notes": ""
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "ic2.api.reactor.planner.boolean canStoreHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "ic2.api.reactor.planner.int getStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "ic2.api.reactor.planner.int getMaxStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "storeHeat",
+          "sig": "ic2.api.reactor.planner.int storeHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.int heatChange)",
+          "notes": ""
+        },
+        {
+          "name": "canViewHeat",
+          "sig": "ic2.api.reactor.planner.boolean canViewHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "ic2.api.reactor.planner.float getExplosionInfluence(ic2.api.reactor.planner.ISimulatedReactor reactor)",
+          "notes": ""
+        },
+        {
+          "name": "getId",
+          "sig": "ic2.api.reactor.planner.short getId()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "extends": [],
+      "implements": [
+        "ic2.api.reactor.planner.SimulatedStack"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.reactor.planner.BaseHeatSimulatedStack",
+      "methods": [
+        {
+          "name": "save",
+          "sig": "net.minecraft.nbt.CompoundTag save()",
+          "notes": ""
+        },
+        {
+          "name": "load",
+          "sig": "void load(net.minecraft.nbt.CompoundTag data)",
+          "notes": ""
+        },
+        {
+          "name": "commitState",
+          "sig": "void commitState()",
+          "notes": ""
+        },
+        {
+          "name": "reset",
+          "sig": "void reset()",
+          "notes": ""
+        },
+        {
+          "name": "acceptUraniumPulse",
+          "sig": "ic2.api.reactor.planner.boolean acceptUraniumPulse(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.SimulatedStack source, ic2.api.reactor.planner.int sourceX, ic2.api.reactor.planner.int sourceY, ic2.api.reactor.planner.boolean heatRun, ic2.api.reactor.planner.boolean damageTick)",
+          "notes": ""
+        },
+        {
+          "name": "canStoreHeat",
+          "sig": "ic2.api.reactor.planner.boolean canStoreHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getStoredHeat",
+          "sig": "ic2.api.reactor.planner.int getStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getMaxStoredHeat",
+          "sig": "ic2.api.reactor.planner.int getMaxStoredHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "storeHeat",
+          "sig": "ic2.api.reactor.planner.int storeHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y, ic2.api.reactor.planner.int heatChange)",
+          "notes": ""
+        },
+        {
+          "name": "canViewHeat",
+          "sig": "ic2.api.reactor.planner.boolean canViewHeat(ic2.api.reactor.planner.ISimulatedReactor reactor, ic2.api.reactor.planner.int x, ic2.api.reactor.planner.int y)",
+          "notes": ""
+        },
+        {
+          "name": "getExplosionInfluence",
+          "sig": "ic2.api.reactor.planner.float getExplosionInfluence(ic2.api.reactor.planner.ISimulatedReactor reactor)",
+          "notes": ""
+        },
+        {
+          "name": "getId",
+          "sig": "ic2.api.reactor.planner.short getId()",
+          "notes": ""
+        }
+      ],
+      "constants": [],
+      "extends": [],
+      "implements": [
+        "ic2.api.reactor.planner.SimulatedStack"
+      ],
+      "domain": "reactor"
+    },
+    {
+      "fqcn": "ic2.api.recipes.ingridients.recipes.BaseRecipeOutput",
+      "methods": [],
+      "constants": [],
+      "extends": [],
+      "implements": [
+        "ic2.api.recipes.ingridients.recipes.IRecipeOutput"
+      ],
+      "domain": "recipes"
+    }
+  ],
+  "enums": [
+    {
+      "fqcn": "ic2.api.network.tile.PacketRange",
+      "values": [
+        "SHORT_RANGE",
+        "LONG_RANGE",
+        "CHUNK_TRACKED",
+        "ALL_DIM",
+        "ALL_SERVER"
+      ],
+      "domain": "network"
+    },
+    {
+      "fqcn": "ic2.api.recipes.misc.RecipeFlags",
+      "values": [
+        "CONSUME_CONTAINERS",
+        "KEEP_IN_INPUT",
+        "HIDE_RECIPE"
+      ],
+      "domain": "recipes"
+    },
+    {
+      "fqcn": "ic2.api.recipes.misc.RecipeMods",
+      "values": [
+        "ENERGY_USAGE",
+        "RECIPE_TIME"
+      ],
+      "domain": "recipes"
+    }
+  ],
+  "events": [
+    {
+      "fqcn": "ic2.api.events.ArmorSlotEvent",
+      "fields": [],
+      "when": ""
+    },
+    {
+      "fqcn": "ic2.api.events.FoamEvent",
+      "fields": [],
+      "when": ""
+    },
+    {
+      "fqcn": "ic2.api.events.LaserEvent",
+      "fields": [
+        {
+          "name": "laser",
+          "type": "net.minecraft.world.entity.Entity"
+        },
+        {
+          "name": "source",
+          "type": "net.minecraft.world.entity.LivingEntity"
+        },
+        {
+          "name": "range",
+          "type": "ic2.api.events.float"
+        },
+        {
+          "name": "power",
+          "type": "ic2.api.events.float"
+        },
+        {
+          "name": "blockBreaks",
+          "type": "ic2.api.events.int"
+        },
+        {
+          "name": "explosive",
+          "type": "ic2.api.events.boolean"
+        },
+        {
+          "name": "smelt",
+          "type": "ic2.api.events.boolean"
+        }
+      ],
+      "when": ""
+    },
+    {
+      "fqcn": "ic2.api.events.RetextureEvent",
+      "fields": [],
+      "when": ""
+    },
+    {
+      "fqcn": "ic2.api.events.ScrapBoxEvent",
+      "fields": [],
+      "when": ""
+    }
+  ],
+  "capability_hints": [],
+  "reactor_blueprint_hints": []
+}
