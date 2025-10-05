@@ -1,0 +1,20 @@
+graph TD
+IEnergySink -->|requests EU from| IEnergyNet
+IEnergySource -->|pushes EU into| IEnergyNet
+IEnergyConductor -->|links| IEnergyAcceptor
+IMultiEnergyTile -->|exposes sub-tiles to| IEnergyNet
+IReactorComponent -->|processed by| IReactor
+IReactorChamber -->|adjacent hull for| IReactor
+IReactorPlannerComponent -->|creates| SimulatedStack
+SimulatedStack -->|simulated in| ISimulatedReactor
+IMachine -->|publishes stats to| IDisplayInfo
+IEnergyStorage -->|reported through| IEUStorage
+ITube -->|transports| TransportedItem
+IWrenchTool -->|operates on| IWrenchable
+INetworkFieldProvider -->|syncs via| INetworkManager
+IMachineRecipeList -->|consumes| IInput
+IMachineRecipeList -->|produces| IRecipeOutput
+FoamEvent -->|observes| FoamEvent_TargetType
+LaserEvent -->|fired by| IPlayerPacket
+ArmorSlotEvent -->|configures| IArmorModule
+ScrapBoxEvent -->|selects loot from| IScrapBoxRegistry
